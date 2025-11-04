@@ -2,11 +2,11 @@
   "languages": {
     "it": {
       "path": "config/it/mkdocs.yml",
-      "site_name": "Documentazione Super Progetto",
-      "author": "Mario Rossi",
+      "site_name": "Leonardo Services Documentation",
+      "author": "Elio Arena",
       "numeroDocumento": "C000CMP01STP01",
-      "revisione": "08.00",
-      "data": "20/06/2025",
+      "revisione": "01.00",
+      "data": "04/11/2025",
       "cageCode": "A0069",
       "language_code": "it",
       "docs_dir": "../../docs/it",
@@ -16,16 +16,16 @@
       "nav_config_file": "nav_config_it.yml",
       
       "titoli": {
-        "titolo1": "Digital Security",
-        "titolo2": "Secure Cloud Management Platform", 
-        "titolo3": "Secure Cloud Management Platform"
+        "titolo1": "Leonardo Services Documentation",
+        "titolo2": "", 
+        "titolo3": ""
       },
 
       "autori": {
         "autore": {
-          "nome": "Carmelo Sciuto",
-          "qualifica": "Product Owner IPT di Sviluppo",
-          "area": "R. Cloud Product | Digital Systems & Engineering Technologies | Engineering"
+          "nome": "Elio Arena",
+          "qualifica": "Digital Proposal & Pre Sales",
+          "area": "Digital Proposal & Pre Sales| Digital Systems & Engineering Technologies | Engineering"
         },
         "verifica1": {
           "nome": "Andrea Giorgio Busà",
@@ -56,9 +56,9 @@
 
       "contatti": {
         "riferimento": {
-          "nome": "Carmelo Sciuto",
-          "qualifica": "Product Owner IPT di Sviluppo",
-          "area": "R. Cloud Product | Digital Systems & Engineering Technologies | Engineering",
+          "nome": "Elio Arena",
+          "qualifica": "Digital Proposal & Pre Sales",
+          "area": "Digital Proposal & Pre Sales | Digital Systems & Engineering Technologies | Engineering",
           "email": "",
           "azienda": "Leonardo S.p.A.",
           "via": "Via A. Agosta SNC",
@@ -78,11 +78,11 @@
 
     "en": {
       "path": "config/en/mkdocs.yml",
-      "site_name": "Super Project Documentation (EN)",
-      "author": "Mario Rossi",
+      "site_name": "Leonardo Services Documentation",
+      "author": "Elio Arena",
       "numeroDocumento": "C000CMP01STP01",
-      "revisione": "08.00",
-      "data": "20/06/2025",
+      "revisione": "01.00",
+      "data": "04/11/2025",
       "cageCode": "A0069",
       "language_code": "en",
       "docs_dir": "../../docs/en",
@@ -92,16 +92,16 @@
       "nav_config_file": "nav_config_en.yml",
       
       "titoli": {
-        "titolo1": "Digital Security",
-        "titolo2": "Secure Cloud Management Platform", 
-        "titolo3": "Secure Cloud Management Platform"
+        "titolo1": "Leonardo Services Documentation",
+        "titolo2": "", 
+        "titolo3": ""
       },
 
       "autori": {
         "autore": {
-          "nome": "Carmelo Sciuto",
-          "qualifica": "Product Owner Development IPT",
-          "area": "R. Cloud Product | Digital Systems & Engineering Technologies | Engineering"
+          "nome": "Elio Arena",
+          "qualifica": "Digital Proposal & Pre Sales",
+          "area": "Digital Proposal & Pre Sales | Digital Systems & Engineering Technologies | Engineering"
         },
         "verifica1": {
           "nome": "Andrea Giorgio Busà",
@@ -132,9 +132,9 @@
 
       "contatti": {
         "riferimento": {
-          "nome": "Carmelo Sciuto",
-          "qualifica": "Product Owner Development IPT",
-          "area": "R. Cloud Product | Digital Systems & Engineering Technologies | Engineering",
+          "nome": "Elio Arena",
+          "qualifica": "Digital Proposal & Pre Sales",
+          "area": "Digital Proposal & Pre Sales | Digital Systems & Engineering Technologies | Engineering",
           "email": "",
           "azienda": "Leonardo S.p.A.",
           "via": "Via A. Agosta SNC",

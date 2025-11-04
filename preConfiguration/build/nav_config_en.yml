@@ -1,4 +1,5 @@
 nav:
-- CaaS: CaaS.md
-- IaaS: IaaS.md
-- PaaS: PaaS.md
+- Leonardo Services Overview: index.md
+- Infrastructure as a Service (IaaS) Category: IaaS.md
+- Container as a Service (CaaS) Category: CaaS.md
+- Platform as a Service (PaaS) Category: PaaS.md

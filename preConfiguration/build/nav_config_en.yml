@@ -1,4 +1,4 @@
 nav:
-- Developers: developers.md
-- Administration: Administration.md
-- PDF: SCMP_SUM_en.pdf
+- CaaS: CaaS.md
+- IaaS: IaaS.md
+- PaaS: PaaS.md

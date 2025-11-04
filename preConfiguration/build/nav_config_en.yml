@@ -1,4 +1,5 @@
 nav:
-- Developers: developers.md
-- Administration: Administration.md
-- PDF: SCMP_SUM_en.pdf
+- Leonardo Services Overview: index.md
+- Infrastructure as a Service (IaaS) Category: IaaS.md
+- Container as a Service (CaaS) Category: CaaS.md
+- Platform as a Service (PaaS) Category: PaaS.md

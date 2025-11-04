@@ -1,15 +1,16 @@
 # Leonardo Services
 
-Leonardo eroga diversi servizi gestiti che sono rappresentati nella seguente figura per tipologia (chiamate famiglie di servizi).
+Leonardo provides a collection of managed services which are represented in the following figure by type and sub-type (technically called "Family" and "Sub-family" respectively).
 
-![Overview Leonardo Services](images/extract/media/PSN1.png)
+![Leonardo Services Overview](assets/images/extract/media/PSN1.png)
 
-Da un punto di vista logico-funzionale i servizi possono essere suddividisi in tre macro-categorie:
+From a logical-functional perspective, these services can be divided into three macro-categories:
 
-- Servizi Infrastructure as a Service (IaaS)
-- Servizi Container as a Service (CaaS)
-- Servizi Platform as a Service (PaaS)
+- Infrastructure as a Service (IaaS)
+- Container as a Service (CaaS)
+- Platform as a Service (PaaS)
 
-Le categorie di tipo IaaS e CaaS includono parte di servizi della famiglia "Compute". La categoria PaaS include i servizi di tutte le altre famiglie.
+The IaaS and CaaS categories include some services from the "Compute" family. 
+The PaaS category includes services from all other families.
 
-A seguire verranno descritti le macro-categorie succitate.
+The above macro-categories are described below, and for each of them, we provide a description of the services for each family and subfamily.

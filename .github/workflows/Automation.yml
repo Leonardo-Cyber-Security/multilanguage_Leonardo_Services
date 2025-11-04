@@ -235,6 +235,30 @@ jobs:
 
         echo "✅ Documentation rebuilt with HTML links, nav configs restored"
 
+    - name: Copy index.html to index/index.html
+      run: |
+        echo "🔄 Copying index.html files to index/index.html..."
+
+        # Copy IT index.html
+        if [ -f generated/it/index.html ]; then
+          mkdir -p generated/it/index
+          cp generated/it/index.html generated/it/index/index.html
+          echo "✅ Copied generated/it/index.html to generated/it/index/index.html"
+        else
+          echo "⚠️ generated/it/index.html not found"
+        fi
+
+        # Copy EN index.html
+        if [ -f generated/en/index.html ]; then
+          mkdir -p generated/en/index
+          cp generated/en/index.html generated/en/index/index.html
+          echo "✅ Copied generated/en/index.html to generated/en/index/index.html"
+        else
+          echo "⚠️ generated/en/index.html not found"
+        fi
+
+        echo "✅ Index files copy completed"
+
     - name: Optimize images
       run: python preConfiguration/build/image_resizier.py
 

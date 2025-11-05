@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Funzione per sostituire il "." del logo con index.html
     function fixLogoLink() {
         // Cerca il logo con href="."
-        let logoLinks = document.querySelectorAll('a.md-nav__button.md-logo[href="."], a.md-logo[href="."], a[href="."][class*="logo"]');
+        let logoLinks = document.querySelectorAll('a.md-nav__button');
         
         logoLinks.forEach(logo => {
             let href = logo.getAttribute('href');
-            if (href === '.') {
+            if (href === '.' || href === '..') {
                 // Sostituisce "." con "index.html"
                 logo.setAttribute('href', 'index.html');
                 console.log('Fixed logo link from "." to "index.html"');

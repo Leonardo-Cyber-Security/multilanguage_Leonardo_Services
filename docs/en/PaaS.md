@@ -1196,6 +1196,8 @@ The service offers the following advantages:
 
 #### Services Description
 
+These are two services, separate but integrable when necessary, developed by Leonardo.
+
 The *AI Audio Analytics PaaS* provides a ready-to-use platform that, thanks to AI-based algorithms on audio sources, allows the identification of unique features from audio streams using preloaded AI models. These features allow the identification of a person's voice, noises, and possible anomalies in the monitored environment.  
 
 The *AI Video Analytics PaaS* is a ready-to-use platform with pre-trained algorithms that leverage computer vision techniques, capable of processing and understanding visual information present in two-dimensional images or video sequences.
@@ -1295,49 +1297,130 @@ The service offers the following advantages:
 
 #### Services Description
 
-
+The Text Analytics PaaS solution,  developed by Leonardo, provides a ready-to-use NLP (Natural Language Processing) platform capable of extracting structured and interpretable information from unstructured texts, enabling quantitative and qualitative analyses that would be time-consuming and difficult to perform manually.  
+The system can identify entities (people, places, organizations, etc.), translations, key concepts, and sentiment from text to identify and extract opinions from text. Multilingual support.
 
 #### Features and Advantages
 
-The service offers the following main features:
+The solution can perform various types of analysis, including:
 
+- *Entity Extraction (NER)* → recognizes the names of people, companies, places, products, dates, etc.
+- *Sentiment analysis* → understands whether the text expresses a positive, negative, or neutral opinion.
+- *Theme and Topic detection* → identifies key concepts in the text.
+- *Language Detection* → detects the language in which a text was written.
 
 The main components of the service are:
 
+- *Swagger UI* → Collection of HTML, CSS, and JavaScript assets automatically generated from the documentation, which must be compliant with the OpenAPI standard.
+- *ML Models* → List of ready-to-use pre-trained models, including:
+    - Key Phrase Extraction: extracts salient parts of text.
+    - Language Detection: infers language from text.
+    - Named Entity Recognition: extracts real-world entities from text, such as the names of people, places, data, companies, etc.
+    - Sentiment Analysis: recognizes sentiment from text.
+
+- *FastAPI Framework* → Modern, fast (high-performance) web framework for building APIs with Python.  
+
+Model creation workflow:
+1. *Data acquisition* → obtains raw text data from various sources to create a robust dataset for NLP tasks.  
+2. *Text preprocessing* → includes several steps to refine the raw text data for meaningful analysis and model training (e.g., text cleaning) Text, tokenization, stopword removal, normalization).  
+3. *Feature Engineering* → transforms raw textual data into numerical features that machine learning models can understand and effectively use to capture semantic meaning, contextual information, and word relationships.  
+4. *Modeling & Evaluation* → the heart of the pipeline, where models are applied and evaluated using various approaches (heuristics, ML, Deep Learning, etc.) to comprehensively measure model performance from both a technical and practical perspective.  
+5. *Deployment* → marks the transition of the developed model from the development environment to a production environment, followed by continuous monitoring and adaptation to ensure lasting performance and relevance.
 
 The service offers the following advantages:
+
+- *Better understanding for users and service consumers* → analyzes feedback, reviews, chats, and surveys to extract sentiment.
+- *Data-driven decisions* → transforms unstructured text into quantifiable insights that can be displayed in dashboards.
+- *Reduced operational costs* → automates text comprehension, significantly reducing human overhead.
+- *Reduced operational costs* → automates text comprehension, significantly reducing human overhead.
+- *Automation and scalability* → analyzes large volumes of text from heterogeneous sources.
+- *Faster time to market* → simple integration via API with third-party systems and applications.
+- *Multilingualism and semantic support* → understands meanings, synonyms, and context (not just keywords).
 
 ### Text Translation
 
 #### Services Description
 
-
+Multilingual translation service using AI-based machine translation (NMT) technologies to enable rapid and accurate translation of text from the source language to the target language in real time.  
+The service draws inspiration from the human brain not only for its neural structure, but also for its ability to adapt, learn from new experiences, and interact with users.  
+The result is a so-called human-in-the-loop approach, a cycle in which machine and human continuously support each other, providing exceptional translation quality and process efficiency that surpasses previous approaches.  
+The service can be offered in two ways:
+- Solution developed by Leonardo.
+- Solution developed by Azure.
 
 #### Features and Advantages
 
 The service offers the following main features:
 
+- *Neural Machine Translation (NMT)* → uses deep neural networks for more natural and contextual translations than statistical models.  
+- *Real-time translation* → streaming translation for chat, call centers, multilingual apps, or conferences.  
+- *Document translation* → translation of complete files (DOCX, PDF, TXT, HTML, etc.) while maintaining layout and formatting.  
+- *Custom translation* → training of custom AI models with glossaries and datasets specific to the industry or company.  
+- *Automatic language recognition* → automatically detects the source language before translation.
 
 The main components of the service are:
 
+- *Translator REST API* → main endpoint for sending text, receiving translations, or metadata (languages, glossaries).
+- *AI NMT Engine* → proprietary neural engine based on Transformer networks (similar to GPT) for contextual translations.
+- *Custom Translator* → portal + API for training models with custom datasets.
+- *Document translation API* → service dedicated to batch file translation (integration with Blob Storage).
 
 The service offers the following advantages:
+
+- *International expansion* → allows you to easily communicate with customers, suppliers, and citizens of different languages, enabling access to new markets or linguistic communities.
+- *Reduced translation time and costs* → automates the translation of texts, documents, and communications, reducing reliance on human translators and accelerating publication workflows.
+- *Multilingual process automation* → integrates translation directly into digital processes, eliminating manual tasks and downtime.
+- *Improved access to information and knowledge* → International content (reports, technical documents, studies) becomes immediately accessible in local languages.
+- *Accuracy thanks to neural translation models (NMT)* → Neural translation engines understand context and produce more natural-sounding texts than older statistical models.
+- *Multiformat support* → automatic translation of texts, documents (PDF, DOCX, HTML), and data streams in real time.
+- *Linguistic customization* → ability to train custom models with glossaries or corporate terminologies for more consistent translations.
+- *AI Model Updates* → Constantly updating the included neural models, improving accuracy and language support without manual intervention.
 
 ### AI Search - RAG
 
 #### Services Description
 
-
+AI Search-RAG is a system developed by Leonardo for automatically generating answers to user-generated questions using context and information from reliable data sources.
+It can be integrated into environments requiring a virtual assistant capable of responding using reliable, contextualized information.
+The system generates answers by first searching for relevant information or passages from a reliable external knowledge base using AGENTIC RAG (Retrieval-Augmented Generation) techniques.
+This service allows for better contextualization of the search, further improving the quality and accuracy of the generated answers compared to traditional text-based RAGs.
+AI Search allows individuals and organizations to quickly access relevant, contextualized information through a simple and intuitive graphical interface built on a chat model, improving efficiency and productivity through advanced intelligent search tools.
 
 #### Features and Advantages
 
 The service offers the following main features:
 
+- *Activation of the Big Data PaaS Data Lake service* → to meet object storage needs.
+- *Use of appropriately optimized Large Language Models and Embeddings* → to provide value to specific contexts and for specific users.
+- *User authentication* → integrates with existing security protocols.
+Understands natural language → provides coherent and complete answers, retrieving multimodal information from knowledge expressed as text and audio.
+Supports multilingual models
+- *Feedback collection* → after a query is resolved, AI Search collects user feedback
+- *Document segmentation by user*
 
 The main components of the service are:
 
+- *Model Repository* → at a minimum, a virtual assistant and an embedding model are required.
+- *Vector Database and Search Engine* → it uses a vector database that stores vector representations (embeddings) of the input data, allowing documents and information to be retrieved based on their meaning (semantic search). It also uses a traditional search engine (lexical search) that operates on text and metadata, performing searches based on keywords and structured criteria (e.g., BM25, FT-IDF).
+- *Document Manager* → responsible for retrieving documentation from a specific repository and indexing it in the vector database for use in user queries.  
+AI Search is composed of three layers:
+
+- *Data layer* → represents the database and the primary source of information.
+- *Analysis layer* → responsible for all processing, analysis, and generation of answers to user queries. It includes the Retriever and the Generator, responsible for retrieving the most relevant information and creating coherent and personalized responses, respectively.
+- *User layer* → interface through which the user interacts directly with the service, offering the ability to query the knowledge base, view answers with referenced sources, manage documents, and provide feedback.
 
 The service offers the following advantages:
+
+- *Access to up-to-date knowledge* → answers always based on the most recent internal and external documents.
+- *Reduced operational costs* → less time spent on manual searches and repetitive support.
+- *Improved customer/employee experience* → relevant, clear, personalized answers.
+- *Increased competitiveness* → leverages proprietary knowledge, not just public knowledge.
+- *Risk mitigation* → reduces errors and hallucinations, increasing the relevance of output to user questions.
+- *Upgradability without retraining *→ simply update the database/document repository, not the LLM.
+- *Hybrid vector search* → combines semantic search with traditional text search.
+- *Model efficiency* → LLM-based host model oversees activities and decisions and supervises other, simpler agents (LLM).
+- *Traceability and transparency* → sources cited to support the answer can be displayed.
+- *Bias reduction* → thanks to the indexing of the text on a vector DB, the LLM conductor will receive as input a context relevant to the questions asked by the users.
 
 ### AI Platform
 
@@ -1415,6 +1498,7 @@ The service offers the following main features:
 
 
 The main components of the service are:
+
 
 
 The service offers the following advantages:

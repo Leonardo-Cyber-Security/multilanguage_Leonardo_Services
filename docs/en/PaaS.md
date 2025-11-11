@@ -4,62 +4,64 @@ The following table lists the services included in the Platform as a Service (Pa
 
 | FAMILY                               | LIST OF SERVICES                                            |
 | ------------------------------------ | ----------------------------------------------------------- |
-| Compute                              | Functions as a Service                                      |
-| Security                             | Identity & Access Management Service                        |
-| Security                             | Key Vault as a Service - Standard                           |
-| Security                             | SIEM As A Service                                           |
-| Middleware                           | PaaS API Management                                         |
-| Middleware                           | Jboss as a Service                                          |
-| Middleware                           | Spring boot as a Service                                    |
-| Middleware                           | PaaS Business Process as a Service                          |
-| Middleware                           | PaaS CMS as a Service                                       |
-| Middleware                           | PaaS ETL - Batch / Real Time Processing - 1 worker          |
-| Infra & Ops Platform                 | Multicloud Management Platform                              |
-| Infra & Ops Platform                 | Control Room as a Service                                   |
-| Infra & Ops Platform                 | IT infrastructure Service Operations (Logging & Monitoring) |
-| Infra & Ops Platform                 | PaaS Ticket Management Service                              |
-| DevSecOps                            | Configuration Manager                                       |
-| DevSecOps                            | Test Automation                                             |
-| DevSecOps                            | Quality Code Analysis                                       |
-| DevSecOps                            | DevSecOps As A Service                                      |
-| DevSecOps                            | Qualizer DevSecOps                                          |
-| Big Data                             | Data Lake - 1TB                                             |
-| Big Data                             | Data Lakehouse                                              |
-| Big Data                             | Business Intelligence Platform                              |
-| Big Data                             | Batch/Real time Processing - 1 Worker                       |
-| Big Data                             | Event Message - 1 Worker                                    |
-| Big Data                             | Data Governance                                             |
-| Artificial Intelligence (AI)         | Speech to Text                                              |
-| Artificial Intelligence (AI)         | PaaS - AI Audio & Video Analytics                           |
-| Artificial Intelligence (AI)         | OCR                                                         |
-| Artificial Intelligence (AI)         | Text Analytics                                              |
-| Artificial Intelligence (AI)         | Translation                                                 |
-| Artificial Intelligence (AI)         | AI Search - RAG                                             |
-| Artificial Intelligence (AI)         | PaaS - AI Platform                                          |
-| Artificial Intelligence (AI)         | PaaS - Semantic Knowledge Search                            |
-| Artificial Intelligence (AI)         | AI SLM/LLM                                                  |
-| Artificial Intelligence (AI)         | AI workflow                                                 |
-| Artificial Intelligence (AI)         | Vector DB                                                   |
-| Virtual Desktop Infrastructure (VDI) | VDI                                                         |
-| Virtual Desktop Infrastructure (VDI) | VDI with GPU support                                        |
-| Collaboration                        | Instant Messaging                                           |
-| Database                             | PaaS SQL PostgreSQL                                         |
-| Database                             | PaaS SQL Server                                             |
-| Database                             | PaaS MongoDB                                                |
-| Database                             | PaaS Redis                                                  |
-| Database                             | PaaS Graph DB                                               |
-| Network                              | PaaS CDN (Content Delivery Network)                         |
-| Network                              | PaaS Domain Name System (DNS)                               |
-| Network                              | PaaS WAF (Web Application Firewall)                         |
-| Network                              | PaaS VPN                                                    |
-| Storage                              | Block Storage (1000 GB) - High Density                      |
+| Compute                              | [Functions as a Service](#faas)                                |                                   
+| Security                             | [Identity & Access Management Service](#IAM)|
+| Security                             | [Key Vault as a Service - Standard](#key-vault)                           |
+| Security                             | [SIEM As A Service](#SIEM)                                           |
+| Middleware                           | [PaaS API Management](#API)                                         |
+| Middleware                           | [Jboss as a Service](#Jboss)                                          |
+| Middleware                           | [Spring boot as a Service](#spring-boot)                                    |
+| Middleware                           | [PaaS Business Process as a Service](#BPM)                          |
+| Middleware                           | [PaaS CMS as a Service](#CMS)                                       |
+| Middleware                           | [PaaS ETL - Batch / Real Time Processing - 1 worker](#ETL)          |
+| Infra & Ops Platform                 | [Multicloud Management Platform](#SCMP)                              |
+| Infra & Ops Platform                 | [Control Room as a Service](#control-room)                                   |
+| Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](#ITops) |
+| Infra & Ops Platform                 | [PaaS Ticket Management Service](#ITSM)                              |
+| DevSecOps                            | [Configuration Manager](#config)                                       |
+| DevSecOps                            | [Test Automation](#test)                                             |
+| DevSecOps                            | [Quality Code Analysis](#quality)                                       |
+| DevSecOps                            | [DevSecOps As A Service](#devsecops)                                      |
+| DevSecOps                            | [Qualizer DevSecOps](#qualizer)                                          |
+| Big Data                             | [Data Lake - 1TB](#datalake)                                             |
+| Big Data                             | [Data Lakehouse](#datalakehouse)                                              |
+| Big Data                             | [Business Intelligence Platform](#BI)                              |
+| Big Data                             | [Batch/Real time Processing - 1 Worker](#processing)                       |
+| Big Data                             | [Event Message - 1 Worker](#event-message)                                    |
+| Big Data                             | [Data Governance](#governance)                                             |
+| Artificial Intelligence (AI)         | [Speech to Text](#speech-to-text)                                              |
+| Artificial Intelligence (AI)         | [PaaS - AI Audio & Video Analytics](#AI-audio-video)                           |
+| Artificial Intelligence (AI)         | [OCR](#AI-OCR)                                                          |
+| Artificial Intelligence (AI)         | [Text Analytics](#AI-text)                                              |
+| Artificial Intelligence (AI)         | [Translation](#AI-translation)                                                 |
+| Artificial Intelligence (AI)         | [AI Search - RAG](#AI-search)                                             |
+| Artificial Intelligence (AI)         | [PaaS - AI Platform](#AI-platform)                                          |
+| Artificial Intelligence (AI)         | [PaaS - Semantic Knowledge Search](#AI-semantic-search)                            |
+| Artificial Intelligence (AI)         | [AI SLM/LLM](#AI-SLM-LLM)                                                  |
+| Artificial Intelligence (AI)         | [AI workflow](#AI-workflow)                                                 |
+| Artificial Intelligence (AI)         | [AI Vector DB](#AI-vectorDB)                                                   |
+| Virtual Desktop Infrastructure (VDI) | [VDI](#VDI)                                                         |
+| Virtual Desktop Infrastructure (VDI) | [VDI with GPU support](#VDI-GPU)                                        |
+| Collaboration                        | [Instant Messaging](#messaging)                                           |
+| Database                             | [PaaS SQL PostgreSQL](#postgres)                                         |
+| Database                             | [PaaS SQL Server](#sql-server)                                             |
+| Database                             | [PaaS MongoDB](#mongoDB)                                                |
+| Database                             | [PaaS Redis](#redis)                                                  |
+| Database                             | [PaaS Graph DB](#graphDB)                                               |
+| Network                              | [PaaS CDN (Content Delivery Network)](#CDN)                         |
+| Network                              | [PaaS Domain Name System (DNS)](#DNS)                               |
+| Network                              | [PaaS WAF (Web Application Firewall)](#WAF)                         |
+| Network                              | [PaaS VPN](#VPN)                                                    |
+| Storage                              | [Block Storage (1000 GB) - High Density](#block-storage)                      |
 <figcaption>List of families and related PaaS services</figcaption>
 
 ## Compute Family
 
 Below is the list of services belonging to the Compute family:
 
-- Functions as a Service
+- [Functions as a Service](#faas)
+
+<a id="faas"></a>
 
 ### Functions as a Service
 
@@ -105,8 +107,11 @@ Competitive advantage in cost and speed compared to traditional hosting models.
 
 Below is the list of services belonging to the Security family:
 
-- Identity & Access Management Service
-- Key Vault as a Service
+- [Identity & Access Management Service](#IAM)
+- [Key Vault as a Service - Standard](#key-vault)
+- [SIEM As A Service](#SIEM)
+
+<a id="IAM"></a>
 
 ### Identity & Access Management Service
 
@@ -159,6 +164,8 @@ The service offers the following advantages:
 - *Agility and Scalability* → Increased speed of onboarding new applications thanks to the use of standard protocols (OIDC, SAML, OAuth2).
 - *Maintainability and Standardization* → Use of standard protocols (OIDC, SAML, OAuth2) that eliminate proprietary implementations and facilitate interoperability.
 
+<a id="key-vault"></a>
+
 ### Key Vault as a Service
 
 ![Key Vault as a Service](assets/images/extract/media/KeyVault.png)
@@ -196,17 +203,28 @@ The service offers the following advantages:
 - *Improved trust and reputation* → audit and traceability to demonstrate secure secret management to stakeholders or customers.
 - *Cryptographic and standardized compliance* → can be configured to use FIPS (Federal Information Processing Standards) validated cryptographic modules, ensuring that all encryption, signing, HMAC and key derivation operations comply with the standards.
 
+<a id="SIEM"></a>
+
+### SIEM As A Service
+
+![SIEM As A Service](assets/images/extract/media/SIEM.png)
+
+#### Services Description
+
+#### Features and Advantages
+
 ## Middleware Family
 
 Below is the list of services belonging to the Middleware family:
 
-- PaaS API Management
-- Jboss as a Service
-- Spring boot as a Service
-- PaaS Business Process as a Service
-- PaaS CMS as a Service
-- PaaS ETL - Batch / Real Time Processing - 1 worker
+- [PaaS API Management](#API)
+- [Jboss as a Service](#Jboss)
+- [Spring boot as a Service](#spring)
+- [PaaS Business Process as a Service](#BPM)
+- [PaaS CMS as a Service](#CMS)
+- [PaaS ETL - Batch / Real Time Processing - 1 worker](#ETL)
 
+<a id="API"></a>
 ### PaaS API Management
 
 ![PaaS API Management](assets/images/extract/media/API.png)
@@ -250,6 +268,8 @@ The service offers the following advantages:
 - *Enhanced security and compliance* → secure management of APIs and traffic between services, with authentication, authorization, and rate limiting policies, protecting the infrastructure from unauthorized access.
 - *Open ecosystem* → Facilitates partnerships and innovation thanks to an API-ready and standardized infrastructure.
 
+<a id="Jboss"></a>
+
 ### Jboss as a Service
 
 ![Jboss As A Service](assets/images/extract/media/JBoss.png)
@@ -284,6 +304,8 @@ The service offers the following advantages:
 - *Security posture* → security policies can be defined and applied consistently across all applications, reducing risk and ensuring regulatory compliance.
 - *Faster innovation* → management tools (CLI, Web Console, REST API) and automated deployment and configuration processes reduce the operational burden on IT teams.
 - *DevOps integration* → integrated CI/CD pipelines for build and deployment.
+
+<a id="spring-boot"></a>
 
 ### Spring boot as a Service
 
@@ -325,6 +347,8 @@ The service offers the following advantages:
 - *Environment consistency* → Same environments for development, testing, and production.
 - *Microservices support* → Simplified management of distributed architectures.
 
+<a id="BPM"></a>
+
 ### Business Process as a Service
 
 ![Business Process as a Service](assets/images/extract/media/BPM.png)
@@ -362,6 +386,8 @@ The service offers the following advantages:
 - *Compliance and auditability* → complete traceability for audits and regulatory compliance. Every step and decision is documented, facilitating internal controls and regulatory compliance
 - *Monitoring and observability* → integrated dashboards and analytics.
 
+<a id="CMS"></a>
+
 ### Content Management Systems (CMS) as a Service
 
 ![Content Management Systems (CMS) as a Service](assets/images/extract/media/CMS.png)
@@ -395,6 +421,8 @@ The service offers the following advantages:
 - *Continuous innovation at no additional cost* → new features released by the provider.
 - *Native integration with cloud services* (CRM, analytics, AI, CDN).
 - *Front-end/back-end separation* → freedom to use modern frameworks (React, Vue, Angular, etc.).
+
+<a id="ETL"></a>
 
 ### PaaS ETL - Batch / Real Time Processing
 
@@ -437,16 +465,16 @@ The service offers the following advantages:
 
 Below is the list of services belonging to the Infra & Ops Platform family:
 
-- Multicloud Management Platform - Leonardo SCMP
-- Control Room as Service
-- IT infrastructure Service Operations (Logging & Monitoring)
-- PaaS Ticket Management Service
-- PaaS Ticket Management Service (ITSM)
-- PaaS Ticket Management Service (ADD-ON ITOM)
+- [Multicloud Management Platform](#SCMP)
+- [Control Room as Service](#control-room)
+- [IT infrastructure Service Operations (Logging & Monitoring)](#ITops)
+- [PaaS Ticket Management Service](#ITSM)
 
-### Multicloud Management Platform - Leonardo Secure Cloud Management Platform (SCMP)
+<a id="SCMP"></a>
 
-![Multicloud Management Platform - Leonardo Secure Cloud Management Platform (SCMP)](assets/images/extract/media/SCMP.png)
+### Multicloud Management Platform
+
+![Leonardo Secure Cloud Management Platform (SCMP)](assets/images/extract/media/SCMP.png)
 
 #### Services Description
 
@@ -492,6 +520,8 @@ The service offers the following advantages:
 - *Improves the reliability of services and processes *→ governance, security, and compliance policies can be centrally managed, ensuring that Resources are protected and regulations are complied with.
 - *IT Operations Support* → can be integrated with IT service management (ITSM) and IT operations automation tools (such as Ansible, Chef, SaltStack), improving service quality and reducing manual errors.
 
+<a id="control-room"></a>
+
 ### Control Room as Service
 
 ![Control Room as Service](assets/images/extract/media/X2030.png)
@@ -532,6 +562,8 @@ The service offers the following advantages:
 - *Shorter problem resolution time *→ thanks to the details provided (tracing, distributed diagnosis, code, database, and network visibility).
 - *Automation and artificial intelligence* → automatic recognition of patterns or anomalies (e.g., through video analytics or generative AI), automatic generation of intervention or escalation plans, improving forecasting and response capabilities over time.
 - *Traceability and reporting* → complete recording of events, decisions, and actions taken.
+
+<a id="ITops"></a>
 
 ### IT infrastructure Service Operations (Logging & Monitoring)
 
@@ -575,6 +607,8 @@ Improved user experience → user session monitoring, frontend/backend performan
 - *Continuous infrastructure monitoring*
 - *Built-in governance and security capabilities* → policies, vulnerability visibility, runtime monitoring, compliance.
 - *Scalability and high availability* → resilient infrastructure, automatic failovers, and multi-zone deployment in secure clouds to ensure always-on reliability.
+
+<a id="ITSM"></a>
 
 ### PaaS Ticket Management Service
 
@@ -620,15 +654,17 @@ Increased support team productivity → thanks to workflow automation, the use o
 
 Below is the list of services belonging to the  DevSecOps family:
 
-- Configuration Manager
-- Test Automation
-- Quality Code Analysis
-- DevSecOps As A Service
-- Qualizer DevSecOps
+- [Configuration Manager](#config)
+- [Test Automation](#test)
+- [Quality Code Analysis](#quality)
+- [DevSecOps As A Service](#devsecops)
+- [Qualizer DevSecOps](#qualizer)
+
+<a id="config"></a>
 
 ### Configuration Manager
 
-![Configuration Manager Service)](assets/images/extract/media/Config.png)
+![Configuration Manager Service](assets/images/extract/media/Config.png)
 
 #### Services Description
 
@@ -667,9 +703,11 @@ The service offers the following advantages:
 - *Distributed scalability* → job execution can be distributed across multiple nodes, improving performance and resilience.
 - *Complete visibility and traceability* → dashboards and analytical reports allow you to monitor the effectiveness of automations and resource usage.
 
+<a id="test"></a>
+
 ### Test Automation
 
-![Test Automation Service)](assets/images/extract/media/Test.png)
+![Test Automation Service](assets/images/extract/media/Test.png)
 
 #### Services Description
 
@@ -712,9 +750,11 @@ The service offers the following advantages:
 - *Controlled scalability* → assigned resources can be scaled horizontally or vertically to meet performance and operational needs.
 - *Multi-platform support* (Web, Mobile, Mainframe, API, Enterprise systems).
 
+<a id="quality"></a>
+
 ### Quality Code Analysis
 
-![Quality Code Analysis Service)](assets/images/extract/media/Quality.png)
+![Quality Code Analysis Service](assets/images/extract/media/Quality.png)
 
 #### Services Description
 
@@ -755,9 +795,11 @@ The service offers the following advantages:
 - *Improved software quality* → through the systematic application of quality rules, the service helps improve code maintainability and readability.
 Technical debt management → estimate the time to fix issues.
 
+<a id="devsecops"></a>
+
 ### DevSecOps As A Service
 
-![DevSecOps As A Service)](assets/images/extract/media/DevSecOps.png)
+![DevSecOps As A Service](assets/images/extract/media/DevSecOps.png)
 
 #### Services Description
 
@@ -796,9 +838,11 @@ The service offers the following advantages:
 - *Foster collaboration between technical and project teams*.
 - *Increase team productivity* through process automation.
 
+<a id="qualizer"></a>
+
 ### Qualizer DevSecOps
 
-![DevSecOps As A Service)](assets/images/extract/media/Qualizer.png)
+![Qualizer DevSecOps Service](assets/images/extract/media/Qualizer.png)
 
 #### Services Description
 
@@ -840,16 +884,18 @@ The service offers the following advantages:
 
 Below is the list of services belonging to the Big Data family:
 
-- Data Lake - 1TB
-- Data Lakehouse
-- Business Intelligence
-- Batch/Real time Processing - 1 Worker
-- Event Message
-- Data Governance
+- [Data Lake - 1TB](#datalake)
+- [Data Lakehouse](#datalakehouse)
+- [Business Intelligence](#BI)
+- [Batch/Real time Processing - 1 Worker](#processing)
+- [Event Message](#event-message)
+- [Data Governance](#governance)
+
+<a id="datalake"></a>
 
 ### Data Lake - 1TB
 
-![Data Lake Service)](assets/images/extract/media/DataLakeLDO.png)
+![Data Lake Service](assets/images/extract/media/DataLakeLDO.png)
 
 #### Services Description
 
@@ -881,9 +927,11 @@ The service offers the following advantages:
 - *Interoperability* → S3 API compatibility allows for easy integration of existing applications. Supports multi-protocol access.
 - *Automation and DevOps-friendly* → it enables continuous updates without downtime and simplified backup management.
 
+<a id="datalakehouse"></a>
+
 ### Data Lakehouse
 
-![Data Lake Service)](assets/images/extract/media/DataLakehouse.png)
+![Data Lakehouse Service](assets/images/extract/media/DataLakehouse.png)
 
 #### Services Description
 
@@ -921,9 +969,11 @@ The service offers the following advantages:
 - *Interoperability* → S3 API compatibility allows for easy integration of existing applications. Supports multi-protocol access.
 - *Automation and DevOps-friendly* → it enables continuous updates without downtime and simplified backup management.
 
+<a id="BI"></a>
+
 ### Business Intelligence
 
-![Data Lakehouse Service)](assets/images/extract/media/BI.png)
+![Business Intelligence Service](assets/images/extract/media/BI.png)
 
 #### Services Description
 
@@ -974,9 +1024,11 @@ The service offers the following advantages:
 - *Security, governance, and compliance* → Features such as encryption and auditing support access control and compliance.
 Infrastructure scalability and flexibility.
 
+<a id="processing"></a>
+
 ### Batch/Real time Processing - 1 Worker
 
-![Batch/Real time Processing Service)](assets/images/extract/media/Processing.png)
+![Batch/Real time Processing Service](assets/images/extract/media/Processing.png)
 
 ##### Services Description
 
@@ -1011,9 +1063,11 @@ The service offers the following advantages:
 - *Guaranteed security and compliance* (encryption, access, audit logs).
 - *Integrated monitoring* → metrics, alerts, and centralized logging for ETL pipelines.
 
+<a id="event-message"></a>
+
 ### Event Message
 
-![Event Message Service)](assets/images/extract/media/Event.png)
+![Event Message Service](assets/images/extract/media/Event.png)
 
 #### Services Description
 
@@ -1056,9 +1110,11 @@ The service offers the following advantages:
 - *Optimized Performance and Latency* → Compression, batching, and automatic topic management improve performance
 - *Security and Compliance* → Authentication, authorization, and encryption in transit and at rest are managed by the provider.
 
+<a id="governance"></a>
+
 ### Data Governance
 
-![Data Governance Service)](assets/images/extract/media/Governance.png)
+![Data Governance Service](assets/images/extract/media/Governance.png)
 
 #### Services Description
 
@@ -1103,21 +1159,23 @@ The service offers the following advantages:
 
 Below is the list of services belonging to the Artificial Intelligence (AI) family:
 
-- Speech to Text
-- AI Audio & Video Analytics
-- OCR
-- Text Analytics
-- Text Translation
-- AI Search - RAG
-- AI Platform
-- Semantic Knowledge Search
-- AI SLM/LLM
-- AI workflow
-- Vector DB
+- [Speech to Text](#speech-to-text)
+- [AI Audio & Video Analytics](#AI-audio-video)
+- [OCR](#AI-OCR)
+- [Text Analytics](#AI-text)
+- [Text Translation](#AI-translation)
+- [AI Search - RAG](#AI-search)
+- [AI Platform](#AI-platform)
+- [Semantic Knowledge Search](#AI-semantic-search)
+- [AI SLM/LLM](#AI-SLM-LLM)
+- [AI workflow](#AI-workflow)
+- [Vector DB](#AI-vectorDB)
+
+<a id="speech-to-text"></a>
 
 ### Speech to Text
 
-![Speech to Text Service)](assets/images/extract/media/STT.png)
+![Speech to Text Service](assets/images/extract/media/STT.png)
 
 #### Services Description
 
@@ -1164,9 +1222,11 @@ The service offers the following advantages:
 - *Multimodal AI support* → can be combined with Text Analytics, Translation, and Text-to-Speech services to create complete speech pipelines (e.g., transcription + translation + synthesis).
 - *Service scalability* → allows you to simultaneously manage thousands of speech streams by providing and managing the necessary infrastructure.
 
+<a id="AI-audio-video"></a>
+
 ### AI Audio & Video Analytics
 
-![AI Audio & Video Analytics Service)](assets/images/extract/media/AudioVideo.png)
+![AI Audio & Video Analytics Service](assets/images/extract/media/AudioVideo.png)
 
 #### Services Description
 
@@ -1208,9 +1268,11 @@ The service offers the following advantages:
 - *Integrated security and privacy* → stream encryption, access control.
 - *Operational monitoring and insights*.
 
+<a id="AI-OCR"></a>
+
 ### Optical Character Recognition (OCR)
 
-![Optical Character Recognition (OCR) Service)](assets/images/extract/media/OCR.png)
+![Optical Character Recognition (OCR) Service](assets/images/extract/media/OCR.png)
 
 #### Services Description
 
@@ -1269,9 +1331,11 @@ The service offers the following advantages:
 - *Real-time and batch processing* → Analysis of live streaming or recorded multimedia archives, thanks to the integration of Processing PaaS.
 - *Managed maintenance and updates* → the infrastructure, security, and updates of AI models are managed.
 
+<a id="AI-text"></a>
+
 ### Text Analytics
 
-![Text Analytics Service)](assets/images/extract/media/Text.png)
+![Text Analytics Service](assets/images/extract/media/Text.png)
 
 #### Services Description
 
@@ -1315,9 +1379,11 @@ The service offers the following advantages:
 - *Faster time to market* → simple integration via API with third-party systems and applications.
 - *Multilingualism and semantic support* → understands meanings, synonyms, and context (not just keywords).
 
+<a id="AI-translation"></a>
+
 ### Text Translation
 
-![Text Analytics Service)](assets/images/extract/media/Translation.png)
+![Text Analytics Service](assets/images/extract/media/Translation.png)
 
 #### Services Description
 
@@ -1356,9 +1422,11 @@ The service offers the following advantages:
 - *Linguistic customization* → ability to train custom models with glossaries or corporate terminologies for more consistent translations.
 - *AI Model Updates* → Constantly updating the included neural models, improving accuracy and language support without manual intervention.
 
+<a id="AI-search"></a>
+
 ### AI Search - RAG
 
-![AI Search - RAG Service)](assets/images/extract/media/AIsearch.png)
+![AI Search - RAG Service](assets/images/extract/media/AIsearch.png)
 
 #### Services Description
 
@@ -1404,9 +1472,11 @@ The service offers the following advantages:
 - *Traceability and transparency* → sources cited to support the answer can be displayed.
 - *Bias reduction* → thanks to the indexing of the text on a vector DB, the LLM conductor will receive as input a context relevant to the questions asked by the users.
 
+<a id="AI-platform"></a>
+
 ### AI Platform
 
-![AI Platform Service)](assets/images/extract/media/AIplatform.png)
+![AI Platform Service](assets/images/extract/media/AIplatform.png)
 
 #### Services Description
 
@@ -1449,9 +1519,11 @@ The service offers the following advantages:
 - *Integrated monitoring and logging* → training metrics, logs, and results are tracked to easily diagnose convergence or overfitting issues.
 - *Simplified deployment* → creating Docker images for model inference allows for simplified deployment to any target system.
 
+<a id="AI-semantic"></a>
+
 ### Semantic Knowledge Search
 
-![Semantic Knowledge Search Service)](assets/images/extract/media/Semantic.png)
+![Semantic Knowledge Search Service](assets/images/extract/media/Semantic.png)
 
 #### Services Description
 
@@ -1491,9 +1563,11 @@ The service offers the following advantages:
 - *Multi-source integration* → Semantic Knowledge Search PaaS allows you to connect structured and unstructured data from multiple sources and supports standard connectors (REST API).
 - *Managed security and compliance* → authentication, authorization, and encryption are integrated into the service.
 
+<a id="AI-SLM-LLM"></a>
+
 ### AI SLM/LLM
 
-![AI SLM/LLM Services)](assets/images/extract/media/LLM.png)
+![AI SLM/LLM Services](assets/images/extract/media/LLM.png)
 
 #### Services Description
 
@@ -1537,9 +1611,11 @@ The service offers the following advantages:
 -* Rapid prototyping and DevOps AI* → ready-to-use environment for developing, testing, and deploying applications through standard interfaces.
 - *Multi-model and hybrid AI* → ability to combine open source and proprietary models in the same ecosystem.
 
+<a id="AI-workflow"></a>
+
 ### AI workflow
 
-![AI workflow Service)](assets/images/extract/media/AIworkflow.png)
+![AI workflow Service](assets/images/extract/media/AIworkflow.png)
 
 #### Services Description
 
@@ -1580,9 +1656,11 @@ The service offers the following advantages:
 - *Automated updates and maintenance* → patch management, version updates, and library dependencies without interrupting active workflows.
 - *Reduced deployment complexity* → models and flows can be quickly deployed as microservices or REST APIs, eliminating the need for manual DevOps.
 
+<a id="AI-vectorDB"></a>
+
 ### Vector DB
 
-![Vector DB Service)](assets/images/extract/media/Vector.png)
+![Vector DB Service](assets/images/extract/media/Vector.png)
 
 #### Services Description
 
@@ -1632,12 +1710,14 @@ Improved productivity, faster decisions, and reduced search time → by enabling
 
 Below is the list of services belonging to the Virtual Desktop Infrastructure (VDI) family:
 
-- VDI
-- VDI with GPU support
+- [VDI](#VDI)
+- [VDI with GPU support](#VDI-GPU)
+
+<a id="VDI"></a>
 
 ### VDI
 
-![VDI Service)](assets/images/extract/media/VDI.png)
+![VDI Service](assets/images/extract/media/VDI.png)
 
 #### Services Description
 
@@ -1676,10 +1756,11 @@ The service offers the following advantages:
 - *Scalability* → easily add/remove users and resources as needed.
 - *Cross-platform compatibility* → Windows, Linux, macOS, iOS, Android, browsers.
 
+<a id="VDI-GPU"></a>
 
 ### VDI with GPU support
 
-![VDI with GPU support Service)](assets/images/extract/media/VDI.png)
+![VDI with GPU support Service](assets/images/extract/media/VDI.png)
 
 #### Services Description
 
@@ -1709,11 +1790,13 @@ The service offers the following advantages:
 
 Below is the list of services belonging to the Collaboration family:
 
-- Instant Messaging
+- [Instant Messaging](#messaging)
+
+<a id="messaging"></a>
 
 ### Instant Messaging
 
-![Instant Messaging Service)](assets/images/extract/media/IM.png)
+![Instant Messaging Service](assets/images/extract/media/IM.png)
 
 #### Services Description
 

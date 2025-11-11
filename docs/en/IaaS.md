@@ -4,23 +4,26 @@ The following table lists the services falling under the Infrastructure as a Ser
 
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Compute |[Pool Small (Confidential)](#pool-confidential-services)<br>[Pool Medium (Confidential)](#pool-confidential-services)<br>[Pool Large (Confidential)](#pool-confidential-services)<br>[Pool X-Large (Confidential)](#pool-confidential-services)|
+| Compute | [Private IaaS (Confidential)](#pool-confidential-services)|
+| Compute | [VMs IaaS (Confidential)](#VM)|
 <figcaption>List of families and related IaaS services</figcaption>
 
 ## Compute Family
 
 Below is the list of services belonging to the Compute family:
 
-- Pool Small (Confidential)
-- Pool Medium (Confidential)
-- Pool Large (Confidential)
-- Pool X-Large (Confidential)
+- [Private IaaS (Confidential)](#pool-confidential-services)
+    - Pool Small
+    - Pool Medium
+    - Pool Large
+    - Pool X-Large
+- [VMs IaaS (Confidential)](#VM)
 
 <a id="pool-confidential-services"></a>
 
-### Pool Confidential Services
+### Private IaaS (Confidential)
 
-![Pool Confidential Services](assets/images/extract/media/iaasprivate.png)
+![Private IaaS (Confidential) Services](assets/images/extract/media/iaasprivate.png)
 
 #### Services Description
 
@@ -42,3 +45,7 @@ The services offer the following advantages:
 - *Dedicated firewalls and network micro-segmentation*.
 - *Automated provisioning and rapid resource management*.
 - *Comprehensive control and centralized governance*: centralized monitoring and auditing for traceability.
+
+<a id="VM"></a>
+
+### VMs IaaS (Confidential) Services

@@ -6,15 +6,15 @@ The following table lists the services included in the Platform as a Service (Pa
 | ------------------------------------ | ----------------------------------------------------------- |
 | Compute                              | Functions as a Service                                      |
 | Security                             | Identity & Access Management Service                        |
-| Security                             | Key Vault as a Service                                      |
-| Security                             | SIEM as a Service                                           |
-| Middleware                           | API Management                                              |
+| Security                             | Key Vault as a Service - Standard                           |
+| Security                             | SIEM As A Service                                           |
+| Middleware                           | PaaS API Management                                         |
 | Middleware                           | Jboss as a Service                                          |
 | Middleware                           | Spring boot as a Service                                    |
-| Middleware                           | Business Process as a Service                               |
-| Middleware                           | Content Management Systems (CMS) as a Service               |
-| Middleware                           | PaaS ETL - Batch / Real Time Processing                     |
-| Infra & Ops Platform                 | Multicloud Management Platform-Leonardo SCMP                |
+| Middleware                           | PaaS Business Process as a Service                          |
+| Middleware                           | PaaS CMS as a Service                                       |
+| Middleware                           | PaaS ETL - Batch / Real Time Processing - 1 worker          |
+| Infra & Ops Platform                 | Multicloud Management Platform                              |
 | Infra & Ops Platform                 | Control Room as a Service                                   |
 | Infra & Ops Platform                 | IT infrastructure Service Operations (Logging & Monitoring) |
 | Infra & Ops Platform                 | PaaS Ticket Management Service                              |
@@ -23,33 +23,36 @@ The following table lists the services included in the Platform as a Service (Pa
 | DevSecOps                            | Quality Code Analysis                                       |
 | DevSecOps                            | DevSecOps As A Service                                      |
 | DevSecOps                            | Qualizer DevSecOps                                          |
-| Big Data                             | Data Lake                                                   |
+| Big Data                             | Data Lake - 1TB                                             |
 | Big Data                             | Data Lakehouse                                              |
-| Big Data                             | Business Intelligence                                       |
-| Big Data                             | Batch/Real time Processing                                  |
-| Big Data                             | Event Message                                               |
+| Big Data                             | Business Intelligence Platform                              |
+| Big Data                             | Batch/Real time Processing - 1 Worker                       |
+| Big Data                             | Event Message - 1 Worker                                    |
 | Big Data                             | Data Governance                                             |
 | Artificial Intelligence (AI)         | Speech to Text                                              |
-| Artificial Intelligence (AI)         | AI Audio & Video Analytics                                  |
-| Artificial Intelligence (AI)         | Optical Character Recognition (OCR)                         |
+| Artificial Intelligence (AI)         | PaaS - AI Audio & Video Analytics                           |
+| Artificial Intelligence (AI)         | OCR                                                         |
 | Artificial Intelligence (AI)         | Text Analytics                                              |
-| Artificial Intelligence (AI)         | Text Translation                                            |
+| Artificial Intelligence (AI)         | Translation                                                 |
 | Artificial Intelligence (AI)         | AI Search - RAG                                             |
-| Artificial Intelligence (AI)         | AI Platform                                                 |
-| Artificial Intelligence (AI)         | Semantic Knowledge Search                                   |
+| Artificial Intelligence (AI)         | PaaS - AI Platform                                          |
+| Artificial Intelligence (AI)         | PaaS - Semantic Knowledge Search                            |
 | Artificial Intelligence (AI)         | AI SLM/LLM                                                  |
 | Artificial Intelligence (AI)         | AI workflow                                                 |
 | Artificial Intelligence (AI)         | Vector DB                                                   |
 | Virtual Desktop Infrastructure (VDI) | VDI                                                         |
 | Virtual Desktop Infrastructure (VDI) | VDI with GPU support                                        |
 | Collaboration                        | Instant Messaging                                           |
+| Database                             | PaaS SQL PostgreSQL                                         |
+| Database                             | PaaS SQL Server                                             |
 | Database                             | PaaS MongoDB                                                |
 | Database                             | PaaS Redis                                                  |
 | Database                             | PaaS Graph DB                                               |
 | Network                              | PaaS CDN (Content Delivery Network)                         |
 | Network                              | PaaS Domain Name System (DNS)                               |
 | Network                              | PaaS WAF (Web Application Firewall)                         |
-| Network                              | PaaS Gateway VPN                                            |
+| Network                              | PaaS VPN                                                    |
+| Storage                              | Block Storage (1000 GB) - High Density                      |
 <figcaption>List of families and related PaaS services</figcaption>
 
 ## Compute Family

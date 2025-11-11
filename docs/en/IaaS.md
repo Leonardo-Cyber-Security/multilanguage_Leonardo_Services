@@ -4,10 +4,8 @@ The following table lists the services falling under the Infrastructure as a Ser
 
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Compute | Pool Small (Confidential)<br>Pool Medium (Confidential)<br>Pool Large (Confidential)<br>Pool X-Large (Confidential) |
+| Compute |[Pool Small (Confidential)](#pool-confidential-services)<br>[Pool Medium (Confidential)](#pool-confidential-services)<br>[Pool Large (Confidential)](#pool-confidential-services)<br>[Pool X-Large (Confidential)](#pool-confidential-services)|
 <figcaption>List of families and related IaaS services</figcaption>
-
-<a id="compute-family"></a>
 
 ## Compute Family
 
@@ -44,6 +42,3 @@ The services offer the following advantages:
 - *Dedicated firewalls and network micro-segmentation*.
 - *Automated provisioning and rapid resource management*.
 - *Comprehensive control and centralized governance*: centralized monitoring and auditing for traceability.
-
-[Link a Compute Family](#compute-family)
-[Link a Pool Confidential Services](#pool-confidential-services)

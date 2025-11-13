@@ -7,7 +7,7 @@ The following table lists the services included in the Platform as a Service (Pa
 | Compute                              | [Functions as a Service](#faas)                                |                                   
 | Security                             | [Identity & Access Management Service](#IAM)|
 | Security                             | [Key Vault as a Service - Standard](#key-vault)                           |
-| Security                             | [End point protection](#endpoint)                                           |
+| Security                             | [Endpoint Protection](#endpoint)                                           |
 | Security                             | [Advanced security and protection service for files and data](#file-data)                                           |
 | Security                             | [Automated Penetration Testing Services](#PT)                                           |
 | Security                             | [Mail security & ransomware protection service](#mail)                                           |
@@ -24,7 +24,7 @@ The following table lists the services included in the Platform as a Service (Pa
 | Middleware                           | [PaaS CMS as a Service](#CMS)                                       |
 | Middleware                           | [PaaS ETL - Batch / Real Time Processing - 1 worker](#ETL)          |
 | Middleware                           | [Semantic Knowledge Search - 1 worker](#semantic-search)                            |
- Data Protection                          | [Backup - PLATFORM](#backup)                            |
+|  Data Protection                          | [Backup - PLATFORM](#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](#SCMP)                              |
 | Infra & Ops Platform                 | [Control Room as a Service](#control-room)                                   |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](#ITops) |
@@ -225,23 +225,53 @@ The service offers the following advantages:
 
 <a id="endpoint"></a>
 
-### End point protection Service
+### Endpoint Protection Service
 
-![End point protection Service Overview](assets/images/extract/media/.png)
+![Endpoint Protection Service Overview](assets/images/extract/media/.png)
 
 #### Services Description
 
-
+The Endpoint protection service offers comprehensive protection for endpoint devices against malware, ransomware, and other threats, including antivirus, firewall, and application control capabilities.  
+The service aims to provide the customer with an EPP platform for multi-layered protection of their endpoint devices, with capabilities to prevent, detect, and respond to cyber threats targeting those devices, including antivirus, anti-malware, personal firewall, web protection, application control, and patch management.  
+The service provides a cloud-delivered, scalable, and centrally managed solution designed to protect customer endpoint devices from a broad spectrum of cyber threats.  
+The service is delivered as a managed PaaS solution, offering continuous protection and simplified administration for organizations seeking robust endpoint security without the overhead of managing on-premise security infrastructures.
 
 #### Features and Advantages
 
-The main features and functionalities of the service are:
+The Endpoint Protection service offers a full suite of integrated security functions aimed at ensuring endpoint resilience and threat visibility across the organization:
+
+- *Antivirus and anti-Malware protection* → continuous real-time scanning, heuristic analysis, and signature-based detection to identify and block known and emerging threats.
+- *Behavioral and threat analysis* → advanced behavioral monitoring and threat intelligence integration to detect and mitigate unknown or zero-day attacks.
+- Personal firewall → endpoint-level firewall providing granular control over inbound and outbound network connections, preventing unauthorized access and lateral movement.
+- Web protection and URL filtering → protects users from malicious or fraudulent websites by evaluating URLs and blocking access to unsafe domains.
+- *Application control* → allows administrators to define and enforce policies for approved and restricted applications, reducing the risk of untrusted software execution
+- Patch and vulnerability management → automates the identification, prioritization, and deployment of patches and updates for operating systems and third-party applications.
+- *Centralized management console* → offers unified visibility and control over all protected endpoints, enabling configuration management, alert handling, policy enforcement, and reporting from a single interface.
+- *Incident Detection and Response (EDR Integration)* → provides integration capabilities with Endpoint Detection and Response tools to enhance investigation and automated remediation processes.
+- *Reporting and compliance monitoring* → delivers customizable reports and dashboards to support compliance with organizational and regulatory security standards.
 
 The main components of the service are:
 
+- *Endpoint Agent* → a lightweight client installed on each endpoint device that performs local threat detection, policy enforcement, and communication with the management server.
+*Management and control console* → the central administrative interface, hosted within the PaaS environment, responsible for policy management, configuration, event correlation, and reporting.
+- *Threat intelligence service* → continuously updated databases and analytics engines that provide real-time intelligence on emerging threats, indicators of compromise (IoCs), and reputation data.
+- *Policy management module* → defines and distributes security configurations and operational rules across endpoint agents, ensuring uniform protection and compliance.
+- *Update and Patch Repository* → centralized repository for antivirus signatures, security updates, and software patches, ensuring endpoints are continuously updated with the latest protection mechanisms.
+*Event correlation and logging module* → collects and analyzes security events from all endpoints, correlating data to detect anomalies and trigger automated responses when threats are identified.
+*Integration and API layer* → enables interoperability with other PSN security services (such as SIEM, SOC, or IAM systems) for advanced monitoring, alerting, and orchestration.
+
 The service offers the following advantages:
 
-
+- *Comprehensive, multi-Layered protection* → combines antivirus, anti-malware, firewall, web protection, and application control for complete endpoint security coverage.
+- *Centralized management and visibility* → a unified management console provides real-time visibility across all endpoints, simplifying administration and reducing operational complexity.
+- *Continuous updates and threat intelligence* → the service is continuously updated with the latest threat intelligence feeds, ensuring protection against emerging and zero-day threats.
+- *Automated patch and vulnerability management* → streamlines the detection and remediation of system vulnerabilities, maintaining secure and compliant endpoint configurations.
+- *Advanced detection and Rrsponse capabilities* → integrates with EDR (Endpoint Detection and Response) systems for enhanced detection, investigation, and automated threat remediation.
+- *High availability and resilience* → built on a redundant and fault-tolerant cloud infrastructure to ensure uninterrupted protection and service continuity.
+- *Rapid incident response and containment* → provides automated isolation and remediation of compromised endpoints, minimizing attack spread and impact.
+- *Integration with security ecosystem* → supports API-based integration with SIEM, SOC, and IAM systems for centralized event correlation and coordinated response.
+- *Policy standardization across devices* → ensures consistent security policies and enforcement across heterogeneous endpoint environments (Windows, macOS, Linux, mobile).
+- *Detailed reporting and analytics* → offers customizable dashboards and reports for compliance, performance monitoring, and trend analysis.
 
 <a id="file-data"></a>
 
@@ -251,18 +281,55 @@ The service offers the following advantages:
 
 #### Services Description
 
-
-
+The service offers comprehensive protection against all types of threats, including encryption, content filtering, and AI-based threat detection.  
+The service aims to provide organizations with a platform for advanced file and data security and protection.  
+In PaaS mode, the service enables the confidentiality, integrity, and availability of their sensitive information through a combination of security technologies and practices designed to protect data, both at rest and in transit, using advanced encryption algorithms or secure protocols, and preventing unauthorized access.  
+The service also provides data classifications and security policies, aligned with customer needs and industry regulations, and uses integrated tools for monitoring and threat detection.
 
 #### Features and Advantages
 
-The main features and functionalities of the service are:
+The service provides a comprehensive set of security functionalities designed to ensure end-to-end data protection and governance:
+
+- *Data classification and discovery* → automatically identifies, tags, and categorizes sensitive data based on predefined or customizable policies (e.g., personal data, financial records, intellectual property). Supports data discovery across cloud storage, endpoints, and file repositories.
+- *Encryption and key management* → provides strong encryption mechanisms for data at rest and in transit, using industry standards (e.g., AES-256, TLS 1.3). Includes centralized key management with role-based access controls and key rotation policies
+- *Data Loss Prevention (DLP)* → monitors, detects, and blocks unauthorized data transfers or exfiltration attempts across endpoints, cloud storage, and collaboration tools Supports policy-based enforcement to prevent data leaks through email, file sharing, or removable media.
+- *File Integrity Monitoring (FIM)* → continuously monitors critical files and directories for unauthorized changes, deletions, or tampering. Generates alerts and audit logs for compliance and forensic analysis.
+- *Access control and rights management* → enables fine-grained access control based on user roles, device compliance, and contextual attributes (e.g., location, time, application). Supports encryption-based digital rights management (DRM) for document and file access control.
+- *Secure file sharing and collaboration* → allows users to securely share files within and outside the organization using encrypted channels and temporary access tokens. Provides audit trails and expiration policies for shared content.
+- *Data backup and recovery* → ensures data availability through automated and encrypted backup processes, supporting rapid recovery in case of accidental loss or compromise.
+- *Threat Detection and Content Scanning* → uses AI-based threat intelligence and sandboxing to detect malicious content embedded in files or data streams.
+Integrates with antivirus and anti-malware engines for real-time scanning.
+- *Compliance and audit support* → provides tools for auditing, logging, and reporting aligned with regulatory frameworks such as GDPR, ISO 27001, and NIST.Generates detailed reports for compliance validation and incident response documentation.
 
 The main components of the service are:
 
+- *Data protection engine* → core component responsible for encryption, decryption, classification, and DLP policy enforcement. Handles both structured and unstructured data across multiple repositories.
+- *Policy management and orchestration module* → centralized interface for defining, distributing, and enforcing data protection policies across endpoints, cloud storage, and applications.Provides rule-based automation for classification, access, and retention policies.
+- *Key Management System (KMS)* → manages cryptographic keys used for data encryption and decryption. Ensures secure key lifecycle management, including generation, rotation, and revocation.
+- *File integrity and monitoring service* → continuously monitors file system changes and logs integrity violations for security analysis and incident response.
+- *Access and identity integration layer* → integrates with Identity and Access Management (IAM) or federated authentication systems (e.g., SAML, OAuth, OpenID Connect) for user validation and access control.
+- *Threat detection and analytics engine* → uses behavioral analysis, machine learning, and sandbox environments to detect anomalous file activities and advanced threats. Correlates events and alerts through integration with Security Information and Event Management (SIEM) systems.
+- *Storage and repository connectors* → provides APIs and connectors to integrate with on-premise and cloud-based file systems (e.g., SharePoint, OneDrive, AWS S3, Azure Blob Storage). Ensures consistent protection across hybrid and multi-cloud environments.
+- *Audit and compliance dashboard* → centralized reporting and visualization layer offering real-time insights, audit trails, and compliance metrics. Supports customizable dashboards for administrators and compliance officers.
+- *Backup and recovery module* → manages encrypted backups, replication, and restoration of critical data with integrity verification mechanisms.
+
 The service offers the following advantages:
 
-
+- *Regulatory compliance and data governance *→ ensures alignment with major data protection regulations (GDPR, ISO 27001, NIS2) through built-in auditing, encryption, and access control mechanisms.
+- *Reduced risk of data breaches* → proactively mitigates risks of data exposure, loss, or theft by applying multi-layered protection and real-time threat detection.
+- *Operational cost reduction* → delivered as a fully managed PaaS, the service removes the need for dedicated on-premise infrastructure and specialized security management teams.
+- *Scalability and flexibility* → the cloud-native architecture allows the service to scale seamlessly with the customer’s data volume and storage requirements.
+- *Enhanced trust and reputation* → protecting sensitive data strengthens customer and stakeholder confidence, reducing reputational and financial impacts from potential data incidents.
+- *Faster compliance reporting and auditing* → automated policy enforcement and centralized dashboards simplify audit preparation and reduce compliance management overhead.
+- *End-to-End data protection* → combines classification, encryption, DLP, and integrity monitoring to secure data across its entire lifecycle—creation, storage, sharing, and archiving.
+- *Centralized policy and key management* → provides unified control over security policies and cryptographic keys, reducing administrative complexity and ensuring consistent enforcement.
+- *Continuous threat detection* → uses AI-driven analytics, sandboxing, and behavior-based detection to identify and neutralize advanced threats targeting data repositories.
+- *Seamless integration with existing systems* → supports API-based integration with enterprise IAM, SIEM, SOC, and data storage platforms to enhance visibility and coordination across the security ecosystem.
+- *Granular access control and rights management* → implements contextual and role-based access policies to protect sensitive files from unauthorized internal or external access.
+- *Secure collaboration enablement* → enables safe file sharing within and beyond the organization while maintaining encryption and auditing of all transactions.
+- *Automated patch, update, and policy distribution* → Keeps the protection layer continuously updated with the latest policies, threat definitions, and encryption standards.
+- *Comprehensive Logging and Auditability* → offers detailed, immutable logs of all data and file activities, supporting forensic analysis and compliance verification.
+- *High availability and fault tolerance* → built on redundant cloud infrastructure to ensure resilience, minimal downtime, and reliable service performance.
 
 <a id="PT"></a>
 
@@ -272,14 +339,48 @@ The service offers the following advantages:
 
 #### Services Description
 
-
-
+Automated Penetration Testing services enable the use of automated penetration tests to identify and remediate vulnerabilities in applications and networks, improving the organization's security posture.  
+The service aims to provide customers with a platform for delivering automated penetration tests within the configured perimeter, enabling customers to assess the security of their networks, applications, and IT systems through automated penetration tests.  
+These services use advanced tools to simulate cyber attacks, identify unique identities, and provide detailed reports on the security weaknesses found, along with recommendations for mitigating risks.
 
 #### Features and Advantages
 
 The main features and functionalities of the service are:
 
+- *Scope definition and test profiles* → predefined test templates (network, web app, API, container, cloud infra, IaC) and fully customizable profiles. Scoped scans with allow/deny lists, IP ranges, application endpoints, credentialed vs. non-credentialed options. Safe-test mode and full-exploit mode distinction (customer controls allowed impact). 
+- *Automated reconnaissance* → asset discovery, service/version fingerprinting, open port and service enumeration, subdomain and API surface mapping. Passive and active discovery options to balance coverage vs. impact.
+- *Vulnerability detection* → multi-engine detection combining signature-based checks, heuristic/behavioral rules, and proved vulnerability checks. SAST/DAST integration for application source and runtime analysis. Cloud configuration and IaC scanning (e.g., misconfigurations, overly permissive IAM).
+- *Safe exploitation & Proof-of-Concept (PoC)* → controlled exploit attempts to validate vulnerability presence where permitted. Non-destructive proof evidence (headers, returned payloads, metadata) and optional sandboxed exploit attempts for confirmation. Automatic rollback and containment to prevent service disruption.
+- *Credentialed / authenticated testing* → support for authenticated scans using supplied credentials, OAuth tokens, or ephemeral test accounts to validate business-logic and privilege escalation paths.
+- *Attack path & chain analysis* → automated correlation of findings into end-to-end attack chains (e.g., pivoting from a low-severity host to privileged access). Visualization of attack paths and required steps for compromise.
+- *Risk scoring & prioritization* → risk scoring combining CVSS, exploitability, business context, asset criticality and threat intelligence. Prioritized remediation lists with targeted recommendations.
+- *Continuous / scheduled / on-Demand testing* → flexible scheduling: continuous crawling, daily/weekly/full-cycle scans, pre-release/on-demand scans and CI/CD triggered tests.
+- *Regression & Re-test Automation* → automatic re-testing of remediated findings, regression checks after patching or code changes, and delta reporting.
+- *Reporting & evidence* → executive summaries, technical findings, remediation playbooks, timelines, and immutable evidence bundles for each validated finding. Exportable formats: PDF, JSON, SARIF (for dev pipelines), and ticket payloads for ITSM.
+- *DevSecOps Integration*s → native connectors and APIs for CI/CD systems, ticketing (Jira, ServiceNow), code repositories (Git), container registries, and build pipelines. Pre-commit / pre-deploy hooks and automatic fail/pass gating based on policy.
+- *Compliance mapping* → mapping of findings to compliance frameworks (e.g., OWASP Top 10, PCI DSS, NIST, ISO 27001) and automated compliance reports.
+- *False positive management & triage* → feedback loop for marking false positives, evidence review workflows, and machine learning to reduce noise over time.
+- *Multi-Tenant Management and RBAC* → tenant isolation, role-based access controls, scoped admin views, and least-privilege access for testers and operators.
+- *APIs & Webhooks* → full REST APIs and webhooks for automation, event streaming and integration with orchestration systems.
+- *Safety, governance & legal controls* → consent and authorization workflows, safe hours scheduling, blast radius controls, throttling, and regulatory/legal guardrails for intrusive tests.
+
 The main components of the service are:
+
+- *Portal / management console* → Web UI for onboarding, scope definition, scheduling, visualization, report generation and policy configuration. Multi-tenant dashboard with role-based views (security team, application owners, auditors).
+- *Orchestration & scheduler* → central orchestration engine that schedules jobs, allocates scanner resources, enforces safe-test rules, and manages stateful test workflows (recon → exploit → validation → reporting).
+- *Scan engine pool* → a horizontally scalable pool of scanning workers (stateless scanner instances) that execute specific test modules: network scanners, web crawlers, API fuzzers, container/IaC scanners, cloud config scanners. Worker pools can be regionally distributed and scaled based on load and isolation requirements.
+- *Exploit Sandbox & Safe Execution Environment* → isolated sandbox environment (containerized or VM-based) used to run controlled exploit attempts and malware samples safely without risking production services. Automatic rollback and containment mechanisms.
+- *Asset & discovery repository* → a canonical asset inventory storing discovered hosts, endpoints, services, and application metadata used to maintain scope and historical comparison.
+- *Knowledge Base & vulnerability library* → continuously updated repository of signatures, exploitation techniques, CVE mappings, PoC scripts, and mitigation guidance; may include external threat intel feeds.
+- *Analytics & correlation engine* → correlates raw scan results into consolidated findings, attack chains, false-positive reductions, risk scoring and trend analysis using ML/heuristics.
+- *Findings Database & evidence store* → secure, immutable storage for findings, raw evidence (logs, request/response captures, screenshots), and historical scan artifacts. Encryption-at-rest and access auditing for all stored evidence.
+- *API gateway & integration layer* → REST APIs, SDKs and webhooks for integration with CI/CD, ITSM, SIEM, SOAR and other toolchains. Rate limiting, authentication and permissioning for automated workflows.
+- *Reporting & compliance module *→ report generation engine that produces executive and technical reports, compliance mappings, remediation playbooks and re-test summaries.
+- *Identity, Access & Key Management* → IAM integration (SAML, OAuth, OIDC) for user authentication and single sign-on. KMS for managing encryption keys used for evidence and credentials storage.
+- *Audit logging & monitoring* → central audit log capturing all user actions, job executions and administrative changes; integrates with SIEM for real-time monitoring and alerts.
+- *Tenant Isolation & Resource Governance* → logical separation of tenant data and scan resources, quota enforcement, billing metrics and metering.
+- *Policy & safety engine* → central ruleset enforcing legal constraints, safe-hours, impact thresholds, throttling and auto-pause on anomalous behavior.
+- *Storage & Backup* → durable object storage for artifacts and backups; retention and purge policies configurable per tenant and per compliance requirements.
 
 The service offers the following advantages:
 

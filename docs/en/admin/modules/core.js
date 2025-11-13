@@ -513,6 +513,20 @@ function updateStagingUI() {
 
 // Commit batch di tutti gli elementi nello staging
 async function commitAllStaging() {
+  // Salva automaticamente il file aperto prima del commit
+  if (window.currentFilePath && editor) {
+    const currentContent = editor.getMarkdown();
+    const originalContent = window.lastSavedContent || "";
+    
+    // Solo se ci sono modifiche non salvate
+    if (currentContent !== originalContent) {
+      console.log("💾 Salvataggio automatico del file aperto prima del commit...");
+      saveFile(); // Salva il file corrente nello staging
+      // Piccola pausa per permettere al salvataggio di completarsi
+      await new Promise(resolve => setTimeout(resolve, 500));
+    }
+  }
+  
   const fileCount = window.localStaging.files.size;
   const imageCount = window.localStaging.images.size;
   const deletedCount = window.localStaging.deleted.size;

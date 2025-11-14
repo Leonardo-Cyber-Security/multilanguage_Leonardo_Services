@@ -5,7 +5,7 @@ The following table lists the services included in the Platform as a Service (Pa
 | FAMILY                               | LIST OF SERVICES                                            |
 | ------------------------------------ | ----------------------------------------------------------- |
 | Compute                              | [Functions as a Service](#faas)                                |                                   
-| Security                             | [Identity & Access Management Service](#IAM)|
+| Security                             | [Identity & Access Management (IAM) Service](#IAM)|
 | Security                             | [Key Vault as a Service - Standard](#key-vault)                           |
 | Security                             | [Endpoint Protection](#endpoint)                                           |
 | Security                             | [Advanced security and protection service for files and data](#file-data)                                           |
@@ -29,7 +29,7 @@ The following table lists the services included in the Platform as a Service (Pa
 | Infra & Ops Platform                 | [Control Room as a Service](#control-room)                                   |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](#ITSM)                              |
-| Infra & Ops Platform                 | [PaaS Servizio di Operations management](#operations)                              |
+| Infra & Ops Platform                 | [PaaS Operations Management](#operations)                              |
 | DevSecOps                            | [Configuration Manager](#config)                                       |
 | DevSecOps                            | [Test Automation](#test)                                             |
 | DevSecOps                            | [Quality Code Analysis](#quality)                                       |
@@ -61,10 +61,11 @@ The following table lists the services included in the Platform as a Service (Pa
 | Database                             | [PaaS GraphDB](#graphDB)                                               |
 | Database                             | [PaaS NoSQL - MongoDB](#mongoDB)                                               |
 | Database                             | [PaaS In Memory - Redis](#redis)                                               |
-| Network                              | [PaaS CDN (Content Delivery Network)](#CDN)                         |
-| Network                              | [PaaS Domain Name System (DNS)](#DNS)                               |
-| Network                              | [PaaS WAF (Web Application Firewall)](#WAF)                         |
-| Network                              | [PaaS VPN](#VPN)                                                    |
+| Networking                              | [PaaS CDN (Content Delivery Network)](#CDN)                         |
+| Networking                              | [PaaS Domain Name System (DNS)](#DNS)                               |
+| Networking                              | [Single public IP](#IP)                         |
+| Networking                              | [L7 Load Balancer (regional)](#L7)                                                    |
+| Networking                              | [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)                                                    |
 | Storage                              | [Block Storage (1000 GB) - High Density](#block-storage)                      |
 <figcaption>List of families and related PaaS services</figcaption>
 
@@ -134,9 +135,9 @@ Below is the list of services belonging to the Security family:
 
 <a id="IAM"></a>
 
-### Identity & Access Management Service
+### Identity & Access Management (IAM) Service
 
-![Identity & Access Management Service Overview](assets/images/extract/media/IaM.png)
+![Identity & Access Management Service (IAM) Overview](assets/images/extract/media/IaM.png)
 
 #### Services Description
 
@@ -227,6 +228,7 @@ The service offers the following advantages:
 
 ### Endpoint Protection Service
 
+
 #### Services Description
 
 The Endpoint protection service offers comprehensive protection for endpoint devices against malware, ransomware, and other threats, including antivirus, firewall, and application control capabilities.  
@@ -274,6 +276,7 @@ The service offers the following advantages:
 <a id="file-data"></a>
 
 ### Advanced security and protection service for files and data
+
 
 #### Services Description
 
@@ -330,6 +333,7 @@ The service offers the following advantages:
 <a id="PT"></a>
 
 ### Automated Penetration Testing Services
+
 
 #### Services Description
 
@@ -404,6 +408,7 @@ Multi-Tenancy and Role-Based Access Control (RBAC) → securely supports multipl
 
 ### Mail security & ransomware protection service
 
+
 #### Services Description
 
 The Mail Security & Ransomware Protection service offers advanced email protection against phishing, malware, and ransomware, using advanced analysis techniques and artificial intelligence to block threats before they reach end users.  
@@ -470,6 +475,7 @@ The service offers the following advantages:
 <a id="posture"></a>
 
 ### DSPM (Data Security Posture Management) Service
+
 
 #### Services Description
 
@@ -603,6 +609,7 @@ Application and user awareness → identifies and controls applications and user
 
 ### PAM (Privileged Access Management) Service
 
+
 #### Services Description
 
 The Privileged Access Management (PAM) service manages and protects privileged access to critical environments, including credential management, session control, and real-time monitoring.  
@@ -677,6 +684,7 @@ Extensive API and Automation Capabilities → exposes APIs for integration with 
 
 ### Perimeter Security Intelligence Service
 
+
 #### Services Description
 
 The Perimeter Security Intelligence service offers in-depth analysis of network traffic and perimeter activity, identifying potential threats and vulnerabilities.  
@@ -730,6 +738,7 @@ The service offers the following advantages:
 
 ### Intrusion Prevention System (IPS) Service
 
+
 #### Services Description
 
 The Intrusion Prevention System (IPS) service actively intercepts network traffic for patterns of malicious or abnormal behavior and automatically and proactively blocks such malicious traffic.  
@@ -754,177 +763,35 @@ The main features and functionalities of the service are:
 
 The main components of the service are:
 
-enforcement / data plane nodes
-
-high-performance inline sensors (virtual or hardware) that inspect and enforce traffic rules, perform dpi, session tracking, and blocking.
-
-deployed across zones (edge, cloud gateway, internal segment).
-
-2. control and management plane
-
-central management console for policy authoring, signature updates, performance monitoring, and enforcement node orchestration.
-
-supports multi-tenancy, role-based access, and delegated administration.
-
-3. signature and threat intelligence repository
-
-stores rule sets, malware and attack signatures, reputation data, ip/domain blacklists, and threat feed aggregations.
-
-regularly updated and distributed to enforcement nodes.
-
-4. behavioral analytics and anomaly detection engine
-
-performs baseline modeling of network and application traffic, detecting deviations and flagging suspicious activity.
-
-generates risk scores, correlates events, and triggers alerts or preventative actions.
-
-5. policy engine and configuration repository
-
-manages configuration of inspection zones, severity thresholds, blocking actions, traffic handling rules, and enforcement workflows.
-
-maintains versioning, audit history, and rollback capabilities.
-
-6. integration and api gateway
-
-exposes restful apis and webhooks for integration with siem, soar, orchestration, and other security tools.
-
-supports event export, automation triggers, and third-party tool connectivity.
-
-7. logging, monitoring, and reporting subsystem
-
-collects logs, alerts, session metadata, and traffic flows, storing them in a secure, indexed repository.
-
-provides dashboards, forensic search, export capabilities, and report generation.
-
-8. high availability and scalability infrastructure
-
-enforces cluster deployment, auto-scaling of enforcement nodes, geographic redundancy, and failover mechanisms.
-
-load-balances traffic across nodes to maintain performance and resilience.
-
-9. secure storage and archival layer
-
-provides encrypted storage for historical logs, session data, and evidence for forensic and compliance purposes.
-
-includes data retention policies, immutable logging, and audit trail support.
-
-10. encryption and decryption module
-
-handles ssl/tls decryption, re-inspection, and re-encryption of traffic to ensure visibility into encrypted streams.
-
-integrates with key management and certificate handling systems.
+- *Enforcement / data plane nodes* → high-performance inline sensors (virtual or hardware) that inspect and enforce traffic rules, perform dpi, session tracking, and blocking. Deployed across zones (edge, cloud gateway, internal segment).
+- *Control and management plane* → central management console for policy authoring, signature updates, performance monitoring, and enforcement node orchestration. Supports multi-tenancy, role-based access, and delegated administration.
+- *Signature and threat intelligence repository* → stores rule sets, malware and attack signatures, reputation data, ip/domain blacklists, and threat feed aggregations.Regularly updated and distributed to enforcement nodes.
+- *Behavioral analytics and anomaly detection engine* → performs baseline modeling of network and application traffic, detecting deviations and flagging suspicious activity.Generates risk scores, correlates events, and triggers alerts or preventative actions.
+- *Policy engine and configuration repository* → manages configuration of inspection zones, severity thresholds, blocking actions, traffic handling rules, and enforcement workflows.Maintains versioning, audit history, and rollback capabilities.
+- *Integration and api gateway* → exposes restful apis and webhooks for integration with siem, soar, orchestration, and other security tools. Supports event export, automation triggers, and third-party tool connectivity.
+- *Logging, monitoring, and reporting subsyste*m → collects logs, alerts, session metadata, and traffic flows, storing them in a secure, indexed repository. Provides dashboards, forensic search, export capabilities, and report generation.
+- *High availability and scalability infrastructure* → cluster deployment, auto-scaling of enforcement nodes, geographic redundancy, and failover mechanisms. Load-balances traffic across nodes to maintain performance and resilience.
+- *Secure storage and archival layer* → provides encrypted storage for historical logs, session data, and evidence for forensic and compliance purposes. It is includes data retention policies, immutable logging, and audit trail support.
+- *Encryption and decryption module* → handles ssl/tls decryption, re-inspection, and re-encryption of traffic to ensure visibility into encrypted streams. Integrates with key management and certificate handling systems.
 
 The service offers the following advantages:
 
-proactive protection against cyber threats
-
-prevents network intrusions and exploits in real time, reducing the risk of data breaches and business disruption.
-
-continuously analyzes traffic to identify and stop attacks before they escalate.
-
-2. reduced operational costs
-
-eliminates the need for dedicated on-premises intrusion prevention appliances and complex management.
-
-delivered as a cloud-based paas with predictable subscription costs and minimal maintenance overhead.
-
-3. enhanced business continuity
-
-blocks disruptive and malicious traffic automatically, ensuring uninterrupted operations.
-
-minimizes downtime and revenue loss caused by security incidents.
-
-4. improved regulatory and compliance posture
-
-supports adherence to frameworks such as iso 27001, gdpr, and nis2.
-
-provides continuous monitoring, detailed logs, and auditable reports for compliance verification.
-
-5. centralized visibility and governance
-
-provides unified control and visibility over network traffic across cloud, hybrid, and on-premises environments.
-
-simplifies governance and policy enforcement from a single management interface.
-
-6. scalability and flexibility
-
-dynamically scales according to traffic load and business needs, adapting to cloud and hybrid deployments.
-
-supports integration with existing soc and siem platforms for extended visibility.
-
-7. reduced risk exposure and faster incident response
-
-accelerates threat response through automated blocking and integration with orchestration tools.
-
-shortens mean time to detect (mttd) and mean time to respond (mttr).
-
-8. improved security posture through continuous updates
-
-continuously updated with new signatures, threat intelligence, and behavioral models.
-
-ensures up-to-date protection against emerging and zero-day attacks.
-
-advanced detection and prevention capabilities
-
-combines signature-based, heuristic, and anomaly-based detection techniques for comprehensive threat coverage.
-
-uses deep packet inspection (dpi) for high-precision traffic analysis.
-
-2. real-time inline prevention
-
-automatically blocks malicious traffic inline without human intervention.
-
-prevents exploits, denial-of-service attempts, and command-and-control communications in real time.
-
-3. machine learning and behavioral analytics
-
-employs machine learning models to identify unknown and evolving threats.
-
-continuously refines detection accuracy through feedback and adaptive learning.
-
-4. seamless integration with existing infrastructure
-
-integrates easily with siem, soar, and soc systems for centralized monitoring and automated response.
-
-supports api-based integration for custom workflows and automation.
-
-5. high availability and redundancy
-
-designed for continuous uptime through clustering, failover, and auto-scaling mechanisms.
-
-ensures uninterrupted protection even during maintenance or component failure.
-
-6. centralized management and policy control
-
-allows administrators to define, deploy, and manage security policies across distributed environments from a single console.
-
-enables consistent enforcement across multi-cloud and hybrid architectures.
-
-7. encrypted traffic inspection
-
-supports ssl/tls decryption and inspection for comprehensive visibility into encrypted traffic streams.
-
-ensures full coverage against hidden or encrypted attacks.
-
-8. automation and orchestration capabilities
-
-supports automated remediation workflows for threat containment and isolation.
-
-reduces human workload and response time through integration with orchestration tools.
-
-9. compliance and audit readiness
-
-maintains detailed logging, reporting, and audit trails for compliance validation.
-
-generates customizable reports for regulators, auditors, and management.
-
-10. scalability and performance optimization
-
-automatically scales inspection capacity based on network traffic volume.
-
-optimized for low-latency processing and high throughput in dynamic network environments.
-
-
+- *Proactive protection against cyber threats* → prevents network intrusions and exploits in real time, reducing the risk of data breaches and business disruption.Continuously analyzes traffic to identify and stop attacks before they escalate.
+- *Reduced operational costs* → eliminates the need for dedicated on-premises intrusion prevention appliances and complex management.Delivered as a cloud-based paas with predictable subscription costs and minimal maintenance overhead.
+- *Enhanced business continuity* → blocks disruptive and malicious traffic automatically, ensuring uninterrupted operations.Minimizes downtime and revenue loss caused by security incidents.
+- *Improved regulatory and compliance posture* → supports adherence to security standard frameworks  Provides continuous monitoring, detailed logs, and auditable reports for compliance verification.
+- *Centralized visibility and governance* → provides unified control and visibility over network traffic across cloud, hybrid, and on-premises environments. Simplifies governance and policy enforcement from a single management interface.
+- *Scalability and flexibility* → dynamically scales according to traffic load and business needs, adapting to cloud and hybrid deployments.Supports integration with existing soc and siem platforms for extended visibility.
+- *Reduced risk exposure and faster incident response* → accelerates threat response through automated blocking and integration with orchestration tools. Shortens mean time to detect (mttd) and mean time to respond (mttr).
+- *Improved security posture through continuous updates* → continuously updated with new signatures, threat intelligence, and behavioral models. Ensures up-to-date protection against emerging and zero-day attacks.
+- *Advanced detection and prevention capabilities* → combines signature-based, heuristic, and anomaly-based detection techniques for comprehensive threat coverage. Uses deep packet inspection (dpi) for high-precision traffic analysis.
+- *Real-time inline prevention* → automatically blocks malicious traffic inline without human intervention. Prevents exploits, denial-of-service attempts, and command-and-control communications in real time.
+- *Machine learning and behavioral analytics* → employs machine learning models to identify unknown and evolving threats. Continuously refines detection accuracy through feedback and adaptive learning.
+- *Seamless integration with existing infrastructure* → integrates easily with SIEM, SOAR, and SOC systems for centralized monitoring and automated response.Supports api-based integration for custom workflows and automation.
+- *High availability and redundancy* → designed for continuous uptime through clustering, failover, and auto-scaling mechanisms. Ensures uninterrupted protection even during maintenance or component failure.
+- *Centralized management and policy control* → allows administrators to define, deploy, and manage security policies across distributed environments from a single console. Enables consistent enforcement across multi-cloud and hybrid architectures.
+- *Encrypted traffic inspection* → supports ssl/tls decryption and inspection for comprehensive visibility into encrypted traffic streams. Ensures full coverage against hidden or encrypted attacks.
+- *Automation and orchestration capabilities* → supports automated remediation workflows for threat containment and isolation. Reduces human workload and response time through integration with orchestration tools.
 
 ## Middleware Family
 
@@ -1007,7 +874,7 @@ The main features and functionalities of the service are:
 The architectural components of the service are as follows:
 
 - *Front-end* → administration interfaces (Web Console, CLI) accessible via browser or terminal, which allow administrators to manage configurations, deployment, resources, and monitoring.
-- *Back-end* → the server core manages application execution, request processing, resource management (datasources, JMS queues, batch, etc.), and integration with external systems via resource adapters and connectors.
+- *ack-end* → the server core manages application execution, request processing, resource management (datasources, JMS queues, batch, etc.), and integration with external systems via resource adapters and connectors.
 - *Database* → integrates with relational and NoSQL databases via configurable datasources, used by applications for data persistence.
 - *Security and Authentication* → offers an advanced security subsystem for authentication, authorization, encryption, and auditing. It supports authentication via LDAP, Kerberos, SSO, and integration with external identity providers, ensuring secure access that complies with corporate standards.
 
@@ -1018,6 +885,55 @@ The service offers the following advantages:
 - *Security posture* → security policies can be defined and applied consistently across all applications, reducing risk and ensuring regulatory compliance.
 - *Faster innovation* → management tools (CLI, Web Console, REST API) and automated deployment and configuration processes reduce the operational burden on IT teams.
 - *DevOps integration* → integrated CI/CD pipelines for build and deployment.
+
+<a id="RT-runtime"></a>
+
+### Red Hat Runtime Subscription Service
+
+![Red Hat Runtime Subscription Service](assets/images/extract/media/.png)
+
+#### Services Description
+
+The service offers a set of products, tools, and components for developing and managing cloud-native applications (Red Hat Runtimes), providing runtimes and frameworks for distributed cloud architectures based on microservices.  
+Red Hat Runtime Subscription is not a standalone service but enables technical support, regular updates, and security patches for other purchased Red Hat products, such as Jboss, and OpenJDK builds for servers/workstations.  
+It should be purchased if you are opting for the Red Hat technology stack for your solution and intend to receive support, especially in production environments.
+
+#### Features and Advantages
+
+The main features and functionalities of the service are:
+
+- *Enterprise runtimes and middleware* → provides access to a curated suite of Red Hat runtimes, such as: Red Hat JBoss EAP (Enterprise Application Platform), Red Hat Quarkus for Java microservices, Red Hat Spring Boot support, Red Hat Single Sign-On (Keycloak-based), Red Hat Data Grid / Infinispan, Red Hat AMQ (messaging and event streaming). Enables deployment of modern and legacy applications using certified, tested environments.
+- *Managed licensing and subscriptions* → provider handles subscription activation, renewal, compliance, and updates. No need to purchase or maintain Red Hat subscription keys. On-demand allocation based on runtime consumption.
+- *Automated updates, patches, and security fixes* → the platform applies security patches, CVE fixes, and bug updates. Ensures runtimes remain compliant with Red Hat lifecycle policies. Reduces operational risk and vulnerability exposure.
+- *Integration with cloud platforms* → fully compatible with: Kubernetes / OpenShift, VMs & compute instances, CI/CD pipelines, service meshes and cloud networking. Ensures smooth deployment of hybrid cloud applications.
+- *Performance and scalability* → runtimes automatically scale with underlying cloud infrastructure. Suitable for enterprise workloads, microservices, and high-throughput applications.
+- *Enterprise support* → access to Red Hat enterprise support channels via the provider. Error diagnostics, best-practice guidance, and runtime optimization. Correlated support across cloud resources and runtimes.
+- *Compatibility and certification* → ensures applications run on Red Hat-certified stacks. Guarantees compatibility with Java specifications, APIs, and Red Hat ecosystems.
+- *Monitoring and observability* → runtime metrics, logs, and traces integrated into cloud monitoring tools. Helps diagnose performance issues and optimize applications.
+- *Zero infrastructure management* → no need to provision runtime servers manually. Platform handles provisioning, configuration, scaling, and lifecycle management.
+
+The architectural components of the service are as follows:
+
+- *Runtime delivery platform* → central system that deploys and manages Red Hat runtimes. Handles dependency resolution, versioning, and configuration templates.
+- *Subscription management layer* → integrates with Red Hat subscription services. Tracks usage, entitlements, and compliance. Fully automated lifecycle (activation to renewal).
+- *Cloud-native execution environment* → supports runtime execution on: containers (Kubernetes/OpenShift), virtual machines, PaaS compute platforms. Provides isolation, scaling, and security boundaries.
+- *Security & compliance layer* → applies Red Hat-certified security baselines. Ensures compliance with enterprise and regulatory standards. Integrates with identity and access management systems.
+- *Control plane* → It manages: deployment configurations, runtime policies, scaling rules, patch rollout, integration with CI/CD pipelines
+- *Data plane* → It executes application workloads: microservices, transactional applications, messaging and event-driven systems, data grids and caching services, Optimized for high throughput and low latency.
+- *Monitoring & logging layer* → centralized metrics and log collection. Health monitoring of runtimes and containers/instances. Alerting and diagnostics tools.
+
+The service offers the following advantages:
+
+- *Reduced complexity and operational burden* → no need to manage Red Hat subscriptions manually. Automated runtime provisioning, updates, and patches.
+- *Enterprise-grade security and compliance* → guaranteed access to certified runtimes with continuous security fixes. Reduces vulnerability exposure and compliance risks.
+- *Faster development and deployment* → ready-to-use, standardized runtime environments. Developers focus on applications, not runtime configuration.
+- *Cost efficiency* → eliminates upfront licensing costs and overprovisioning.
+- *High performance and scalability* → runtimes scale automatically with cloud infrastructure- Optimized for enterprise workloads and microservices.
+- *Consistency across environments* → uniform runtime versions across dev/test/prod environments. Reduces errors caused by environment drift.
+- *Access to enterprise support* → Red Hat-backed support ensures stability and reliability. Faster issue resolution and expert guidance.
+- *Improved application reliability* → certified runtime stacks with automated health checks. Reduces downtime and improves service continuity.
+- *Modernization of legacy applications* → allows migration from traditional application servers to cloud-native runtimes. Supports Java EE/Jakarta EE and modern microservices frameworks.
+- *Accelerated hybrid and multi-cloud adoption* → consistent runtime environment across cloud and on-prem systems. Simplifies application portability and modernization strategies.
 
 <a id="spring-boot"></a>
 
@@ -1219,6 +1135,60 @@ The service offers the following advantages:
 - *Multi-source integration* → Semantic Knowledge Search PaaS allows you to connect structured and unstructured data from multiple sources and supports standard connectors (REST API).
 - *Managed security and compliance* → authentication, authorization, and encryption are integrated into the service.
 
+## Data Protection Family
+
+Below is the list of services belonging to Data Protection family:
+
+- [Backup - PLATFORM](#backup)
+
+<a id="backup"></a>
+
+### Backup - PLATFORM Service
+
+![Backup - PLATFORM Service](assets/images/extract/media/.png)
+
+#### Services Description
+
+The PaaS Backup (VIM-based solution) is a fully managed platform service that provides automated, secure, and reliable data protection for virtual machines, cloud workloads, and application data.  
+The service ensures consistent backups, rapid restores, and long-term retention without requiring customers to deploy or maintain backup servers, storage repositories, or complex scheduling policies.  
+The solution is designed for enterprise-grade data protection, offering backup automation, disaster recovery enablement, policy-based lifecycle management, and secure multi-tenant separation within cloud environments.
+
+#### Features and Advantages
+
+The service offers the following key features:
+
+- *Automated VM and cloud resource backup* → Protects: virtual machines, cloud instances, application data, OS and configuration states. Supports image-level and incremental backups for optimal efficiency.
+- *Policy-based backup management* → Create backup policies defining: scheduling, retention periods, backup types (full, incremental, differential), storage tiers. Ensures consistent and compliant protection across environments.
+- *Application-consistent backups* → supports VSS-based and application-aware backups for: databases (SQL, Oracle, etc.), Active Directory, file systems, transactional workloads. Guarantees recoverability and data integrity.
+- *Multiple restore options* → Full VM restore, instant recovery to cloud infrastructure, file-level recovery, application or database item-level restore, cross-region or cross-environment recovery
+- *Backup storage flexibility* → uses managed backup repositories within the cloud. Tiers include: performance storage (for fast restore), capacity storage (for long-term retention), archival storage (optional)
+- *Immutable and secure backups* → optional immutability features for ransomware protection. Write-once, read-many (WORM) retention policies. Encrypted transport and encrypted-at-rest repositories.
+- *Monitoring and reporting* → dashboards for job success, failures, and SLA compliance. Alerts for - *Disaster recovery integration* → supports replication features for DR strategy. Enables fast failover to cloud environments. Provides restore testing and verification tools.
+- *Zero infrastructure management* → No need to deploy backup servers or agents manually. Provider handles: scaling, patching, repository management, backup infrastructure health.
+
+The main components of the service are:
+
+*Backup management cluster* → centralized system orchestrating all backup operations. Handles scheduling, job execution, and policy enforcement. Highly available and fully managed by the provider.
+- *Backup proxies and data movers* → distributed components that handle data transfer. Optimize performance by offloading backup/restore workloads. Integrated with cloud virtualization platforms.
+- *Backup repository layer* → Multi-tier repository infrastructure for: short-term storage, long-term retention, immutable storage. Redundant and scalable for large data volumes.
+- *Control plane* →  Manages: backup policies, job configurations, user permissions and multi-tenancy, SLA definitions, reporting and analytics, API-driven automation.à
+- *Data plane* → responsible for: VM snapshot creation, data extraction and compression, transport - *Security & compliance layer* → encryption in transit and at rest. Tenant isolation at storage and management layers. Compliance with data protection standards (GDPR, ISO, etc.).
+- *Observability & alerting layer* → real-time monitoring of backup/restore jobs. Alerts on job failures, capacity issues, and SLA violations. Audit logs for operations and access tracking.
+
+The service offers the following advantages:
+
+- *Reliable and consistent data protection* → ensures all virtual machines and data are continuously protected. Reduces risk of data loss and improves operational resilience. 
+- *Simplified backup management* → fully managed service eliminates infrastructure complexity Policy-based automation ensures compliance and consistency.
+- *Fast and flexible recovery* → instant VM recovery dramatically reduces downtime. Granular restore options improve operational efficiency.
+- *Ransomware resistance* → immutable backups prevent malicious modification or deletion. Secure repository design strengthens recovery posture.
+- *Cost efficiency* → no need to purchase backup servers, licenses, or storage hardware.
+- *High scalability* → handles growing workloads and storage needs. Suitable for expanding cloud environments and hybrid infrastructures.
+- *Improved compliance and governance* → detailed reporting supports audits, SLA measurement, and regulatory compliance. Centralized retention policies ensure consistent data handling.
+- *Unified protection across hybrid environments* → protects both cloud and on-prem workloads (if extended). Supports modernization and migration scenarios.
+- *Reduced operational overhead* → provider manages infrastructure, maintenance, patching, and upgrades. IT teams focus on core applications instead of backup operations.
+- *Business continuity enablement* → integrates with replication and DR features. Supports failover during incidents or migrations.
+
+
 ## Infra & Ops Platform Family
 
 Below is the list of services belonging to the Infra & Ops Platform family:
@@ -1407,6 +1377,55 @@ Increased support team productivity → thanks to workflow automation, the use o
 - *Improved user experience* → users can open tickets, monitor status, and find solutions independently, reducing frustration and wait times. Furthermore, it fosters a collaborative and efficient environment between users and support teams, with agents viewing the same status in real time.
 - *Improved control and governance of IT services* → provides a comprehensive view of assets, users, and services, supporting regulatory compliance and service level agreement (SLA) monitoring in a documented and traceable manner.
 - *Native integration with the IT ecosystem* → possible integrations with SSO systems (e.g., Active Directory/Azure AD), UEM, Asset Management, Change Management, IT monitoring, HR systems, and others via API, reducing information silos and improving data quality.
+
+<a id="operations"></a>
+
+### PaaS Operations Management
+
+![PaaS Operations Management](assets/images/extract/media/Ticket.png)
+
+#### Services Description
+
+The PaaS Operations Management service provides a fully managed platform for monitoring, observability, incident detection, and operational oversight of IT infrastructures and applications.  
+Based on Zabbix and NetEye, the service delivers enterprise-grade monitoring capabilities—such as telemetry collection, alerting, performance analytics, and event correlation—without requiring customers to deploy or maintain monitoring servers, databases, or agents.  
+Designed for hybrid and cloud-native environments, the service centralizes monitoring for compute, network, storage, security, and application layers, ensuring full visibility and operational continuity.
+
+#### Features and Advantages
+
+The service offers the following main features:
+
+- *Comprehensive infrastructure & application monitoring* → tracks the health and performance of: VMs, containers, hosts, and cloud resources, networks, firewalls, and load balancers, storage systems and databases, application services and APIs. Supports agent-based and agentless checks.
+- *Centralized metrics, logs, and telemetry collection* → consolidates metrics, ping checks, SNMP data, application logs, and custom KPIs. Ensures unified observability across heterogeneous environments. Retains historical data for trend analysis.
+- *Intelligent alerting & notifications* → event-driven alerts based on thresholds, anomalies, or dependency rules. Multi-channel notifications (email, SMS, webhook, ITSM integration). Avoids alert noise through suppression, deduplication, and escalation rules.
+- *Event correlation and root cause analysis* → NetEye’s correlation engine groups related events. Identifies probable root causes across interconnected systems. Reduces mean time to detect (MTTD) and mean time to repair (MTTR).
+- *Dashboards and visualization* → customizable dashboards for operations, NOC screens, and business KPIs. Visual representations of system health, topology maps, and SLA views.
+- *SLA monitoring and reporting* → tracks service availability against SLA targets. Generates performance, capacity, and downtime reports. Supports compliance audits and service management.
+- *Automated discovery* → auto-detects new cloud resources, VMs, hosts, network devices, and services. Automatically assigns monitoring templates. Keeps monitoring configuration aligned with dynamic environments.
+- *Integration with ITSM and automation tools* → supports integration with ticketing systems (ServiceNow, Jira, etc.). Exposes APIs for orchestration and automated remediation workflows.
+- *Zero infrastructure management* → no monitoring servers, databases, or scaling logic to manage. The provider handlespatching, backup, capacity, and high-availability.
+
+The main components of the service are:
+
+- *Zabbix monitoring cluster* → distributed monitoring cluster for data collection and event processing. Supports high availability and horizontal scaling. Responsible for metrics ingestion, - *NetEye observability and correlation layer* → enhances Zabbix data with event correlation and analytics. Adds long-term storage, dashboards, reporting, and advanced alerts. Integrates with log management and SIEM modules if required.
+- *Data collection layer* → supports multiple collection methods: Zabbix agents, SNMP collector, API polling, log ingestion, push gateway metrics, cloud-native exporters. Ensures flexibility across heterogeneous environments.
+- *Storage layer* → time-series storage for metrics (TSDB). Log and event indexing engines. Redundant and scalable architecture for long-term data retention.
+- *Control plane* → manages: template management, alert rules, agent policies, discovery rules, user and permissions configuration, integrations and webhooks
+- *Data plane* → collects telemetry from monitored systems. Processes events, evaluates triggers, and generates alerts. Streams metrics to dashboards and correlation modules.
+- Visualization & reporting layer → provides dashboards, SLA reports, historical charts, and heatmaps. UI tailored for NOC operations and technical teams.
+- *Security & multitenancy* → segregated monitoring domains per tenant or project. Secure role-based access controls (RBAC). Encrypted communication between monitoring agents and servers.
+
+The service offers the following advantages:
+
+- *End-to-end visibility* → unified monitoring across cloud, on-prem, and hybrid environments. Central view of all operational metrics and services.
+- *Faster detection and resolution* → intelligent alerts and event correlation reduce noise and improve detection. Lower MTTR thanks to root cause analysis and detailed telemetry.
+- *No Infrastructure to manage* → fully managed service—no servers, DBs, or upgrades to maintain. Reduces operational burden on IT and DevOps teams.
+- *Enhanced reliability and SLA compliance* → continuous monitoring ensures proactive issue identification. Supports SLA tracking and reporting for internal/external services.
+- *Scalability and performance* → handles thousands of checks per second. Automatically adapts to growing or dynamic infrastructures.
+- *Cost efficiency* → avoids the cost of deploying, licensing, and maintaining monitoring platforms.
+- *Enterprise-grade security* → isolated tenant environments. Encrypted agent communications and secure data storage.
+- *Improved operations and governance* → supports audit requirements with historical logs and performance reports. Ensures transparency and accountability in service operations.
+- *Integration with ITSM and automation* → automatic ticket creation for incidents. Enables self-healing workflows and auto-remediation.
+- *Better user and customer experience* → early detection prevents service degradation. Ensures smooth, predictable operation of business-critical applications.
 
 ##  DevSecOps Family
 
@@ -2896,3 +2915,301 @@ The service offers the following advantages:
 - *Reliability and continuity* → built-in replication and failover mechanisms ensure continuous availability. Automated backups and geo-redundancy support robust disaster recovery. Meets enterprise-grade SLA commitments for uptime and data durability.
 - *Compliance and security* → provider-managed encryption, patching, and access control ensure compliance with data security standards. Role-based access and network isolation protect sensitive data in-memory and at rest. Reduces compliance risks through centralized governance and auditing tools.
 - *Focus on core business innovation* → frees developers and operations teams from managing infrastructure and cluster administration. Allows organizations to focus on value creation, product innovation, and user experience. Enables integration of Redis-based caching and real-time logic into cloud-native architectures effortlessly.
+
+## Networking Family
+
+Below is the list of services belonging to the Networking family:
+
+- [Paas CDN (Content Delivery Network)](#CDN)
+- [PaaS DNS (Domain Name System)](DNS)
+- [Single public IP](#IP)
+- [L7 Load Balancer (regional)](#L7)
+- [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)
+
+<a id="CDN"></a>
+
+### PaaS CDN (Content Delivery Network)
+
+#### Services Description
+
+A PaaS CDN (Content Delivery Network) is a platform that accelerates the delivery of digital content by distributing it across a decentralized, global network of edge servers.  
+As a PaaS service, it abstracts infrastructure management, allowing organizations to utilize CDN capabilities through configuration, APIs, and integrations without having to worry about hardware, deployment, or low-level operations.  
+A CDN stores and serves content from geographically distributed edge nodes. When a user requests an asset (image, script, video, webpage, API response), the CDN automatically selects the closest or most optimal node, minimizing latency, bandwidth usage, load on origin servers.  
+By serving content from the closest edge location, a CDN improves: page load speed, Core Web Vitals, user experience.
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Content caching & distribution* → stores static and dynamic content in edge nodes.Reduces latency by serving content from the nearest node. Supports cache policies (TTL, no-store, versioning).
+- *Global load balancing* → intelligently routes traffic across multiple PoPs (Points of Presence). Selects the most efficient network path. Provides automatic failover when nodes are unavailable.
+- *Security services* → managed TLS/HTTPS (certificate lifecycle handled by the platform). Built-in DDoS mitigation. WAF (Web Application Firewall) for application protection. Access control via signed URLs, tokens, ACLs.
+- *Edge compute* → serverless functions executed at the edge. Request/response rewriting. Image optimization and on-the-fly transformations.
+- *API acceleration* → API response caching. Request coalescing (prevents duplicate backend calls). Protocol optimization (HTTP/2, HTTP/3/QUIC).
+- *Content optimization* → Dynamic compression. Resource minification. Video streaming optimization (HLS/DASH delivery).
+- *Observability & analytics* → Real-time monitoring. Full request logging. Metrics for hit/miss, throughput, latency, and threats.
+- *Zero infrastructure management* → as a PaaS, it eliminates the need for: server provisioning, network management, software patches and upgrades
+
+The main components of the service are:
+
+*Edge Network Layer (PoP Layer)* → a global network of geographically distributed edge nodes. Each node includes: local cache, edge compute processors, security engines, network accelerators. Function: handle most traffic without contacting the origin.
+- *Origin Services Layer* → a logical layer that manages interaction with origin servers. It includes: origin selection, failover between origins, health checks, multi-origin load balancing (active-active or active-passive).
+- *Global traffic management layer* → the intelligence controlling request routing. It uses: anycast routing, Software-Defined Networking (SDN), real-time performance telemetry. Function: determine the optimal PoP for each request.
+- *Distributed cache management system* → a scalable system handling: cache invalidation, TTL and cache rules, content versioning, smart synchronization between PoPs. Designed for high performance and distributed consistency.
+- *Security layer* → embedded into every edge node. It is includes: distributed L7 firewall, DDoS detection, bot mitigation, TLS termination, API protection mechanisms. Filtering at the edge reduces malicious traffic early.
+- *Edge compute runtime* → ey characteristics: lightweight serverless runtime (JS/TS or WebAssembly), executes close to end-users, sandboxed for isolation, globally distributed deployments. Used for personalization and content transformation at the edge.
+- *Control plane* → the logical management console of the CDN. It handles: APIs and configuration interfaces, certificate management, rule distribution to all PoPs, deployment orchestration, global configuration synchronization. The Control Plane does not handle user traffic.
+- *Monitoring & analytics layer* → It is includes: real-time metrics, distributed logging, anomaly detection, dashboards and analysis tools. Architecturally independent for scalability.
+
+The service offers the following advantages:
+
+- *Improved performance and lower latency* → content is delivered from edge nodes close to end users. Faster page loads, reduced round-trip time, better user experience. Enhanced performance for both static assets and dynamic/API responses.
+- *Scalability without infrastructure management* → automatically scales to handle traffic spikes, peak loads, or global audiences.No need to provision or maintain servers, network appliances, or caching layers.
+- *Reduced load on origin servers* → edge caching absorbs the majority of traffic.Backend systems experience fewer requests, improving stability and reducing costs.
+- *Ehanced reliability and availability* → built-in redundancy across distributed PoPs. Automatic failover if an edge node or origin becomes unavailable. Improved resilience during outages or network congestion.
+- *Integrated security capabilities* → protection against DDoS attacks. Built-in WAF to block malicious requests. Managed TLS certificates and secure HTTPS delivery. Access control tools such as token-based authentication or signed URLs.
+- *Cost optimization* → lower bandwidth consumption from origin servers. Reduced infrastructure investment.
+- *Edge compute for custom logic* → ability to run serverless code close to users. Real-time content manipulation, personalization, or request filtering. Reduced latency and improved performance for dynamic processing.
+- *Streamlined DevOps and faster deployment* → centralized configuration via APIs or dashboards. Rapid global propagation of rules and updates.Simplified CI/CD integration.
+- *Better observability and analytics* → real-time insights into traffic, performance, and threats. Detailed logs for diagnostics and optimization. Metrics for cache hits, latency, throughput, and security events.
+- *Consistent user experience worldwide* → uniform content delivery performance regardless of geographic region. Improved responsiveness for international users.
+
+<a id="DNS"></a>
+
+### PaaS DNS (Domain Name System)
+
+#### Services Description
+
+The PaaS DNS service is a platform that manages domain name resolution and related DNS operations without requiring organizations to maintain DNS servers or networking infrastructure.  
+This is a DNS service that allows organizations to define their own DNS configurations for resolving names to IP addresses in their application environment.  
+The service can also be configured as a public DNS forwarder for resolving Internet domains.
+It is a managed service, similar to PaaS (Paid as a Service), where the customer can self-manage the service through a dedicated console or a manual process.  
+As a PaaS offering, it provides high availability, global distribution, automation, and advanced DNS features through an abstracted, fully managed platform.
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Authoritative DNS resolution* → hosts authoritative DNS zones and responds to DNS queries for registered domains. Ensures fast and accurate mapping of domain names to IP addresses. Supports all standard DNS record types.
+- *Global traffic distribution and load balancing* → routes users to different endpoints based on geographic location, latency, or availability. Supports features such as: Geo-DNS, latency-based routing, multi-origin or multi-region distribution. Helps applications deliver consistent performance globally.
+- *High availability and resilience* → ensures continuous DNS operation across globally distributed servers. Offers redundancy across multiple regions and networks. Protects against DNS outages and service disruption.
+- *Scalability* → handles large volumes of DNS queries. No need for organizations to manage DNS server capacity or scaling. Suitable for small websites up to high-traffic global platforms.
+- *Advanced DNS management* → provides APIs and dashboards for: creating and editing DNS zones, managing DNS records, automating DNS updates. Supports versioning, rollback, and audit trails.
+- *DNSSEC Support* → offers DNS Security Extensions to prevent DNS spoofing or tampering. Handles key management and signing automatically. Ensures secure, authenticated DNS responses.
+- *Traffic steering and failover* → automatically redirects users if a primary endpoint fails. Allows health checks for web servers, APIs, or other services. Ensures higher availability and reliability of applications.
+- *Observability and analytics* → orovides logging, metrics, and monitoring for: query count, response times, geographic distribution, errors and anomalies. Helps diagnose DNS issues quickly.
+- *Zero infrastructure management* → as a PaaS service, it eliminates the need to manage: DNS server software, redundancy and failover, global replication, network provisioning or tuning
+
+The main components of the service are:
+
+- *Global anycast DNS Network* → distributed global DNS servers reachable via Anycast addresses. Ensures users are answered by the closest and fastest DNS node. Provides natural DDoS resistance - - *Authoritative zone storage layer* → a distributed, replicated storage system that stores domain zones and DNS records; ensures consistency across global DNS nodes; supports versioning, atomic changes, and secure propagation.
+- *Zone distribution and replication system* → propagates DNS zone updates across the entire global network.Ensures near real-time consistency while maintaining high availability. Uses secure channels and integrity checks.
+- *Traffic management and routing engine* → implements advanced DNS logic such as: geo-routing, latency-based routing, proximity-based routing, failover routing. Utilizes real-time global telemetry to guide DNS decision-making.
+- *Health checking and availability layer* → continuously monitors configured endpoints (web servers, load balancers, APIs). Automatically adjusts DNS responses based on health signals. Prevents directing users to failed or degraded services.
+- *Security layer* → It's provides: DNSSEC signing and validation, DDoS mitigation, query rate limiting, response integrity verification. Security is typically implemented across all global DNS nodes.
+- *Control plane* → the centralized management system used by administrators and APIs. Responsible for: creating and modifying DNS zones, propagating configurations globall, certificate and key management (for DNSSEC), authentication, RBAC, and access governance. Does not participate in DNS query resolution.
+- *Monitoring & analytics layer* → it's includes: real-time logs, query analytics, performance metrics. 
+- *Threat detection indicators* → operates independently from the data plane for scalability and reliability.
+
+The service offers the following advantages:
+
+- Higher performance and faster DNS resolution → query responses are served from globally distributed Anycast DNS servers. Reduces lookup latency and improves overall application responsiveness → ensures fast domain resolution for users anywhere in the world.
+- Built-in high availability and resilience → redundant DNS servers across multiple regions. Automatic failover if a node becomes unreachable. Protects against outages in single data centers or networks.
+- Scalability → handles millions or billions of DNS queries without capacity planning. No need to manage servers, compute resources, or network provisioning. Ideal for both small and large-scale platforms.
+- Simplified management through APIs and dashboards → easy creation and modification of DNS zones and records. Automation of DNS workflows (CI/CD updates, dynamic record creation). Versioning, change history, and rollback capabilities.
+- Improved reliability through traffic steering → support for geo-location routing, latency-based routing, and weighted routing. Directs users to the best available endpoint for performance and availability. Helps deliver consistent global user experience.
+- Enhanced security → built-in DNSSEC for authenticated, tamper-proof responses. DDoS protection at the DNS layer. Query rate-limiting and anomaly detection. Protection against DNS spoofing and cache poisoning.
+- Reduced operational overhead → eliminates the need to run and patch DNS servers. No maintenance of BIND, NSD, Unbound, or other DNS software. No management of global replication or zone distribution.
+- Cost efficiency → reduced need for dedicated networking and operations teams. Lower infrastructure and bandwidth expenses.
+- Real-Time monitoring and analytics → insight into query volume, record usage, performance, and errors. Faster troubleshooting with detailed logs. Better planning for traffic patterns and capacity.
+- Improved application reliability → supports health checks and automated failover at the DNS level. Prevents users from being routed to offline or degraded services. Enhances uptime and service continuity.
+
+<a id="IP"></a>
+
+### Single public IP Service
+
+#### Services Description
+
+A PaaS Single Public IP service is a managed cloud networking offering that provides a dedicated, globally reachable public IP address for workloads hosted in the provider’s cloud environment.  
+In this implementation the service enables customers to expose virtual machines, containers, load balancers, or platform services to the Internet using a stable, provider-managed public IP, without requiring them to manage networking infrastructure or routing complexity.
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Dedicated public IP assignment* → provides one unique and persistent public IPv4 or IPv6 address. The IP can be assigned to VMs, network interfaces, or load balancers within the cloud environment Ensures stable reachability even if the underlying infrastructure changes.
+-  *Managed routing and NAT* → the platform automatically manages inbound and outbound routing. Supports 1:1 NAT, DNAT, or SNAT depending on configuration. Simplifies network exposure of private resources, with no need to operate firewalls or routers.
+- *High availability and redundancy* → public IPs are served through a highly redundant provider network. Automatic failover ensures continuity even if the underlying host or zone fails. Supports attaching the IP to different resources without service interruption.
+- *Flexible binding to cloud resources* → the same public IP can be detached and reattached to: virtual machines, virtual network interfaces, load balancers, application gateways. Enables quick recovery, migrations, and architecture evolution.
+- *Integrated security controls* → configurable security groups, ACLs, and firewall rules. Traffic filtering and connection control managed through the cloud portal. Protection against common network threats through provider-level safeguards.
+- *Simplified internet exposure* → ideal for publishing: web applications, APIs, VPN gateways, remote management endpoints. No need to configure BGP, DNS routing, or physical network appliances.
+- *Monitoring & logging* → platform dashboards show: traffic flows, connection statistics, security events. Useful for troubleshooting and capacity planning.
+
+The main components of the service are:
+
+- *Provider-managed edge network* → the public IP is routed through Aruba’s redundant edge infrastructure. Anycast or geographically optimized routing ensures low latency and high availability. Backbone interconnects with major Internet exchange points.
+- *Virtualized networking layer* → based on SDN-enabled virtual switches and routers. The public IP is associated to a virtual NIC via cloud networking APIs. Provides isolation between tenants and secure segmentation.
+- *NAT & Firewall gateway cluster* → a cluster of virtual gateways manages: NAT operations, packet inspection, stateful firewalling, traffic shaping, Fully redundant and automatically scaled by the platform.
+- *Control plane* → centralized management system allowing: creation and deletion of public IPs, binding/unbinding to resources, firewall rule management, configuration propagation across zones. Does not handle traffic directly but orchestrates network behavior.
+- *Data plane* → distributed packet-processing nodes handle the real traffic. Designed for high throughput, low latency, and multi-zone resilience. Built to ensure performance even under heavy load.
+- *Integration with DNS and load balancers* → the public IP can be connected to: DNS A/AAAA records, cloud load balancers, reverse proxies. Enables scalable and flexible application publishing.
+
+The service offers the following advantages:
+
+- *Simplified internet exposure* → easily expose VMs, applications, or services to the public Internet. No need to configure routers, gateways, or complex network infrastructure.
+- *High availability and resilience* → public IPs are served through a redundant cloud network. Automatic failover ensures continuity if the underlying instance or zone fails. The IP remains reachable even when moving resources.
+- *Flexibilty and portability* → the same IP can be detached and reattached to different cloud resources. Enables seamless migration, maintenance, and architecture changes. Supports disaster - - *Zero infrastructure management* → no need to deploy or maintain firewalls, NAT appliances, or BGP routers. Managing of routing, redundancy, and capacity at the network edge.
+- *Integrated security* → built-in firewall rules, security groups, and access control lists Centralized management through the cloud portal or APIs. Provider-level protection against common network attacks.
+- *Cost efficiency* → eliminates the need for purchasing and managing public IP blocks. Reduces operational overhead and network administration costs.
+- *Consistent and stable reachability* → the public IP remains persistent, even if internal infrastructure changes. Guarantees stable endpoints for DNS records, APIs, and external integrations.
+- *Improved operational agility* → fast provisioning of new public IPs on demand. Immediate configuration changes via self-service interface. Accelerates deployment pipelines and DevOps workflows.
+- *Traffic monitoring and visibility* → built-in dashboards and logs for tracking inbound/outbound traffic. Useful for troubleshooting, auditing, and performance optimization.
+- *Secure and scalable foundation for cloud services* → works seamlessly with load balancers, DNS records, VPN gateways, and edge services. Supports both small applications and large-scale enterprise architectures.
+
+<a id="L7"></a>
+
+### L7 Load Balancer (regional) Service
+
+#### Services Description
+ 
+A PaaS L7 Load Balancer (Regional) is a fully managed platform service that distributes HTTP/HTTPS traffic across backend services (VMs, containers, or applications) within a specific cloud region.  
+It consists of a listener that receives requests on behalf of a set of backend pools and distributes them based on criteria based on application data, thus determining which pools serve a given request. The application infrastructure can therefore be specifically tuned and optimized to serve specific types of content.  
+Based on an OPNsense-like architecture, it provides advanced Layer 7 capabilities such as content-aware routing, SSL offloading, traffic inspection, and application firewalling—without requiring customers to deploy, monitor, or maintain any load-balancing infrastructure.  
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Layer 7 application-aware routing* → inspects and routes traffic based on HTTP/HTTPS attributes: URL paths, hostnames, headers, cookies, query parameters, Enables fine-grained control and intelligent traffic distribution.
+- *SSL/TLS termination and management* → offloads TLS/SSL handshake from backend servers. Centralized management of certificates (upload, renewal, rotation). Supports HTTPS redirection, HSTS, and modern cipher suites.
+- *Backend load distribution* → supports several load-balancing algorithms: round-robin, least connections, IP hash, weighted distribution. Ensures efficient traffic handling and smooth scaling of applications.
+- *Health checks and failover* → performs L7 health checks on backend services (HTTP codes, response payloads). Automatically excludes unhealthy instances and restores them when available. Prevents routing user requests to failed or degraded services.
+- *Web Application Firewall (WAF)* → integrated OPNsense-compatible WAF engine. Protects against OWASP Top 10 and common web attacks. Provides rule sets, anomaly scoring, and traffic filtering.
+- *URL rewriting and traffic transformation* → rewrite URLs, headers, or cookies. Inject or remove headers for security or routing logic. Useful for legacy system integration or microservices migration.
+- *Regional scope* → traffic is handled within a specific cloud region for: predictable latency, compliance requirements, locality of data and workloads. Ideal for regional failover patterns.
+- *Logging, monitoring, and metrics* → provides: request/response logs, traffic and error statistics, performance metrics, WAF alerts. Enables effective debugging and performance optimization.
+- *Zero infrastructure management* → no need to deploy virtual appliances, firewalls, or proxies. The platform maintains: high availability, patching, upgrades, scaling, failover
+
+The main components of the service are:
+
+- *Regional load balancing cluster* → a distributed cluster of L7 processing nodes within the chosen region.Provides high availability (active-active or active-standby) → automatically scales horizontally based on traffic load.
+- *OPNsense-based application proxy layer* → built on top of an OPNsense-like architecture: HAProxy or NGINX engine, integrated WAF, layer 7 parsing and filtering. Provides flexibility and robust application-level control.
+- *Virtualized networking layer* → integrates with the cloud network fabric. Supports private and public endpoints. Ensures tenant isolation and secure routing to backends.
+- *Control plane* → It's coordinates: configuration of listeners, rules, routes, and backends, certificate management, policy updates and propagation, versioning and rollback, API- and UI-based management. Does not handle traffic.
+- *Data plane* → processes all HTTP/HTTPS requests. Terminates TLS, applies routing logic, executes WAF rules. Ensures high throughput and low latency.
+- *Health check and failover engine* → continuously monitors backend endpoints. Maintains a dynamic view of backend availability. Ensures failover rules are applied in real time.
+- *Logging & analytics layer* → collects request logs, WAF events, metrics, and anomalies. Provides dashboards and monitoring tools. Works independently from the data plane to ensure performance.
+
+The service offers the following advantages:
+
+- *Improved application availability* → automatic failover prevents downtime. Faulty backends are bypassed instantly.
+- *Better performance and lower latency* → efficient L7 traffic distribution within the same region. TLS offloading improves backend performance.
+- *Strong security posture* → built-in WAF protects against common web threats. TLS best practices and centralized certificate management.
+- *Simplified operations* → fully managed service—no appliance deployment or patching. Easy configuration from UI or APIs. Reduces operational and networking overhead.
+- High flexibility in routing → content-based routing for modern microservices architectures. Easy to map multiple applications under the same IP/hostname.
+- *Cost efficiency* → eliminates need for dedicated load balancer appliances.
+- Consistent user experience → evenly balances traffic to healthy backends. Ensures predictable application responsiveness.
+- *Enhanced observability* → access to detailed logs, metrics, and WAF events. Faster troubleshooting and monitoring.
+- *Compliance and regional data control* → all traffic processing remains within a specific geographic region. Helps meet regulatory and data residency requirements.
+- *Rapid deployment and DevOps integration* → instant provisioning with minimal configuration. API-driven automation for CI/CD pipelines.
+
+<a id="gold"></a>
+
+### Cloud interconnect Gold SW (10 Gbps max throughput)
+
+#### Services Description
+
+The PaaS Cloud interconnect gold SW service provides a high-quality, software-defined, private connectivity between a customer’s on-premises infrastructure (or external data centers) and the Aruba cloud environment.  
+It offers dedicated bandwidth tiers, enhanced SLA guarantees, secure routing, and enterprise-grade performance, enabling customers to build hybrid or multi-cloud architectures without deploying physical network appliances or managing complex routing setups.  
+The “Gold” tier represents the highest level of availability, performance, and support, while the “SW” component refers to software-based interconnect provisioning, ensuring flexibility, fast activation, and seamless scalability.  
+This service, delivered via hardware or software, is designed to simplify customer application migration with minimal impact on users and workloads.  
+It enables granularity down to the individual IP address during migration, increasing security and minimizing rollback times, if necessary.  
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Private and secure network connectivity* → ensures a private, non-public connection between customer networks and cloud resources. Traffic does not traverse the public Internet, reducing risk and improving performance. Ideal for workloads requiring compliance, isolation, or predictable latency.
+-* Software-defined provisioning (SW)* → fully software-based interconnect setup with no physical circuits required.On-demand provisioning via web console or API. Rapid activation (minutes instead of days or weeks). Flexible reconfiguration without service interruption.
+- *High SLA & guaranteed bandwidth (Gold tier)* → provides defined bandwidth tiers with guaranteed throughput. Includes enhanced SLA for: availability, packet loss, latency, jitter. Suitable for mission-critical enterprise applications.
+- *Multi-site and multi-zone connectivity* → supports connectivity to multiple Aruba regions or availability zones. Enables redundant hybrid cloud architectures. Facilitates interconnection of distributed workloads.
+- *Routing integration* → supports dynamic routing (BGP) or static routing. Automatically adapts to network topology changes. Enables flexible hybrid cloud traffic engineering.
+- *Segmentation and isolation* → allows creation of multiple isolated virtual circuits or VLANs. Ideal for separating environments: production, staging, development, partner networks
+- *End-to-end encryption* → traffic can be encrypted at the network edge using IPsec or provider-managed encryption. Ensures compliance with data protection standards.
+- *Monitoring, logs, and telemetry* → real-time monitoring of: bandwidth usage, packet loss and latency, connection health. Exportable logs for SIEM and analytics systems.
+- *No Physical hardware required* → provider manages the entire connectivity layer. No need for physical circuits, routers, or carrier contracts. Reduces complexity and deployment time.
+
+The main components of the service are:
+
+- *Software-defined interconnect fabric* → centralized SDN layer orchestrating virtual connections. Provides flexible, scalable, multi-tenant connectivity. Allows rapid deployment and reconfiguration.
+- *Regional interconnect gateways* → high-availability routing gateways located in Aruba cloud regions. Serve as entry/exit points for private customer traffic. Architected for redundancy and failover.
+- *Cloud backbone network* → high-capacity fiber backbone interconnecting Aruba data centers. Ensures low-latency east-west traffic across regions. Supports both primary and backup routes.
+-  *Security & isolation layer* → strict tenant isolation enforced at: network virtualization layer, routing control plane, traffic segmentation policies. Ensures no cross-tenant visibility.
+- *Control plane* → It manages: provisioning of interconnects, routing updates, bandwidth allocation, policy enforcement. Exposed through UI and APIs.
+- *Data plane* → handles the actual traffic flow with: guaranteed QoS, deterministic routing, optimized latency paths. Decoupled from monitoring and control tasks.
+- *Monitoring & observability layer* → aggregates telemetry from gateways and SDN controllers. Provides dashboards and alerting for performance and reliability.
+
+The service offers the following advantages:
+
+- *Enhanced security* → private connection avoids exposure to the public Internet. Supports encrypted tunnels and isolated routing domains.
+- *Predictable and high performance* → guaranteed bandwidth and low latency. Stable connectivity ideal for enterprise workloads.
+- *Rapid deployment* → software-defined provisioning reduces setup from weeks to minutes. No physical circuits or carrier coordination required.
+- *High availability and reliability (Gold SLA)* → redundant gateways, paths, and failover mechanisms built in. Suitable for mission-critical connectivity.
+- *Cost efficiency* → eliminates the need for physical interconnects or MPLS lines.
+- Improved hybrid cloud architecture → seamlessly integrates on-prem infrastructure with cloud workloads. Supports migration, DR, and inter-site communication.
+- *Scalability on demand* → quickly adjust bandwidth tiers or add new interconnects. Ideal for growing or fluctuating workloads.
+- *Simplified network operations* → centralized management via API/portal. Automated routing and monitoring reduce operational overhead.
+- *Better compliance and data governance* → private, regional connectivity supports regulatory requirements. Data paths remain under predictable network control.
+- *Optimized application experience* → reduced jitter and packet loss improve performance for: databases, real-time apps, VoIP/UC, latency-sensitive services.
+
+## Storage Family
+
+Below is the list of services belonging to the Storage family:
+
+- [Block Storage (1000 GB) - High Density](#block-storage)
+
+<a id="block-storage"></a>
+
+### Block Storage (1000 GB) - High Density Service
+
+#### Services Description
+
+The PaaS Block Storage (1000 GB) – High Density service provides enterprise-grade, fully managed block storage volumes designed for virtual machines and cloud workloads hosted on Proxmox platforms.  
+The storage layer is powered by Ceph, a distributed, fault-tolerant, and scalable SDS (Software-Defined Storage) technology that ensures durability, high availability, and efficient capacity utilization.  
+This service offers 1000 GB of high-density block storage, ideal for workloads that require large capacity at optimized cost while still benefiting from redundancy, resiliency, and seamless integration into virtualized cloud environments.
+
+#### Features and Advantages
+
+The main features of the service are:
+
+- *Managed block storage volumes (1000 GB)* → provides fully provisioned 1000 GB block devices. Can be attached to Proxmox-based virtual machines. Supports OS disks, application data, databases, and file systems.
+- *High-density storage tier* → optimized for workloads requiring large capacity. Uses cost-efficient high-density disks while maintaining reliability. Suitable for: archival data, moderately I/O-intensive applications, backup staging, large datasets that don’t require ultra-high performance
+- *Ceph RBD (RADOS Block Device) integration* → volumes are exposed as Ceph RBD devices. Features:, thin provisioning, snapshot support, cloning capabilities, striping for balanced performance
+- *High availability and data replication* → data is replicated across multiple Ceph nodes. Ensures durability even in case of disk or node failure. Automatic recovery and self-healing functions enhance resilience.
+- *Persistent and Reliable Storage* → volumes maintain data integrity across VM reboots, migrations, or failovers. Ideal for persistent disks in virtualized infrastructures.
+- Seamless VM integration → managed directly through the Proxmox interface/API. It supports: VM disk attachments and detachments, live migration with attached volumes, dynamic resizing
+- *Performance optimization for large-capacity workloads* → balanced read/write response designed for high-density environments. Ceph intelligently distributes I/O across cluster nodes.
+- *Managed service* → No need to manage Ceph clusters, disks, or replicating policies. Handling of: monitoring, maintenance, scaling, upgrades, fault resolution
+
+The main components of the service are:
+
+- *Ceph storage cluster* → distributed architecture composed of: multiple OSD nodes (Object Storage Daemons), MON nodes for cluster coordination, MGR nodes for cluster insight and APIs. Ensures high availability and horizontal scalability.
+- *Proxmox integration layer* → proxmox integrates directly with Ceph RBDs. Provides unified API and management interface for VMs and storage. Allows dynamic allocation of block devices to VMs.
+- *Replicated storage pools* → storage pools configured with replication (e.g., 3 replicas). Ensures redundancy across multiple disks and hosts. Prevents data loss from node or disk failures.
+- *Data plane* → handles all I/O operations, including: data striping, replication, rebalancing, recovery, snapshot management. Designed for reliability and optimized throughput.
+- *Control plane* → Manages: Ceph cluster coordination, health monitoring, volume lifecycle, config policies, Proxmox integration.
+- *Monitoring and observability* → continuous monitoring of: storage utilization, disk health, replication status, I/O performance. Automated alerts ensure proactive issue resolution.
+- *Security and isolation* → tenant isolation at storage pool and access level. Encrypted communication between Ceph and Proxmox nodes. Optional disk encryption at rest depending on policy.
+
+The service offers the following advantages:
+
+- *High capacity at optimized cost* → designed for workloads needing large data volume without paying for premium performance tiers.
+- *High udrability and fault tolerance* → multi-node replication ensures data remains safe even if disks or machines fail.
+- *Fully managed storage infrastructure* → eliminates the need to configure, maintain, or troubleshoot Ceph clusters.
+- *Scalable and flexible* → storage grows horizontally without downtime. Additional capacity or block volumes can be provisioned on demand.
+- *Seamless integration with Proxmox VM environments* → easy attachment to VMs, live migration support, and simplified administration.
+- *Improved operational efficiency* → snapshots, cloning, and thin provisioning speed up development and operations workflows.
+- *Consistent performance for high-density workloads* → balanced I/O distribution with predictable storage behavior.
+- *Enhanced data protection* → built-in replication, self-healing, and monitoring reduce risk of data loss.
+- *Simplified backup and recovery* → volume snapshots enable fast backup operations. Easy rollback to previous storage states.
+- *Enterprise-grade reliability* → Ceph’s distributed architecture provides continuous service availability and resilience.

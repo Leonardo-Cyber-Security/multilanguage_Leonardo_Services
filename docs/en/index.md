@@ -129,5 +129,5 @@ The following table lists the various families and their related services.
 From a logical-functional point of view, the Leonardo's services can be divided into three macro-categories:
 
 - [Infrastructure as a Service (IaaS)](IaaS.md)  
-- [Container as a Service (CaaS)](CaaS.md) 
+- [Container as a Service (CaaS)](CaaS.md)
 - [Platform as a Service (PaaS)](PaaS.md)

@@ -80,6 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     link.setAttribute('href', newHref);
                     console.log('Fixed anchor link:', href, '->', newHref);
                 }
+                // Controlla se il link finisce con / (ma non è solo "/")
+                else if (href.endsWith('/') && href !== '/') {
+                    // Aggiunge index.html alla fine
+                    let newHref = href + 'index.html';
+                    link.setAttribute('href', newHref);
+                    console.log('Fixed trailing slash link:', href, '->', newHref);
+                }
             }
         });
     }

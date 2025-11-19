@@ -8,8 +8,6 @@ For each service, you can choose from three alternative purchase options:
 - *Annual Reserved Subscription* with upfront payment upon activation and testing of the service;
 - *Three-year Reserved Subscription* with upfront payment upon activation and testing of the service.
 
-{:.col-4-60}
-
 | Family | Service | Metric (unit of measurement) | Metric (unit value) | Monthly Subscription | Annual Reserved Subscription | Three-year Reserved Subscription |
 | ------ | ------- | ---------------------------- | ------------------- | -------------------- | ---------------------------- | -------------------------------- |
 | Compute | [Pool Small (Confidential)](IaaS.md#pool-confidential-services)| Hosts number| 3 Host Number (2x 24 Core CPU - 512 GB RAM - 32 TB SSD)| 21.586,03 €| 233.129,08 €| 621.677,54 €|
@@ -24,7 +22,6 @@ For each service, you can choose from three alternative purchase options:
 | Compute | [Functions As A Service (FAAS)](PaaS.md#faas)| VCPU| 100 VCPUs| 6.315,12 €| 68.203,33 €| 181.875,55 €|
 <figcaption>Price list of the Compute Family Services</figcaption>
 
-{:.col-3-60}
 
 | Family | Service | Metric (unit of measurement) | Metric (unit value) | Monthly Subscription | Annual Reserved Subscription | Three-year Reserved Subscription |
 | ------ | ------- | ---------------------------- | ------------------- | -------------------- | ---------------------------- | -------------------------------- |
@@ -41,8 +38,6 @@ For each service, you can choose from three alternative purchase options:
 | Security | [Intrusion Prevention System (IPS)](PaaS.md#IPS)| Throughput (Gbps)| 1| 7.541,19 €| 81.444,88 €| 217.186,36 €|
 <figcaption>Price list of the Security Family Services</figcaption>
 
-{:.col-4-40}
-
 | Family | Service | Metric (unit of measurement) | Metric (unit value) | Monthly Subscription | Annual Reserved Subscription | Three-year Reserved Subscription |
 | ------ | ------- | ---------------------------- | ------------------- | -------------------- | ---------------------------- | -------------------------------- |
 | Middleware | [PaaS API Management](PaaS.md#API)| Request| 500M API request| 24.900,56 €| 268.926,08 €| 717.136,23 €|
@@ -54,8 +49,6 @@ For each service, you can choose from three alternative purchase options:
 | Middleware | [PaaS ETL - Batch / Real Time Processing - 1 worker](PaaS.md#ETL)| Worker node| 1| 16.816,32 €|  181.616,26 €|  484.310,02 €|
 | Middleware | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)| Worker node| 1| 244,06 €| 2.635,81 €| 7.028,84 €|
 <figcaption>Price list of the Middleware Family Services</figcaption>
-
-{:.col-3-60}
 
 | Family | Service | Metric (unit of measurement) | Metric (unit value) | Monthly Subscription | Annual Reserved Subscription | Three-year Reserved Subscription |
 | ------ | ------- | ---------------------------- | ------------------- | -------------------- | ---------------------------- | -------------------------------- |

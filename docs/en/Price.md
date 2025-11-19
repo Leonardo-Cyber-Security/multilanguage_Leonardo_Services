@@ -54,5 +54,18 @@ For each service, you can choose from three alternative purchase options:
 | Data Protection | [Backup - PLATFORM](PaaS.md#backup)| TB| 1| 30,52 €| 329,62 €| 879,00 €|
 <figcaption>Price list of the Data Protection Family Services</figcaption>
 
+| Family | Service | Metric (unit of measurement) | Metric (unit value) | Monthly Subscription | Annual Reserved Subscription | Three-year Reserved Subscription |
+| ------ | ------- | ---------------------------- | ------------------- | -------------------- | ---------------------------- | -------------------------------- |
+| Infra & Ops Platform | [Multicloud Management Platform](PaaS.md#SCMP) | Request| 500M API request| 24.900,56 €| 268.926,08 €| 717.136,23 €|
+| Middleware | [Jboss as a Service](PaaS.md#Jboss)| Node| 1 Node with 4 VCPUs and 8GB of RAM| 537,78 €| 5.808,04 €| 15.488,10 €|
+| Middleware | [Red Hat Runtime Subscription](PaaS.md#RT-runtime)| Red Hat Subscription License| 1| 1.699,25 €| 18.351,86 €| 48.938,28 €|
+| Middleware | [Spring boot as a Service](PaaS.md#spring-boot)| GB| 16 GB container| 651,62 €| 7.037,54 €| 18.766,76 €|
+| Middleware | [PaaS Business Process as a Service](PaaS.md#BPM)| Core| 8 core| 12.755,33 €| 137.757,60 €| 367.353,61 €|
+| Middleware | [PaaS CMS as a Service](PaaS.md#CMS)| Users| 1000 | 5.722,14 €| 61.799,09 €| 164.797,57 €|
+| Middleware | [PaaS ETL - Batch / Real Time Processing - 1 worker](PaaS.md#ETL)| Worker node| 1| 16.816,32 €|  181.616,26 €|  484.310,02 €|
+| Middleware | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)| Worker node| 1| 244,06 €| 2.635,81 €| 7.028,84 €|
+<figcaption>Price list of the Middleware Family Services</figcaption>
+
+
 
 

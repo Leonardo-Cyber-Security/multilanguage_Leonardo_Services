@@ -77,7 +77,7 @@ The following table lists the various families and their related services.
 | Artificial Intelligence (AI)         | [PaaS - AI Audio & Video Analytics](PaaS.md#AI-audio-video)                           |
 | Artificial Intelligence (AI)         | [OCR](PaaS.md#AI-OCR)                                                          |
 | Artificial Intelligence (AI)         | [Text Analytics/NLP](PaaS.md#AI-text)                                              |
-| Artificial Intelligence (AI)         | [TranslationPaaS.mdAI-translation](PaaS.md#translation)                                                  |
+| Artificial Intelligence (AI)         | [Translation](PaaS.md#translation)                                                  |
 | Artificial Intelligence (AI)         | [AI Search - RAG](PaaS.md#AI-search)                                             |
 | Artificial Intelligence (AI)         | [PaaS - AI Platform](PaaS.md#AI-platform)                                          |
 | Artificial Intelligence (AI)         | [AI SLM/LLM](PaaS.md#AI-SLM-LLM)                                                  |
@@ -124,7 +124,7 @@ The following table lists the various families and their related services.
 | FAMILY                               | LIST OF SERVICES                                            |
 | ------------------------------------ | ----------------------------------------------------------- |
 | Hybrid                               | [Edge Location](PaaS.md#edge)                      |
-<figcaption>List of services for the Storage family</figcaption>
+<figcaption>List of services for the Hybrid family</figcaption>
 
 From a logical-functional point of view, the Leonardo's services can be divided into three macro-categories:
 

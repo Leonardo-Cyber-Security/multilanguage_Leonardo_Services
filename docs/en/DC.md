@@ -328,7 +328,7 @@ This section lists the technical specifications for each Data Center.
 
 #### The Region B Data Centers 
 
-##### DC MI 1 (Aruba)
+##### DC MI 1 (Bergamo)
 
 **General specifications**
 

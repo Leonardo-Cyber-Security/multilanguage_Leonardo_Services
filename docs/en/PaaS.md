@@ -1783,6 +1783,18 @@ The service offers the following advantages:
 - *Interoperability* → S3 API compatibility allows for easy integration of existing applications. Supports multi-protocol access.
 - *Automation and DevOps-friendly* → it enables continuous updates without downtime and simplified backup management.
 
+#### Disaster Recovery (DR) architecture
+
+Data replication within MinIO Object Storage is managed directly at the application level. The solution provides Site Replication capabilities that enable native management of data distributed across multiple Data Centers (DCs). These capabilities allow for the alignment of not only buckets and objects, but also access policies and encryption capabilities.
+
+Typically, in systems like these, data availability and resilience is managed through conceptual separations of parts of the distributed cluster: these are called Regions and Availability Zones.
+
+Replication is performed synchronously between two Availability Zones (AZs) belonging to the same region, thus ensuring data consistency and availability in the event of a local failure. At the same time, asynchronous replication can be enabled between different Regions, ensuring an effective geographical Disaster Recovery (DR) mechanism.
+
+Thanks to the high bandwidth and low latency of the connections available between data centers, a synchronous data replication solution was adopted between clusters. Access to the different clusters can be achieved either via direct addressing or through the use of a load balancer, depending on architectural and operational needs.
+
+From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience. To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure. Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets, ensuring redundancy, fault tolerance, and operational continuity.
+
 <a id="datalakehouse"></a>
 
 ### Data Lakehouse
@@ -3118,7 +3130,7 @@ The main features of the service are:
 
 The main components of the service are:
 
-*Edge Network Layer (PoP Layer)* → a global network of geographically distributed edge nodes. Each node includes: local cache, edge compute processors, security engines, network accelerators. Function: handle most traffic without contacting the origin.
+- *Edge Network Layer (PoP Layer)* → a global network of geographically distributed edge nodes. Each node includes: local cache, edge compute processors, security engines, network accelerators. Function: handle most traffic without contacting the origin.
 - *Origin Services Layer* → a logical layer that manages interaction with origin servers. It includes: origin selection, failover between origins, health checks, multi-origin load balancing (active-active or active-passive).
 - *Global traffic management layer* → the intelligence controlling request routing. It uses: anycast routing, Software-Defined Networking (SDN), real-time performance telemetry. Function: determine the optimal PoP for each request.
 - *Distributed cache management system* → a scalable system handling: cache invalidation, TTL and cache rules, content versioning, smart synchronization between PoPs. Designed for high performance and distributed consistency.
@@ -3397,3 +3409,67 @@ The service offers the following advantages:
 - *Enhanced data protection* → built-in replication, self-healing, and monitoring reduce risk of data loss.
 - *Simplified backup and recovery* → volume snapshots enable fast backup operations. Easy rollback to previous storage states.
 - *Enterprise-grade reliability* → Ceph’s distributed architecture provides continuous service availability and resilience.
+
+#### Disaster Recovery Process
+
+The PaaS Block Storage service is delivered on a high-density storage architecture powered by Proxmox VE and a Ceph distributed storage cluster.  
+Ceph provides native replication, self-healing and strong data durability.  
+Disaster Recovery (DR) ensures service continuity, data integrity and rapid restoration in case of partial or full site failure.
+
+**Disaster Recovery (DR) Objectives**
+
+- RPO (Recovery Point Objective): Typically near-zero, because Ceph writes are synchronously replicated across multiple OSDs and nodes before acknowledgment.
+- RTO (Recovery Time Objective): Designed to be minimal. Recovery depends on the nature of the failure (node, rack, or site).
+
+**DR Protection Levels**
+
+- Node-Level Failure
+    - Ceph automatically marks failed OSDs or nodes as “out”
+    - Data is automatically re-replicated to healthy nodes to restore the predefined replication level
+    - Proxmox migrates VMs/volumes to healthy nodes via HA framework
+
+- Rack-Level or Power Domain Failure
+    - If the CRUSH map is configured with rack-awareness, Ceph ensures that: No dataset has all its replicas in the same rack/power domain
+    - Failover is automatic and transparent
+
+- Full Site Failure (Multi-site DR) (Applicable only when a second Ceph site or stretch-cluster is deployed)
+    
+    - Block volumes are replicated to a secondary Ceph cluster through asynchronous multi-site Ceph replication, or RBD mirroring (journal-based)
+    - In case of complete primary site outage, the secondary site can promote replicated RBD images and restore service
+
+**DR Process Workflow**
+
+- Step 1 – Failure Detection
+
+    - Continuous monitoring of Ceph MONs, OSDs, Proxmox nodes and cluster health status.
+    - Automatic alerts for: Disk or node failures, Network disruption, Replication degradation, Cluster reaching “HEALTH_WARN” or “HEALTH_ERR”
+
+- Step 2 – Automatic Failover (Local Cluster)
+
+    - Ceph redistributes I/O across available OSDs
+    - Proxmox HA automatically restarts workloads on healthy nodes
+    - No manual intervention is typically required
+
+- Step 3 – Data Re-Replication
+
+    - Ceph restores the replication level (e.g. 3 copies) by copying missing replicas to healthy OSDs
+    - The process is throttled to avoid performance degradation.
+
+- Step 4 – Activation of Secondary Site
+
+    - If the failure affects the entire primary site:
+        - Administrators promote mirrored RBD images on the secondary Ceph cluster
+        - Proxmox compute nodes at the DR site attach the promoted RBDs
+        - Services are restarted according to the failover plan.
+
+- Step 5 – Service Validation
+
+    - Verification that Block Storage volumes are consistent and available
+    - Checks of application logs and integrity validation.
+
+- Step 6 – Failback (Post-Recovery)
+
+    - Once the primary site is restored:
+        - Data is synchronized back (reverse RBD mirroring)
+        - Primary Ceph cluster is reintroduced into production
+        - Normal operations resume

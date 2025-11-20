@@ -42,6 +42,8 @@ The Architectural components are:
 -* Networking & connectivity* → secure connectivity between edge locations and datacenters (VPN, SD-WAN, MPLS). Network segmentation via virtualization technologies. Support for public and private addressing of workloads
 - *Integration with enterprise systems* → integration with corporate authentication systems (LDAP, AD, SSO). Optional integration with Kubernetes for container-native workloads. Interoperability with public cloud platforms as part of a hybrid cloud model.
 
+The service is sized in host unit. A single unit is composed by 3 Hosts, with the following settings: 2x 24 Core CPU - 512 GB RAM - 32 TB SSD.
+
 The service offers the following advantages:
 
 - *Reduced latency* → processing occurs closer to the data source, improving performance for IoT, analytics, and real-time applications.

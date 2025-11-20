@@ -2,41 +2,52 @@
 
 ## General architecture
 
-The Cloud Services described in the relevant categories are hosted within 6 Data Centers distributed across Italy, configured in a dual Region (3 DCs + 3 DCs), each redundant with three highly reliable Availability Zones.
+The Cloud Services described in the relevant categories are hosted within 9 Data Centers distributed throughout Italy and spread across 3 Regions (A, B, and C), each redundant with three highly reliable Availability Zones.
 
-![Data Center Architecture and Interconnection](assets/images/extract/media/DC.png)  
+![Data Center Architecture and Interconnection](assets/images/extract/media/DC_design.png)  
 
-The infrastructure configuration is completely redundant thanks to the division of each of the two regions. The regions are more than 400 km apart.  
-Each Region consists of three Availability Zones (AZs), that is three Data Centers configured for business continuity, separated as the crow flies by tens of kilometers.
+The infrastructure configuration is fully redundant thanks to the division of each of the three Regions, whose maximum distance exceeds 400 km.
+Each Region is composed of three Availability Zones (AZs), three Data Centers configured for business continuity, separated as the crow flies by tens of kilometers.
 
 Specifically, the following table shows the DC association for each region:
 
-| Region   | List of DCs |
+| Region   | List of Data Centers |
 | -------- | ----------- |
-| Region A | RM 1 (Rome)        |
-| Region A | RM 2 (Acilia-Rome)        |
-| Region A | RM 3 (Pomezia-Rome)       |
-| Region B | MI 1 (Bergamo)       |
-| Region B | MI 2 (Basiglio-Milan)       |
-| Region B | MI 3 (Siziano-Milan)       |
+| Region A | [DC MI 1 Bergamo](#MI1)       |
+| Region A | [DC MI 2 Basiglio](#MI2)       |
+| Region A | [DC MI 3 Siziano](#MI3)
+| Region B | [DC GE 1 Fiumara](#GE1)       |
+| Region B | [DC GE 2 Puccini](#GE2)       |
+| Region B | [DC GE 3](#GE3)       |
+| Region C | [DC RM 1 Rome](#RM1)        |
+| Region C | [DC RM 2 Acilia](#RM2)        |
+| Region C | [DC RM 3 Pomezia](#RM3)       |
 <figcaption>Nomenclature of DCs for each Region</figcaption>
 
 Below are the distances between each Region and between the DCs of each Region.
 
-- Region A - Region B: distance more than 400 km
-- RM 1 - RM 2: approximate distance 30 km
-- RM 1 - RM 3: approximate distance 30 km
-- RM 2 - RM 3: approximate distance 15 km
-- MI 1 - MI 2: approximate distance 53 km
-- MI 1 - MI 3: approximate distance 54 km
-- MI 2 - MI 3: approximate distance 10 km
+- Region A - Region B: distance more than 200 km
+- Region A - Region C: distance more than 400 km
+- Region B - Region C: distance more than 500 km
 
-All data centers are equipped with all the necessary technical and technological infrastructure to guarantee the highest quality standards in terms of reliability, availability, and physical security. 
+- DC MI 1 Bergamo - DC MI 2 Basiglio: approximate distance 53 km
+- DC MI 1 Bergamo - DC MI 3 Siziano: approximate distance 54 km
+- DC MI 2 Basiglio - DC MI 3 Siziano: approximate distance 10 km
 
-The three AZs are interconnected via a dedicated backbone, which guarantees complete redundancy, negligible latency, and private connectivity, logically characterizing the Regions as a single virtual Data Center (Software Defined Data Center).  
+- DC GE 1 Fiumara - DC GE 2 Puccini: approximate distance 10 Km
+- DC GE 1 Fiumara - DC GE 3: approximate distance 15 Km
+- DC GE 2 Puccini - DC GE 3: approximate distance 15 Km
 
-The Regions are also interconnected via the same dedicated and reserved backbone with IP/MPLS network transmission, enabling a flexible, software-defined logical network architecture, ensuring the mobility of application loads and the inherent high reliability of Cloud solutions.  
-Within an Availability Zone, workloads are transparently distributed, and the HA (High Availability) configuration enables infrastructure service continuity (Business Continuity) between the three Data Centers in the same Region. 
+- DC RM 1 Rome - DC RM 2 Acilia: approximate distance 30 km
+- DC RM 1 Rome - DC RM 3 Pomezia: approximate distance 30 km
+- DC RM 2 Acilia - DC RM 3 Pomezia: approximate distance 15 km
+
+All data centers are equipped with all the technical and technological infrastructure necessary to ensure the highest quality standards in terms of reliability, availability, and physical security.
+
+The three Availability Zones are interconnected via a dedicated regional backbone, which guarantees complete redundancy, negligible latency, and priority connectivity, logically characterizing the Regions as a single virtual Data Center (Software Defined Data Center).
+
+The Regions are also interconnected via dedicated and reserved interregional backbones with IP/MPLS network transmission, enabling a flexible, software-defined logical network architecture, ensuring the mobility of application loads and the inherent high reliability of Cloud solutions.
+Within an Availability Zone, workloads are transparently distributed, and the HA (High Availability) configuration enables infrastructure service continuity (Business Continuity) between the three Data Centers in the same Region.
 
 Thanks to this basic configuration, the Cloud platform will also provide data distribution between the three zones of each Region. This configuration is possible thanks to the distribution of storage space (identified with the best Storage Array technologies available on the IT market) within the three AZs and, therefore, thanks to the continuous replication of data for the service chosen by each individual organization. Therefore, if an individual organization decides to leverage the full redundancy of its infrastructure (physical or virtual), it can leverage the Cloud platform's HA configuration and create DR/BC solutions.  
 
@@ -112,199 +123,9 @@ This section lists the technical specifications for each Data Center.
 
 #### The Region A Data Centers 
 
-##### DC RM 1 (Rome)
+<a id="MI1"></a>
 
-**General specifications**
-
-- Total surface area: 10.730 m² 
-- Data hall surface area: 3.120 m² 
-- Number of independent data rooms: 6 
-- Floors on which the server rooms are distributed: 3
-- Secure location in terms of earthquakes
-- Secure location in terms of hydro-geological risks
-
-**Building** 
-
-- Height of the data hall: 3,5 m 
-- Height of upper plenum: 1,4 m 
-- Height of lower plenum:  1,95 m 
-- Load capacity of the floating floor: 2.000 kg/m² (distributed load) - 1.000 kg/m² (concentrated load in one place) 
-- External firewalls:  REI 240 
-- Internal firewalls: REI 120
-- Double insulation with defrost system
-- Double loading bay
-
-**Certifications and compliance** 
-
-- ANSI/TIA 942-C-2024 Rating 4 (formerly Tier 4)
-- ISO 9001 - Quality of services offered
-- ISO 14001 - Environmental management system 
-- ISO 22237 - Data Center Lifecycle Management
-- ISO 27001 - IT security 
-- ISO 45001- Workplace health and safety management system
-- ISO 22301 - Business Continuity management system
-- ISO 20000-1 - IT services management
-
-**Connectivity** 
-
-- Point of entrance: 6 
-- Entrance Room: 2 
-- Main Distribution Area (MDA): 2 
-
-    - Carrier neutral data center
-    - Provision of managed connectivity
-
-**Energy** 
-
-- Total power: 6 MW IT 2N (redundant) 
-- UPS redundancy: 2N+1 
-- UPS type: double conversion static 
-- Individual UPS power: 500 kVA 
-- UPS run time: 15 minutes at full power on single module in emergency conditions - 30 minutes in standard conditions 
-- Generator redundancy: 2N 
-- Generator type: diesel generator units  
-- Full load run time: 24h in emergency conditions,  48h in standard conditions, refill within 12h
-
-**Cooling** 
-
-- Cooling type: Chilled water  - water to air system 
-- Normal mode: air/water chiller to indirect free cooling 
-- Chiller redundancy: 2N 
-- CRAH redundancy: 2N
-
-**Security** 
-
-- CCTV
-- 24/7/365 security
-- Separate parking for employees/visitors
-- Vehicle bollards
-- Separate entrance gates for visitors/goods
-- Mantrap for visitors and goods with anti-tailgating
-- Network Operations Center (NOC) 24/7/365
-- Security Operations Center (SOC) 24/7/365
-- Facility Operations Center (FOC) 24/7/365
-- Building Management System (BMS)
-
-**Fire prevention system** 
-
-- Air exchange: 2vol/h 
-- Extinguishing system: inert gas  Extinguishing gas: IG-541 
-- Redundancy of extinguishing cylinders: 2N 
-
-    - Highly sensitive smoke detection system
-    - Underfloor liquid loss detection system
-    - Fire detection and extinguishing system in each single module
-    - Standalone system on every generator unit
-
-##### DC RM 2 (Acilia-Rome)
-
-**General specifications**
-
-- Total surface area: 8.000 m²
-- Powered by two separate medium-voltage lines, each coming from distinct ACEA substations, ensuring electrical redundance
-
-**Certifications and compliance** 
-
-- Certified at Tier IV level, the highest standard for redundancy and uptime
-- It holds ANSI/TIA-942 Rating 4 for facility design
-- Management and operations standards include:
-
-    - ISO 50001 (energy management) 
-    - ISO 14001 (environmental management) 
-    - ISO 27001 (information security) 
-    - ISO 20000-1 (IT service management) and ISO 22301 (business continuity) 
-    - ISO 9001 (quality management) 
-
-- The facility adheres to the European Data Center Code of Conduct for energy efficiency.
-
-**Connectivity** 
-
-- It uses dual-ring fiber connectivity via two distinct Points of Entry (POEs), connecting to an optical backbone through POPs both located in Rome. 
-- The internal campus distribution ensures physically separate fiber paths between POEs and the meet-me rooms / data halls. 
-- The three AZs in Region A are interconnected via DWDM (Dense Wavelength Division Multiplexing) links, at high capacity, with a proprietary backbone for redundancy and low-latency.
-
-**Energy** 
-
-- It is powered with 100% renewable energy, aligning with TIM’s sustainability targets. 
-- An onsite photovoltaic installation providing up to 75,000 W (75 kW) capacity. 
-- Energy management systems are real-time: the infrastructure monitors electrical and thermal parameters to drive predictive maintenance and efficiency optimizations.
-
-**Cooling** 
-
-- The cooling architecture uses air delivered via raised floor systems, with return air collected in alternating ceiling plenums. 
-- It includes free-cooling, using external air when conditions allow, to reduce the energy used by mechanical refrigeration. 
-- Geothermal heat exchangers (ground-based dispersers) are used for heat rejection from chillers when needed. 
-- A Building Management System (BMS) monitors temperature, humidity, and airflow to optimize when and how cooling is deployed
-
-**Security** 
-
-- External and internal fencing, with anti-climb perimeter protection. 
-- Armed security guard presence. 
-- Video surveillance (CCTV) throughout the site. 
-- Pedestrian access is controlled by security mantraps / turnstiles. 
-- Intrusion detection systems (perimeter alarms) and corner / glass protection: the windows are blast-resistant / reinforced. 
-- Internal security patrols / rounds. 
-- Access to critical system rooms (data halls) is through security airlocks (bussole) and requires badge-based dual authentication. 
-- Cybersecurity: the infrastructure is monitored by a Security Operation Center (SOC), providing continuous threat detection. 
-- The facility complies with the PSN’s Technical Security Measures (MTMS), which define guidelines for logical segmentation, risk management, and protection
-
-**Fire prevention system** 
-
-- The Data Center is equipped with Very Early Smoke Detection Apparatus (VESDA) or similarly sensitive smoke detection systems to detect fire in its early stages
-- The fire suppression uses 3M Novec 1230 as the extinguishing agent: it's electrically non-conductive, volume-expanding, and designed to absorb heat to inhibit the combustion reaction. 
-- The fire suppression system has redundancy to provide 2N (fully redundant) coverage and ensure reliability in case of activation
-
-##### DC RM 3 (Pomezia-Rome)
-
-**General specifications**
-
-- The campus comprises a total area of ~51.000 m², with 13 system-rooms and 6 telecom rooms
-
-**Building** 
-
-- The PISP building within Pomezia is elevated and built with a 0.9 m raised floor, offering enhanced protection in case of flooding
-- Power is provided via two separate 20 kV medium-voltage lines from an ACEA substation, giving high reliability and redundancy
-- The primary electrical distribution is designed with redundancy: primary distribution uses an N+1 logic, while secondary distribution is a+b (or N+1) with dual radial path
-
-**Certifications and compliance** 
-
-- The data center meets Uptime Institute Tier III standard
-- It has ANSI/TIA-942 Rating 3 certification for facility design
-- The system is compliant with multiple ISO standards: ISO 50001 (energy management), ISO 14001 (environmental management), ISO 9001 (quality), ISO 27001 (information security), ISO 22301 (business continuity)
-
-**Connectivity** 
-
-- Connected via a dual-fiber ring: two independent paths link it to main ISP'score network via the POPs both located in Rome
-- The internal campus network ensures physically separate fiber routes between Points of Entry (POEs), meet-me rooms, and system rooms for redundancy
-
-**Energy** 
-
-- The electrical supply uses redundant medium-voltage (20 kV) lines, ensuring high availability
-- It uses two diesel generators plus two DRUPS (UPS + generator combo) for backup power
-- Fuel storage: there are two 15,000-litre double-walled diesel tanks with leak detection, strictly for emergency use
-- It aims for sustainability: adhere to green energy standards.
-
-**Cooling** 
-
-- The cooling system is built with dual-loop refrigerant circulation (two independent loops) to remove heat efficiently across the campus
-- On the rooftop, there are redundant chillers (N+1), ensuring that if one fails, thermal rejection can continue without service interruption
-- Inside the system rooms, there are approximately 120 air-conditioning units to manage local heat load
-
-**Security** 
-
-- Physical security is multilayered: perimeter protection, intrusion detection, surveillance, and access control
-- Access to sensitive rooms is controlled through security airlocks (“mantraps”) and requires badge-based authentication
-- Cybersecurity is managed through a Security Operation Center (SOC), with continuous monitoring, threat detection, and incident response
-
-**Fire prevention system** 
-
-- The security manual (MTMS) mandates very early smoke detection systems to detect fire risk promptly
-- Fire suppression likely uses inert, clean agents suitable for data centers, to avoid damaging sensitive IT gear
-- The fire protection architecture is designed with redundancy, according to high-availability and resilience standards
-
-#### The Region B Data Centers 
-
-##### DC MI 1 (Bergamo)
+##### DC MI 1 Bergamo
 
 **General specifications**
 
@@ -395,8 +216,9 @@ This section lists the technical specifications for each Data Center.
 - Fire detection and extinguishing system in each single module
 - Standalone system on every generator unit
 
+<a id="MI2"></a>
 
-##### DC MI 2 (Basiglio-Milan)
+##### DC MI 2 Basiglio
 
 **General specifications**
 
@@ -488,7 +310,9 @@ Suppression agents:
 - FM200
 - Argon
 
-##### DC MI 3 (Siziano-Milan)
+<a id="MI3"></a>
+
+##### DC MI 3 Siziano
 
 **General specifications**
 
@@ -569,3 +393,272 @@ Data Hall Security:
 - Intumescent paint on metal structures
 - REI120 fire-resistant perimeter walls around technical areas 
 - Part of the electrical and environmental risk-mitigation strategy includes fire-resistant compartmentalization
+
+#### The Region B Data Centers 
+
+<a id="GE1"></a>
+
+##### DC GE 1 Fiumara
+
+**General specifications**
+
+**Building** 
+
+**Certifications and compliance** 
+
+**Connectivity** 
+
+**Energy**
+
+**Cooling** 
+
+**Security** 
+
+**Fire prevention system** 
+
+<a id="GE2"></a>
+
+##### DC GE 2 Puccini
+
+**General specifications**
+
+**Building** 
+
+**Certifications and compliance** 
+
+**Connectivity** 
+
+**Energy**
+
+**Cooling** 
+
+**Security** 
+
+**Fire prevention system** **
+
+<a id="GE3"></a>
+
+##### DC GE 3 
+
+**General specifications**
+
+**Building** 
+
+**Certifications and compliance** 
+
+- Multiple ISO certifications, including: ISO 9001, ISO 14001, ISO 45001, and ISO 27001
+
+**Connectivity** 
+
+- Submarine cables: the facility supports or plans to support multiple undersea cable systems, including BlueMed, Blue & Raman, and Unitirreno.
+- Backbone integration: The site is part of Sparkle’s Tier-1 Seabone backbone, offering IP transit and interconnection.
+- Interconnection / IX: The landing hub provides access to local IX ecosystems and supports peering; it is aligned with the local Ge-DIX Internet Exchange.
+
+**Energy**
+
+**Cooling** 
+
+**Security**
+
+- Digital security: Sparkle’s corporate commitment includes security management aligned with ISO 27001.
+- Services offered (security layer): the site supports DDoS protection and virtual NAP capabilities.
+
+**Fire prevention system** 
+
+#### The Region C Data Centers 
+
+<a id="RM1"></a>
+
+##### DC RM 1 Rome
+
+**General specifications**
+
+- Total surface area: 10.730 m² 
+- Data hall surface area: 3.120 m² 
+- Number of independent data rooms: 6 
+- Floors on which the server rooms are distributed: 3
+- Secure location in terms of earthquakes
+- Secure location in terms of hydro-geological risks
+
+**Building** 
+
+- Height of the data hall: 3,5 m 
+- Height of upper plenum: 1,4 m 
+- Height of lower plenum:  1,95 m 
+- Load capacity of the floating floor: 2.000 kg/m² (distributed load) - 1.000 kg/m² (concentrated load in one place) 
+- External firewalls:  REI 240 
+- Internal firewalls: REI 120
+- Double insulation with defrost system
+- Double loading bay
+
+**Certifications and compliance** 
+
+- ANSI/TIA 942-C-2024 Rating 4 (formerly Tier 4)
+- ISO 9001 - Quality of services offered
+- ISO 14001 - Environmental management system 
+- ISO 22237 - Data Center Lifecycle Management
+- ISO 27001 - IT security 
+- ISO 45001- Workplace health and safety management system
+- ISO 22301 - Business Continuity management system
+- ISO 20000-1 - IT services management
+
+**Connectivity** 
+
+- Point of entrance: 6 
+- Entrance Room: 2 
+- Main Distribution Area (MDA): 2 
+
+    - Carrier neutral data center
+    - Provision of managed connectivity
+
+**Energy** 
+
+- Total power: 6 MW IT 2N (redundant) 
+- UPS redundancy: 2N+1 
+- UPS type: double conversion static 
+- Individual UPS power: 500 kVA 
+- UPS run time: 15 minutes at full power on single module in emergency conditions - 30 minutes in standard conditions 
+- Generator redundancy: 2N 
+- Generator type: diesel generator units  
+- Full load run time: 24h in emergency conditions,  48h in standard conditions, refill within 12h
+
+**Cooling** 
+
+- Cooling type: Chilled water  - water to air system 
+- Normal mode: air/water chiller to indirect free cooling 
+- Chiller redundancy: 2N 
+- CRAH redundancy: 2N
+
+**Security** 
+
+- CCTV
+- 24/7/365 security
+- Separate parking for employees/visitors
+- Vehicle bollards
+- Separate entrance gates for visitors/goods
+- Mantrap for visitors and goods with anti-tailgating
+- Network Operations Center (NOC) 24/7/365
+- Security Operations Center (SOC) 24/7/365
+- Facility Operations Center (FOC) 24/7/365
+- Building Management System (BMS)
+
+**Fire prevention system** 
+
+- Air exchange: 2vol/h 
+- Extinguishing system: inert gas  Extinguishing gas: IG-541 
+- Redundancy of extinguishing cylinders: 2N 
+
+    - Highly sensitive smoke detection system
+    - Underfloor liquid loss detection system
+    - Fire detection and extinguishing system in each single module
+    - Standalone system on every generator unit
+
+<a id="RM2"></a>
+
+##### DC RM 2 Acilia
+
+**General specifications**
+
+- Total surface area: 8.000 m²
+- Powered by two separate medium-voltage lines, each coming from distinct ACEA substations, ensuring electrical redundance
+
+**Certifications and compliance** 
+
+- Certified at Tier IV level, the highest standard for redundancy and uptime
+- It holds ANSI/TIA-942 Rating 4 for facility design
+- Management and operations standards include:
+
+    - ISO 50001 (energy management) 
+    - ISO 14001 (environmental management) 
+    - ISO 27001 (information security) 
+    - ISO 20000-1 (IT service management) and ISO 22301 (business continuity) 
+    - ISO 9001 (quality management) 
+
+- The facility adheres to the European Data Center Code of Conduct for energy efficiency.
+
+**Connectivity** 
+
+- It uses dual-ring fiber connectivity via two distinct Points of Entry (POEs), connecting to an optical backbone through POPs both located in Rome. 
+- The internal campus distribution ensures physically separate fiber paths between POEs and the meet-me rooms / data halls. 
+- The three AZs in Region A are interconnected via DWDM (Dense Wavelength Division Multiplexing) links, at high capacity, with a proprietary backbone for redundancy and low-latency.
+
+**Energy** 
+
+- It is powered with 100% renewable energy, aligning with TIM’s sustainability targets. 
+- An onsite photovoltaic installation providing up to 75,000 W (75 kW) capacity. 
+- Energy management systems are real-time: the infrastructure monitors electrical and thermal parameters to drive predictive maintenance and efficiency optimizations.
+
+**Cooling** 
+
+- The cooling architecture uses air delivered via raised floor systems, with return air collected in alternating ceiling plenums. 
+- It includes free-cooling, using external air when conditions allow, to reduce the energy used by mechanical refrigeration. 
+- Geothermal heat exchangers (ground-based dispersers) are used for heat rejection from chillers when needed. 
+- A Building Management System (BMS) monitors temperature, humidity, and airflow to optimize when and how cooling is deployed
+
+**Security** 
+
+- External and internal fencing, with anti-climb perimeter protection. 
+- Armed security guard presence. 
+- Video surveillance (CCTV) throughout the site. 
+- Pedestrian access is controlled by security mantraps / turnstiles. 
+- Intrusion detection systems (perimeter alarms) and corner / glass protection: the windows are blast-resistant / reinforced. 
+- Internal security patrols / rounds. 
+- Access to critical system rooms (data halls) is through security airlocks (bussole) and requires badge-based dual authentication. 
+- Cybersecurity: the infrastructure is monitored by a Security Operation Center (SOC), providing continuous threat detection. 
+- The facility complies with the PSN’s Technical Security Measures (MTMS), which define guidelines for logical segmentation, risk management, and protection
+
+**Fire prevention system** 
+
+- The Data Center is equipped with Very Early Smoke Detection Apparatus (VESDA) or similarly sensitive smoke detection systems to detect fire in its early stages
+- The fire suppression uses 3M Novec 1230 as the extinguishing agent: it's electrically non-conductive, volume-expanding, and designed to absorb heat to inhibit the combustion reaction. 
+- The fire suppression system has redundancy to provide 2N (fully redundant) coverage and ensure reliability in case of activation
+
+<a id="RM3"></a>
+
+##### DC RM 3 Pomezia
+
+**General specifications**
+
+- The campus comprises a total area of ~51.000 m², with 13 system-rooms and 6 telecom rooms
+
+**Building** 
+
+- The PISP building within Pomezia is elevated and built with a 0.9 m raised floor, offering enhanced protection in case of flooding
+- Power is provided via two separate 20 kV medium-voltage lines from an ACEA substation, giving high reliability and redundancy
+- The primary electrical distribution is designed with redundancy: primary distribution uses an N+1 logic, while secondary distribution is a+b (or N+1) with dual radial path
+
+**Certifications and compliance** 
+
+- The data center meets Uptime Institute Tier III standard
+- It has ANSI/TIA-942 Rating 3 certification for facility design
+- The system is compliant with multiple ISO standards: ISO 50001 (energy management), ISO 14001 (environmental management), ISO 9001 (quality), ISO 27001 (information security), ISO 22301 (business continuity)
+
+**Connectivity** 
+
+- Connected via a dual-fiber ring: two independent paths link it to main ISP'score network via the POPs both located in Rome
+- The internal campus network ensures physically separate fiber routes between Points of Entry (POEs), meet-me rooms, and system rooms for redundancy
+
+**Energy** 
+
+- The electrical supply uses redundant medium-voltage (20 kV) lines, ensuring high availability
+- It uses two diesel generators plus two DRUPS (UPS + generator combo) for backup power
+- Fuel storage: there are two 15,000-litre double-walled diesel tanks with leak detection, strictly for emergency use
+- It aims for sustainability: adhere to green energy standards.
+
+**Cooling** 
+
+- The cooling system is built with dual-loop refrigerant circulation (two independent loops) to remove heat efficiently across the campus
+- On the rooftop, there are redundant chillers (N+1), ensuring that if one fails, thermal rejection can continue without service interruption
+- Inside the system rooms, there are approximately 120 air-conditioning units to manage local heat load
+
+**Security** 
+
+- Physical security is multilayered: perimeter protection, intrusion detection, surveillance, and access control
+- Access to sensitive rooms is controlled through security airlocks (“mantraps”) and requires badge-based authentication
+- Cybersecurity is managed through a Security Operation Center (SOC), with continuous monitoring, threat detection, and incident response
+
+**Fire prevention system** 
+
+- The security manual (MTMS) mandates very early smoke detection systems to detect fire risk promptly
+- Fire suppression likely uses inert, clean agents suitable for data centers, to avoid damaging sensitive IT gear
+- The fire protection architecture is designed with redundancy, according to high-availability and resilience standards

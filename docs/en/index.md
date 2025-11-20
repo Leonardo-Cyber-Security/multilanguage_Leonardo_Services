@@ -126,8 +126,9 @@ The following table lists the various families and their related services.
 | Hybrid                               | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)                      |
 <figcaption>List of services for the Hybrid family</figcaption>
 
-From a logical-functional point of view, the Leonardo's services can be divided into three macro-categories:
+From a logical-functional point of view, the Leonardo's services can be divided into four categories:
 
 - [Infrastructure as a Service (IaaS)](IaaS.md)  
 - [Container as a Service (CaaS)](CaaS.md)
 - [Platform as a Service (PaaS)](PaaS.md)
+- [Hybrid Services](Hybrid.md)

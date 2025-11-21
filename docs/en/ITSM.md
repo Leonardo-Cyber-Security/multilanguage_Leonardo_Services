@@ -116,6 +116,8 @@ The organization is responsible for cloud security, including data protection, i
 
 The distribution of responsibilities varies depending on the service model. As the organization adopts higher-level services (from IaaS to PaaS), Leonardo assumes a greater share of operational responsibility, while the organization retains responsibility for data, identity, and access governance.
 
+![Division of responsibilities](assets/images/extract/media/shared_resp.png)
+
 ###  Organizational roles
 
 To ensure effective management of shared responsibilities, the following internal roles are established:

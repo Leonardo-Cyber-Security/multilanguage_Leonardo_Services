@@ -1763,15 +1763,13 @@ The service offers the following advantages:
 
 #### Disaster Recovery (DR) architecture
 
-Data replication within MinIO Object Storage is managed directly at the application level. The solution provides Site Replication capabilities that enable native management of data distributed across multiple Data Centers (DCs). These capabilities allow for the alignment of not only buckets and objects, but also access policies and encryption capabilities.
-
-Typically, in systems like these, data availability and resilience is managed through conceptual separations of parts of the distributed cluster: these are called Regions and Availability Zones.
-
-Replication is performed synchronously between two Availability Zones (AZs) belonging to the same region, thus ensuring data consistency and availability in the event of a local failure. At the same time, asynchronous replication can be enabled between different Regions, ensuring an effective geographical Disaster Recovery (DR) mechanism.
-
-Thanks to the high bandwidth and low latency of the connections available between data centers, a synchronous data replication solution was adopted between clusters. Access to the different clusters can be achieved either via direct addressing or through the use of a load balancer, depending on architectural and operational needs.
-
-From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience. To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure. Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets, ensuring redundancy, fault tolerance, and operational continuity.
+Data replication within MinIO Object Storage is managed directly at the application level.  
+The solution provides Site Replication capabilities that enable native management of data distributed across multiple Data Centers (DCs), synchronizing buckets, objects, access policies, and encryption configurations.  
+Typically, data availability and resilience in distributed object storage systems is achieved through deployment across multiple physical locations. In this architecture, MinIO clusters are deployed in geographically separate data centers to provide disaster recovery capabilities. 
+Replication between MinIO sites can be configured as either synchronous or asynchronous depending on network characteristics and recovery objectives.  
+In this deployment, thanks to the high bandwidth and low latency connections available between data centers, synchronous Site Replication was adopted between clusters, ensuring data consistency across locations.  
+Access to the different clusters can be achieved either via direct addressing or through a load balancer, depending on architectural and operational needs.From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience.  
+To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure. Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets, ensuring redundancy, fault tolerance, and operational continuity.
 
 <a id="datalakehouse"></a>
 

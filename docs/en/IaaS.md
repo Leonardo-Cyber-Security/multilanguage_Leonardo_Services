@@ -66,9 +66,9 @@ The services offer the following advantages:
 
 ![How to create a VM - Step 1](assets/images/extract/media/VM_create.png)  
 
-![How to create a VM - Steo 2](assets/images/extract/media/VM_create02.png)  
+![How to create a VM - Step 2](assets/images/extract/media/VM_create02.png)  
 
-![How to visualize a VM](assets/images/extract/media/VM_view.png)
+![How to manage a VM](assets/images/extract/media/VM_view.png)
 
 #### Services Description
 

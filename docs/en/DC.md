@@ -442,7 +442,9 @@ Data Hall Security:
 
 **General specifications**
 
-**Building** 
+Landing of Blue & Raman submarine cables.  
+BlueMed system with branches between Italy, Africa, Europe, and the Middle East.  
+Infrastructure designed to support up to six new submarine cables in the future via the Genoa Landing Platform.
 
 **Certifications and compliance** 
 
@@ -450,20 +452,23 @@ Data Hall Security:
 
 **Connectivity** 
 
-- Submarine cables: the facility supports or plans to support multiple undersea cable systems, including BlueMed, Blue & Raman, and Unitirreno.
-- Backbone integration: The site is part of Sparkle’s Tier-1 Seabone backbone, offering IP transit and interconnection.
-- Interconnection / IX: The landing hub provides access to local IX ecosystems and supports peering; it is aligned with the local Ge-DIX Internet Exchange.
+The data center has an active IP node for IP transit services. The IP node is integrated with Sparkle's global Tier-1 Seabone backbone.  
+Submarine cables: the facility supports or plans to support multiple undersea cable systems, including BlueMed, Blue & Raman, and Unitirreno.  
+Interconnection / IX: The landing hub provides access to local IX ecosystems and supports peering; it is aligned with the local Ge-DIX Internet Exchange.
 
 **Energy**
 
+The data center is designed with environmental sustainability in mind.   
+Total installed power of 4.7 MW.
+
 **Cooling** 
+
+Use of advanced cooling systems (including "green" techniques) and lithium-ion batteries.
 
 **Security**
 
 - Digital security: Sparkle’s corporate commitment includes security management aligned with ISO 27001.
 - Services offered (security layer): the site supports DDoS protection and virtual NAP capabilities.
-
-**Fire prevention system** 
 
 #### The Region C Data Centers 
 

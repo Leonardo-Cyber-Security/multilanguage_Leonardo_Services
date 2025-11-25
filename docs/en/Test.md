@@ -1,13 +1,13 @@
 # Test Account Requests
 
-This section defines the process for provisioning test accounts requested by customers, ensuring delivery within 10 days from the date of a complete and validated request.  
-The process ensures that all customer requests for test accounts are handled in a controlled, timely, and secure manner. It includes request intake, validation, approval, provisioning, and delivery.
+This section defines the process for provisioning test accounts requested by customers.
+The process ensures that customer requests for test accounts are handled in a controlled, timely, and secure manner. It includes request intake, validation, approval, provisioning, and delivery.
 
 ## Request submission process
 
 Below you can view the sequence of the process for requesting a test account by an authorized user.
 
-1) The customer submits a request via email to the designated support address. The request have to include:
+1) The customer sends a request via email to the support address listed here: lce.support@leonardo.com. The request must include:
 
 - Purpose of the test account
 - Number of accounts required
@@ -34,3 +34,13 @@ A functionality check is performed to confirm proper access.
 - Contact information for support
 
 The ticket is now then closed.
+
+## Limitations
+
+The following are some limitations regarding test account requests:
+
+- Creation of a maximum of 4 small-scale VMs.
+- Creation of a maximum of 1 K8S cluster.
+- PaaS services can be added on request to the K8S cluster.
+
+Not all PaaS services can be requested in the test environment.

@@ -8,7 +8,7 @@ For each service, you can choose from three alternative purchase options:
 - *Annual Reserved Subscription* with upfront payment upon activation and testing of the service;
 - *Three-year Reserved Subscription* with upfront payment upon activation and testing of the service.
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Compute | [Pool Small (Confidential)](IaaS.md#pool-confidential-services)| Hosts number| 3 Host Number (2x 24 Core CPU - 512 GB RAM - 32 TB SSD)| 21.586,03 €| 233.129,08 €| 621.677,54 €|
 | Compute | [Pool Medium (Confidential)](IaaS.md#pool-confidential-services)| Hosts number| 6 Host Number (2x 24 Core CPU - 512 GB RAM - 32 TB SSD)| 34.560,46 €| 373.252,97 €| 995.341,26 €|
@@ -23,7 +23,7 @@ For each service, you can choose from three alternative purchase options:
 <figcaption>Price list of the Compute Family Services</figcaption>
 
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Security | [Identity & Access Management (IAM) Service](PaaS.md#IAM)| Users| 100 users| 454,59 €| 4.909,58 €| 13.092,20 €|
 | Security | [Key Vault as a Service - Standard](PaaS.md#key-vault)| Client| 50 clients| 18.508,98 €| 199.896,94 €| 533.058,50 €|
@@ -38,7 +38,7 @@ For each service, you can choose from three alternative purchase options:
 | Security | [Intrusion Prevention System (IPS)](PaaS.md#IPS)| Throughput (Gbps)| 1| 7.541,19 €| 81.444,88 €| 217.186,36 €|
 <figcaption>Price list of the Security Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Middleware | [PaaS API Management](PaaS.md#API)| Request| 500M API request| 24.900,56 €| 268.926,08 €| 717.136,23 €|
 | Middleware | [Jboss as a Service](PaaS.md#Jboss)| Node| 1 Node with 4 VCPUs and 8GB of RAM| 537,78 €| 5.808,04 €| 15.488,10 €|
@@ -49,12 +49,12 @@ For each service, you can choose from three alternative purchase options:
 | Middleware | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)| Worker node| 26-core 2.70 GHz processor, 1:2 virtualization ratio - SSD disk per worker| 244,06 €| 2.635,81 €| 7.028,84 €|
 <figcaption>Price list of the Middleware Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Data Protection | [Backup - PLATFORM](PaaS.md#backup)| TB| 1| 30,52 €| 329,62 €| 879,00 €|
 <figcaption>Price list of the Data Protection Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Infra & Ops Platform | [Multicloud Management Platform](PaaS.md#SCMP) | Volumes|less than €1.000.000,00 in annual managed resource expenditure for Cloud resources; every 5120 GB of managed RAM for on-premise or hybrid resources| 8.621,22 €| 93.109,16 €| 248.291,09 €|
 | Infra & Ops Platform | [IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops)| Package of 80 infra hosts with an average of 32 GB RAM, 20 apps with an average of 64 GB RAM, 3 million trx, standard support| 1| 55.867,15 €| 603.365,24 €|  1.608.973,98 €|
@@ -62,7 +62,7 @@ For each service, you can choose from three alternative purchase options:
 | Infra & Ops Platform | [PaaS Operations Management](PaaS.md#operations)| Concurrent users| 25| 13.899,53 €| 150.114,91 €| 400.306,42 €|
 <figcaption>Price list of the Infra & Ops Platform Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | DevSecOps | [Configuration Manager](PaaS.md#config)| Nodes|25 Nodes| 494,25 €| 5.337,86 €| 14.234,29 €|
 | DevSecOps | [Test Automation](PaaS.md#test)| User| 1 tester, 10 automation Users, 5 Robots| 13.057,79 €| 141.024,08 €| 376.064,22 €|
@@ -71,7 +71,7 @@ For each service, you can choose from three alternative purchase options:
 | DevSecOps| [Qualizer DevSecOps](PaaS.md#qualizer) | Projects| 10 Projects| 10.010,65 €| 108.115,00 €| 288.306,67 €|
 <figcaption>Price list of the DevSecOps Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Big Data | [Data Lake - 1TB](PaaS.md#datalake)| TB|1 TB| 25,83 €| 279,00 €| 744,00 €|
 | Big Data | [Business Intelligence Platform](PaaS.md#BI)| Users| 50 users| 8.365,83 €| 90.351,00 €| 240.936,01 €|
@@ -80,7 +80,7 @@ For each service, you can choose from three alternative purchase options:
 | Big Data| [Data Governance](PaaS.md#governance)| User| 10 users| 461,45 €| 4.983,68 €| 13.289,82 €|
 <figcaption>Price list of the Big Data Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | AI | [Speech to Text](PaaS.md#speech-to-text)| GPU| 1 partition H100| 2.819,93 €| 30.455,25 €| 81.214,00 €|
 | AI | [PaaS - AI Audio Analytics](PaaS.md#AI-audio-video)| Audio stream| H24 X 365G| 219,65 €| 2.372,23 €| 6.325,95 €|
@@ -98,17 +98,17 @@ For each service, you can choose from three alternative purchase options:
 | AI | [AI Vector DB](PaaS.md#AI-vectorDB)| User; vCore| 10 Users; 8 vCores| 31.053,51 €| 335.377,93 €| 894.341,14 €|
 <figcaption>Price list of the Artificial Intelligence (AI) Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | VDI | [VDI](PaaS.md#VDI)| Competing users| 250 concurrent users (8vcpu, 16Gb RAM, 256 GB Disk)| 94.673,12 €| 1.022.469,74 €| 2.726.585,98 €|
 <figcaption>Price list of the Data Protection Virtual Desktop Infrastructure (VDI) Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Collaboration | [Instant Messaging](PaaS.md#messaging)| Users| 1000 users| 67.785,44 €| 732.082,73 €| 1.952.220,60 €|
 <figcaption>Price list of the Collaboration Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Database | [PaaS SQL - PostgreSQL](PaaS.md#postgres)| DB Instance| 4 vCPUs; 16 GB of RAM ; 500 GB of storage per istance (with replication)| 550,42 €| 5.944,50 €| 15.851,99 €|
 | Database | [PaaS SQL - MariaDB](PaaS.md#mariaDB)| DB Instance| 4 vCPUs; 16 GB of RAM ; 500 GB of storage per istance (with replication)| 601,71 €| 6.498,45 €| 17.329,20 €|
@@ -119,7 +119,7 @@ For each service, you can choose from three alternative purchase options:
 | Database | [PaaS In Memory - Redis](PaaS.md#redis) | DB Instance| 4 vCPUs; 16 GB of RAM ; 500 GB of storage per istance | 1.873,84 €| 20.237,47 €| 53.966,58 €|
 <figcaption>Price list of the Database Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Networking | [PaaS CDN (Content Delivery Network)](PaaS.md#CDN)|Throughput (Gbps)| 10|  9.112,76 €|  98.417,78 €|  262.447,40 €|
 | Networking | [PaaS Domain Name System (DNS)](PaaS.md#DNS)| DNS Instance| 1| 3.899,57 €|  42.115,37 €| 112.307,66 €|
@@ -128,13 +128,13 @@ For each service, you can choose from three alternative purchase options:
 | Networking | [Cloud interconnect Gold SW (10 Gbps max throughput)](PaaS.md#gold)|Throughput (Gbps)| 10| 9.112,76 €| 98.417,78 €| 262.447,40 €|
 <figcaption>Price list of the Networking Family Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Storage | [Block Storage (1000 GB) - High Density](PaaS.md#block-storage)| 1000 GB| 1| 107,24 €| 1.158,24 €| 3.088,65 €|
 | Storage | [Archive Storage (1000 GB)](PaaS.md#archive-storage)| 1000 GB| 1| 96,52 €| 1.042,42 €| 2.779,78 €|
 <figcaption>Price list of the Storage Services</figcaption>
 
-| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Year Reserved| 3Year Reserved|
+| Family| Service| Unit| Value per unit| PAYG (Monthly)| 1Y Reserved| 3Y Reserved|
 | ------| -------| ----| --------------| --------------| --------------| --------------|
 | Hybrid | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)| Host number| 3 Hosts (2x 24 Core CPU - 512 GB RAM - 32 TB SSD| 21.586,03 €| 233.129,08 €| € 621.677,54|
 <figcaption>Price list of the Hybrid Services</figcaption>

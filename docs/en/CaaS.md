@@ -62,3 +62,53 @@ The service offers the following advantages:
 - *Centralized cluster control and governance*.
 - *Scalability and flexibility*.
 - *Integration with multicloud and legacy environments*.
+
+
+**Baseline Managed Kubernetes Architecture on Leonardo Cloud**
+==============================================================
+
+**Overview**
+------------
+
+This reference architecture describes the recommended baseline design for running containerized applications on **Leonardo Cloud Managed Kubernetes Service (MKS)**. It provides a secure, scalable, production-ready foundation aligned with cloud best practices for networking, identity, security, observability, DevOps, and resilience.
+
+This baseline architecture is suitable for most production workloads and is the recommended starting point for any Kubernetes deployment on Leonardo Cloud.
+
+######Architecture Components***
+===========================
+
+**Leonardo Cloud Managed Kubernetes Service (MKS)**
+---------------------------------------------------
+
+MKS provides a fully managed Kubernetes control plane offering:
+
+*   High-availability master nodes
+    
+*   Automatic patching and upgrades
+    
+*   Secure API endpoints integrated with Leonardo Cloud IAM
+    
+*   Managed certificates and control-plane hardening
+    
+*   Unified lifecycle management (create, scale, upgrade, delete)
+    
+
+Customers interact only with the Kubernetes API; Leonardo Cloud operates and secures the control plane.
+
+**Node Pools**
+--------------
+
+Node pools provide the compute layer and support:
+
+*   **System node pool** — hosts core Kubernetes components
+    
+*   **User node pools** — run your application workloads
+    
+*   Multiple pool types (CPU-optimized, RAM-optimized, GPU-backed)
+    
+*   Auto-healing nodes
+    
+*   Manual or automatic scaling
+    
+*   Managed node image lifecycle
+    

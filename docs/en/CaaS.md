@@ -26,13 +26,18 @@ The platform ensures automation of node scaling, monitoring, and high availabili
 The cluster capacity can be increased or decreased through automated scaling mechanisms based on predefined node block increments, in line with the proposed SKU sizing.  
 This approach ensures architectural consistency, predictable performance, and alignment with the design constraints of the underlying infrastructure.
 
+| Type               | Contained Elements                   |
+| -------------------| -------------------------------------|
+| Kubernetes cluster | 15 nodes with 8 GB RAM for each unit |
+<figcaption>Contained Elements for the Kubernetes Confidential Computing Service</figcaption>
+
 #### Features and Advantages
 
 Implementation requires a combination of hardware certified for Confidential Computing, a private, security-hardened Kubernetes infrastructure, and a suite of observability and governance tools to maintain complete control over the container lifecycle.
 
 Features included:
 
-- *Data protection* → The operating system is configured to ensure protection at all stages: data in memory, through full disk encryption and key rotation; data in transit, using secure and encrypted communication protocols; and data in use, adopting Confidential Computing practices and secure execution environments.
+- *Data protection* → The operating system is configured to ensure protection at all stages: data in memory, through full disk encryption; data in transit, using secure and encrypted communication protocols; and data in use, adopting Confidential Computing practices and secure execution environments.
 - *Secure enclaves* → Enforces isolation and encryption, ensuring that only authorized parties can access data.
 - *Trusted execution environments (TEEs)* → Adds a secure computing environment, protecting data from external threats.
 - As a managed Kubernetes solution, the customer does not have to worry about managing the infrastructure and its complexity, as the infrastructure layer is managed by Leonardo throughout the service lifecycle.
@@ -53,8 +58,6 @@ Access Security:
 Compliance, Monitoring, and Auditing:
 
 - Centralized logging and security-related events are forwarded directly to the SOC team SIEM, enabling correlation, alerting, and continuous security monitoring.
-
-The service is offered with the following metrics: *15 nodes with 8 GB RAM for each unit*.
 
 The service offers the following advantages:
 

@@ -1,4 +1,4 @@
-# Cyber Security specifications
+# Cyber Security Services
 
 This section lists the Cyber Security specifications and services provided by Leonardo Security Operation Centre (SOC).
 
@@ -86,47 +86,4 @@ The CSIRT services deeply analyse and react to security incidents, minimising th
 - Identification of Indicators of Compromise and any containment actions to put in place.
 - Capability to isolate systems while preserving evidences. 
 - Specialised support to carry out the remediation and restoration of systems. 
-- Indications regarding the actions needed to mitigate future incidents
-
-## Security services for recovering
-
-### Crisis Management, Training & Security Awareness
-
-Crisis Management, Training & Security Awareness services support companies and organisations in the management of emergencies and crises due to cyber incidents that seriously affect organisations as well as in the design and delivery of training activities on hot cyber security issues and awareness campaigns increasing the cyber security competency of internal staff. 
-
-**Services’ Deliverable**
-
-- Technical incident report.
-- Post-crisis assessment.
-- Lesson learned and training activities.
-
-**Services Included**
-
-- Cyber Crisis Management → provides specialist support to guarantee the effective recovery of the organisation’s vital services or assets from crisis. 
-- Cyber Training & Security Awareness → includes basic and advanced training courses on cyber security issues to support the company in improving its cyber resilience level.
-
-**Benefits**
-
-- Performance of post-crisis assessment by evaluating all aspects involved within the crisis and getting incident parameters against future occurrences. 
-- Activation of Lesson learned phase aimed at developing a resilient and secure cyber approach for the organization.
-
-### Computer Security Incident Response Team Services
-
-The Computer Security Incident Response Team Services (CSIRT) identify and analyse the most advanced cyber threats that are capable of bypassing traditional automatic defensive measures, through the identification of root cause, attacker behaviour, relevant artefacts, and compromised assets within the monitored infrastructures.  
-The CSIRT services deeply analyse and react to security incidents, minimising the operational and economic impacts of the security incident as effectively as possible through the definition of an effective recovery plan including long-term, mid-term and short terms suggested actions.
-
-**Services’ Deliverable**
-
-- Incident response reports.
-- Remediation and restoration technical support.
-- Security evidences and artifacts.
-
-**Services Included**
-
-- *Incident Response* → combines specialist capability in incident management and investigation to deliver comprehensive advice and technical analysis in the face of any cyber security attack or breach. 
-- *Digital Forensics* → identify, collect and acquire all the evidence that demonstrates a possible compromise following an exploit by an attacker and any non-compliant use of an asset.
-
-**Benefits**
-
-- Understanding of the root cause of any cyber security related incident. 
-- Provision of evidence to support company, regulatory or criminal investigations.
+- Indications regarding the actions needed to mitigate future incidents.

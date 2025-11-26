@@ -18,7 +18,7 @@ For details on each service, please see the dedicated section.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Compute | [Confidental Private IaaS](IaaS.md#pool-confidential-services)|
-| Compute | [Shared-IaaS (VMs)](IaaS.md#VMs)|
+| Compute | [Confidential Shared-IaaS (VMs)](IaaS.md#VMs)|
 <figcaption>List of families and related IaaS services</figcaption>
 
 ## Container as a Service (CaaS)
@@ -37,29 +37,22 @@ Below is a list of services included in this category.
 For details on each service, please see the dedicated section. 
 
 | FAMILY                               | LIST OF SERVICES                                            |
-| ------------------------------------ | ----------------------------------------------------------- |
-| Compute                              | [Functions As A Service (FAAS)](PaaS.md#faas)                                |                                   
+| ------------------------------------ | ----------------------------------------------------------- |                            
 | Security                             | [Identity & Access Management (IAM) Service](PaaS.md#IAM)|
 | Security                             | [Key Vault as a Service - Standard](PaaS.md#key-vault)                           |
 | Security                             | [Endpoint Protection](PaaS.md#endpoint)                                           |
-| Security                             | [Advanced security and protection service for files and data](PaaS.md#file-data)                                           |
-| Security                             | [Automated Penetration Testing Services](PaaS.md#PT)                                           |
-| Security                             | [Mail security & ransomware protection service](PaaS.md#mail)                                           |
-| Security                             | [DSPM (Data Security Posture Management)](PaaS.md#posture)                                           |
 | Security                             | [NGFW platform](PaaS.md#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](PaaS.md#PAM)                                           |
-| Security                             | [Perimeter Security Intelligence](PaaS.md#PSI)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](PaaS.md#IPS)                                           |
 | Middleware                           | [PaaS API Management](PaaS.md#API)                                         |
+| Middleware                              | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
 | Middleware                           | [Jboss as a Service](PaaS.md#Jboss)                                          |
-| Middleware                           | [Red Hat Runtime Subscription](PaaS.md#RT-runtime)                                          |
 | Middleware                           | [Spring boot as a Service](PaaS.md#spring-boot)                                    |
 | Middleware                           | [PaaS Business Process as a Service](PaaS.md#BPM)                          |
 | Middleware                           | [PaaS CMS as a Service](PaaS.md#CMS)                                       |
 | Middleware                           | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)                            |
-|  Data Protection                          | [Backup - PLATFORM](PaaS.md#backup)                            |
+|  Data Protection                          | [Backup](PaaS.md#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](PaaS.md#SCMP)                              |
-| Infra & Ops Platform                 | [Control Room as a Service](PaaS.md#control-room)                                   |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](PaaS.md#ITSM)                              |
 | Infra & Ops Platform                 | [PaaS Operations Management](PaaS.md#operations)                              |
@@ -111,4 +104,5 @@ For details on each service, please see the dedicated section.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)|
+| Hybrid | [Bulk Data Transfer](Hybrid.md#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>

@@ -5,6 +5,7 @@ The following table lists the services included in the *Hybrid* category.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](#edge)|
+| Hybrid | [Bulk Data Transfer](#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>
 
 ## Hybrid Family
@@ -78,6 +79,7 @@ The service offers the following advantages:
 - *Architectural flexibility* → support for VM-based, containerized, and mixed workloads.
 - *Operational efficiency* → standardized processes for deployment, updates, and governance.
 
+<a id="bulk"></a>
 
 ## Bulk Data Transfer
 

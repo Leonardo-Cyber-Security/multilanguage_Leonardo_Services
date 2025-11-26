@@ -5,7 +5,7 @@ The following table lists the services included in the *Infrastructure as a Serv
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Compute | [Confidental Private IaaS](#pool-confidential-services)|
-| Compute | [Shared-IaaS (VMs)](#VMs)|
+| Compute | [Confidental Shared-IaaS (VMs)](#VMs)|
 <figcaption>List of families and related IaaS services</figcaption>
 
 ## Compute Family
@@ -13,15 +13,15 @@ The following table lists the services included in the *Infrastructure as a Serv
 Below is the list of services belonging to the Compute family:
 
 - [Confidental Private IaaS](#pool-confidential-services)
-    - Pool Small
-    - Pool Medium
-    - Pool Large
-    - Pool X-Large
-- [Shared-IaaS (VMs)](#VMs)
-    - VM Small
-    - VM Medium
-    - VM Large
-    - VM X-Large
+    - Pool Small (Confidential)
+    - Pool Medium (Confidential)
+    - Pool Large (Confidential)
+    - Pool X-Large (Confidential)
+- [Confidential Shared-IaaS (VMs)](#VMs)
+    - VM Small (Confidential)
+    - VM Medium (Confidential)
+    - VM Large (Confidential)
+    - VM X-Large (Confidential)
 
 <a id="pool-confidential-services"></a>
 
@@ -62,7 +62,7 @@ The services offer the following advantages:
 
 <a id="VMs"></a>
 
-### Shared-IaaS (VMs)
+### Confidential Shared-IaaS (VMs)
 
 ![How to create a VM - Step 1](assets/images/extract/media/VM_create.png)  
 
@@ -90,27 +90,23 @@ Depending on the resource pool required by each individual organization, the mos
 The services offer the following features:
 
 - *High Availability (HA)* → automatic VM failover in case of node failure when HA is enabled.
-- *Live Migration* → VMs can be moved between nodes without downtime.
-- *Snapshots* → point-in-time copies of VM disks for quick rollback or testing.
 - *Backups* → scheduled full or incremental backups using Proxmox Backup Server integration.
 - *Templates* → predefined OS images (e.g., Ubuntu, Debian, CentOS, Windows Server) for rapid VM deployment.
 - *User Access* → secure web interface and console access (noVNC/SPICE).
 - *Monitoring* → real-time performance metrics and resource usage monitoring.
 - *Security and isolation* → tenant isolation using VLANs and hypervisor-level separation.
-- *Access Control* → role-based access control (RBAC) and optional LDAP/SSO integration.
-- *Firewall* → integrated per-VM and per-network firewall rules configurable by users.
+- *Access Control* → role-based access control (RBAC).
 - *Data protection* → encrypted storage backends and secure backup transfer protocols.
 - *Audit logging* → comprehensive logging of user and system activities for compliance and troubleshooting.
 - *Provisioning* → fully automated via API or web interface.
-- *Resource scaling* → dynamic allocation of compute, storage, and network resources based on user-defined limits.
 
 The service architecture is built on a Proxmox cluster consisting of multiple physical nodes connected via a high-speed network.  
 Each node contributes CPU, memory, and storage resources to a shared resource pool managed by Proxmox VE.  
 The main components of the service are:
 
-- *Hypervisor* → Proxmox VE with KVM (for full virtualization) and LXC (for container virtualization).
+- *Hypervisor* → Proxmox VE with KVM (for full virtualization).
 - *Cluster management* → centralized management via Proxmox Cluster Manager with quorum-based consistency.
-- *Storage backend* → shared storage using Ceph, ZFS, NFS, or iSCSI, supporting redundancy, scalability, and live migration.
+- *Storage backend* → shared storage using Ceph supporting redundancy, scalability.
 - *Networking* → virtual networking implemented through Linux bridges or VLAN tagging, with optional SDN integration for advanced network segmentation.
 - *Management interface* → Web-based GUI and REST API for VM lifecycle operations (creation, modification, deletion, migration, snapshot, backup, restore).
 
@@ -120,5 +116,4 @@ The services offer the following advantages:
 - *Flexibility* → resources (CPU, RAM, storage) can be scaled up or down quickly according to business needs.
 - *Faster Time-to-Market* → virtual environments can be provisioned quickly. Ideal for testing, development, or rapid deployment of new services and applications. It reduces provisioning and approval times inside the organization.
 - *Capital and resource optimization* → unused resources are dynamically shared across tenants, maximizing infrastructure efficiency. Better capital utilization compared to underused dedicated environments.
-- *Business Continuity* → built-in backup, snapshot, and high availability (HA) features ensure service continuity in case of hardware failures. Minimizes operational risk for critical applications.
-- *Multi-Layer Security* → tenant isolation through VLANs, integrated firewalls, and hypervisor-level separation. Data encryption in transit and at rest, with centralized authentication (LDAP/SSO). Logging and auditing for full traceability of user actions.
+- *Business Continuity* → built-in backup and high availability (HA) features ensure service continuity in case of hardware failures. Minimizes operational risk for critical applications.

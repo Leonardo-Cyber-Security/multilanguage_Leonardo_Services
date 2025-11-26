@@ -3,29 +3,22 @@
 The following table lists the services included in the *Platform as a Service (PaaS)* category.
 
 | FAMILY                               | LIST OF SERVICES                                            |
-| ------------------------------------ | ----------------------------------------------------------- |
-| Compute                              | [Functions As A Service (FAAS)](#faas)                                |                                   
+| ------------------------------------ | ----------------------------------------------------------- |                              
 | Security                             | [Identity & Access Management (IAM) Service](#IAM)|
 | Security                             | [Key Vault as a Service - Standard](#key-vault)                           |
 | Security                             | [Endpoint Protection](#endpoint)                                           |
-| Security                             | [Advanced security and protection service for files and data](#file-data)                                           |
-| Security                             | [Automated Penetration Testing Services](#PT)                                           |
-| Security                             | [Mail security & ransomware protection service](#mail)                                           |
-| Security                             | [DSPM (Data Security Posture Management)](#posture)                                           |
 | Security                             | [NGFW platform](#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](#PAM)                                           |
-| Security                             | [Perimeter Security Intelligence](#PSI)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](#IPS)                                           |
 | Middleware                           | [PaaS API Management](#API)                                         |
+| Middleware                           | [Functions As A Service (FAAS)](#faas)                                | 
 | Middleware                           | [Jboss as a Service](#Jboss)                                          |
-| Middleware                           | [Red Hat Runtime Subscription](#RT-runtime)                                          |
 | Middleware                           | [Spring boot as a Service](#spring-boot)                                    |
 | Middleware                           | [PaaS Business Process as a Service](#BPM)                          |
 | Middleware                           | [PaaS CMS as a Service](#CMS)                                       |
 | Middleware                           | [Semantic Knowledge Search - 1 worker](#semantic-search)                            |
-|  Data Protection                          | [Backup - PLATFORM](#backup)                            |
+| Data Protection                      | [Backup](#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](#SCMP)                              |
-| Infra & Ops Platform                 | [Control Room as a Service](#control-room)                                   |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](#ITSM)                              |
 | Infra & Ops Platform                 | [PaaS Operations Management](#operations)                              |
@@ -69,56 +62,6 @@ The following table lists the services included in the *Platform as a Service (P
 | Storage                              | [Archive Storage (1000 GB)](#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>
 
-## Compute Family
-
-Below is the list of services belonging to the Compute family:
-
-- [Functions As a Service (FAAS)](#faas)
-
-<a id="faas"></a>
-
-### Functions as a Service
-
-![Functions As a Service (FAAS) Interface](assets/images/extract/media/FaaS.png)
-
-#### Services Description
-
-FaaS (Function as a Service) is an event-driven system design model running on stateless containers, where developers create, deploy, and execute small, independent functions to perform specific tasks without worrying about the underlying infrastructure.  
-Adopting FaaS allows for standardization of application development and execution by centralizing cross-functional capabilities such as orchestration, automatic provisioning, monitoring, integrated service management, and event-driven flow control. 
-
-It offers tools to:
-
-- centrally manage serverless functions;
-- automate component lifecycle management;
-- enable multi-cloud and hybrid cloud portability;
-- support innovation with GPU runtimes and dedicated AI tools.   
-
-The FaaS platform provisions and scales the underlying resources based on demand. It is ideal for highly dynamic scenarios with variable workloads and integrates seamlessly with microservices and event-based architectures.
-
-#### Features and Advantages
-
-The service goes beyond simply providing an execution engine; it also offers a complete ecosystem, consisting of:
-
-- Serverless execution → stateless functions and event-driven workflows, scalable and available in various programming languages.
-- Portability and independence → can run on any Kubernetes cluster, across multiple environments, without lock-in constraints.
-- Security and compliance → data protection and centralized access management.
-- The solution enables organizations to adopt a modern and flexible model, reducing operational complexity and benefiting from a standardized and easily accessible service.
-
-The service is delivered through Apache OpenServerless, an open-source, cloud-agnostic serverless platform based on Apache OpenWhisk as a Function-as-a-Service (FaaS) engine.
-
-The service is offered with the following metrics: *100 VCPUs*.
-
-The service offers the following advantages:
-
-- *Reduced operating costs* → you only pay for the actual use of features.
-- *Flexibility and scalability* → resources adapt to demand.
-- *Operational efficiency* → eliminating the need to directly manage servers, patches, and updates.
-- *High availability* → built-in redundancy and fault tolerance, ensuring high availability of features even in the event of hardware failures or other interruptions.
-- *Accelerated time-to-market* → rapid release of new features without worrying about the infrastructure.
-- *Agile development* → focus on code and business logic, not server management.
-- *Continuous innovation* → rapid experimentation with new, low-cost services.
-Competitive advantage in cost and speed compared to traditional hosting models.
-
 ## Security Family
 
 Below is the list of services belonging to the Security family:
@@ -126,13 +69,8 @@ Below is the list of services belonging to the Security family:
 - [Identity & Access Management Service](#IAM)
 - [Key Vault as a Service - Standard](#key-vault)
 - [End point protection](#endpoint)
-- [Advanced security and protection service for files and data](#file-data)
-- [Automated Penetration Testing Services](#PT)
-- [Mail security & ransomware protection service](#mail)
-- [DSPM (Data Security Posture Management)](#posture)
 - [NGFW platform](#ngfw)
 - [PAM (Privileged Access Management)](#PAM)
-- [Perimeter Security Intelligence](#PSI)
 - [Intrusion Prevention System (IPS)](#IPS)
 
 <a id="IAM"></a>
@@ -148,6 +86,8 @@ It manages single sign-on access to guarantee access to all protected resources 
 It enables first-level authentication with username/password and second-level authentication with multi-factor authentication based on Time-based One-Time Password (TOTP) protocols.  
 It manages access authorization to system-protected resources only for users with rights to use them according to the Role-based Access Control (RBAC) and Attribute-based Access Control (ABAC) paradigms. Integration with external user repositories (LDAP or Active Directory) is also available.  
 It manages the user lifecycle and related authorizations via the console.
+
+The service is offered with the following unit metric: *100 users*.
 
 #### Features and Advantages
 
@@ -166,8 +106,7 @@ The main features and functionalities of the service are:
     - Role-Based Authorization (RBAC) and policies.
 
 - *Protocol and Integration*
-    - Support for standard protocols, such as OpenID Connect (OIDC), OAuth 2.0, and SAML 2.0.
-    - Official adapters for Java, Spring Boot, WildFly, Node.js, and other applications.
+    - Support for standard protocols, such as OpenID Connect (OIDC), OAuth 2.0, and SAML 2.0.ì
     - Ability to integrate  with API Gateways, microservices, and web frontends.
 
 - *Security and Management*
@@ -180,8 +119,6 @@ The main features and functionalities of the service are:
     - REST API for automated user, role, and client management.
     - SPI (Service Provider Interfaces) for extending authentication, validation, or provisioning capabilities.
     - Ability to implement custom authenticators or connect to external systems.
-    
-The service is offered with the following unit metric: *100 users*.
 
 The service offers the following advantages:
 
@@ -198,9 +135,11 @@ The service offers the following advantages:
 
 #### Services Description
 
-The service, based on Hashicorp Vault technology, provides a secure cloud repository (Vault) for storing and managing credentials and passwords used by cloud applications without having to manually install and manage dedicated IaaS machines. 
+The service, based on Hashicorp Vault technology, provides a secure cloud repository (Vault) for storing and managing credentials and passwords used by cloud applications without having to manually install and manage dedicated IaaS machines.  
 The service consists of a software platform that enables centralized and automated management of encryption keys, secrets, and certificates, with access controlled by identity-based authentication and authorization methods.  
 It also allows organizations to significantly simplify key lifecycle management, ensuring centralized control while leveraging the native cryptographic capabilities of KMS providers.
+
+The service is offered with the following unit metric: *50 clients*.
 
 #### Features and Advantages
 
@@ -219,8 +158,6 @@ The main workflow of Key Vault as a Service consists of four phases:
 - *Validation* → Validation occurs through trusted third-party sources, such as Active Directory, LDAP, and Okta.
 - *Authorization* → The client is then associated with the Key Vault as a Service security policy, which consists of a set of rules that define which API endpoints a user, machine, or application is allowed or denied access to with its token.
 - *Access* → Key Vault as a Service then grants access to keys and encryption features, secrets, and certificates.
-
-The service is offered with the following unit metric: *50 clients*.
 
 The service offers the following advantages:
 
@@ -242,6 +179,8 @@ The Endpoint protection service offers comprehensive protection for endpoint dev
 The service aims to provide the customer with an EPP platform for multi-layered protection of their endpoint devices, with capabilities to prevent, detect, and respond to cyber threats targeting those devices, including antivirus, anti-malware, personal firewall, web protection, application control, and patch management.  
 The service provides a cloud-delivered, scalable, and centrally managed solution designed to protect customer endpoint devices from a broad spectrum of cyber threats.  
 The service is delivered as a managed PaaS solution, offering continuous protection and simplified administration for organizations seeking robust endpoint security without the overhead of managing on-premise security infrastructures.
+
+The service is offered with the following unit metric: *100 endpoints*.
 
 #### Features and Advantages
 
@@ -267,8 +206,6 @@ The main components of the service are:
 *Event correlation and logging module* → collects and analyzes security events from all endpoints, correlating data to detect anomalies and trigger automated responses when threats are identified.
 *Integration and API layer* → enables interoperability with other PSN security services (such as SIEM, SOC, or IAM systems) for advanced monitoring, alerting, and orchestration.
 
-The service is offered with the following unit metric: *100 endpoints*.
-
 The service offers the following advantages:
 
 - *Comprehensive, multi-Layered protection* → combines antivirus, anti-malware, firewall, web protection, and application control for complete endpoint security coverage.
@@ -281,282 +218,6 @@ The service offers the following advantages:
 - *Integration with security ecosystem* → supports API-based integration with SIEM, SOC, and IAM systems for centralized event correlation and coordinated response.
 - *Policy standardization across devices* → ensures consistent security policies and enforcement across heterogeneous endpoint environments (Windows, macOS, Linux, mobile).
 - *Detailed reporting and analytics* → offers customizable dashboards and reports for compliance, performance monitoring, and trend analysis.
-
-<a id="file-data"></a>
-
-### Advanced security and protection service for files and data
-
-![Advanced security and protection service for files and data Overview](assets/images/extract/media/advanced.png)
-
-#### Services Description
-
-The service offers comprehensive protection against all types of threats, including encryption, content filtering, and AI-based threat detection.  
-The service aims to provide organizations with a platform for advanced file and data security and protection.  
-In PaaS mode, the service enables the confidentiality, integrity, and availability of their sensitive information through a combination of security technologies and practices designed to protect data, both at rest and in transit, using advanced encryption algorithms or secure protocols, and preventing unauthorized access.  
-The service also provides data classifications and security policies, aligned with customer needs and industry regulations, and uses integrated tools for monitoring and threat detection.
-
-#### Features and Advantages
-
-The service provides a comprehensive set of security functionalities designed to ensure end-to-end data protection and governance:
-
-- *Data classification and discovery* → automatically identifies, tags, and categorizes sensitive data based on predefined or customizable policies (e.g., personal data, financial records, intellectual property). Supports data discovery across cloud storage, endpoints, and file repositories.
-- *Encryption and key management* → provides strong encryption mechanisms for data at rest and in transit, using industry standards (e.g., AES-256, TLS 1.3). Includes centralized key management with role-based access controls and key rotation policies
-- *Data Loss Prevention (DLP)* → monitors, detects, and blocks unauthorized data transfers or exfiltration attempts across endpoints, cloud storage, and collaboration tools Supports policy-based enforcement to prevent data leaks through email, file sharing, or removable media.
-- *File Integrity Monitoring (FIM)* → continuously monitors critical files and directories for unauthorized changes, deletions, or tampering. Generates alerts and audit logs for compliance and forensic analysis.
-- *Access control and rights management* → enables fine-grained access control based on user roles, device compliance, and contextual attributes (e.g., location, time, application). Supports encryption-based digital rights management (DRM) for document and file access control.
-- *Secure file sharing and collaboration* → allows users to securely share files within and outside the organization using encrypted channels and temporary access tokens. Provides audit trails and expiration policies for shared content.
-- *Data backup and recovery* → ensures data availability through automated and encrypted backup processes, supporting rapid recovery in case of accidental loss or compromise.
-- *Threat Detection and Content Scanning* → uses AI-based threat intelligence and sandboxing to detect malicious content embedded in files or data streams.
-Integrates with antivirus and anti-malware engines for real-time scanning.
-- *Compliance and audit support* → provides tools for auditing, logging, and reporting aligned with regulatory frameworks such as GDPR, ISO 27001, and NIST.Generates detailed reports for compliance validation and incident response documentation.
-
-The main components of the service are:
-
-- *Data protection engine* → core component responsible for encryption, decryption, classification, and DLP policy enforcement. Handles both structured and unstructured data across multiple repositories.
-- *Policy management and orchestration module* → centralized interface for defining, distributing, and enforcing data protection policies across endpoints, cloud storage, and applications.Provides rule-based automation for classification, access, and retention policies.
-- *Key Management System (KMS)* → manages cryptographic keys used for data encryption and decryption. Ensures secure key lifecycle management, including generation, rotation, and revocation.
-- *File integrity and monitoring service* → continuously monitors file system changes and logs integrity violations for security analysis and incident response.
-- *Access and identity integration layer* → integrates with Identity and Access Management (IAM) or federated authentication systems (e.g., SAML, OAuth, OpenID Connect) for user validation and access control.
-- *Threat detection and analytics engine* → uses behavioral analysis, machine learning, and sandbox environments to detect anomalous file activities and advanced threats. Correlates events and alerts through integration with Security Information and Event Management (SIEM) systems.
-- *Storage and repository connectors* → provides APIs and connectors to integrate with on-premise and cloud-based file systems (e.g., SharePoint, OneDrive, AWS S3, Azure Blob Storage). Ensures consistent protection across hybrid and multi-cloud environments.
-- *Audit and compliance dashboard* → centralized reporting and visualization layer offering real-time insights, audit trails, and compliance metrics. Supports customizable dashboards for administrators and compliance officers.
-- *Backup and recovery module* → manages encrypted backups, replication, and restoration of critical data with integrity verification mechanisms.
-
-The service is offered with the following unit metric: *Data quantity (GB/day)*.
-
-The service offers the following advantages:
-
-- *Regulatory compliance and data governance *→ ensures alignment with major data protection regulations (GDPR, ISO 27001, NIS2) through built-in auditing, encryption, and access control mechanisms.
-- *Reduced risk of data breaches* → proactively mitigates risks of data exposure, loss, or theft by applying multi-layered protection and real-time threat detection.
-- *Operational cost reduction* → delivered as a fully managed PaaS, the service removes the need for dedicated on-premise infrastructure and specialized security management teams.
-- *Scalability and flexibility* → the cloud-native architecture allows the service to scale seamlessly with the customer’s data volume and storage requirements.
-- *Enhanced trust and reputation* → protecting sensitive data strengthens customer and stakeholder confidence, reducing reputational and financial impacts from potential data incidents.
-- *Faster compliance reporting and auditing* → automated policy enforcement and centralized dashboards simplify audit preparation and reduce compliance management overhead.
-- *End-to-End data protection* → combines classification, encryption, DLP, and integrity monitoring to secure data across its entire lifecycle—creation, storage, sharing, and archiving.
-- *Centralized policy and key management* → provides unified control over security policies and cryptographic keys, reducing administrative complexity and ensuring consistent enforcement.
-- *Continuous threat detection* → uses AI-driven analytics, sandboxing, and behavior-based detection to identify and neutralize advanced threats targeting data repositories.
-- *Seamless integration with existing systems* → supports API-based integration with enterprise IAM, SIEM, SOC, and data storage platforms to enhance visibility and coordination across the security ecosystem.
-- *Granular access control and rights management* → implements contextual and role-based access policies to protect sensitive files from unauthorized internal or external access.
-- *Secure collaboration enablement* → enables safe file sharing within and beyond the organization while maintaining encryption and auditing of all transactions.
-- *Automated patch, update, and policy distribution* → Keeps the protection layer continuously updated with the latest policies, threat definitions, and encryption standards.
-- *Comprehensive Logging and Auditability* → offers detailed, immutable logs of all data and file activities, supporting forensic analysis and compliance verification.
-- *High availability and fault tolerance* → built on redundant cloud infrastructure to ensure resilience, minimal downtime, and reliable service performance.
-
-<a id="PT"></a>
-
-### Automated Penetration Testing Services
-
-![Automated Penetration Testing Services Overview](assets/images/extract/media/PT.png)
-
-#### Services Description
-
-Automated Penetration Testing services enable the use of automated penetration tests to identify and remediate vulnerabilities in applications and networks, improving the organization's security posture.  
-The service aims to provide customers with a platform for delivering automated penetration tests within the configured perimeter, enabling customers to assess the security of their networks, applications, and IT systems through automated penetration tests.  
-These services use advanced tools to simulate cyber attacks, identify unique identities, and provide detailed reports on the security weaknesses found, along with recommendations for mitigating risks.
-
-#### Features and Advantages
-
-The main features and functionalities of the service are:
-
-- *Scope definition and test profiles* → predefined test templates (network, web app, API, container, cloud infra, IaC) and fully customizable profiles. Scoped scans with allow/deny lists, IP ranges, application endpoints, credentialed vs. non-credentialed options. Safe-test mode and full-exploit mode distinction (customer controls allowed impact). 
-- *Automated reconnaissance* → asset discovery, service/version fingerprinting, open port and service enumeration, subdomain and API surface mapping. Passive and active discovery options to balance coverage vs. impact.
-- *Vulnerability detection* → multi-engine detection combining signature-based checks, heuristic/behavioral rules, and proved vulnerability checks. SAST/DAST integration for application source and runtime analysis. Cloud configuration and IaC scanning (e.g., misconfigurations, overly permissive IAM).
-- *Safe exploitation & Proof-of-Concept (PoC)* → controlled exploit attempts to validate vulnerability presence where permitted. Non-destructive proof evidence (headers, returned payloads, metadata) and optional sandboxed exploit attempts for confirmation. Automatic rollback and containment to prevent service disruption.
-- *Credentialed / authenticated testing* → support for authenticated scans using supplied credentials, OAuth tokens, or ephemeral test accounts to validate business-logic and privilege escalation paths.
-- *Attack path & chain analysis* → automated correlation of findings into end-to-end attack chains (e.g., pivoting from a low-severity host to privileged access). Visualization of attack paths and required steps for compromise.
-- *Risk scoring & prioritization* → risk scoring combining CVSS, exploitability, business context, asset criticality and threat intelligence. Prioritized remediation lists with targeted recommendations.
-- *Continuous / scheduled / on-Demand testing* → flexible scheduling: continuous crawling, daily/weekly/full-cycle scans, pre-release/on-demand scans and CI/CD triggered tests.
-- *Regression & Re-test Automation* → automatic re-testing of remediated findings, regression checks after patching or code changes, and delta reporting.
-- *Reporting & evidence* → executive summaries, technical findings, remediation playbooks, timelines, and immutable evidence bundles for each validated finding. Exportable formats: PDF, JSON, SARIF (for dev pipelines), and ticket payloads for ITSM.
-- *DevSecOps Integration*s → native connectors and APIs for CI/CD systems, ticketing (Jira, ServiceNow), code repositories (Git), container registries, and build pipelines. Pre-commit / pre-deploy hooks and automatic fail/pass gating based on policy.
-- *Compliance mapping* → mapping of findings to compliance frameworks (e.g., OWASP Top 10, PCI DSS, NIST, ISO 27001) and automated compliance reports.
-- *False positive management & triage* → feedback loop for marking false positives, evidence review workflows, and machine learning to reduce noise over time.
-- *Multi-Tenant Management and RBAC* → tenant isolation, role-based access controls, scoped admin views, and least-privilege access for testers and operators.
-- *APIs & Webhooks* → full REST APIs and webhooks for automation, event streaming and integration with orchestration systems.
-- *Safety, governance & legal controls* → consent and authorization workflows, safe hours scheduling, blast radius controls, throttling, and regulatory/legal guardrails for intrusive tests.
-
-The main components of the service are:
-
-- *Portal / management console* → Web UI for onboarding, scope definition, scheduling, visualization, report generation and policy configuration. Multi-tenant dashboard with role-based views (security team, application owners, auditors).
-- *Orchestration & scheduler* → central orchestration engine that schedules jobs, allocates scanner resources, enforces safe-test rules, and manages stateful test workflows (recon → exploit → validation → reporting).
-- *Scan engine pool* → a horizontally scalable pool of scanning workers (stateless scanner instances) that execute specific test modules: network scanners, web crawlers, API fuzzers, container/IaC scanners, cloud config scanners. Worker pools can be regionally distributed and scaled based on load and isolation requirements.
-- *Exploit Sandbox & Safe Execution Environment* → isolated sandbox environment (containerized or VM-based) used to run controlled exploit attempts and malware samples safely without risking production services. Automatic rollback and containment mechanisms.
-- *Asset & discovery repository* → a canonical asset inventory storing discovered hosts, endpoints, services, and application metadata used to maintain scope and historical comparison.
-- *Knowledge Base & vulnerability library* → continuously updated repository of signatures, exploitation techniques, CVE mappings, PoC scripts, and mitigation guidance; may include external threat intel feeds.
-- *Analytics & correlation engine* → correlates raw scan results into consolidated findings, attack chains, false-positive reductions, risk scoring and trend analysis using ML/heuristics.
-- *Findings Database & evidence store* → secure, immutable storage for findings, raw evidence (logs, request/response captures, screenshots), and historical scan artifacts. Encryption-at-rest and access auditing for all stored evidence.
-- *API gateway & integration layer* → REST APIs, SDKs and webhooks for integration with CI/CD, ITSM, SIEM, SOAR and other toolchains. Rate limiting, authentication and permissioning for automated workflows.
-- *Reporting & compliance module* → report generation engine that produces executive and technical reports, compliance mappings, remediation playbooks and re-test summaries.
-- *Identity, Access & Key Management* → IAM integration (SAML, OAuth, OIDC) for user authentication and single sign-on. KMS for managing encryption keys used for evidence and credentials storage.
-- *Audit logging & monitoring* → central audit log capturing all user actions, job executions and administrative changes; integrates with SIEM for real-time monitoring and alerts.
-- *Tenant Isolation & Resource Governance* → logical separation of tenant data and scan resources, quota enforcement, billing metrics and metering.
-- *Policy & safety engine* → central ruleset enforcing legal constraints, safe-hours, impact thresholds, throttling and auto-pause on anomalous behavior.
-- *Storage & Backup* → durable object storage for artifacts and backups; retention and purge policies configurable per tenant and per compliance requirements.
-
-The service is offered with the following unit metric: *500 Targets (IP/URL)*.
-
-The service offers the following advantages:
-
-- *Continuous security validation* → enables ongoing assessment of the organization’s security posture rather than relying solely on periodic, manual penetration tests. This supports a proactive rather than reactive security strategy.
--*Reduced costs and resource optimization* → lowers operational costs by automating repetitive and time-consuming manual testing tasks, reducing dependency on external penetration testing teams.
-- *Faster time-to-remediation* → automated detection and prioritized reporting allow organizations to identify and fix vulnerabilities faster, minimizing exposure windows.
-Improved compliance and audit readiness → provides continuous documentation, evidence, and compliance mapping (e.g., ISO 27001, NIS2, PCI-DSS, OWASP Top 10), simplifying audits and compliance reporting.
-- *Risk reduction and business continuity* → identifies exploitable vulnerabilities before attackers do, reducing the likelihood of breaches and service disruptions.
-- *Scalability and flexibility* → the cloud-based PaaS architecture allows organizations to scale testing activities across multiple environments—applications, networks, and cloud workloads—without increasing infrastructure complexity.
-- *Consistent and repeatable testing* → ensures uniform methodologies and consistent results across different environments and timeframes, reducing human error and variation.
-- *Faster product release cycles* → integration with CI/CD pipelines enables security testing to be embedded in DevOps workflows, supporting faster, more secure software releases.
-- *Predictable cost model* → subscription-based pricing provides transparency and predictability compared to traditional per-engagement penetration testing models.
-- *Enhanced organizational reputation and trust* → demonstrates commitment to security best practices, strengthening trust among customers, partners, and regulators.
-- *Comprehensive, automated coverage* → covers multiple layers — network, application, API, container, and cloud — providing holistic visibility of vulnerabilities across complex hybrid environments.
-- *Advanced Vulnerability Detection and Exploitation Validation* → combines multiple testing engines (signature-based, behavioral, AI-driven) to identify, validate, and prioritize vulnerabilities based on exploitability and risk.
-- *Safe, Controlled Testing Environment* → built-in sandboxing and safety mechanisms ensure exploit attempts are isolated and non-disruptive to production systems.
-Orchestrated and Scalable Architecture → modular microservices and distributed scanner nodes support elastic scaling, parallel test execution, and high availability.
-- *Risk-Based Prioritization and Contextual Analysis* → correlates vulnerabilities with business context, CVSS scores, and asset criticality to generate actionable, prioritized remediation plans.
-- *Integration with DevSecOps and IT ecosystems* → provides APIs and native integrations with CI/CD, SIEM, SOAR, and ITSM tools, enabling seamless inclusion of automated testing into existing operational workflows.
-- *Automated re-testing and verification* → automatically re-tests vulnerabilities after remediation, confirming fix effectiveness and preventing regression issues.
-- *Centralized management and reporting* → unified management console with dashboards for test scheduling, result tracking, compliance summaries, and historical trend analysis.
-- *Continuous hreat Intelligence updates* → integrates updated CVE databases, exploit repositories, and threat intelligence feeds to ensure detection of the latest vulnerabilities.
-- *Comprehensive audit trails and evidence storage* → maintains immutable logs, scan evidence, and report archives for compliance, forensics, and governance requirements.
-Multi-Tenancy and Role-Based Access Control (RBAC) → securely supports multiple customers or departments with strict data segregation and fine-grained access permissions.
-
-<a id="mail"></a>
-
-### Mail security & ransomware protection Service
-
-![Mail security & ransomware protection Service Overview](assets/images/extract/media/mail.png)
-
-#### Services Description
-
-The Mail Security & Ransomware Protection service offers advanced email protection against phishing, malware, and ransomware, using advanced analysis techniques and artificial intelligence to block threats before they reach end users.  
-The service aims to provide the customer with a mail security & ransomware protection platform to protect email communications from cyber threats such as phishing, malware, ransomware, and other targeted attacks.  
-The service must be integrated with the customer's email system and will implement filters to block spam, phishing, and emails containing malware or ransomware, as well as monitoring, email backup, rapid recovery, and reporting on scan results.
-
-#### Features and Advantages
-
-The Mail Security & Ransomware Protection PaaS provides a comprehensive suite of features that address the entire e-mail threat lifecycle — prevention, detection, response, and recovery.
-
-- *Inbound & outbound filtering* → multi-layered scanning for inbound and outbound e-mail traffic. Detects and blocks spam, phishing, malware, ransomware, and spoofed messages before they reach the mailbox. Ensures outbound e-mail compliance by scanning for sensitive data or potential data leaks.
-- *Anti-phishing & impersonation defense* → detects spear-phishing and business e-mail compromise (BEC) attempts using AI-based identity and content analysis. Validates sender authenticity through SPF, DKIM, and DMARC enforcement. Identifies display-name spoofing, look-alike domains, and suspicious sender behaviors.
-- *Ransomware & malware protection* → advanced sandboxing and machine learning detect and quarantine attachments or URLs containing malicious payloads. Signature-less behavioral detection identifies new ransomware strains and polymorphic threats. URL rewriting and time-of-click protection prevent access to malicious links even after delivery.
-- *Spam & graymail filtering* → adaptive filtering based on user behavior and reputation scoring. Automatically categorizes marketing and bulk messages to reduce inbox clutter.
-*Data Loss Prevention (DLP)* → monitors outbound e-mails and attachments for sensitive content (PII, financial data, intellectual property). Enforces encryption or blocking policies when confidential data is detected.
-- *E-mail encryption* → end-to-end encryption of messages and attachments using S/MIME or TLS 1.3. Policy-based encryption to protect sensitive communications and ensure confidentiality and compliance.
-- *Attachment and URL sandboxing* → executes attachments and embedded URLs in isolated virtual sandboxes to detect zero-day exploits and malicious scripts.
-- *Threat intelligence integration* → continuous updates from global threat intelligence feeds and internal telemetry. Correlates indicators of compromise (IoCs) and emerging attack patterns to block new threats proactively.
-- *User awareness and training integration* → optional integration with phishing simulation and training modules to increase user resilience. Automated user feedback loops for reporting suspicious e-mails.
-- *E-mail continuity and archiving* → provides temporary failover e-mail access in case of service outage. Long-term encrypted e-mail archiving with indexing and eDiscovery capabilities.
-- *Incident response and quarantine management* → real-time monitoring and centralized quarantine for suspicious or blocked messages. Administrator tools for message release, investigation, and remediation.
-- *Reporting and Analytics* → dashboards for threat trends, blocked attacks, user behavior, and policy violations. Exportable reports for compliance, audit, and management review.
-- *API and SIEM/SOAR integration* → REST APIs and webhooks for integration with SOC platforms, SIEM systems, and SOAR workflows. Event streaming for threat correlation and centralized monitoring.
-
-The main components of the service are:
-
-- *E-mail security gateway* → core engine that manages inbound and outbound mail flow. Performs message routing, scanning, and enforcement of anti-spam, anti-malware, and DLP policies. Supports both SMTP relay and API-based integration with e-mail providers (e.g., Microsoft 365, Google Workspace).
-- *Threat detection engine* → multi-layer detection system combining static analysis, dynamic sandboxing, heuristics, and machine learning models. Analyzes message headers, attachments, URLs, and behavioral patterns for anomalies.
-- *Sandboxing and detonation cluster* → isolated virtual environments for executing suspicious attachments and URLs to observe malicious behaviors safely. Supports multiple OS and application profiles for realistic threat emulation.
-- *Threat intelligence and reputation database* → continuously updated repository of known malicious IPs, URLs, domains, and file hashes. Aggregates external threat feeds and internal telemetry for adaptive protection.
-- *Policy and compliance engine* → centralized configuration module that defines and enforces security, encryption, and DLP rules. Supports policy inheritance, exception handling, and multi-tenant configuration management.
-- *Encryption and Key Management Service (KMS)* → manages cryptographic keys for message and attachment encryption. Integrates with hardware security modules (HSMs) for secure key storage.
-- *Machine learning & analytics engine* → continuously refines detection accuracy using feedback from quarantines, false positives, and threat outcomes. Performs pattern recognition and anomaly detection across large volumes of e-mail metadata.
-- *Management and administration console* → Web-based dashboard for administrators to monitor e-mail flow, review quarantined items, and generate reports. Role-based access control (RBAC) for security and compliance officers, IT admins, and auditors.
-- *Logging, monitoring, and audit subsystem* → captures all system and user events for traceability and compliance. Integrates with external SIEM for real-time alerting and correlation.
-- *API and integration layer* → provides RESTful APIs and connectors for integration with ticketing systems, SIEM/SOAR platforms, and incident response tools.
-- *High availability and load balancer cluster* → ensures redundancy and failover for all e-mail filtering and delivery operations. Supports geo-redundant architecture for resilience and disaster recovery.
-- *Storage and archiving repository* → secure, encrypted storage for quarantined e-mails, archived messages, logs, and reports. Complies with data retention and privacy requirements (e.g., GDPR, ISO 27001).
-- *IAM and Access Management Integration* → supports SAML, OAuth, and OpenID Connect for single sign-on and centralized authentication. Enforces multi-factor authentication for administrative access.
-
-The service is offered with the following unit metric: *100 mailboxes*.
-
-The service offers the following advantages:
-
-- *Reduced risk of business disruption* → prevents e-mail-based ransomware and phishing attacks that could lead to system downtime, data loss, and financial or reputational damage.
-- *Regulatory compliance and data protection* → ensures compliance with major data protection and cybersecurity frameworks (GDPR, ISO 27001, NIS2) through encryption, auditing, and DLP capabilities.
-- *Operational cost reduction* → delivered as a managed PaaS, eliminating the need for on-premise infrastructure, maintenance, and manual signature updates, while providing predictable subscription-based costs.
-- *Enhanced employee productivity* → reduces the volume of spam and malicious messages reaching users, allowing them to focus on legitimate communications without disruptions.
-- *Strengthened customer and partner trust* → protects outgoing communications and ensures authenticity and confidentiality, enhancing the organization’s professional image and credibility.
-- *Business continuity and e-mail resilience* → built-in continuity features ensure uninterrupted e-mail access even during attacks or service outages, maintaining business operations without downtime.
-- *Scalable and flexible service delivery* → the cloud-native architecture scales automatically with e-mail traffic and user growth, adapting to both SMB and enterprise environments.
-- *Accelerated security maturity* → enables organizations to adopt enterprise-grade e-mail protection rapidly, without requiring internal expertise or lengthy deployment cycles.
-- *Multi-Layered e-mail protection* → integrates anti-spam, anti-malware, sandboxing, encryption, and DLP technologies for complete e-mail security coverage.
-- *AI-powered threat detection* → utilizes artificial intelligence and behavioral analytics to detect sophisticated phishing and ransomware campaigns, including zero-day threats.
-- *Advanced sandboxing and time-of-click protection* → isolates suspicious attachments and URLs to prevent execution of malicious code, even after message delivery.
-- *Continuous Threat Intelligence Updates* → leverages global intelligence networks for real-time updates on emerging threats, ensuring immediate response to new ransomware variants.
-- *Centralized Policy Management* → a unified console allows administrators to configure and enforce organization-wide e-mail security policies, encryption rules, and compliance settings.
-- *Comprehensive logging and auditability* → provides detailed audit trails of all messages, policies, and administrative actions to support compliance and forensic analysis.
-- *Seamless integration with existing infrastructure* → compatible with major e-mail systems and integrates with SIEM, SOAR, and IAM solutions.
-- *Secure and encrypted communication* → supports S/MIME, TLS, and policy-based encryption to protect e-mails in transit and at rest, ensuring confidentiality and integrity.
-- *Automated incident response and quarantine management* → real-time monitoring and automated quarantining minimize manual intervention, while administrators can review, release, or delete messages from a centralized dashboard.
-- *High availability and redundancy* → deployed on resilient cloud infrastructure with geo-redundant architecture to guarantee uptime, fault tolerance, and disaster recovery capabilities.
-- *User Awareness Integration* → optional phishing simulation and user training modules strengthen human defenses and reduce the risk of social engineering attacks.
-- *Granular Role-Based Access Control (RBAC)* → ensures secure management operations by defining user roles for administrators, auditors, and compliance officers.
-
-<a id="posture"></a>
-
-### DSPM (Data Security Posture Management) Service
-
-![DSPM (Data Security Posture Management) Service Overview](assets/images/extract/media/posture.png)
-
-#### Services Description
-
-The Data Security Posture Management service is designed to provide organizations with a tool to control how users use their data, with particular attention to sensitive and critical data.  
-The service enables full visibility into where sensitive data resides, who can access it, how it is used, and whether it is properly protected in accordance with security policies and compliance frameworks.  
-The service leverages new AI and machine learning technologies to automate data discovery and classification and identify operations that are at risk or not in line with the organization's configurable security policies.  By integrating automated data discovery, classification, risk assessment, and remediation, the DSPM PaaS empowers organizations to maintain a strong data security posture and prevent data breaches caused by misconfigurations, overexposure, or insider threats.  
-The service can be delivered across hybrid environments and consists of one or more integration components dedicated to the organization's perimeter and a central management and control console.
-
-#### Features and Advantages
-
-The DSPM PaaS delivers end-to-end visibility and control over data security posture, leveraging automation, analytics, and AI to identify, assess, and mitigate risks across distributed data assets.
-
-- *Automated data discovery and classification* → continuously scans structured and unstructured data sources across on-premises, cloud, and SaaS environments. Identifies sensitive, regulated, or confidential data (e.g., PII, PHI, financial information, intellectual property). Uses pattern-based, AI, and machine learning techniques for accurate data classification. Supports integration with data lakes, databases, object storage, and file repositories (e.g., AWS S3, Azure Blob, Google Cloud Storage).
-- *Data inventory and mapping* → builds a real-time catalog of all data assets, including metadata, location, ownership, and sensitivity level. Visualizes data lineage and flow between systems, applications, and cloud environments.Tracks data copies, shadow data, and redundant repositories.
-- *Risk and exposure assessment* → detects misconfigurations, excessive permissions, open access, and unencrypted repositories. Quantifies data exposure risks by correlating access patterns, user roles, and data sensitivity. Prioritizes remediation based on impact, criticality, and compliance requirements.
-- *Policy-based security posture monitoring* → continuously evaluates compliance with internal and external policies (e.g., GDPR, ISO 27001, NIS2, HIPAA). Automatically alerts when data assets violate security baselines or retention policies. Enforces remediation actions through workflow automation or integration with security orchestration platforms.
-- *Access governance and entitlement analysis* → monitors who has access to sensitive data and how permissions are granted and used. Detects privilege escalation, dormant accounts, and cross-environment access anomalies. Integrates with IAM and CIEM systems to ensure least-privilege enforcement.
-- *Data encryption and protection validation* → validates encryption status, key management configurations, and data masking policies. Monitors compliance with encryption standards (AES-256, TLS 1.3, FIPS 140-2). Detects unencrypted or improperly protected data stores.
-- Compliance and audit reporting → provides automated compliance mapping and audit-ready reports for multiple frameworks. Generates dashboards and alerts for non-compliant data assets or policy violations. Supports export of reports for auditors, regulators, or data protection officers.
-- *Integration with Security Ecosystem* → connects with SIEM, SOAR, DLP, CSPM, and data protection tools for unified threat detection and response. Exposes APIs and webhooks for data exchange with existing governance and risk platforms. Enables closed-loop remediation workflows through orchestration.
-- *Anomaly detection and behavior analytics* → monitors data activity for unusual access or transfer patterns (e.g., data exfiltration or insider misuse). Leverages machine learning to detect deviations from normal usage baselines.Generates contextual risk scores for prioritized investigation.
-- *Automated remediation and policy enforcement* → supports policy-driven remediation actions (e.g., revoke access, encrypt data, quarantine repository). Provides guided recommendations for manual or automated corrections. Ensures continuous improvement of the organization’s data security posture.
-
-The main components of the service are:
-
-- *Data discovery and classification engine* → scans data repositories using agents, APIs, and network crawlers. Applies pattern recognition, ML-based classification, and contextual tagging. Supports both structured (SQL, NoSQL) and unstructured (documents, logs, storage) data sources.
-- *Data inventory and metadata repository* → centralized catalog storing data asset metadata, classification labels, and sensitivity scores. Enables search, visualization, and reporting through dashboards and APIs.Maintains historical versions for trend and change analysis.
-- *Risk and policy engine* → core analytical module evaluating data exposure and policy compliance. Correlates data sensitivity with configuration and access control data. Assigns risk levels and triggers automated alerts and remediation workflows.
-- *Access and entitlement analysis module* → integrates with IAM, CIEM, and directory services (LDAP, Azure AD, Okta). Maps user and service account permissions to data assets. Detects anomalies such as excessive privileges, orphaned accounts, and unauthorized access.
-- *Encryption and protection monitor* → monitors encryption status and validates data protection mechanisms. Interfaces with Key Management Services (KMS) and Hardware Security Modules (HSMs). Audits encryption configurations and compliance with cryptographic policies.
-- *Analytics and correlation layer* → processes data from sensors, logs, and discovery agents using big data analytics. Employs AI/ML models for pattern recognition, anomaly detection, and trend prediction. Correlates posture findings with external threat intelligence and user behavior data.
-- *Dashboard and reporting console* → Web-based UI providing visibility into data posture, risk levels, compliance status, and trends. Role-based access control for administrators, auditors, and compliance officers. Customizable reports and visual analytics for executive and technical stakeholders.
-- *Integration and API layer* → REST APIs and connectors for integration with external tools (SIEM, SOAR, CSPM, DLP, GRC). Supports event streaming and webhook-based notifications. Enables orchestration of automated remediation workflows.
-- *Data storage and retention subsystem* → secure, encrypted repositories for metadata, logs, and historical posture data. Ensures integrity and traceability for compliance and forensic analysis. Supports configurable data retention and anonymization policies.
-- *Identity and access management (IAM)* → provides authentication and authorization for all users and system components. Supports SAML, OAuth2.0, and multi-factor authentication. Enforces least-privilege access to DSPM management functions.
-- *Monitoring, logging, and audit framework* → collects telemetry and operational metrics across all components. Maintains immutable logs for audit and compliance. Integrates with SOC/SIEM for centralized visibility.
-
-The service is offered with the following unit metric: *100 users*.
-
-The service offers the following advantages:
-
-- *Enhanced data visibility and control* → provides a unified view of all sensitive data across cloud, on-premise, and hybrid environments, allowing organizations to make informed, risk-based decisions.
-- *Regulatory compliance and governance* → simplifies adherence to key regulatory frameworks (GDPR, ISO 27001, NIS2, HIPAA) by mapping data to compliance requirements and generating audit-ready reports.
-- *Reduced risk of data breaches* → detects and mitigates misconfigurations, overexposed data, and excessive access privileges before they can be exploited by attackers or insiders.
-- *Improved business agility* → enables faster and safer adoption of cloud services by continuously monitoring data exposure and security compliance across environments.
-- *Operational cost efficiency* → delivered as a PaaS, eliminating the need for complex infrastructure or dedicated in-house data security resources, and reducing manual risk assessments through automation.
-- *Improved trust and reputation* → demonstrates commitment to data protection and compliance, reinforcing customer confidence and brand integrity.
-- *Data-driven decurity decision making* → provides actionable insights and prioritization of data risks, empowering leadership to allocate resources effectively.
-- *Accelerated compliance audits and reporting* → automates evidence collection and reporting, reducing time and effort needed to prepare for regulatory audits and certifications.
-- *Strategic risk reduction* → transforms data security from reactive to proactive, helping organizations anticipate vulnerabilities and maintain resilience against evolving threats.
-- *Comprehensive data discovery and classification* → continuously identifies and categorizes sensitive data across all storage types, ensuring that no critical information remains unmonitored or unprotected.
-- *Real-Time security posture assessment* → monitors configurations, permissions, and encryption status to maintain a dynamic, up-to-date view of data risk posture.
-Automated remediation and policy enforcement → executes automated corrective actions—such as revoking access or enforcing encryption—based on predefined security policies and workflows.
-- *AI-driven risk prioritization* → uses machine learning and analytics to correlate data sensitivity, user behavior, and configuration issues for intelligent risk scoring and prioritization.
-- *Cross-environment data protection* → delivers consistent posture visibility and policy enforcement across multi-cloud, hybrid, and on-premise environments.
-- *Integration with Enterprise security scosystem* → seamlessly integrates with SIEM, SOAR, IAM, CSPM, and DLP tools, enabling a unified security operations workflow.
-- *Continuous compliance validation* → continuously audits data repositories against regulatory and internal compliance standards, reducing the risk of non-compliance penalties.
-- *Centralized Management and Reporting* → provides a single console for visibility, analytics, and reporting, simplifying operational management for administrators and compliance officers.
-- *Granular access and entitlement analysis* → detects misaligned access privileges, unused credentials, and policy violations to enforce least-privilege principles.
-- *High scalability and availability* → cloud-native architecture ensures performance and resilience, scaling automatically with enterprise data growth and operational demand.
-- *Secure data governance lifecycle* → covers all phases of the data lifecycle—from discovery to deletion—ensuring ongoing compliance and protection throughout the process.
-- *Auditability and traceability* → maintains immutable logs and versioned posture data for forensic investigation and compliance verification.
 
 <a id="ngfw"></a>
 
@@ -571,39 +232,21 @@ The platform includes all the advanced features of a firewall with additional th
 The device is also capable of analyzing the content of network packets, down to the application layer (deep packet inspection), and managing rules based on more than just ports and protocols.  
 The service delivers intelligent traffic inspection, application-aware control, intrusion prevention, and threat detection across cloud, on-premise, and hybrid infrastructures. Unlike traditional firewalls that rely solely on port and protocol filtering, the NGFW PaaS incorporates deep packet inspection (DPI), machine learning-based threat analysis, and context-aware security policies to identify and mitigate sophisticated attacks, including malware, ransomware, zero-day exploits, and data exfiltration attempts.
 
+The service is offered with the following unit metric: *1 Gbps of Throughput*.
+
 #### Features and Advantages
 
 The main features and functionalities of the service are:
 
-- *Advanced traffic inspection* → performs Deep Packet Inspection (DPI) to analyze traffic beyond basic headers. Detects malicious payloads, encrypted threats, and unauthorized applications. Supports full SSL/TLS decryption and inspection with configurable privacy controls.
-- *Application awareness and control* → identifies and classifies network traffic by application, not just port or protocol. Enables granular policy enforcement (allow, block, limit, prioritize) based on application type, risk level, and user identity. Prevents the use of unauthorized or high-risk applications (e.g., P2P, anonymizers, unapproved SaaS).
 - *Intrusion prevention system (IPS)* → provides signature-based and behavior-based detection to prevent known and unknown exploits. Protects against buffer overflows, SQL injection, cross-site scripting, and command injection attacks. Continuously updated with global threat intelligence feeds.
-- *Threat intelligence and malware protection* → integrates with real-time Threat Intelligence Feeds to block malicious IPs, URLs, and domains. Detects and blocks command-and-control (C2) traffic and lateral movement.Employs machine learning to identify zero-day malware and ransomware indicators.
-- *User and identity awareness* → integrates with Identity and Access Management (IAM) and directory services. Enforces user-based policies and logs actions for compliance and audit. Enables role-based access control (RBAC) for network usage and policy management.
-- *Secure Web filtering and URL categorization* → filters web traffic by category (e.g., malware, phishing, adult, social media). Blocks or restricts access based on organization-defined policies. Protects users from malicious or compromised websites.
-- *Network segmentation and microsegmentation* → enables logical separation of networks and workloads using VLANs, VPNs, or SDN policies. Implements Zero Trust segmentation to minimize lateral movement of threats.Supports east-west traffic control within cloud and virtualized environments.
 - *Virtual Private Network (VPN) and secure remote access* → provides site-to-site and remote access VPN with AES-256 encryption. Supports IPsec, SSL, and hybrid VPN tunnels for secure communication. Integrates with multi-factor authentication (MFA) for secure user access.
-- *Sandboxing and threat emulation* → suspicious files and payloads are executed in isolated virtual sandboxes. Detects advanced malware and zero-day exploits through behavioral analysis. Feeds findings back into the threat intelligence ecosystem for continuous learning.
-- *Policy automation and orchestration* → centralized management of firewall rules, security policies, and compliance templates. Automates policy updates and synchronization across distributed environments. Provides versioning, rollback, and change tracking for policy lifecycle management.
 - *Logging, monitoring, and analytics* → real-time visibility into network traffic, user activity, and threat events. Integrated dashboards and customizable reports for compliance and auditing. Supports integration with SIEM/SOAR platforms for advanced analytics and incident response.
 - *High availability and scalability* → redundant architecture ensuring failover, session synchronization, and minimal downtime. Auto-scaling capabilities to handle fluctuating workloads and peak network demand. Supports multi-zone and multi-region deployment for resilience and disaster recovery.
 
 The main components of the service are:
 
-- *Firewall enforcement nodes* → core data-plane components responsible for packet inspection, policy enforcement, and threat prevention. Deployed in a scalable cluster across multiple cloud availability zones or on-premise gateways. Supports virtual, containerized, or hardware-accelerated form factors.
-- *Control and management plane* → provides centralized configuration, orchestration, and lifecycle management of all NGFW instances. Supports multi-tenant environments with granular administrative segmentation. Exposes APIs for automation, integration, and third-party control systems.
-- *Threat intelligence and analytics engine* → aggregates global threat intelligence feeds and correlates them with real-time traffic telemetry. Employs AI and behavioral analytics for anomaly detection and predictive threat modeling.Updates detection rules and security signatures dynamically across all nodes.
-- *Intrusion prevention and detection subsystem (IPS/IDS)* → continuously monitors inbound and outbound traffic for known exploits or attack patterns. Uses signature-based, heuristic, and behavioral analysis to identify advanced threats. Works in conjunction with sandboxing and threat emulation for extended detection.
-- *Policy and compliance engine* → stores and enforces security policies across the infrastructure. Supports custom rule sets, templates, and compliance mappings (e.g., ISO 27001, PCI-DSS, NIS2). Provides automated risk scoring and compliance auditing for configurations.
-- *Identity and access integration layer* → connects to corporate IAM and SSO platforms to apply identity-aware security policies. Enables per-user or per-role traffic control and logging. Supports MFA and federated authentication mechanisms.
-- *Sandboxing and threat emulation cluster* → dedicated virtualized environment for executing suspicious files and payloads. Detects unknown threats without impacting production systems. Integrates with global threat intelligence to enhance protection models.
-- *Logging, telemetry, and SIEM integration* → collects and normalizes network logs, flow records, and security events. Integrates with external SIEM systems for centralized visibility and correlation. Supports syslog, REST API, and streaming telemetry protocols.
-- *API gateway and orchestration layer* → enables integration with CSPM, SOAR, and automation platforms. Provides RESTful APIs and SDKs for policy management, provisioning, and analytics. Facilitates policy synchronization and automation in hybrid environments.
-- *High availability and load balancing layer* → distributes traffic across multiple enforcement nodes for optimized performance and reliability. Supports active-active and active-standby configurations. Includes automatic failover, state synchronization, and redundancy at all layers.
-- *Monitoring and visualization dashboard* → provides administrators with real-time visibility into network status, threats, and policy compliance. Features interactive analytics, risk scoring, and alert prioritization. Supports customizable widgets for security operations and compliance teams.
-- *Data storage and archiving subsystem* → secure storage for logs, events, and configuration snapshots. Encrypted repositories with configurable retention and audit capabilities. Supports integration with cloud object storage or on-prem archival systems.
-
-The service is offered with the following unit metric: *1 Gbps of Throughput*.
+- *Web filtering and URL categorization / Web and email security* → filters web traffic by category, blocks o restringe accesso a siti malevoli o non autorizzati.” — Corretto, almeno a livello di proxy/filtraggio tramite plugin (es. proxy HTTP/HTTPS, filtraggio URL/blacklist). 
+- *Firewall enforcement nodes / Stateful firewall, policy-based filtering, support VLAN, NAT, port forwarding, etc*.
 
 The service offers the following advantages:
 
@@ -646,6 +289,8 @@ The PAM PaaS delivers identity-centric protection and governance for all privile
 It enforces the principle of least privilege, enables session monitoring and recording, and automates credential rotation, vaulting, and just-in-time access provisioning to minimize risk exposure.  
 Delivered as a managed PaaS, the service eliminates the complexity of deploying and maintaining traditional PAM infrastructure, providing organizations with continuous protection, compliance enforcement, and operational efficiency.
 
+The service is offered with the following unit metric: *10 administrative users managed by the Platform*.
+
 #### Features and Advantages
 
 The PAM PaaS provides a rich set of functionalities to secure and manage privileged accounts, credentials, and access sessions throughout their lifecycle.
@@ -679,8 +324,6 @@ The main components of the service are:
 - Web management console → provides administrators with a unified interface for configuration, policy management, and monitoring. Offers dashboards, risk indicators, and compliance views. Supports delegated administration and role-based visibility.
 - *High availability and scalability layer* → multi-zone deployment with redundant components to ensure continuous availability. Supports horizontal scaling for concurrent session and credential workloads. Implements backup, failover, and disaster recovery capabilities.
 
-The service is offered with the following unit metric: *10 administrative users managed by the Platform*.
-
 The service offers the following advantages:
 
 - *Reduced risk of data dreaches and insider threats* → minimizes the attack surface by enforcing strict control and monitoring of privileged accounts, effectively reducing both external and insider threat vectors.
@@ -707,64 +350,6 @@ Real-time session monitoring and recording → enables full visibility into priv
 - *Resilient and redundant infrastructure* → built on a high-availability architecture with geographic redundancy, automatic failover, and disaster recovery capabilities.
 Extensive API and Automation Capabilities → exposes APIs for integration with orchestration and ITSM systems, enabling policy automation, credential management, and incident response workflows.
 
-
-<a id="PSI"></a>
-
-### Perimeter Security Intelligence Service
-
-![Perimeter Security Intelligence Service Overview](assets/images/extract/media/alert.png)
-
-#### Services Description
-
-The Perimeter Security Intelligence service offers in-depth analysis of network traffic and perimeter activity, identifying potential threats and vulnerabilities.  
-Using advanced data analysis techniques, the service provides a comprehensive and proactive view of an organization's perimeter security. The Perimeter Security Intelligence service is based on the integration of advanced intelligence capabilities with organizations' existing security systems.  
-The goal is to provide, through a threat information sharing and reputation assessment platform, reliable feeds and indicators of compromise to other security solutions so they can proactively block threats.
-
-#### Features and Advantages
-
-The main features and functionalities of the service are:
-
-- *Real-time perimeter monitoring* → continuously monitors network traffic at the organization’s edge for signs of malicious activity, intrusions, or policy violations. Provides deep inspection of packets and flow analysis to identify abnormal behaviors and potential attacks. Supports on-premises, cloud, and hybrid network topologies.
-- *Threat intelligence integration* → integrates with global and industry-specific threat intelligence feeds to detect known indicators of compromise (iocs). Correlates external threat data with internal events to prioritize risks and anticipate emerging attacks. Automatically updates protection rules and correlation signatures in real time.
-- *Intrusion Detection and Prevention (IDS/IPS)* → identifies and blocks unauthorized access attempts, exploit activity, and suspicious network traffic. Utilizes signature-based, heuristic, and behavior-based detection methods.Supports inline (prevention) and passive (detection) deployment modes.
-- *Network Behavior Analysis (NBA)* → uses machine learning to baseline normal network activity and detect anomalies, such as lateral movement or data exfiltration. Identifies zero-day attacks and insider threats based on deviation from established patterns. Generates risk scores and automated alerts for anomalous behaviors.
-- *Distributed Denial-of-Service (DDOS) protection* → detects and mitigates volumetric, protocol-based, and application-layer DDOS attacks. Utilizes traffic filtering, rate limiting, and intelligent rerouting techniques. Integrates with cloud-based scrubbing centers for high-volume mitigation.
-- *Security information correlation and event enrichment* → correlates perimeter data with logs from other security sources (firewalls, vpns, proxies, endpoints). Enriches events with contextual intelligence, user identity, and geolocation data. Provides high-fidelity alerts to reduce noise and false positives.
-- *Threat hunting and forensic analysis* → enables proactive investigation of perimeter events and indicators of compromise. Provides historical visibility through log retention and network flow archives. Supports automated forensic reconstruction of attack chains and lateral movement.
-- *Adaptive policy enforcement* → dynamically updates firewall, ids/ips, and web filtering rules based on threat intelligence and incident context. Supports automated response actions such as ip blocking, quarantine, or traffic redirection.Integrates with soar platforms for orchestration of complex response workflows.
-- *Perimeter access control and network segmentation* → controls external connections through context-aware policies and zero-trust segmentation principles. Limits communication between zones based on sensitivity, trust level, and risk posture. Integrates with identity-based access controls and vpn gateways.
-- *Security analytics and visualization* → provides centralized dashboards with real-time metrics on traffic volume, threats, and blocked activity. Supports drill-down analysis by ip, application, or geographic source. Enables customizable reports for soc teams and compliance auditors.
-- *Log management and retention* → collects and stores network and security logs in an encrypted, tamper-proof repository. Supports customizable retention policies for compliance and forensic analysis. Integrates with external siem and compliance monitoring tools.
-- *Automation and orchestration* → automates threat response and mitigation through integration with soar systems.Supports playbooks for recurring incidents and threat scenarios. Provides apis for custom integrations and policy automation.
-
-The main components of the service are:
-
-- *Data collection and sensor layer* → distributed sensors deployed at network perimeters, gateways, and cloud endpoints. Captures traffic flows, logs, and events for analysis. Supports netflow, sflow, pcap, and syslog formats.
-- *Threat detection and correlation engine* → core analysis engine that applies rules, signatures, and behavioral models to incoming data. Correlates events from multiple sensors to identify attack patterns and coordinated campaigns. Continuously updated via global threat intelligence feeds.
-- *Machine learning and analytics module* → performs behavioral baselining, anomaly detection, and predictive threat analysis. Identifies previously unseen threats using unsupervised learning algorithms. Generates risk scores and prioritizes alerts based on contextual relevance.
-- *Intrusion Detection and Prevention (IDS/IPS)* → inspects packets in real time to detect and block malicious payloads. Supports both inline blocking and passive detection deployments. Uses deep packet inspection (dpi) and heuristic analysis for zero-day detection.
-- *Threat intelligence aggregator* → collects, normalizes, and correlates threat data from multiple external sources (cert, isac, vendor feeds). Enriches internal security events with iocs, ip reputation, and malware signatures. Provides adaptive updates to detection and response rules.
-- *Security orchestration and response layer* → executes automated or manual response actions based on detected threats. Integrates with soar platforms to trigger remediation workflows. Supports playbooks for dynamic rule updates and containment strategies.
-- *Policy and configuration management* → centralized management of firewall, ids/ips, and access control policies. Supports versioning, approval workflows, and compliance validation. Ensures consistent policy enforcement across distributed environments.
-- *Visualization and reporting dashboard* → provides operational and executive-level views of perimeter activity, threat trends, and response metrics. Supports customizable widgets and dynamic filtering for soc teams. Offers preconfigured compliance and kpi dashboards.
-- *Log storage and archival repository* → encrypted storage for raw and processed perimeter security data. Provides full auditability and supports long-term retention requirements.Enables retrospective analysis for threat hunting and legal investigations.
-- *API and integration gateway* → facilitates interoperability with siem, soar, iam, and cspm platforms.Enables data exchange and automation through restful apis. Supports event forwarding, rule synchronization, and analytics export.
-- *High availability and scalability layer* → built with redundant components and auto-scaling mechanisms to ensure consistent performance. Supports multi-zone deployment with failover and disaster recovery capabilities. Automatically balances sensor workloads and analysis processing.
-- *Security governance and compliance module* → maps policies and controls to industry standards and frameworks. Monitors adherence to compliance baselines and provides deviation alerts. Generates reports aligned with ISO 27001, GDPR, and NIS2 requirements.
-
-The service is offered with the following unit metric: *6 Target integrations in perimeter (e.g. FW)*.
-
-The service offers the following advantages:
-
-- *Enhanced protection of business assets* → safeguards critical data and infrastructure from external cyber threats, reducing the likelihood of data breaches and financial loss. Provides continuous monitoring to ensure business continuity and operational resilience.
-- *Reduced total cost of ownership (TCO)* →  eliminates the need for on-premises perimeter security hardware and complex maintenance.
-- *Faster incident response and risk mitigation* → automates detection and mitigation processes to minimize downtime and reduce incident impact. Accelerates decision-making through real-time alerts, dashboards, and contextual threat analysis.
-- *Increased visibility and control* → provides a unified view of perimeter activity across hybrid and multi-cloud environments. Helps identify emerging risks and vulnerabilities before they impact business operations.
-- *Improved regulatory compliance* → supports compliance with industry standards such as ISO 27001, gdpr, and NIS2. Generates audit-ready reports and evidence of continuous monitoring and threat management.
-- *Operational efficiency and agility* → reduces manual tasks through automation and orchestration of security workflows.
-- *Scalability and flexibility* → adapts to the evolving perimeter of digital enterprises, supporting cloud, remote, and iot environments.
-- *Data-driven decision making* → transforms perimeter data into actionable intelligence, improving security strategy alignment with business priorities.Enhances situational awareness through analytics-driven insights and trend analysis.
-
 <a id="IPS"></a>
 
 ### Intrusion Prevention System (IPS) Service
@@ -778,35 +363,26 @@ The Intrusion Prevention System (IPS) service not only detects but also prevents
 It uses attack signatures and behavioral analysis to identify and block known and unknown threats, protecting the IT infrastructure from potential compromise.
 Unlike an IDS, an IPS is integrated into the network architecture, at least for mission-critical network flows.
 
+The service is offered with the following unit metric: *1 Gbps of Throughput*.
+
 #### Features and Advantages
 
 The main features and functionalities of the service are:
 
 - *Traffic inspection and analysis* → performs deep packet inspection (dpi) and protocol decoding for inbound, outbound, and east-west traffic. Applies signature-based rules (known attack patterns), anomaly/behavior analysis (baseline deviation), and policy enforcement. Supports real-time blocking of malicious connections and content.
 - *Signature and threat intelligence engine* → maintains an updated signature library for known exploits and malicious traffic patterns. Integrates external threat intelligence feeds to identify malicious ips, domains, C2 channels, and exploit kits.
-- *Anomaly and behavioral detection* → establishes baseline traffic behavior, then identifies deviations indicating potential threats (e.g., lateral movement, data exfiltration). Applies machine-learning or heuristic engines to supplement rule-based detection.
-- *Policy-driven prevention and inline blocking* → automates blocking, connection termination, or traffic modification (e.g., reset, drop) when threats are detected. Policy profiles are configurable by severity, traffic zone, protocol, application, and asset criticality.
-- *Encrypted traffic inspection* → supports ssl/tls decryption and re-inspection of encrypted traffic to uncover hidden threats.
+- *Policy-driven prevention and inline blocking* → automates blocking, connection termination, or traffic modification (e.g., reset, drop) when threats are detected. Policy profiles are configurable by severity, traffic zone, protocol, application, and asset criticality.ts.
 - *Zone and network segment enforcement* → inspects traffic crossing defined security zones (e.g., lan → dmz, cloud → on-prem) and enforces segmentation rules.
 - *Logging, alerting, and reporting*→ generates detailed logs of detected intrusions, blocked events, and session information. Provides dashboards and reports for monitoring detection/prevention performance, compliance, and trends.
-- *Automated remediation and integration* → integrates with soar and automation platforms to trigger containment workflows (e.g., block ip, quarantine host, notify soc). Provides api access and webhooks for external orchestration.
-- *Scalable deployment models* → supports virtualized or containerized enforcement points across cloud regions, hybrid sites, and branch networks. Auto-scales to ensure performance under high traffic loads and large session volumes.
 - *Continuous update and threat intelligence sync* → automatically delivers new signatures, behavioral models, and threat intelligence to all enforcement nodes to keep protection current.
 
 The main components of the service are:
 
 - *Enforcement / data plane nodes* → high-performance inline sensors (virtual or hardware) that inspect and enforce traffic rules, perform dpi, session tracking, and blocking. Deployed across zones (edge, cloud gateway, internal segment).
-- *Control and management plane* → central management console for policy authoring, signature updates, performance monitoring, and enforcement node orchestration. Supports multi-tenancy, role-based access, and delegated administration.
 - *Signature and threat intelligence repository* → stores rule sets, malware and attack signatures, reputation data, ip/domain blacklists, and threat feed aggregations.Regularly updated and distributed to enforcement nodes.
-- *Behavioral analytics and anomaly detection engine* → performs baseline modeling of network and application traffic, detecting deviations and flagging suspicious activity.Generates risk scores, correlates events, and triggers alerts or preventative actions.
 - *Policy engine and configuration repository* → manages configuration of inspection zones, severity thresholds, blocking actions, traffic handling rules, and enforcement workflows.Maintains versioning, audit history, and rollback capabilities.
 - *Integration and api gateway* → exposes restful apis and webhooks for integration with siem, soar, orchestration, and other security tools. Supports event export, automation triggers, and third-party tool connectivity.
 - *Logging, monitoring, and reporting subsyste*m → collects logs, alerts, session metadata, and traffic flows, storing them in a secure, indexed repository. Provides dashboards, forensic search, export capabilities, and report generation.
-- *High availability and scalability infrastructure* → cluster deployment, auto-scaling of enforcement nodes, geographic redundancy, and failover mechanisms. Load-balances traffic across nodes to maintain performance and resilience.
-- *Secure storage and archival layer* → provides encrypted storage for historical logs, session data, and evidence for forensic and compliance purposes. It is includes data retention policies, immutable logging, and audit trail support.
-- *Encryption and decryption module* → handles ssl/tls decryption, re-inspection, and re-encryption of traffic to ensure visibility into encrypted streams. Integrates with key management and certificate handling systems.
-
-The service is offered with the following unit metric: *1 Gbps of Throughput*.
 
 The service offers the following advantages:
 
@@ -832,14 +408,15 @@ The service offers the following advantages:
 Below is the list of services belonging to the Middleware family:
 
 - [PaaS API Management](#API)
+- [Functions as a Service (FAAS)](#faas)
 - [Jboss as a Service](#Jboss)
 - [Spring boot as a Service](#spring)
 - [PaaS Business Process as a Service](#BPM)
 - [PaaS CMS as a Service](#CMS)
-- [PaaS ETL - Batch / Real Time Processing - 1 worker](#ETL)
 - [Semantic Knowledge Search - 1 Worker](#semantic-search)
 
 <a id="API"></a>
+
 ### PaaS API Management
 
 ![PaaS API Management](assets/images/extract/media/API.png)
@@ -885,11 +462,51 @@ The service offers the following advantages:
 - *Enhanced security and compliance* → secure management of APIs and traffic between services, with authentication, authorization, and rate limiting policies, protecting the infrastructure from unauthorized access.
 - *Open ecosystem* → Facilitates partnerships and innovation thanks to an API-ready and standardized infrastructure.
 
+<a id="faas"></a>
+
+### Functions as a Service
+
+![Functions As a Service (FAAS) Interface](assets/images/extract/media/FaaS.png)
+
+#### Services Description
+
+FaaS (Function as a Service) is an event-driven system design model running on stateless containers, where developers create, deploy, and execute small, independent functions to perform specific tasks without worrying about the underlying infrastructure.  
+Adopting FaaS allows for standardization of application development and execution by centralizing cross-functional capabilities such as orchestration, automatic provisioning, monitoring, integrated service management, and event-driven flow control. 
+
+It offers tools to:
+
+- centrally manage serverless functions;
+- automate component lifecycle management.
+
+The FaaS platform provisions and scales the underlying resources based on demand. It is ideal for highly dynamic scenarios with variable workloads and integrates seamlessly with microservices and event-based architectures.
+
+The service is offered with the following metrics: *100 VCPUs*.
+
+#### Features and Advantages
+
+The service goes beyond simply providing an execution engine; it also offers a complete ecosystem, consisting of:
+
+- Serverless execution → stateless functions and event-driven workflows, scalable and available in various programming languages.
+- Portability and independence → can run on any Kubernetes cluster, across multiple environments, without lock-in constraints.
+- Security and compliance → data protection and centralized access management.
+- The solution enables organizations to adopt a modern and flexible model, reducing operational complexity and benefiting from a standardized and easily accessible service.
+
+The service is delivered through Apache OpenServerless, an open-source, cloud-agnostic serverless platform based on Apache OpenWhisk as a Function-as-a-Service (FaaS) engine.
+
+The service offers the following advantages:
+
+- *Reduced operating costs* → you only pay for the actual use of features.
+- *Flexibility and scalability* → resources adapt to demand.
+- *Operational efficiency* → eliminating the need to directly manage servers, patches, and updates.
+- *High availability* → built-in redundancy and fault tolerance, ensuring high availability of features even in the event of hardware failures or other interruptions.
+- *Accelerated time-to-market* → rapid release of new features without worrying about the infrastructure.
+- *Agile development* → focus on code and business logic, not server management.
+- *Continuous innovation* → rapid experimentation with new, low-cost services.
+Competitive advantage in cost and speed compared to traditional hosting models.
+
 <a id="Jboss"></a>
 
 ### Jboss as a Service
-
-![Jboss As A Service](assets/images/extract/media/JBoss.png)
 
 #### Services Description
 
@@ -922,60 +539,6 @@ The service offers the following advantages:
 
 - *Reduced time to market* → application lifecycle automation, centralized management, and easy integration with DevOps pipelines reduce development and release times, accelerating response to market needs.
 - *Reduced operating costs* → centralized resource management and the platform's modularity optimize the use of existing infrastructure, reducing waste and operating costs.
-- *Security posture* → security policies can be defined and applied consistently across all applications, reducing risk and ensuring regulatory compliance.
-- *Faster innovation* → management tools (CLI, Web Console, REST API) and automated deployment and configuration processes reduce the operational burden on IT teams.
-- *DevOps integration* → integrated CI/CD pipelines for build and deployment.
-
-<a id="RT-runtime"></a>
-
-### Red Hat Runtime Subscription Service
-
-![Red Hat Runtime Subscription Service](assets/images/extract/media/runtime.png)
-
-#### Services Description
-
-The service offers a set of products, tools, and components for developing and managing cloud-native applications (Red Hat Runtimes), providing runtimes and frameworks for distributed cloud architectures based on microservices.  
-Red Hat Runtime Subscription is not a standalone service but enables technical support, regular updates, and security patches for other purchased Red Hat products, such as Jboss, and OpenJDK builds for servers/workstations.  
-It should be purchased if you are opting for the Red Hat technology stack for your solution and intend to receive support, especially in production environments.
-
-#### Features and Advantages
-
-The main features and functionalities of the service are:
-
-- *Enterprise runtimes and middleware* → provides access to a curated suite of Red Hat runtimes, such as: Red Hat JBoss EAP (Enterprise Application Platform), Red Hat Quarkus for Java microservices, Red Hat Spring Boot support, Red Hat Single Sign-On (Keycloak-based), Red Hat Data Grid / Infinispan, Red Hat AMQ (messaging and event streaming). Enables deployment of modern and legacy applications using certified, tested environments.
-- *Managed licensing and subscriptions* → provider handles subscription activation, renewal, compliance, and updates. No need to purchase or maintain Red Hat subscription keys. On-demand allocation based on runtime consumption.
-- *Automated updates, patches, and security fixes* → the platform applies security patches, CVE fixes, and bug updates. Ensures runtimes remain compliant with Red Hat lifecycle policies. Reduces operational risk and vulnerability exposure.
-- *Integration with cloud platforms* → fully compatible with: Kubernetes / OpenShift, VMs & compute instances, CI/CD pipelines, service meshes and cloud networking. Ensures smooth deployment of hybrid cloud applications.
-- *Performance and scalability* → runtimes automatically scale with underlying cloud infrastructure. Suitable for enterprise workloads, microservices, and high-throughput applications.
-- *Enterprise support* → access to Red Hat enterprise support channels via the provider. Error diagnostics, best-practice guidance, and runtime optimization. Correlated support across cloud resources and runtimes.
-- *Compatibility and certification* → ensures applications run on Red Hat-certified stacks. Guarantees compatibility with Java specifications, APIs, and Red Hat ecosystems.
-- *Monitoring and observability* → runtime metrics, logs, and traces integrated into cloud monitoring tools. Helps diagnose performance issues and optimize applications.
-- *Zero infrastructure management* → no need to provision runtime servers manually. Platform handles provisioning, configuration, scaling, and lifecycle management.
-
-The architectural components of the service are as follows:
-
-- *Runtime delivery platform* → central system that deploys and manages Red Hat runtimes. Handles dependency resolution, versioning, and configuration templates.
-- *Subscription management layer* → integrates with Red Hat subscription services. Tracks usage, entitlements, and compliance. Fully automated lifecycle (activation to renewal).
-- *Cloud-native execution environment* → supports runtime execution on: containers (Kubernetes/OpenShift), virtual machines, PaaS compute platforms. Provides isolation, scaling, and security boundaries.
-- *Security & compliance layer* → applies Red Hat-certified security baselines. Ensures compliance with enterprise and regulatory standards. Integrates with identity and access management systems.
-- *Control plane* → It manages: deployment configurations, runtime policies, scaling rules, patch rollout, integration with CI/CD pipelines
-- *Data plane* → It executes application workloads: microservices, transactional applications, messaging and event-driven systems, data grids and caching services, Optimized for high throughput and low latency.
-- *Monitoring & logging layer* → centralized metrics and log collection. Health monitoring of runtimes and containers/instances. Alerting and diagnostics tools.
-
-The service is sized for single subscriptions.
-
-The service offers the following advantages:
-
-- *Reduced complexity and operational burden* → no need to manage Red Hat subscriptions manually. Automated runtime provisioning, updates, and patches.
-- *Enterprise-grade security and compliance* → guaranteed access to certified runtimes with continuous security fixes. Reduces vulnerability exposure and compliance risks.
-- *Faster development and deployment* → ready-to-use, standardized runtime environments. Developers focus on applications, not runtime configuration.
-- *Cost efficiency* → eliminates upfront licensing costs and overprovisioning.
-- *High performance and scalability* → runtimes scale automatically with cloud infrastructure- Optimized for enterprise workloads and microservices.
-- *Consistency across environments* → uniform runtime versions across dev/test/prod environments. Reduces errors caused by environment drift.
-- *Access to enterprise support* → Red Hat-backed support ensures stability and reliability. Faster issue resolution and expert guidance.
-- *Improved application reliability* → certified runtime stacks with automated health checks. Reduces downtime and improves service continuity.
-- *Modernization of legacy applications* → allows migration from traditional application servers to cloud-native runtimes. Supports Java EE/Jakarta EE and modern microservices frameworks.
-- *Accelerated hybrid and multi-cloud adoption* → consistent runtime environment across cloud and on-prem systems. Simplifies application portability and modernization strategies.
 
 <a id="spring-boot"></a>
 
@@ -987,8 +550,9 @@ The service offers the following advantages:
 
 This service allows you to use Spring Boot, an open-source framework for Java application development, as a managed service.  
 It is designed to simplify the development of production-ready Java applications by providing a platform that eliminates much of the manual configuration required by the traditional Spring framework and reduces the need for server provisioning and dependency management.  
-With a preconfigured environment optimized for the Spring Boot framework, the service allows teams to focus on developing business features, reducing release times and costs.  
-It integrates with DevOps tools and leading cloud services, offering scalability, managed updates, and continuous monitoring.
+With a preconfigured environment optimized for the Spring Boot framework, the service allows teams to focus on developing business features, reducing release times and costs.
+
+The service is sized for single containers. Each container has 16 GB of storage.
 
 #### Features and Advantages
 
@@ -1000,7 +564,6 @@ Simplified deployment → ability to directly upload a JAR or source code (e.g.,
 - *Integrated monitoring and logging* → access to runtime metrics (CPU, memory, latency, throughput); centralized logs (stdout/stderr) accessible via console or API; integration with BI tools (Prometheus, Grafana, etc.).
 - *Configuration and secret management* → centralized configuration (environment variables, Spring Cloud Config, or Vault); secure management of credentials, tokens, and keys.
 Integrated support services → easy connection to managed databases (PostgreSQL, MySQL, MongoDB); support for messaging (RabbitMQ, Kafka), caching (Redis), and storage; automatic service binding via environment variables or injection.
-- *DevOps integration* → support for CI/CD pipelines; continuous deployment (Continuous Deployment) and automatic rollbacks; compatibility with tools such as GitHub Actions, Jenkins, GitLab CI.
 - *Security and isolation* → each application is isolated (namespace, container, or dedicated VM); HTTPS/TLS by default, identity management, and integration with authentication systems (OAuth2, SSO).
 
 The solution is based on the following architectural layers:
@@ -1009,8 +572,6 @@ The solution is based on the following architectural layers:
 - *Orchestration layer* (Platform Runtime) → manages the lifecycle of Spring Boot containers, from deployment to monitoring, ensuring availability, replication, and load balancing
 - *Application layer* (Spring Boot Runtime) → Spring Boot runs within a container; supports Actuator endpoints for health checks and metrics; exposes HTTP/REST APIs on predefined and configurable ports
 - *Management layer and PaaS services* → web dashboard or CLI to manage applications, versions, and resources. REST API for automation (deployment, scale, logs, metrics). Integration with external logging and monitoring systems.
-
-The service is sized for single containers. Each container has 16 GB of storage.
 
 The service offers the following advantages:
 
@@ -1033,6 +594,8 @@ It is a comprehensive Business Process Management (BPM) platform that helps comp
 It combines workflow automation, application integration, and performance monitoring in a single solution. The goal is to improve operational efficiency, reduce execution times, and ensure process consistency across the organization.  
 It facilitates collaboration between business users and IT during the creation, management, validation, and deployment of customized process and decision automation solutions. Business users can modify business logic and business processes without requiring assistance from IT staff.
 
+The service is sized for each 8 cores.
+
 #### Features and Advantages
 
 The main features and functionalities of the service are:
@@ -1051,8 +614,6 @@ The service, based on IBM technology, is organized into the following integrated
 - *Process Server* → Process execution engine. Manages both human and automated tasks.
 - *Process Portal* → User portal for receiving, executing, or approving tasks.
 - *Performance Data Warehouse (PDW)* → Performance collection and analysis system, stores process execution data and enables historical analysis and real-time monitoring.
-
-The service is sized for each 8 cores.
 
 The service offers the following advantages:
 
@@ -1074,6 +635,8 @@ The service, based on Wordpress, provides comprehensive and versatile tools for 
 It offers a centralized system that allows for scalable, integrable, and multi-channel content management, with consumption-based costs and no infrastructure overhead.  
 This allows users to focus solely on content creation and management, while the platform handles hosting, maintenance, and updates.
 
+The service is offered for license unit. Each license consists of 1000 users.
+
 #### Features and Advantages
 
 The main features and functionalities of the service are:
@@ -1086,8 +649,6 @@ The main features and functionalities of the service are:
 - *Flexibility and scalability* → adaptability based on needs.
 - *Open Source and Community* → collaboration with the online community.
 - *Accessibility* → tools to improve readability, contrast, keyboard navigation, and compliance with accessibility standards for users with disabilities.
-
-The service is offered for license unit. Each license consists of 1000 users.
 
 The service offers the following advantages:
 
@@ -1114,6 +675,8 @@ The service allows for the management of content in various formats (Word docume
 The tool is able to filter and select the most relevant information for the user through the use of an NLP (Natural Language Processing) model, also allowing complete navigation of the indexed document. The services are designed to ensure digital sovereignty through deployment on a secure national infrastructure, with a particular focus on latency and optimization of computational resources.  
 It allows users to enter feedback on individual results returned by the search engine, in order to take into account domain knowledge to better refine the results provided by the system.
 
+Each unit consists of a 26-core 2.70 Ghz physical processor with a 1:2 virtualization ratio - SSD disk.
+
 #### Features and Advantages
 
 The platform bases its semantic search methodology on a database of carefully selected internal information sources, as well as on feedback from system users.  
@@ -1132,8 +695,6 @@ The main components of the service are:
 - *Apache Tika* → Software for data extraction, language identification, and content analysis. It can find and extract text and metadata from over a thousand file formats.
 - *OpenSearch* → A distributed search engine that provides extremely fast full-text search capabilities and high-performance indexing of all data types. Interaction with the search engine occurs via REST API technology.
 
-Each unit consists of a 26-core 2.70 Ghz physical processor with a 1:2 virtualization ratio - SSD disk.
-
 The service offers the following advantages:
 
 - *Faster and more informed decisions* → teams have easier access to corporate knowledge, reducing analysis and decision-making time.
@@ -1150,13 +711,13 @@ The service offers the following advantages:
 
 Below is the list of services belonging to Data Protection family:
 
-- [Backup - PLATFORM](#backup)
+- [Backup](#backup)
 
 <a id="backup"></a>
 
-### Backup - PLATFORM Service
+### Backup Service
 
-![Backup - PLATFORM Service](assets/images/extract/media/backup.png)
+![Backup Service](assets/images/extract/media/backup.png)
 
 #### Services Description
 
@@ -1206,15 +767,17 @@ The service offers the following advantages:
 Below is the list of services belonging to the Infra & Ops Platform family:
 
 - [Multicloud Management Platform](#SCMP)
-- [Control Room as Service](#control-room)
 - [IT infrastructure Service Operations (Logging & Monitoring)](#ITops)
 - [PaaS Ticket Management Service](#ITSM)
+- [PaaS Operations Management Service](#operations)
 
 <a id="SCMP"></a>
 
 ### Multicloud Management Platform
 
-![Leonardo Secure Cloud Management Platform (SCMP)](assets/images/extract/media/SCMP.png)
+![Leonardo Secure Cloud Management Platform (SCMP)  - Inventory interface](assets/images/extract/media/SCMP1.png)
+
+![Leonardo Secure Cloud Management Platform (SCMP) - Costs dashboard](assets/images/extract/media/SCMP2.png)
 
 #### Services Description
 
@@ -1264,49 +827,6 @@ The service offers the following advantages:
 - *Improves the reliability of services and processes *→ governance, security, and compliance policies can be centrally managed, ensuring that Resources are protected and regulations are complied with.
 - *IT Operations Support* → can be integrated with IT service management (ITSM) and IT operations automation tools (such as Ansible, Chef, SaltStack), improving service quality and reducing manual errors.
 
-<a id="control-room"></a>
-
-### Control Room as Service
-
-![Control Room as Service](assets/images/extract/media/X2030.png)
-
-#### Services Description
-
-The service, developed by Leonardo, involves the adoption of a next-generation platform that aims to provide a comprehensive and innovative response to large urban centers, police forces, large utilities, and organizations that monitor and manage critical infrastructure.  
-This platform is a multi-source, multi-environment system for aggregating, analyzing, and processing data in near real time across multiple application domains.  
-It can leverage existing and installed sensor networks, such as security cameras, hydrogeological detection systems, or fire prevention systems, integrating data with open sources such as social networks, drone monitoring, and satellite data. It can also utilize artificial intelligence algorithms to produce real-time information.  
-This way, operators in the command center and in the field can make decisions quickly and effectively via Leonardo's professional communications networks (DMR, TETRA, and 5G).
-
-#### Features and Advantages
-
-The service offers the following main features:
-
-- *Integration with heterogeneous and multimodal sources* → the platform enables the integration, interaction, and acquisition of data from various heterogeneous and diverse sources, systems, sensors, or other existing and third-party objects (e.g., on-board cameras on air and ground vehicles, satellite images, IoT sensors, social media, applications, etc.), enabling complete and versatile situational awareness.
-- *Intelligent processing* → the system integrates various appropriate Big Data and AI algorithms to create a real-time or predictive decision support system.
-Georeferencing → The acquired information, once appropriately normalized and processed, can be displayed and localized on different levels of cartographic maps for a unified view of the situation.
-- *Simplified interaction with operators* → the information and detected events are displayed to control operators in a graphical and personalized manner (e.g., alert and notification management), enabling intuitive and simplified interaction.
-- *Coordination with Communication systems* → allows you to integrate and coordinate field resources by leveraging the radio network (RIM/DMR) or mobile networks (DMR, TETRA, and 5G).
-- *Activity tracking* → the tracking system records and archives all detected and displayed activities (maintenance, training, events).
-
-Architecturally, the platform has a microservices software architecture composed of multiple layers:
-
-- *Integration layer* → includes all sensors and subsystems that acquire information from the field and is capable of performing initial processing according to domain-specific logic.
-- *Core layer* → the core of the system, where data and events from the integration layer are collected via a microservices infrastructure and made available to the various processing engines to generate the overall situation.
-- *Presentation layer* → based on an innovative graphical interface designed to present information to the operator in a simple, comprehensive, and effective manner. The use of a GIS (Geographic Information System) allows for the georeferencing of all information and activities, including interactions with integrated subsystems.
-
-The service offers the following advantages:
-
-- *Improved risk management and business continuity* → reduced response times to incidents and crises, increased overall organizational resilience.
-- *Cost optimization* → centralizing monitoring activities reduces the need for distributed resources across the territory and improves planning and resource utilization.
-- *Improved image and reputation* → rapid and coordinated response capabilities, more transparent and timely external communication.
-- *Data-driven strategic decisions* → continuous collection of spatial data (weather, traffic, IoT sensors, social monitoring), historical and predictive analysis to support long-term investments and planning.
-- *Compliance and governance* → Compliance with regulations on safety, civil protection, the environment, or infrastructure management. Complete audit trail and traceability of decisions and interventions.
-- *Integrated and real-time monitoring* → Integration of heterogeneous sources, centralized visualization in static or dynamic maps, automatic notifications and configurable alerts for anomalies or critical events.
-- *Efficient operational coordination* → can enable multi-agency collaboration (e.g., law enforcement, civil defense, utility companies, etc.) and create standardized procedures for event management.
-- *Shorter problem resolution time* → thanks to the details provided (tracing, distributed diagnosis, code, database, and network visibility).
-- *Automation and artificial intelligence* → automatic recognition of patterns or anomalies (e.g., through video analytics or generative AI), automatic generation of intervention or escalation plans, improving forecasting and response capabilities over time.
-- *Traceability and reporting* → complete recording of events, decisions, and actions taken.
-
 <a id="ITops"></a>
 
 ### IT infrastructure Service Operations (Logging & Monitoring)
@@ -1319,6 +839,8 @@ This is an Application Performance Monitoring (APM) service that monitors and co
 It provides centralized collection and analysis across various infrastructure elements: Servers and VMs, Containers and orchestrators, Cloud providers, and Network.  
 It provides AI-based analytics to prevent and resolve issues before they impact users.
 
+The service is offered per 1 GB of data storage.
+
 #### Features and Advantages
 
 The Log & Audit service built on OpenTelemetry provides a unified and vendor-neutral way to collect, process, and export observability data. Its core capabilities include:
@@ -1326,62 +848,38 @@ The Log & Audit service built on OpenTelemetry provides a unified and vendor-neu
 The service offers the following main features:
 
 - *Log collection & aggregation* → vaptures application logs, system logs, and security-relevant audit trails. Supports structured logging for consistent and machine-readable data.
-
 - *Audit trail generation* → tracks user actions, configuration changes, and security-sensitive operations. Ensures immutability and integrity through standardized data formats and export pipelines.
-
 - *Distributed tracing* → enables end-to-end traceability across microservices. Helps correlate logs, metrics, and traces for full-context auditability.
-
 - *Metrics and performance data* → collects operational and performance metrics (CPU, memory, network, API latency). Correlates metrics with logs and traces for accurate diagnostics.
-
 - *Policy-driven data processing* → allows filtering, sampling, redaction, and enrichment through OpenTelemetry Collectors. Ensures sensitive information is processed according to compliance policies.
-
 - *Multi-destination export* → exports data to SIEM platforms, log analytics tools, data lakes, or object storage. Supports Elasticsearch, Splunk, Loki, BigQuery, and more.
 
 The main components of the service are:
 
 - *Instrumentation Layer* → applications and services instrumented using OpenTelemetry SDKs and auto-instrumentation agents. Generates logs, metrics, and traces in a standardized OTLP format.
-
 - *OpenTelemetry collector* → central component responsible for: receiving data (logs, metrics, traces); processing/enriching it; exporting it to one or more backends.  
-Can run as: a sidecar in Kubernetes, a daemonset on each node, a centralized collector cluster
-
-- *Export & storage layer* → observability and security data is sent to: log storage (Elasticsearch, Loki, Cloud logging platforms); SIEM systems (Elastic SIEM, Splunk, Azure Sentinel); Audit archives (S3, GCS, object storage)
-
-- *Visualization & analytics* → dashboards and visual tools such as: Grafana, Kibana, OpenSearch Dashboards, SIEM dashboards
-
+Can run as: a sidecar in Kubernetes, a daemonset on each node, a centralized collector cluster.
+- *Export & storage layer* → observability and security data is sent to: log storage (Elasticsearch, Loki, Cloud logging platforms); SIEM systems (Elastic SIEM, Splunk, Azure Sentinel); Audit archives (S3, GCS, object storage).
+- *Visualization & analytics* → dashboards and visual tools (Grafana). 
 - Support centralized log analysis, auditing, forensics, and compliance reporting.
-
-The service is offered per package. Each package consists of 80 infra hosts with:
-
-- an average of 32 GB RAM
-- 20 apps with an average of 64 GB RAM
-- 3 million trx
-- standard support
 
 The service offers the following advantages:
 
 - *Improved security & compliance* → centralized audit trails simplify compliance with standards (ISO 27001, SOC2, GDPR). Enhanced visibility into user actions and critical events reduces risk.
-
 - *Reduced vendors Lock-in* → OpenTelemetry is vendor-neutral, enabling freedom to switch backends without re-instrumenting code.
-
 - *Better decision-making* → unified observability data supports data-driven product and business insights. Helps organizations identify usage patterns, performance bottlenecks, and customer-impacting issues.
-
 - *Cost optimization* → policy-driven sampling and data routing help reduce storage and licensing costs. Ability to send different data types to cost-efficient storage tiers.
-
 - *Unified observability pipeline* → Single consistent pipeline for logs, metrics, and traces reduces operational complexity.
-
 - *Improved troubleshooting* → correlation of logs, metrics, and traces dramatically speeds up root cause analysis. Reduces MTTR (Mean Time To Repair).
-
 - *Scalability & flexibility* → the OpenTelemetry Collector can be scaled horizontally to handle high data volumes. Supports multi-cloud and hybrid architectures natively.
-
 - *Standardization across teams* → developers, SREs, and security teams use a common telemetry standard. Simplifies onboarding and reduces friction in cross-team operations.
-
 - *Extensibility* → pluggable components allow integration with new tools or pipelines without redesigning the system.
 
 <a id="ITSM"></a>
 
 ### PaaS Ticket Management Service
 
-![Ticket Management Service](assets/images/extract/media/Ticket.png)
+![Ticket Management Service interface](assets/images/extract/media/Ticket.png)
 
 #### Services Description
 
@@ -1486,7 +984,7 @@ Below is the list of services belonging to the  DevSecOps family:
 
 ### Configuration Manager
 
-![Configuration Manager Service](assets/images/extract/media/Config.png)
+![Configuration Manager Service interface](assets/images/extract/media/Config.png)
 
 #### Services Description
 
@@ -1878,7 +1376,7 @@ Infrastructure scalability and flexibility.
 
 ![PaaS ETL - Batch/Real time Processing](assets/images/extract/media/Processing.png)
 
-##### Services Description
+#### Services Description
 
 It is a platform that provides a set of tools for processing, integrating, quality-checking, and preparing data from heterogeneous sources stored in the Data Lake, both in real time and in batch mode.  
 It offers a user-friendly graphical interface for designing and implementing data integration workflows using a visual approach, following the ETL (Extract – Transform – Load) approach. This reduces the complexity of data integration and allows users to focus on business logic rather than programming code.  

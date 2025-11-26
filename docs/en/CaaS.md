@@ -19,9 +19,9 @@ Below is the list of services belonging to the Compute family:
 
 ![Kubernetes Confidential Computing Overview](assets/images/extract/media/K8S.png)
 
-#### Services Description
+#### Service Description
 
-This service provides an automated Kubernetes platform for orchestrating private and secure containers, designed to manage containerized applications in highly regulated environments or with confidentiality requirements.  
+This service, deveoloped by Leonardo, provides an automated Kubernetes platform for orchestrating private and secure containers, designed to manage containerized applications in highly regulated environments or with confidentiality requirements.  
 The platform ensures automation of node scaling, monitoring, and high availability management, without requiring any operational activities on the customer's part.  
 The cluster capacity can be increased or decreased through automated scaling mechanisms based on predefined node block increments, in line with the proposed SKU sizing.  
 This approach ensures architectural consistency, predictable performance, and alignment with the design constraints of the underlying infrastructure.

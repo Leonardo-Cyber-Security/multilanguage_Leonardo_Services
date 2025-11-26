@@ -70,7 +70,7 @@ For each service, you can choose from three alternative purchase options:
 |Big Data|[Data Lake](PaaS.md#datalake)|TB|1 TB|25,83 €|279,00 €|744,00 €|
 |Big Data|[Business Intelligence Platform](PaaS.md#BI)|User|50 users|8.365,83 €|90.351,00 €|240.936,01 €|
 |Big Data|[PaaS ETL Batch/Real time Processing](PaaS.md#processing)|Worker node|4vCPU, 128 GB RAM per worker| 608,48 €|6.571,54 €|17.524,11 €|
-|Big Data|[Event Message - 1 Worker](PaaS.md#event-message)|Worker|Apache Kafka on a 26-core 2.70 GHz physical processor with a 1:2 virtualization ratio per worker|291,29 €|3.145,95 €|8.389,20 €|
+|Big Data|[Event Message](PaaS.md#event-message)|Worker node|4vCPU, 128 GB RAM per worker|291,29 €|3.145,95 €|8.389,20 €|
 |Big Data|[Data Governance](PaaS.md#governance)|User|10 users|461,45 €|4.983,68 €|13.289,82 €|
 <figcaption>Price list of the Big Data Family Services</figcaption>
 
@@ -79,23 +79,14 @@ For each service, you can choose from three alternative purchase options:
 |AI|[Speech to Text](PaaS.md#speech-to-text)|GPU|1 partition H100|2.819,93 €|30.455,25 €|81.214,00 €|
 |AI|[PaaS-AI Audio Analytics](PaaS.md#AI-audio-video)|Audio stream|H24X365G|219,65 €|2.372,23 €|6.325,95 €|
 |AI|[PaaS-AI Video Analytics](PaaS.md#AI-audio-video)| Video stream|H24X365G|648,28 €|7.001,38 €|18.670,35 €|
-|AI|[OCR-Tessacrat](PaaS.md#AI-OCR)|Container|16 GB RAM per container|1.109,42 €|11.981,77 €|31.951,40 €|
-|AI|[OCR-Microsoft](PaaS.md#AI-OCR)|Pages|96 M per page|10.448,40 €|112.842,70 €|300.913,86 €|
+|AI|[OCR](PaaS.md#AI-OCR)|Container|16 GB RAM per container|1.109,42 €|11.981,77 €|31.951,40 €|
 |AI|[Text Analytics/NLP](PaaS.md#AI-text)|Worker|26-core 2.70 Ghz physical processor with a 1:2 virtualization ratio per worker|393,54 €|4.250,25 €|11.334,00 €|
-|AI|[Translation-Leonardo](PaaS.md#translation)|GPU|2 GPU H100|18.247,86 €|197.076,90 €|525.538,40 €|
-|AI|[Translation-Microsoft](PaaS.md#translation)|Characters;Clients|4,8 Mln per Characters;10 clients|21.965,84 €|237.231,07 €|632.616,19 €|
+|AI|[Translation](PaaS.md#translation)|GPU|2 GPU H100|18.247,86 €|197.076,90 €|525.538,40 €|
 |AI|[AI Search-RAG](PaaS.md#AI-search)|GPU|1 GPU H100|23.305,31 €|251.697,33 €|671.192,88 €|
-|AI|[AI Platform](PaaS.md#AI-platform)|GPU|26-core 2.70 GHz physical processor, 1:2 virtualization ratio-dedicated Nvidia A100|1.281,30 €|13.838,03 €|36.901,40 €|
+|AI|[AI Platform](PaaS.md#AI-platform)|GPU|1 GPU H100|1.281,30 €|13.838,03 €|36.901,40 €|
 |AI|[AI SLM](PaaS.md#AI-SLM-LLM)|GPU|1 partition GPU H100|6.896,91 €|74.486,63 €|198.631,00 €|
 |AI|[AI LLM](PaaS.md#AI-search)|GPU|3 GPU H100|30.824,01 €|332.899,28 €|887.731,41 €|
-|AI|[AI workflow](PaaS.md#AI-workflow)|GPU|3 GPU H100|30.824,01 €|332.899,28 €|887.731,41 €|
-|AI|[AI Vector DB](PaaS.md#AI-vectorDB)|User;vCore|10 Users;8 vCores|31.053,51 €|335.377,93 €|894.341,14 €|
 <figcaption>Price list of the Artificial Intelligence (AI) Family Services</figcaption>
-
-|Family|Service|Unit|Value|PAYG (Monthly)|1Y Reserved|3Y Reserved|
-|------| ------| ---| ----| -------------| ----------| ----------|
-|VDI|[VDI](PaaS.md#VDI)|concurrent user|250 concurrent users(8vcpu, 16Gb RAM, 256 GB Disk)|94.673,12 €|1.022.469,74 €|2.726.585,98 €|
-<figcaption>Price list of the Data Protection Virtual Desktop Infrastructure (VDI) Services</figcaption>
 
 |Family|Service|Unit|Value|PAYG (Monthly)|1Y Reserved|3Y Reserved|
 |------| ------| ---| ----| -------------| ----------| ----------|

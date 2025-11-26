@@ -51,7 +51,7 @@ For details on each service, please see the dedicated section.
 | Middleware                           | [PaaS Business Process as a Service](PaaS.md#BPM)                          |
 | Middleware                           | [PaaS CMS as a Service](PaaS.md#CMS)                                       |
 | Middleware                           | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)                            |
-|  Data Protection                          | [Backup](PaaS.md#backup)                            |
+| Data Protection                      | [Backup](PaaS.md#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](PaaS.md#SCMP)                              |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](PaaS.md#ITSM)                              |
@@ -61,24 +61,19 @@ For details on each service, please see the dedicated section.
 | DevSecOps                            | [Quality Code Analysis](PaaS.md#quality)                                       |
 | DevSecOps                            | [DevSecOps As A Service](PaaS.md#devsecops)                                      |
 | DevSecOps                            | [Qualizer DevSecOps](PaaS.md#qualizer)                                          |
-| Big Data                             | [Data Lake - 1TB](PaaS.md#datalake)                                             |
-| Big Data                             | [Data Lakehouse](v#datalakehouse)                                              |
+| Big Data                             | [Data Lake](PaaS.md#datalake)                                             |
 | Big Data                             | [Business Intelligence Platform](PaaS.md#BI)                              |
-| Big Data                             | [PaaS ETL Batch/Real time Processing - 1 Worker](PaaS.md#processing)                       |
-| Big Data                             | [Event Message - 1 Worker](PaaS.md#event-message)                                    |
+| Big Data                             | [PaaS ETL Batch/Real time Processing](PaaS.md#processing)                       |
+| Big Data                             | [Event Message](PaaS.md#event-message)                                    |
 | Big Data                             | [Data Governance](PaaS.md#governance)                                             |
 | Artificial Intelligence (AI)         | [Speech to Text](PaaS.md#speech-to-text)                                              |
 | Artificial Intelligence (AI)         | [PaaS - AI Audio & Video Analytics](PaaS.md#AI-audio-video)                           |
 | Artificial Intelligence (AI)         | [OCR](PaaS.md#AI-OCR)                                                          |
-| Artificial Intelligence (AI)         | [Text Analytics/NLP    ](PaaS.md#AI-text)                                              |
+| Artificial Intelligence (AI)         | [Text Analytics/NLP](PaaS.md#AI-text)                                              |
 | Artificial Intelligence (AI)         | [Translation](PaaS.md#AI-translation)                                                 |
 | Artificial Intelligence (AI)         | [AI Search - RAG](PaaS.md#AI-search)                                             |
-| Artificial Intelligence (AI)         | [PaaS - AI Platform](PaaS.md#AI-platform)                                          |
+| Artificial Intelligence (AI)         | [AI Platform](PaaS.md#AI-platform)                                          |
 | Artificial Intelligence (AI)         | [AI SLM/LLM](PaaS.md#AI-SLM-LLM)                                                  |
-| Artificial Intelligence (AI)         | [AI workflow](PaaS.md#AI-workflow)                                                 |
-| Artificial Intelligence (AI)         | [AI Vector DB](PaaS.md#AI-vectorDB)                                                   |
-| Virtual Desktop Infrastructure (VDI) | [VDI](PaaS.md#VDI)                                                         |
-| Virtual Desktop Infrastructure (VDI) | [VDI with GPU support](PaaS.md#VDI-GPU)                                        |
 | Collaboration                        | [Instant Messaging](PaaS.md#messaging)                                           |
 | Database                             | [PaaS SQL - PostgreSQL](PaaS.md#postgres)                                         |
 | Database                             | [PaaS SQL - MariaDB](PaaS.md#mariaDB)                                             |

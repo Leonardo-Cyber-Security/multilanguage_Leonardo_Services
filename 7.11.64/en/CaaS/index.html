@@ -1,0 +1,1465 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Container as a Service (CaaS) - Leonardo Services Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/eng-standard-theme.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/fabric.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/toc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/language-switcher.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#container-as-a-service-caas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Leonardo Services Documentation" class="md-header__button md-logo" aria-label="Leonardo Services Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leonardo Services Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Container as a Service (CaaS)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Leonardo Services Documentation" class="md-nav__button md-logo" aria-label="Leonardo Services Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Leonardo Services Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as a Service (IaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container as a Service (CaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform as a Service (PaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hybrid/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hybrid Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DC/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Center Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Price/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Provisioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITSM/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SLA/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Level Agreement (SLA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Account Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Certifications/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyber Security Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Faq/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions (FAQ)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compute-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compute Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes-confidential-computing-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kubernetes Confidential Computing Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kubernetes Confidential Computing Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leonardo-kubernetes-service-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leonardo Kubernetes Service Reference Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leonardo Kubernetes Service Reference Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leonardo-kubernetes-service-lks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leonardo Kubernetes Service (LKS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node Pools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Networks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-and-service-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pod and Service Networking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingress &amp; Load Balancing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity &amp; Access Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leonardo-cloud-iam-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leonardo Cloud IAM Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-rbac-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended RBAC Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-plane-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Plane Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-and-runtime-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node and Runtime Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resilience-business-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resilience &amp; Business Continuity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High Availability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-observability-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native Observability Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-observability-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Observability Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-gitops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevOps &amp; GitOps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuous Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="container-as-a-service-caas">Container as a Service (CaaS)</h1>
+<p>The following table lists the services included in the <em>Container as a Service (CaaS)</em> category.</p>
+<table>
+<thead>
+<tr>
+<th>FAMILY</th>
+<th>LIST OF SERVICES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute</td>
+<td><a href="#kubernetes">Kubernetes Confidential Computing</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption>List of families and related CaaS services</figcaption>
+
+<h2 id="compute-family">Compute Family</h2>
+<p>Below is the list of services belonging to the Compute family:</p>
+<ul>
+<li><a href="#kubernetes">Kubernetes Confidential Computing</a></li>
+</ul>
+<p><a id="kubernetes"></a></p>
+<h3 id="kubernetes-confidential-computing-service">Kubernetes Confidential Computing Service</h3>
+<p>
+<figure><img src="../assets/images/extract/media/K8S.png" /><figcaption>Kubernetes Confidential Computing Overview</figcaption>
+</figure>
+</p>
+<h4 id="service-description">Service Description</h4>
+<p>This service, deveoloped by Leonardo, provides an automated Kubernetes platform for orchestrating private and secure containers, designed to manage containerized applications in highly regulated environments or with confidentiality requirements.<br />
+The platform ensures automation of node scaling, monitoring, and high availability management, without requiring any operational activities on the customer's part.<br />
+The cluster capacity can be increased or decreased through automated scaling mechanisms based on predefined node block increments, in line with the proposed SKU sizing.<br />
+This approach ensures architectural consistency, predictable performance, and alignment with the design constraints of the underlying infrastructure.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Contained Elements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kubernetes cluster</td>
+<td>15 nodes with 8 GB RAM for each unit</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Contained Elements for the Kubernetes Confidential Computing Service</figcaption>
+
+<h4 id="features-and-advantages">Features and Advantages</h4>
+<p>Implementation requires a combination of hardware certified for Confidential Computing, a private, security-hardened Kubernetes infrastructure, and a suite of observability and governance tools to maintain complete control over the container lifecycle.</p>
+<p>Features included:</p>
+<ul>
+<li><em>Data protection</em> → The operating system is configured to ensure protection at all stages: data in memory, through full disk encryption; data in transit, using secure and encrypted communication protocols; and data in use, adopting Confidential Computing practices and secure execution environments.</li>
+<li><em>Secure enclaves</em> → Enforces isolation and encryption, ensuring that only authorized parties can access data.</li>
+<li><em>Trusted execution environments (TEEs)</em> → Adds a secure computing environment, protecting data from external threats.</li>
+<li>As a managed Kubernetes solution, the customer does not have to worry about managing the infrastructure and its complexity, as the infrastructure layer is managed by Leonardo throughout the service lifecycle.</li>
+</ul>
+<p>The service includes a comprehensive set of security tools and services designed to ensure the secure usage of containers running on the Managed Service for Containers.<br />
+It implements a multilayered infrastructure security model that safeguards the entire container lifecycle—from image creation to runtime execution—ensuring platform integrity, operational compliance, and consistent protection of containerized workloads. </p>
+<p>Platform security:</p>
+<ul>
+<li>Real-time security monitoring and vulnerability scanning are implemented through the use of StackRox, providing continuous assessment of container images and runtime workloads. The platform enables automated detection of CVEs, policy violations, and security threats ensuring a secure, compliant, and monitored environment without operational intervention.</li>
+<li>Host-level malware and virus detection to secure container nodes with EDR provided by Bitdefender</li>
+<li>Kernel-level hardening and enforcement of mandatory security profiles to isolate workloads (by design)</li>
+</ul>
+<p>Access Security:</p>
+<ul>
+<li>Identity-based access controls (RBAC) and integration with centralized identity management systems.</li>
+</ul>
+<p>Compliance, Monitoring, and Auditing:</p>
+<ul>
+<li>Centralized logging and security-related events are forwarded directly to the SOC team SIEM, enabling correlation, alerting, and continuous security monitoring.</li>
+</ul>
+<p>The service offers the following advantages:</p>
+<ul>
+<li><em>Security and confidentiality of containerized applications</em> → end-to-end encryption, confidential computing for workloads, container isolation on dedicated nodes with hardware-based protection, integrated security policies, and advanced RBAC.</li>
+<li><em>Centralized cluster control and governance</em>.</li>
+<li><em>Scalability and flexibility</em>.</li>
+<li><em>Integration with multicloud and legacy environments</em>.</li>
+</ul>
+<h3 id="leonardo-kubernetes-service-reference-architecture">Leonardo Kubernetes Service Reference Architecture</h3>
+<h5 id="overview">Overview</h5>
+<p>This reference architecture describes the recommended baseline design for running containerized applications on <strong>Leonardo Cloud Leonardo Kubernetes Service (LKS)</strong>. It provides a secure, scalable, production-ready foundation aligned with cloud best practices for networking, identity, security, observability, DevOps, and resilience.</p>
+<p>This baseline architecture is suitable for most production workloads and is the recommended starting point for any Kubernetes deployment on Leonardo Cloud.</p>
+<h5 id="architecture-components">Architecture Components</h5>
+<h5 id="leonardo-kubernetes-service-lks">Leonardo Kubernetes Service (LKS)</h5>
+<p>LKS provides a fully managed Kubernetes control plane offering:</p>
+<ul>
+<li>
+<p>High-availability master nodes</p>
+</li>
+<li>
+<p>Automatic patching and upgrades</p>
+</li>
+<li>
+<p>Secure API endpoints integrated with Leonardo Cloud IAM</p>
+</li>
+<li>
+<p>Managed certificates and control-plane hardening</p>
+</li>
+<li>
+<p>Unified lifecycle management (create, scale, upgrade, delete)</p>
+</li>
+</ul>
+<p>Customers interact only with the Kubernetes API; Leonardo Cloud operates and secures the control plane.</p>
+<h5 id="node-pools">Node Pools</h5>
+<p>Node pools provide the compute layer and support:</p>
+<ul>
+<li>
+<p><strong>System node pool</strong> — hosts core Kubernetes components</p>
+</li>
+<li>
+<p><strong>User node pools</strong> — run your application workloads</p>
+</li>
+<li>
+<p>Multiple pool types (CPU-optimized, RAM-optimized, GPU-backed)</p>
+</li>
+<li>
+<p>Auto-healing nodes</p>
+</li>
+<li>
+<p>Manual or automatic scaling</p>
+</li>
+<li>
+<p>Managed node image lifecycle</p>
+</li>
+</ul>
+<h5 id="network-architecture">Network Architecture</h5>
+<h5 id="virtual-networks">Virtual Networks</h5>
+<p>LKS clusters are deployed into a <strong>customer-managed Virtual Network (VNet)</strong>. The recommended configuration includes:</p>
+<p>SubnetDescription<strong>Control-plane subnet</strong>Restricted subnet for accessing the Kubernetes API (managed by Leonardo Cloud)<strong>Node subnet(s)</strong>Hosts system and user node pools<strong>Ingress subnet</strong>Load-balanced entrypoints (public or private)<strong>Private services subnet</strong>Internal services such as databases, caches, message brokers</p>
+<p>Pod CIDR and service CIDR must not overlap with customer VNets.</p>
+<h5 id="pod-and-service-networking">Pod and Service Networking</h5>
+<p>Leonardo Cloud LKS uses a cloud-integrated CNI supporting:</p>
+<ul>
+<li>
+<p>Stable pod IP allocation</p>
+</li>
+<li>
+<p>Network policy enforcement</p>
+</li>
+<li>
+<p>Native routing within the VNet</p>
+</li>
+<li>
+<p>Egress governance &amp; logging</p>
+</li>
+</ul>
+<p>Service CIDRs provide stable virtual IPs for Kubernetes services.</p>
+<h5 id="ingress-load-balancing">Ingress &amp; Load Balancing</h5>
+<p>Customers can expose applications via:</p>
+<ul>
+<li>
+<p><strong>Layer-7 ingress</strong> with managed controllers</p>
+</li>
+<li>
+<p><strong>Private internal load balancers</strong></p>
+</li>
+<li>
+<p><strong>Public load balancers</strong>, optionally fronted by a WAF</p>
+</li>
+</ul>
+<p>Ingress provides TLS termination, routing rules, and isolation between environments.</p>
+<h5 id="identity-access-control">Identity &amp; Access Control</h5>
+<h5 id="leonardo-cloud-iam-integration">Leonardo Cloud IAM Integration</h5>
+<p>LKS authentication is fully integrated with <strong>Leonardo Cloud Identity and Access Management (IAM)</strong>:</p>
+<ul>
+<li>
+<p>SSO integration with enterprise identity providers</p>
+</li>
+<li>
+<p>Multifactor authentication</p>
+</li>
+<li>
+<p>Workload identities and service principals</p>
+</li>
+<li>
+<p>Role-based API access to cluster endpoints</p>
+</li>
+</ul>
+<p>Authorization uses Kubernetes RBAC and supports fine-grained controls.</p>
+<h5 id="recommended-rbac-model">Recommended RBAC Model</h5>
+<p>Typical baseline roles:</p>
+<ul>
+<li>
+<p><strong>Cluster Admins</strong> – full administrative access</p>
+</li>
+<li>
+<p><strong>Namespace Operators</strong> – developer teams isolated by namespace</p>
+</li>
+<li>
+<p><strong>Service Accounts</strong> – least-privilege identities for workloads</p>
+</li>
+</ul>
+<p>Quota policies and network policies help enforce multi-tenancy boundaries.</p>
+<h5 id="security-best-practices">Security Best Practices</h5>
+<h5 id="control-plane-security">Control Plane Security</h5>
+<ul>
+<li>
+<p>Fully isolated, managed, and hardened control plane</p>
+</li>
+<li>
+<p>Encrypted API traffic</p>
+</li>
+<li>
+<p>Optional <strong>private-only cluster endpoints</strong></p>
+</li>
+<li>
+<p>Automated certificate rotation</p>
+</li>
+</ul>
+<h5 id="node-and-runtime-security">Node and Runtime Security</h5>
+<ul>
+<li>
+<p>Leonardo Cloud hardened node OS image</p>
+</li>
+<li>
+<p>Automatic security and kernel patching</p>
+</li>
+<li>
+<p>Enforcement of Kubernetes Pod Security Standards</p>
+</li>
+<li>
+<p>Optional OPA/Gatekeeper policies</p>
+</li>
+<li>
+<p>Encrypted secrets using KMS integration</p>
+</li>
+</ul>
+<h5 id="network-security">Network Security</h5>
+<ul>
+<li>
+<p>Built-in Kubernetes Network Policies</p>
+</li>
+<li>
+<p>Per-namespace ingress/egress control</p>
+</li>
+<li>
+<p>Integration with Leonardo Cloud Firewall</p>
+</li>
+<li>
+<p>Optional WAF for HTTP(S) ingress</p>
+</li>
+</ul>
+<h5 id="image-security">Image Security</h5>
+<ul>
+<li>
+<p>Scanning in Leonardo Cloud Container Registry</p>
+</li>
+<li>
+<p>Support for image signing &amp; attestation</p>
+</li>
+<li>
+<p>Policy-based enforcement for trusted registries</p>
+</li>
+</ul>
+<h5 id="resilience-business-continuity">Resilience &amp; Business Continuity</h5>
+<h5 id="high-availability">High Availability</h5>
+<ul>
+<li>
+<p>Multi-zone support for node pools (when available)</p>
+</li>
+<li>
+<p>Multiple replicas for control-plane components</p>
+</li>
+<li>
+<p>Pod anti-affinity &amp; topology spread constraints</p>
+</li>
+<li>
+<p>Recommended use of Pod Disruption Budgets (PDBs)</p>
+</li>
+</ul>
+<h5 id="backups">Backups</h5>
+<p>Customers should:</p>
+<ul>
+<li>
+<p>Use <strong>Velero</strong> for application-level backups</p>
+</li>
+<li>
+<p>Use Leonardo Cloud Storage snapshots for persistent volumes</p>
+</li>
+<li>
+<p>Perform regular recovery validation</p>
+</li>
+</ul>
+<h5 id="disaster-recovery">Disaster Recovery</h5>
+<p>For mission-critical applications:</p>
+<ul>
+<li>
+<p>Deploy across multiple clusters or regions</p>
+</li>
+<li>
+<p>Store manifests in Git for reproducible redeployment</p>
+</li>
+<li>
+<p>Use replicated or multi-zone storage classes</p>
+</li>
+<li>
+<p>Enable cross-region backup replication</p>
+</li>
+</ul>
+<h5 id="observability">Observability</h5>
+<h5 id="native-observability-integration">Native Observability Integration</h5>
+<p>Leonardo Cloud LKS integrates with the <strong>Leonardo Cloud Monitor</strong> service, supporting:</p>
+<ul>
+<li>
+<p>Node and pod metrics</p>
+</li>
+<li>
+<p>Container and system logs</p>
+</li>
+<li>
+<p>Alerts &amp; dashboards</p>
+</li>
+<li>
+<p>Optional distributed tracing</p>
+</li>
+</ul>
+<p>Observability agents are automatically deployed in the system pool.</p>
+<h5 id="customer-observability-options">Customer Observability Options</h5>
+<p>You may deploy:</p>
+<ul>
+<li>
+<p>Prometheus + Grafana</p>
+</li>
+<li>
+<p>Loki / Elasticsearch for logs</p>
+</li>
+<li>
+<p>Jaeger or Tempo for distributed tracing</p>
+</li>
+</ul>
+<p>All can ship logs and metrics to Leonardo Cloud Monitor.</p>
+<h5 id="devops-gitops">DevOps &amp; GitOps</h5>
+<h5 id="continuous-deployment">Continuous Deployment</h5>
+<p>LKS supports:</p>
+<ul>
+<li>
+<p>GitOps (Argo CD, Flux CD)</p>
+</li>
+<li>
+<p>CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins, Azure DevOps, etc.)</p>
+</li>
+<li>
+<p>Helm + OCI registry integration</p>
+</li>
+<li>
+<p>Kustomize manifests</p>
+</li>
+</ul>
+<h5 id="recommended-practices">Recommended Practices</h5>
+<ul>
+<li>
+<p>Store manifests in Git (declarative infrastructure)</p>
+</li>
+<li>
+<p>Use GitOps for automated reconciliation</p>
+</li>
+<li>
+<p>Enforce policy-as-code in CI/CD pipelines</p>
+</li>
+<li>
+<p>Separate environments (dev, test, prod) with isolated namespaces and networks</p>
+</li>
+</ul>
+<h5 id="storage-architecture">Storage Architecture</h5>
+<h5 id="storage-classes">Storage Classes</h5>
+<p>Leonardo Cloud provides multiple storage classes:</p>
+<ul>
+<li>
+<p><strong>General Purpose SSD</strong></p>
+</li>
+<li>
+<p><strong>High-Performance NVMe</strong></p>
+</li>
+<li>
+<p><strong>Replicated Storage</strong> for high availability</p>
+</li>
+</ul>
+<p>All support:</p>
+<ul>
+<li>
+<p>Dynamic provisioning</p>
+</li>
+<li>
+<p>Persistent Volume (PV) expansion</p>
+</li>
+<li>
+<p>Snapshots and cloning</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/toc.js"></script>
+      
+        <script src="../assets/js/language-switcher.js"></script>
+      
+    
+  </body>
+</html>

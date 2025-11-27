@@ -2316,10 +2316,9 @@ Below is the list of services belonging to the Networking family:
 
 #### Service Description
 
-A PaaS CDN (Content Delivery Network) is a platform that accelerates the delivery of digital content by distributing it across a decentralized, global network of edge servers.  
-As a PaaS service, it abstracts infrastructure management, allowing organizations to utilize CDN capabilities through configuration, APIs, and integrations without having to worry about hardware, deployment, or low-level operations.  
-A CDN stores and serves content from geographically distributed edge nodes. When a user requests an asset (image, script, video, webpage, API response), the CDN automatically selects the closest or most optimal node, minimizing latency, bandwidth usage, load on origin servers.  
-By serving content from the closest edge location, a CDN improves: page load speed, Core Web Vitals, user experience.
+The PaaS CDN (Content Delivery Network) service based on Nginx memory cache is a cloud-managed platform designed to accelerate content delivery, reduce latency, and ensure high availability for web applications and digital services.  
+By leveraging Nginx’s high-performance caching capabilities—optimized for in-memory operations—the platform delivers ultra-fast retrieval of static and dynamic content.  
+As a fully managed PaaS offering, it abstracts the complexity of operating CDN infrastructure, providing customers with a scalable, secure, and globally distributed content delivery layer.
 
 The service is offered with the following unit metric: *10 Gbps of throughput (inbound & Outbound)*.
 
@@ -2327,38 +2326,35 @@ The service is offered with the following unit metric: *10 Gbps of throughput (i
 
 The main features of the service are:
 
-- *Content caching & distribution* → stores static and dynamic content in edge nodes.Reduces latency by serving content from the nearest node. Supports cache policies (TTL, no-store, versioning).
-- *Global load balancing* → intelligently routes traffic across multiple PoPs (Points of Presence). Selects the most efficient network path. Provides automatic failover when nodes are unavailable.
-- *Security services* → managed TLS/HTTPS (certificate lifecycle handled by the platform). Built-in DDoS mitigation. WAF (Web Application Firewall) for application protection. Access control via signed URLs, tokens, ACLs.
-- *Edge compute* → serverless functions executed at the edge. Request/response rewriting. Image optimization and on-the-fly transformations.
-- *API acceleration* → API response caching. Request coalescing (prevents duplicate backend calls). Protocol optimization (HTTP/2, HTTP/3/QUIC).
-- *Content optimization* → Dynamic compression. Resource minification. Video streaming optimization (HLS/DASH delivery).
-- *Observability & analytics* → Real-time monitoring. Full request logging. Metrics for hit/miss, throughput, latency, and threats.
-- *Zero infrastructure management* → as a PaaS, it eliminates the need for: server provisioning, network management, software patches and upgrades
+- *High-Performance In-Memory Caching* → ultra-low latency content delivery powered by Nginx memory cache, ideal for frequently accessed assets.
+- *Global Edge Distribution* → multiple distributed PoPs (Points of Presence) to ensure content is served as close to users as possible.
+- *Dynamic Content Acceleration* → support for reverse proxy, micro-caching, and intelligent cache rules to optimize dynamic workloads.
+- *Load Balancing and Failover* → built-in traffic distribution mechanisms to maintain availability and service continuity.
+- *Real-Time Purge and Cache Control* → instant cache invalidation APIs for granular control over content lifecycle.
+- *TLS Offloading and Security Filtering* → enhanced security features including HTTPS termination, rate limiting, and request filtering.
+- *Centralized Management Interface* → unified portal for configuration, analytics, monitoring, and scaling.
 
 The main components of the service are:
 
-- *Edge Network Layer (PoP Layer)* → a global network of geographically distributed edge nodes. Each node includes: local cache, edge compute processors, security engines, network accelerators. Function: handle most traffic without contacting the origin.
-- *Origin Services Layer* → a logical layer that manages interaction with origin servers. It includes: origin selection, failover between origins, health checks, multi-origin load balancing (active-active or active-passive).
-- *Global traffic management layer* → the intelligence controlling request routing. It uses: anycast routing, Software-Defined Networking (SDN), real-time performance telemetry. Function: determine the optimal PoP for each request.
-- *Distributed cache management system* → a scalable system handling: cache invalidation, TTL and cache rules, content versioning, smart synchronization between PoPs. Designed for high performance and distributed consistency.
-- *Security layer* → embedded into every edge node. It is includes: distributed L7 firewall, DDoS detection, bot mitigation, TLS termination, API protection mechanisms. Filtering at the edge reduces malicious traffic early.
-- *Edge compute runtime* → ey characteristics: lightweight serverless runtime (JS/TS or WebAssembly), executes close to end-users, sandboxed for isolation, globally distributed deployments. Used for personalization and content transformation at the edge.
-- *Control plane* → the logical management console of the CDN. It handles: APIs and configuration interfaces, certificate management, rule distribution to all PoPs, deployment orchestration, global configuration synchronization. The Control Plane does not handle user traffic.
-- *Monitoring & analytics layer* → It is includes: real-time metrics, distributed logging, anomaly detection, dashboards and analysis tools. Architecturally independent for scalability.
+- *Nginx Edge Nodes* → distributed caching servers running Nginx with optimized memory caching for fast content retrieval.
+- *Control and Orchestration Layer** → cloud-based management system for provisioning, updating, configuring, and scaling all CDN nodes.
+- *Global Routing & Load Balancing* → smart routing algorithms directing users to the nearest or fastest-performing PoP.
+- *API Gateway & Cache Management Tools* → APIs for programmatic cache purging, cache rules, routing policies, and provisioning.
+- *Monitoring & Analytics Engine* → real-time dashboards providing metrics on latency, cache hit ratio, traffic patterns, and health status.
+- *Security Layer* → integrated HTTPS, WAF options, rate limiting, and request validation at the edge.
 
-The service offers the following advantages:
+The service offers the following advantages: 
 
-- *Improved performance and lower latency* → content is delivered from edge nodes close to end users. Faster page loads, reduced round-trip time, better user experience. Enhanced performance for both static assets and dynamic/API responses.
-- *Scalability without infrastructure management* → automatically scales to handle traffic spikes, peak loads, or global audiences.No need to provision or maintain servers, network appliances, or caching layers.
-- *Reduced load on origin servers* → edge caching absorbs the majority of traffic.Backend systems experience fewer requests, improving stability and reducing costs.
-- *Ehanced reliability and availability* → built-in redundancy across distributed PoPs. Automatic failover if an edge node or origin becomes unavailable. Improved resilience during outages or network congestion.
-- *Integrated security capabilities* → protection against DDoS attacks. Built-in WAF to block malicious requests. Managed TLS certificates and secure HTTPS delivery. Access control tools such as token-based authentication or signed URLs.
-- *Cost optimization* → lower bandwidth consumption from origin servers. Reduced infrastructure investment.
-- *Edge compute for custom logic* → ability to run serverless code close to users. Real-time content manipulation, personalization, or request filtering. Reduced latency and improved performance for dynamic processing.
-- *Streamlined DevOps and faster deployment* → centralized configuration via APIs or dashboards. Rapid global propagation of rules and updates.Simplified CI/CD integration.
-- *Better observability and analytics* → real-time insights into traffic, performance, and threats. Detailed logs for diagnostics and optimization. Metrics for cache hits, latency, throughput, and security events.
-- *Consistent user experience worldwide* → uniform content delivery performance regardless of geographic region. Improved responsiveness for international users.
+- *Improved User Experience* → faster load times and reduced latency directly enhance customer satisfaction and engagement.
+- *Predictable and Lower Operational Costs* → OPEX-based PaaS model avoids infrastructure investment and reduces maintenance burden.
+- *Scalable for Growth* → easily supports increasing traffic volume without service interruptions or rearchitecture.
+- *Global Reach with Minimal Effort* → organizations can instantly expand content delivery worldwide without deploying additional infrastructure.
+- *Increased Service Reliability* → built-in redundancy and failover ensure business continuity even during traffic spikes.
+- *High Performance Through Memory Caching* → in-memory content serving dramatically improves throughput and reduces backend load.
+- *Flexible Caching Policies* → support for custom rules, micro-caching, selective purging, and dynamic acceleration.
+- *Reduced Origin Server Load* → high cache hit ratios prevent unnecessary upstream requests, improving origin server performance.
+- *Optimized for Modern Web Architectures* → compatible with APIs, microservices, SPA frameworks, and containerized environments.
+- *Secure by Design* → integrated TLS termination, request filtering, rate limiting, and observability tools protect the delivery pipeline.
 
 <a id="DNS"></a>
 
@@ -2368,11 +2364,9 @@ The service offers the following advantages:
 
 #### Service Description
 
-The PaaS DNS service is a platform that manages domain name resolution and related DNS operations without requiring organizations to maintain DNS servers or networking infrastructure.  
-This is a DNS service that allows organizations to define their own DNS configurations for resolving names to IP addresses in their application environment.  
-The service can also be configured as a public DNS forwarder for resolving Internet domains.
-It is a managed service, similar to PaaS (Paid as a Service), where the customer can self-manage the service through a dedicated console or a manual process.  
-As a PaaS offering, it provides high availability, global distribution, automation, and advanced DNS features through an abstracted, fully managed platform.
+The PaaS DSN (Distributed Secure Network) service based on OPNsense provides a cloud-delivered, fully managed network security and routing platform designed for organizations that require scalable, secure, and highly available connectivity.  
+Built on OPNsense’s open-source firewall and security capabilities, this service abstracts infrastructure complexity and offers customers a ready-to-use network environment delivered as a Platform-as-a-Service.  
+The solution centralizes policy management, simplifies deployment, and ensures consistent security enforcement across distributed sites, remote users, and cloud workloads.
 
 The service is offered for each DNS Instance unit. 
 
@@ -2380,39 +2374,34 @@ The service is offered for each DNS Instance unit.
 
 The main features of the service are:
 
-- *Authoritative DNS resolution* → hosts authoritative DNS zones and responds to DNS queries for registered domains. Ensures fast and accurate mapping of domain names to IP addresses. Supports all standard DNS record types.
-- *Global traffic distribution and load balancing* → routes users to different endpoints based on geographic location, latency, or availability. Supports features such as: Geo-DNS, latency-based routing, multi-origin or multi-region distribution. Helps applications deliver consistent performance globally.
-- *High availability and resilience* → ensures continuous DNS operation across globally distributed servers. Offers redundancy across multiple regions and networks. Protects against DNS outages and service disruption.
-- *Scalability* → handles large volumes of DNS queries. No need for organizations to manage DNS server capacity or scaling. Suitable for small websites up to high-traffic global platforms.
-- *Advanced DNS management* → provides APIs and dashboards for: creating and editing DNS zones, managing DNS records, automating DNS updates. Supports versioning, rollback, and audit trails.
-- *DNSSEC Support* → offers DNS Security Extensions to prevent DNS spoofing or tampering. Handles key management and signing automatically. Ensures secure, authenticated DNS responses.
-- *Traffic steering and failover* → automatically redirects users if a primary endpoint fails. Allows health checks for web servers, APIs, or other services. Ensures higher availability and reliability of applications.
-- *Observability and analytics* → orovides logging, metrics, and monitoring for: query count, response times, geographic distribution, errors and anomalies. Helps diagnose DNS issues quickly.
-- *Zero infrastructure management* → as a PaaS service, it eliminates the need to manage: DNS server software, redundancy and failover, global replication, network provisioning or tuning
+- *Cloud-managed OPNsense firewall instances* → fully managed virtual appliances with automated updates, monitoring, and lifecycle management.
+- *Advanced security services* → integrated IDS/IPS (Suricata), stateful firewalling, traffic shaping, and multi-layer threat protection.
+- *Zero-Trust network access* → policy-based access management for users and devices, enabling secure remote connectivity.
+- *High Availability & scalability* → cluster configurations, automated failover, and elastic capacity provisioning.
+- *Centralized configuration & orchestration* → unified control panel for managing rules, VPNs, routing, and monitoring across multiple nodes.
+- *Multi-tenant architecture* → logical separation of environments for partners, business units, or customers.
+- *Full API integration* → REST API support for automation, CI/CD pipelines, and infrastructure-as-code workflows.
 
 The main components of the service are:
 
-- *Global anycast DNS Network* → distributed global DNS servers reachable via Anycast addresses. Ensures users are answered by the closest and fastest DNS node. Provides natural DDoS resistance - - *Authoritative zone storage layer* → a distributed, replicated storage system that stores domain zones and DNS records; ensures consistency across global DNS nodes; supports versioning, atomic changes, and secure propagation.
-- *Zone distribution and replication system* → propagates DNS zone updates across the entire global network.Ensures near real-time consistency while maintaining high availability. Uses secure channels and integrity checks.
-- *Traffic management and routing engine* → implements advanced DNS logic such as: geo-routing, latency-based routing, proximity-based routing, failover routing. Utilizes real-time global telemetry to guide DNS decision-making.
-- *Health checking and availability layer* → continuously monitors configured endpoints (web servers, load balancers, APIs). Automatically adjusts DNS responses based on health signals. Prevents directing users to failed or degraded services.
-- *Security layer* → It's provides: DNSSEC signing and validation, DDoS mitigation, query rate limiting, response integrity verification. Security is typically implemented across all global DNS nodes.
-- *Control plane* → the centralized management system used by administrators and APIs. Responsible for: creating and modifying DNS zones, propagating configurations globall, certificate and key management (for DNSSEC), authentication, RBAC, and access governance. Does not participate in DNS query resolution.
-- *Monitoring & analytics layer* → it's includes: real-time logs, query analytics, performance metrics. 
-- *Threat detection indicators* → operates independently from the data plane for scalability and reliability.
+- *OPNsense core platform* → the foundational firewall and security engine, providing routing, filtering, and advanced security modules.
+- *Management & orchestration layer* → a cloud-native platform that automates provisioning, configuration, monitoring, and scaling of OPNsense nodes.
+- *VPN & secure access gateway* → centralized services for site-to-site VPNs, remote user access (IPsec, OpenVPN, WireGuard), and zero-trust capabilities.
+- *Telemetry & monitoring stack* → real-time dashboards, logs, alerts, and analytics for performance, security events, and capacity planning.
+- *High-Availability infrastructure* → redundant cloud nodes, load balancing, and automated failover mechanisms to ensure service continuity.
 
 The service offers the following advantages:
 
-- Higher performance and faster DNS resolution → query responses are served from globally distributed Anycast DNS servers. Reduces lookup latency and improves overall application responsiveness → ensures fast domain resolution for users anywhere in the world.
-- Built-in high availability and resilience → redundant DNS servers across multiple regions. Automatic failover if a node becomes unreachable. Protects against outages in single data centers or networks.
-- Scalability → handles millions or billions of DNS queries without capacity planning. No need to manage servers, compute resources, or network provisioning. Ideal for both small and large-scale platforms.
-- Simplified management through APIs and dashboards → easy creation and modification of DNS zones and records. Automation of DNS workflows (CI/CD updates, dynamic record creation). Versioning, change history, and rollback capabilities.
-- Improved reliability through traffic steering → support for geo-location routing, latency-based routing, and weighted routing. Directs users to the best available endpoint for performance and availability. Helps deliver consistent global user experience.
-- Enhanced security → built-in DNSSEC for authenticated, tamper-proof responses. DDoS protection at the DNS layer. Query rate-limiting and anomaly detection. Protection against DNS spoofing and cache poisoning.
-- Reduced operational overhead → eliminates the need to run and patch DNS servers. No maintenance of BIND, NSD, Unbound, or other DNS software. No management of global replication or zone distribution.
-- Cost efficiency → reduced need for dedicated networking and operations teams. Lower infrastructure and bandwidth expenses.
-- Real-Time monitoring and analytics → insight into query volume, record usage, performance, and errors. Faster troubleshooting with detailed logs. Better planning for traffic patterns and capacity.
-- Improved application reliability → supports health checks and automated failover at the DNS level. Prevents users from being routed to offline or degraded services. Enhances uptime and service continuity.
+- *Reduced operational ocmplexity* → eliminates the need to manage firewall hardware, updates, and maintenance in-house.
+- *Lower total cost of ownership (TCO)* → subscription-based model removes CAPEX and ensures predictble cost planning.
+- *Accelerated time-to-value* → rapid deployment and standardized configurations shorten rollout cycles.
+- *Improved security posture* → centralized policy enforcement and continuous updates reduce exposure to threats.
+- *Flexibility for business growth* → easily add new sites, users, or workloads without re-architecting the network.
+- *High performance & reliability* →  load balancing, clustering, and optimized routing ensure stable and performant network operation.
+- *Consistent and automated ocnfiguration* → reduces human error and ensures uniform security across the organization.
+- *Advanced threat detection* → IDS/IPS and security monitoring improve detection and response capabilities.
+- *API-first approach* →  smooth integration with DevOps pipelines and automated deployment systems.
+- *Vendor neutral and open source–absed* → avoids vendor lock-in while benefiting from the transparency and flexibility of OPNsense.
 
 <a id="IP"></a>
 
@@ -2726,3 +2715,92 @@ The service offers the following advantages:
 - Flexible access models: Filesystem, block, or object interfaces allow integration with backup systems, archival workflows, and data management tools.
 - Resilience and self-healing: Ceph automatically redistributes and recovers data in case of disk or node failures, reducing administrative overhead.
 - Compliance support: Suitable for long-term preservation and regulatory retention requirements.
+
+## Auto Scaling & Scaling-to-Zero
+ 
+The PaaS services described in this document are designed to run on orchestrated, cloud-native platforms where horizontal auto scaling is a native capability. Auto scaling dynamically adjusts the number of active instances in response to application load so that services can absorb traffic peaks while avoiding unnecessary over‑provisioning during off‑peak periods.
+
+At the platform level, an Horizontal Pod Autoscaler (HPA) or analogous controller continuously observes key metrics exposed by the workloads and the underlying infrastructure. These metrics commonly include CPU utilization, memory consumption, request rate, queue or backlog depth, and custom application indicators exported through standard monitoring interfaces. When the measured values exceed or fall below configured thresholds, the controller increases or decreases the replica count within the minimum and maximum limits defined for each service.  
+
+The same mechanism applies to many PaaS building blocks beyond purely stateless functions. These components can be configured to scale out when demand increases, distributing traffic across additional instances, and to scale in when demand subsides, consolidating activity on fewer instances. This behavior reduces the need for manual capacity planning, while still allowing organizations to define guardrails such as per‑tenant quotas, reserved capacity, or upper bounds imposed by licensing and compliance requirements.  
+
+For suitable workloads, several PaaS services also support scaling‑to‑zero. When a workload becomes idle and there are no active requests or tasks to process, the orchestration layer can progressively drain and stop all runtime instances associated with that service, leaving only the control and configuration plane active. In this state, compute capacity is released instead of being reserved for an idle service, which reduces the operational surface exposed to potential threats and improves infrastructure utilization. When new load arrives after a scale‑to‑zero phase, the platform automatically recreates the necessary runtime instances and starts routing work to them as soon as they become healthy; this can introduce a controlled start‑up latency, which can be mitigated for latency‑sensitive services by configuring a small minimum number of always‑on instances. 
+
+Scaling‑to‑zero applies to workloads whose runtime instances can be stopped while still meeting durability and availability requirements. State‑heavy services such as relational databases, message brokers, and some analytics engines typically maintain at least one active replica or a minimal cluster footprint to guarantee durability, failover, and predictable performance characteristics. For these services, elasticity is achieved through controlled horizontal scaling of nodes, vertical tuning of resource allocations, and scheduled maintenance windows, with the serving tier remaining continuously available.  
+
+In all scenarios, auto scaling integrates with the platform’s monitoring, logging, and governance capabilities. Scaling events are traceable, auditable, and can be correlated with business and security metrics to validate that capacity changes remain compliant with corporate policies.
+
+## Security Patching
+
+Security patching is part of the Vulnerability Management (VM) process and concerns the operational activities involved in applying software updates (called patches or fixes) designed to resolve security vulnerabilities found in operating systems, applications, firmware, or other IT components.
+
+In practice, security patching:
+
+- fixes security flaws that could be exploited by attackers.
+- improves system stability and reliability.
+- reduces the risk of attacks such as malware, ransomware, or unauthorized access.
+
+These activities are carried out according to established schedules (Periodic VM) or as a result of risk analyses, internal/external alerts, or specific needs in response to urgent patches (such as emergency patches or zero-day patches), i.e., non-periodic (on-demand) VM.
+
+The VM process pursues the following objectives:
+
+- identifying and assessing potential weaknesses (vulnerabilities) in the technological infrastructure.
+- verifying compliance with security standards and corporate policies.
+- checking the robustness of networks, systems, or applications against the possibility of exploitation by new cyber threats.
+evaluating the effectiveness of remediation actions taken to improve the security of systems, networks, or applications.
+
+The Security Operation Center (SOC), manages the VM process by performing the following activities:
+
+- defines the scope of Vulnerability Management activities.
+- contributes to planning the activities.
+- relays any alerts or warnings from external or internal sources.
+- analyzes the reports produced by the SOC.
+- validates the remediation plan.
+
+The SOC, for its part, performs the following operational activities:
+
+- collects vulnerability alerts from both internal and external sources.
+- gathers information about the affected assets.
+- plans, together with the CISO, security assessments aimed at identifying the technological perimeter subject to VM.
+- carries out VA/PT activities and prepares the related reports.
+
+The phases of the vulnerability management process are:
+
+a) Planning
+b) Execution of activities
+c) Definition of the remediation plan
+d) Implementation of the remediation plan
+e) Monitoring
+
+In the specific case of PaaS services provided on the Kubernetes cluster, VM and security patching activities make use of the StackRox tool. StackRox  is the solution used to verify container security, providing capabilities to identify critical vulnerabilities in managed StackRox environments and supporting the processes of checking, monitoring, and correcting identified security issues:
+
+- Vulnerability Management
+- Network Segmentation
+- Compliance
+- Detection and Response
+
+## Encryption 
+
+The Data at Rest Encryption requirement—i.e., ensuring the confidentiality of data stored on the infrastructure’s disks through encryption—is fulfilled by integrating the storage solutions, for both block storage and object storage, with a centralized Key Management System (KMS).  
+
+Specifically, for block storage, the confidentiality of data within Persistent Volumes (PV) created on the Kubernetes cluster infrastructure is ensured through the Ceph storage solution, which supports volume encryption. The enablement and configuration of the integration with the external KMS is performed at the storage class level, using the Key Management Interoperability Protocol (KMIP).  
+
+For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
+
+All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
+
+## Backup
+
+The protection of data integrity and availability within the PaaS platform is ensured by integrating the Kubernetes cluster with a centralized backup service delivered through a Veeam solution.
+
+To integrate Veeam with Kubernetes clusters, the Veeam architecture must include a Media Agent responsible for executing the actual backup of the K8S cluster. Backup operations are performed through APIs exposed by the K8S infrastructure.
+
+The Kubernetes objects subject to backup are:
+
+- the distributed etcd database hosted on the master nodes.
+- the Persistent Volumes (Block & File Storage) provided by the Ceph service.
+
+Given the criticality of the etcd database - which manages and stores the state and configuration of all objects within K8S - its backup is performed at a very high frequency (several times per hour).  
+Furthermore, for certain types of applications (e.g., PostgreSQL databases) running on the K8S platform, achieving Application-Consistent backups requires integrating pre/post-backup scripts.  
+These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
+The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.

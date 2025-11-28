@@ -206,6 +206,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         
                         console.log('Search result clicked:', href);
                         
+                        // Rimuovi i parametri di query (?h=... ecc)
+                        if (href.includes('?')) {
+                            href = href.split('?')[0];
+                            console.log('Removed query parameters:', href);
+                        }
+                        
                         // Se il link contiene un anchor (#)
                         if (href.includes('#')) {
                             const parts = href.split('#');

@@ -184,6 +184,81 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Funzione per fixare i link dei risultati di ricerca
+    function fixSearchResultLinks() {
+        // Osserva il DOM per rilevare quando vengono caricati i risultati di ricerca
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                // Cerca i risultati di ricerca aggiunti
+                const searchResults = document.querySelectorAll('.md-search-result__link, .md-search-result__article a');
+                
+                searchResults.forEach(link => {
+                    // Evita di aggiungere listener multipli
+                    if (link.hasAttribute('data-search-fixed')) return;
+                    link.setAttribute('data-search-fixed', 'true');
+                    
+                    // Aggiungi event listener al click
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        
+                        let href = this.getAttribute('href');
+                        if (!href) return;
+                        
+                        console.log('Search result clicked:', href);
+                        
+                        // Se il link contiene un anchor (#)
+                        if (href.includes('#')) {
+                            const parts = href.split('#');
+                            const path = parts[0];
+                            const anchor = parts[1];
+                            
+                            // Se il path non finisce con .html e non è vuoto
+                            if (path && !path.endsWith('.html') && !path.endsWith('/')) {
+                                href = path + '/index.html#' + anchor;
+                            } else if (path && path.endsWith('/')) {
+                                href = path + 'index.html#' + anchor;
+                            }
+                        } else {
+                            // Link senza anchor
+                            if (!href.endsWith('.html') && !href.endsWith('/')) {
+                                href = href + '/index.html';
+                            } else if (href.endsWith('/')) {
+                                href = href + 'index.html';
+                            }
+                        }
+                        
+                        console.log('Fixed search link:', this.getAttribute('href'), '->', href);
+                        
+                        // Naviga al link corretto
+                        window.location.href = href;
+                    });
+                });
+            });
+        });
+        
+        // Osserva il container dei risultati di ricerca
+        const searchContainer = document.querySelector('.md-search-result');
+        if (searchContainer) {
+            observer.observe(searchContainer, {
+                childList: true,
+                subtree: true
+            });
+            console.log('Search result observer activated');
+        }
+        
+        // Osserva anche il container principale per catturare l'apertura della ricerca
+        const mainContainer = document.querySelector('.md-search');
+        if (mainContainer) {
+            observer.observe(mainContainer, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['data-md-state']
+            });
+            console.log('Search container observer activated');
+        }
+    }
+
     // Esegui le funzioni
     fixSidebarIndexLinks();
     fixLogoLink();
@@ -191,4 +266,5 @@ document.addEventListener("DOMContentLoaded", function () {
     removeTableOverflow();
     createFullscreenButton();
     setupFullscreenEscapeKey();
+    fixSearchResultLinks();
 });

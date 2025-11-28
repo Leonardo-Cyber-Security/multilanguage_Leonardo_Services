@@ -28,7 +28,7 @@ This approach ensures architectural consistency, predictable performance, and al
 
 | Type               | Contained Elements                   |
 | -------------------| -------------------------------------|
-| Kubernetes cluster | 15 nodes with 8 GB RAM for each unit |
+| Kubernetes cluster | 15 node workers with 8 GB RAM for each unit |
 <figcaption>Contained Elements for the Kubernetes Confidential Computing Service</figcaption>
 
 #### Features and Advantages

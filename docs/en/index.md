@@ -50,8 +50,8 @@ For details on each service, please see the dedicated section.
 | Middleware                           | [Spring boot as a Service](PaaS.md#spring-boot)                                    |
 | Middleware                           | [PaaS Business Process as a Service](PaaS.md#BPM)                          |
 | Middleware                           | [PaaS CMS as a Service](PaaS.md#CMS)                                       |
-| Middleware                           | [Semantic Knowledge Search - 1 worker](PaaS.md#semantic-search)                            |
-| Data Protection                      | [Backup](PaaS.md#backup)                            |
+| Middleware                           | [Semantic Knowledge Search](PaaS.md#semantic-search)                            |
+| Data Protection                      | [Backup Platform](PaaS.md#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](PaaS.md#SCMP)                              |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](PaaS.md#ITSM)                              |

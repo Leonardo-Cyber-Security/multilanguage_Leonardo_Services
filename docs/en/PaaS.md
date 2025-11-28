@@ -82,7 +82,7 @@ It enables first-level authentication with username/password and second-level au
 It manages access authorization to system-protected resources only for users with rights to use them according to the Role-based Access Control (RBAC) and Attribute-based Access Control (ABAC) paradigms. Integration with external user repositories (LDAP or Active Directory) is also available.  
 It manages the user lifecycle and related authorizations via the console.
 
-The service is offered with the following unit metric: *100 users*.
+The service is offered with the following unit metric: *100 concurrent users*.
 
 #### Features and Advantages
 
@@ -134,7 +134,7 @@ The service, based on Hashicorp Vault technology, provides a secure cloud reposi
 The service consists of a software platform that enables centralized and automated management of encryption keys, secrets, and certificates, with access controlled by identity-based authentication and authorization methods.  
 It also allows organizations to significantly simplify key lifecycle management, ensuring centralized control while leveraging the native cryptographic capabilities of KMS providers.
 
-The service is offered with the following unit metric: *50 clients*.
+The service is offered with the following unit metric: *500 clients*.
 
 #### Features and Advantages
 
@@ -284,7 +284,7 @@ The PAM PaaS delivers identity-centric protection and governance for all privile
 It enforces the principle of least privilege, enables session monitoring and recording, and automates credential rotation, vaulting, and just-in-time access provisioning to minimize risk exposure.  
 Delivered as a managed PaaS, the service eliminates the complexity of deploying and maintaining traditional PAM infrastructure, providing organizations with continuous protection, compliance enforcement, and operational efficiency.
 
-The service is offered with the following unit metric: *10 administrative users managed by the Platform*.
+The service is offered with the following unit metric: *10 administrative users*.
 
 #### Features and Advantages
 
@@ -429,7 +429,7 @@ The API manager facilitates API lifecycle management, including aspects such as 
 The API manager allows you to define and enforce policies, such as usage limits, quota management, custom authentication, data transformations, and caching. These policies allow you to control API behavior and ensure compliance with security requirements and guidelines.  
 The API Manager can integrate with other systems and tools, such as identity and access management (IAM) systems, performance monitoring systems, data analytics systems, and security gateways. This integration expands the API Manager's functionality and integrates it into the ecosystem of existing applications and services.
 
-The service is offered for a *unit size of 500 MB of API requests*.
+The service is offered for a *unit size of 500 M of API requests*.
 
 #### Features and Advantages
 
@@ -459,7 +459,7 @@ The service offers the following advantages:
 
 <a id="faas"></a>
 
-### Functions as a Service
+### Functions as a Service (FAAS)
 
 ![Functions As a Service (FAAS) Interface](assets/images/extract/media/FaaS.png)
 
@@ -510,7 +510,8 @@ It allows to run Java EE/Jakarta EE applications and microservices, providing a 
 It allows to manage the application lifecycle, including deployment, updates, rollbacks, and centralized configuration, ensuring secure and repeatable processes.  
 Thanks to its modular architecture, compatibility with cloud environments, and rich integration with automation and security tools, it represents a strategic solution for companies seeking efficiency, innovation, and operational control.
 
-The service is sized per node. Each node consists of:
+The service is sized per container. Each one consists of:
+
 - 4 VCPUs
 - 8 GB of RAM
 
@@ -547,7 +548,7 @@ This service allows you to use Spring Boot, an open-source framework for Java ap
 It is designed to simplify the development of production-ready Java applications by providing a platform that eliminates much of the manual configuration required by the traditional Spring framework and reduces the need for server provisioning and dependency management.  
 With a preconfigured environment optimized for the Spring Boot framework, the service allows teams to focus on developing business features, reducing release times and costs.
 
-The service is sized for single containers. Each container has 16 GB of storage.
+The service is sized for single containers. Each container has 16 GB of RAM.
 
 #### Features and Advantages
 
@@ -589,7 +590,10 @@ Based on Kogito solution, it is a comprehensive Business Process Management (BPM
 It combines workflow automation, application integration, and performance monitoring in a single solution. The goal is to improve operational efficiency, reduce execution times, and ensure process consistency across the organization.  
 It facilitates collaboration between business users and IT during the creation, management, validation, and deployment of customized process and decision automation solutions. Business users can modify business logic and business processes without requiring assistance from IT staff.
 
-The service is sized for each 8 cores.
+The service is sized for istance. Each one consists of:
+
+- 8 VCPUs
+- 16 GB of RAM
 
 #### Features and Advantages
 
@@ -630,7 +634,7 @@ The service, based on Wordpress, provides comprehensive and versatile tools for 
 It offers a centralized system that allows for scalable, integrable, and multi-channel content management, with consumption-based costs and no infrastructure overhead.  
 This allows users to focus solely on content creation and management, while the platform handles hosting, maintenance, and updates.
 
-The service is offered for license unit. Each license consists of 1000 users.
+The service is offered every 1000 users for unit.
 
 #### Features and Advantages
 
@@ -670,7 +674,10 @@ The service allows for the management of content in various formats (Word docume
 The tool is able to filter and select the most relevant information for the user through the use of an NLP (Natural Language Processing) model, also allowing complete navigation of the indexed document. The services are designed to ensure digital sovereignty through deployment on a secure national infrastructure, with a particular focus on latency and optimization of computational resources.  
 It allows users to enter feedback on individual results returned by the search engine, in order to take into account domain knowledge to better refine the results provided by the system.
 
-Each unit consists of a 26-core 2.70 Ghz physical processor with a 1:2 virtualization ratio - SSD disk.
+The service is sized per container unit. Each container consists of:
+
+- 8 VCPUs
+- 16 GB of RAM
 
 #### Features and Advantages
 
@@ -706,11 +713,11 @@ The service offers the following advantages:
 
 Below is the list of services belonging to Data Protection family:
 
-- [Backup](#backup)
+- [Backup Platform](#backup)
 
 <a id="backup"></a>
 
-### Backup Service
+### Backup Platform Service
 
 ![Backup Service](assets/images/extract/media/backup.png)
 
@@ -785,7 +792,7 @@ It can also manage self-service provisioning of resources: e.g., virtual machine
 The service is sized and offered based on volumes:
 
 - less than €1.000.000,00 in annual managed resource expenditure for Cloud resources. 
-- every 5120 GB of managed RAM for on-premise or hybrid resources.
+- every 5 TB of managed RAM for on-premise or hybrid resources.
 
 #### Features and Advantages
 
@@ -926,7 +933,7 @@ The PaaS Operations Management service provides a fully managed platform for mon
 Based on Zabbix and NetEye, the service delivers enterprise-grade monitoring capabilities—such as telemetry collection, alerting, performance analytics, and event correlation—without requiring customers to deploy or maintain monitoring servers, databases, or agents.  
 Designed for hybrid and cloud-native environments, the service centralizes monitoring for compute, network, storage, security, and application layers, ensuring full visibility and operational continuity.
 
-The service is offered and sized for every 25 simultaneous users.
+The service is offered and sized for every 25 concurrent users.
 
 #### Features and Advantages
 
@@ -986,7 +993,7 @@ Below is the list of services belonging to the  DevSecOps family:
 The service, based on Red Hat Ansible Automation Platform, is a comprehensive automation solution for managing IT infrastructure, simplifying operations, and accelerating development and deployment processes.  
 It is a platform that acts as a powerful and flexible configuration manager, helping organizations automate repetitive or manual tasks, implement complex configurations, and orchestrate workflows centrally and securely through a declarative and automated approach, ensuring consistency and improving overall operational efficiency and compliance.
 
-The service is offered and sized in units of 25 nodes each.
+The service is offered and sized in units of 25 Managed workers.
 
 #### Features and Advantages
 
@@ -1034,7 +1041,7 @@ It was created to support both IT and business teams in the continuous validatio
 It supports Agile and DevOps approaches with Continuous Testing to ensure code changes do not introduce new defects.  
 Centralized monitoring: Test results are collected and displayed in a single interface, facilitating monitoring and analysis via UiPath Test Manager and extensible with dashboards on UiPath Insights.
 
-The service is sized and offered per user units. Each unit is consists of: 1 tester, 10 automation users and 5 robots.
+The service is sized and offered per user units. Each unit is consists of: 10 automation testers -concurrent, 5 Robots.
 
 #### Features and Advantages
 
@@ -1081,7 +1088,7 @@ The service, based on SonarQube, offers public administrations a robust static c
 Thanks to its architecture and ability to integrate into the continuous development and analysis cycle, it enables the development of high-quality software and fully supports DevSecOps initiatives. The service also enables in-depth source code security analysis, detecting known vulnerabilities, injections, poor cryptographic practices, uncontrolled access, and potential exploits.  
 Integrating directly into CI/CD pipelines or through supported DevOps platforms, it analyzes source code against a broad set of quality rules, covering aspects such as code maintainability, software reliability, and application security.
 
-The service is offered per unit of line of codes. Each unit consists of 1 million lines of codes.
+The service is offered per unit of line of codes. Each unit consists of 1 M lines of codes.
 
 #### Features and Advantages
 
@@ -1128,7 +1135,8 @@ The service, based on Gitlab, offers an integrated environment for the complete 
 The service aims to support organizations in introducing application development, release, and management processes characterized by automation, security, and compliance, thus promoting the creation of reliable digital solutions aligned with required quality standards.  
 It allows you to manage projects and repositories, control source code versions, automate CI/CD pipelines, and collaborate efficiently with development teams.
 
-The service is offered per user unit. Each unit consists of 100 users.
+The service is offered per user unit in the following options: 100 Users Ultimate/500 Users premium/2000 Free.
+
 
 #### Features and Advantages
 
@@ -1173,7 +1181,7 @@ The Leonardo's Qualizer service is a platform designed to meet the needs for vis
 It offers a centralized tool for analyzing, observability, and governance of software quality.  
 The service allows you to aggregate data from various sources, security, monitoring, and testing tools, integrating them into a user dashboard (portal) that clearly and graphically displays various interactive metrics and insights.
 
-The service is sized and offered per project unit. Each unit consists of 10 projects included.
+The service is sized and offered per project unit. Each unit consists of 10 projects.
 
 #### Features and Advantages
 
@@ -1277,7 +1285,7 @@ Developed by Leonardo with Grafana technology, the Business Intelligence Service
 It centralizes data ingestion, transformation, storage, and dashboarding within a scalable service that eliminates the need for organizations to maintain on-premises analytics infrastructure.  
 Built on the Grafana visualization engine, the platform empowers users to explore metrics, logs, and business KPIs through intuitive dashboards while integrating seamlessly with diverse data sources across cloud and hybrid ecosystems.
 
-The service is sized and offered per user unit. Each unit consists of 50 users.
+The service is sized and offered per user unit. Each unit consists of 100 users.
 
 #### Features and Advantages
 
@@ -1329,7 +1337,10 @@ It offers a user-friendly graphical interface for designing and implementing dat
 It supports a wide range of data sources, including relational databases, files, web applications, cloud, web services, and more. This makes it extremely flexible for data integration in a variety of contexts.  
 It also offers data quality management tools, allowing users to clean, standardize, and enrich their data to ensure its accuracy and reliability.
 
-The service is sized and offered per worker node. Each worker consists of: 16vCPU, 128 GB RAM.
+The service is sized and offered per worker node. Each worker consists of: 
+
+- 16vCPU
+- 128 GB of RAM
 
 #### Features and Advantages
 
@@ -1370,7 +1381,9 @@ It increases the scalability and resilience of existing applications by decoupli
 The platform can scale horizontally and provide ordered message delivery capabilities. Like other Big Data PaaS modules, the solution is based on containerized resources orchestrated via Kubernetes.  
 It enables near-real-time analytical processes through streaming and facilitates the implementation of IoT use cases.
 
-The service is sized and offered per worker node. Each worker consists of 16vCPU, 128 GB RAM.
+The service is sized and offered per worker node. Each worker consists of:
+- 16 vCPU
+- 128 GB of RAM
 
 #### Features and Advantages
 
@@ -1476,7 +1489,7 @@ This service provides an advanced speech-to-text model for transcribing audio fi
 The service is optimized for English transcription, but can also recognize and transcribe speech in other languages, still returning the text in English. Furthermore, it can automatically identify the spoken language and supports automatic speech translation.  
 It is useful for automatically transcribing conversations, interviews, meetings, call centers, podcasts, or videos; supporting chatbots and voice assistants, translating voice into text understandable by NLP or AI systems; indexing and analyzing audio content (semantic search, sentiment analysis, data mining); and digitizing voice archives and official minutes, ensuring accuracy and traceability.
 
-The service is sized and offered per GPU. Each GPU consists of one NVIDIA H100 partition.
+The service is sized and offered per GPU. Each GPU consists of one NVIDIA H200 partition.
 
 #### Features and Advantages
 
@@ -1531,7 +1544,10 @@ The *AI Audio Analytics PaaS* provides a ready-to-use platform that, thanks to A
 
 The *AI Video Analytics PaaS* is a ready-to-use platform with pre-trained algorithms that leverage computer vision techniques, capable of processing and understanding visual information present in two-dimensional images or video sequences.
 
-The Audio and Video analytics services are sized and offered for single streams. Each audio/video stream consists of 24 x 365G.
+The Audio and Video analytics services are sized and offered for GPU unit, specifically:
+
+- for audio analytics: 1 partition H200 GPU per unit
+- for video analytics: 1 H200 GPU per unit
 
 #### Features and Advantages
 
@@ -1624,7 +1640,7 @@ The service offers the following advantages:
 The Text Analytics PaaS solution, developed by Leonardo, provides a ready-to-use NLP (Natural Language Processing) platform capable of extracting structured and interpretable information from unstructured texts, enabling quantitative and qualitative analyses that would be time-consuming and difficult to perform manually.  
 The system can identify entities (people, places, organizations, etc.), translations, key concepts, and sentiment from text to identify and extract opinions from text. Multilingual support.
 
-The service is sized per Inference unit and per page inferences, respectively 60M and 1,2M per page.
+The service is sized per unit of 1 partition H200 GPU.
 
 #### Features and Advantages
 
@@ -1673,7 +1689,7 @@ Developed by Leonardo using AI-based machine translation (NMT) technologies, the
 The service draws inspiration from the human brain not only for its neural structure, but also for its ability to adapt, learn from new experiences, and interact with users.  
 The result is a so-called human-in-the-loop approach, a cycle in which machine and human continuously support each other, providing exceptional translation quality and process efficiency that surpasses previous approaches. 
 
-It is sized per GPU unit. Each unit consists of two NVIDIA H100 GPUs.  
+It is sized per GPU unit. Each unit consists of 1 NVIDIA H200 GPU.  
 
 #### Features and Advantages
 
@@ -1717,7 +1733,7 @@ The system generates answers by first searching for relevant information or pass
 This service allows for better contextualization of the search, further improving the quality and accuracy of the generated answers compared to traditional text-based RAGs.
 AI Search allows individuals and organizations to quickly access relevant, contextualized information through a simple and intuitive graphical interface built on a chat model, improving efficiency and productivity through advanced intelligent search tools.
 
-The service is sized per GPU unit. Each unit consists of one NVIDIA H100 GPU.
+The service is sized per GPU unit. Each unit consists of one NVIDIA H200 GPU.
 
 #### Features and Advantages
 
@@ -1768,7 +1784,7 @@ The service provides a ready-to-use platform capable of easily managing the enti
 The platform can be enhanced using, in addition to the Data Lake service, other technologies made available by the Big Data PaaS.  
 The services are designed to ensure digital sovereignty through deployment on secure national infrastructure, with a particular focus on latency and optimization of computational resources.
 
-The service is sized per GPU H100.
+The service is sized per unit of 1 GPU H200.
 
 #### Features and Advantages
 
@@ -1821,8 +1837,8 @@ SLMs are suitable for performing specific, less complex applications and tasks (
 
 The services are sized per GPU unit:
 
-- for AI SLM service each unit consists of 1 partition NVIDIA H100 GPU.
-- for AI SLM service each unit consists of 3 NVIDIA H100 GPUs.
+- for AI SLM service each unit consists of 1 partition NVIDIA H200 GPU.
+- for AI LLM service each unit consists of 1 NVIDIA H200 GPUs.
 
 #### Features and Advantages
 
@@ -1938,11 +1954,10 @@ The service could be used to:
 - Simplify DevOps workflows by automating database management tasks.
 - Integrate easily with other cloud services (analytics, AI, APIs, etc.).
 
-The service is offered per DB instance. Each instance consists of: 
+The service is offered per DB instance. Each instance with replication consists of: 
 
 - 4 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage (with replication).
 
 #### Features and Advantages
 
@@ -1999,11 +2014,10 @@ Typical use cases:
 - Development and testing environments.
 - Data analytics and reporting using SQL queries.
 
-The service is offered per DB instance. Each instance consists of: 
+The service is offered per DB instance. Each instance with replication consists of: 
 
 - 4 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage (with replication).
 
 #### Features and Advantages
 
@@ -2057,7 +2071,6 @@ The service is offered per DB instance. Each instance consists of:
 
 - 8 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage
 
 #### Features and Advantages
 
@@ -2109,7 +2122,6 @@ The service is offered per DB instance. Each instance consists of:
 
 - 8 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage
 
 #### Features and Advantages
 
@@ -2140,7 +2152,6 @@ The service is offered per DB instance. Each instance consists of:
 
 - 4 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage
 
 #### Features and Advantages
 
@@ -2195,11 +2206,10 @@ The service is designed to support modern, data-driven applications requiring hi
 - Content management systems (CMS) and e-commerce platforms.
 - Big data pipelines and data lakes needing schema evolution and rapid ingestion.
 
-The service is offered per DB instance. Each instance consists of: 
+The service is offered per DB instance. Each instance with replication consists of: 
 
 - 4 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage
 
 #### Features and Advantages
 
@@ -2241,7 +2251,7 @@ The service offers the following advantages:
 
 #### Service Description
 
-It is a PaaS DB based on Redis technology (Remote Dictionary Server) that exposes a high-performance in-memory database, primarily used as a cache and database for web and real-time applications.  
+It is a PaaS DB based on Redis technology (Remote Dictionary Server) that exposes a high-performance in-memory database, primarily used as a cache and database for web and real-time applications. 
 Redis is a widely used database due to its flexibility and ability to handle a wide range of data types with low latency.  
 The service delivers sub-millisecond data access, advanced caching, session management, message streaming, and data persistence capabilities.  
 As a Platform-as-a-Service (PaaS) offering, it abstracts away the operational complexity of managing Redis clusters — including provisioning, scaling, patching, failover, and monitoring — while ensuring enterprise-grade reliability, security, and performance.  
@@ -2259,7 +2269,6 @@ The service is offered per DB instance. Each instance consists of:
 
 - 4 vCPUs
 - 16 GB of RAM
-- 500 GB of Storage
 
 #### Features and Advantages
 

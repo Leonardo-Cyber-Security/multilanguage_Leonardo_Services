@@ -20,7 +20,8 @@ The ITIL® framework has been used as a reference for delivering and improving s
 This section lists the process sequences for customer support requests.
 
 1) **Ticket Intake**  
-Customer requests may be submitted via email.  
+The customer sends a request via email to the support address listed here: <a href="mailto:lce.support@leonardo.com?subject=Request support%20for%20....&body=Insert%20your%20specific%20requests%20following%20the%20instrucions%20">Send an email</a>
+
 Upon receipt, the Service Desk (or designated support function) performs:
 
 - Logging of the request into the ticketing system.
@@ -104,7 +105,7 @@ Performance of the Ticket Management Process is monitored through KPIs such as:
 
 Periodic reviews identify improvement opportunities and ensure adherence to service standards.
 
-##  Roles and responsibilities process
+##  Roles and responsibilities
 
 This section defines the roles, responsibilities, and operational boundaries for managing cloud services in accordance with a Shared Responsibility Model.  
 The goal is to establish a clear framework that enables the secure, compliant, and efficient adoption of cloud services within the organization.  

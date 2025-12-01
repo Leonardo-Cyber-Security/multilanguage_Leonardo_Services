@@ -41,9 +41,10 @@ For details on each service, please see the dedicated section.
 | Security                             | [Identity & Access Management (IAM) Service](PaaS.md#IAM)|
 | Security                             | [Key Vault as a Service - Standard](PaaS.md#key-vault)                           |
 | Security                             | [Endpoint Protection](PaaS.md#endpoint)                                           |
-| Security                             | [NGFW platform](PaaS.md#ngfw)                                           |
+| Security                             | [NGFW Platform](PaaS.md#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](PaaS.md#PAM)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](PaaS.md#IPS)                                           |
+| Security                             | [PaaS Web Application Firewall (WAF)](PaaS.md#WAF)                                           |
 | Middleware                           | [PaaS API Management](PaaS.md#API)                                         |
 | Middleware                              | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
 | Middleware                           | [Jboss as a Service](PaaS.md#Jboss)                                          |
@@ -87,6 +88,9 @@ For details on each service, please see the dedicated section.
 | Networking                           | [Single public IP](#IP)                         |
 | Networking                           | [L7 Load Balancer (regional)](PaaS.md#L7)                                                    |
 | Networking                           | [Cloud interconnect Gold SW (10 Gbps max throughput)](PaaS.md#gold)                                                    |
+| Networking                           | [Managed VPN Access Service](PaaS.md#VPN-managed)                                                    |
+| Networking                           | [PaaS Client/Forward Proxy](PaaS.md#proxy-client)                                           |
+| Networking                           | [PaaS Reverse Proxy](PaaS.md#proxy-client)                                           |
 | Storage                              | [Block Storage (1000 GB) - High Density](PaaS.md#block-storage)                      |
 | Storage                              | [Archive Storage (1000 GB)](PaaS.md#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>

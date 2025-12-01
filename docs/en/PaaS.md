@@ -1,5 +1,98 @@
 # Platform as a Service (PaaS)
 
+## General features
+
+### Auto Scaling & Scaling-to-Zero
+ 
+The PaaS services described in this document are designed to run on orchestrated, cloud-native platforms where horizontal auto scaling is a native capability. Auto scaling dynamically adjusts the number of active instances in response to application load so that services can absorb traffic peaks while avoiding unnecessary over‑provisioning during off‑peak periods.
+
+At the platform level, an Horizontal Pod Autoscaler (HPA) or analogous controller continuously observes key metrics exposed by the workloads and the underlying infrastructure. These metrics commonly include CPU utilization, memory consumption, request rate, queue or backlog depth, and custom application indicators exported through standard monitoring interfaces. When the measured values exceed or fall below configured thresholds, the controller increases or decreases the replica count within the minimum and maximum limits defined for each service.  
+
+The same mechanism applies to many PaaS building blocks beyond purely stateless functions. These components can be configured to scale out when demand increases, distributing traffic across additional instances, and to scale in when demand subsides, consolidating activity on fewer instances. This behavior reduces the need for manual capacity planning, while still allowing organizations to define guardrails such as per‑tenant quotas, reserved capacity, or upper bounds imposed by licensing and compliance requirements.  
+
+For suitable workloads, several PaaS services also support scaling‑to‑zero. When a workload becomes idle and there are no active requests or tasks to process, the orchestration layer can progressively drain and stop all runtime instances associated with that service, leaving only the control and configuration plane active. In this state, compute capacity is released instead of being reserved for an idle service, which reduces the operational surface exposed to potential threats and improves infrastructure utilization. When new load arrives after a scale‑to‑zero phase, the platform automatically recreates the necessary runtime instances and starts routing work to them as soon as they become healthy; this can introduce a controlled start‑up latency, which can be mitigated for latency‑sensitive services by configuring a small minimum number of always‑on instances. 
+
+Scaling‑to‑zero applies to workloads whose runtime instances can be stopped while still meeting durability and availability requirements. State‑heavy services such as relational databases, message brokers, and some analytics engines typically maintain at least one active replica or a minimal cluster footprint to guarantee durability, failover, and predictable performance characteristics. For these services, elasticity is achieved through controlled horizontal scaling of nodes, vertical tuning of resource allocations, and scheduled maintenance windows, with the serving tier remaining continuously available.  
+
+In all scenarios, auto scaling integrates with the platform’s monitoring, logging, and governance capabilities. Scaling events are traceable, auditable, and can be correlated with business and security metrics to validate that capacity changes remain compliant with corporate policies.
+
+### Security Patching
+
+Security patching is part of the Vulnerability Management (VM) process and concerns the operational activities involved in applying software updates (called patches or fixes) designed to resolve security vulnerabilities found in operating systems, applications, firmware, or other IT components.
+
+In practice, security patching:
+
+- fixes security flaws that could be exploited by attackers.
+- improves system stability and reliability.
+- reduces the risk of attacks such as malware, ransomware, or unauthorized access.
+
+These activities are carried out according to established schedules (Periodic VM) or as a result of risk analyses, internal/external alerts, or specific needs in response to urgent patches (such as emergency patches or zero-day patches), i.e., non-periodic (on-demand) VM.
+
+The VM process pursues the following objectives:
+
+- identifying and assessing potential weaknesses (vulnerabilities) in the technological infrastructure.
+- verifying compliance with security standards and corporate policies.
+- checking the robustness of networks, systems, or applications against the possibility of exploitation by new cyber threats.
+evaluating the effectiveness of remediation actions taken to improve the security of systems, networks, or applications.
+
+The Security Operation Center (SOC), manages the VM process by performing the following activities:
+
+- defines the scope of Vulnerability Management activities.
+- contributes to planning the activities.
+- relays any alerts or warnings from external or internal sources.
+- analyzes the reports produced by the SOC.
+- validates the remediation plan.
+
+The SOC, for its part, performs the following operational activities:
+
+- collects vulnerability alerts from both internal and external sources.
+- gathers information about the affected assets.
+- plans, together with the CISO, security assessments aimed at identifying the technological perimeter subject to VM.
+- carries out VA/PT activities and prepares the related reports.
+
+The phases of the vulnerability management process are:
+
+a) Planning
+b) Execution of activities
+c) Definition of the remediation plan
+d) Implementation of the remediation plan
+e) Monitoring
+
+In the specific case of PaaS services provided on the Kubernetes cluster, VM and security patching activities make use of the StackRox tool. StackRox  is the solution used to verify container security, providing capabilities to identify critical vulnerabilities in managed StackRox environments and supporting the processes of checking, monitoring, and correcting identified security issues:
+
+- Vulnerability Management
+- Network Segmentation
+- Compliance
+- Detection and Response
+
+### Encryption 
+
+The Data at Rest Encryption requirement—i.e., ensuring the confidentiality of data stored on the infrastructure’s disks through encryption—is fulfilled by integrating the storage solutions, for both block storage and object storage, with a centralized Key Management System (KMS).  
+
+Specifically, for block storage, the confidentiality of data within Persistent Volumes (PV) created on the Kubernetes cluster infrastructure is ensured through the Ceph storage solution, which supports volume encryption. The enablement and configuration of the integration with the external KMS is performed at the storage class level, using the Key Management Interoperability Protocol (KMIP).  
+
+For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
+
+All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
+
+### Replication
+
+The protection of data integrity and availability within the PaaS platform is ensured by integrating the Kubernetes cluster with a centralized backup service delivered through a Veeam solution.
+
+To integrate Veeam with Kubernetes clusters, the Veeam architecture must include a Media Agent responsible for executing the actual backup of the K8S cluster. Backup operations are performed through APIs exposed by the K8S infrastructure.
+
+The Kubernetes objects subject to backup are:
+
+- the distributed etcd database hosted on the master nodes.
+- the Persistent Volumes (Block & File Storage) provided by the Ceph service.
+
+Given the criticality of the etcd database - which manages and stores the state and configuration of all objects within K8S - its backup is performed at a very high frequency (several times per hour).  
+Furthermore, for certain types of applications (e.g., PostgreSQL databases) running on the K8S platform, achieving Application-Consistent backups requires integrating pre/post-backup scripts.  
+These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
+The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
+
+### List of services
+
 The following table lists the services included in the *Platform as a Service (PaaS)* category.
 
 | FAMILY                               | LIST OF SERVICES                                            |
@@ -7,9 +100,10 @@ The following table lists the services included in the *Platform as a Service (P
 | Security                             | [Identity & Access Management (IAM) Service](#IAM)|
 | Security                             | [Key Vault as a Service - Standard](#key-vault)                           |
 | Security                             | [Endpoint Protection](#endpoint)                                           |
-| Security                             | [NGFW platform](#ngfw)                                           |
+| Security                             | [NGFW Platform](#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](#PAM)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](#IPS)                                           |
+| Security                             | [PaaS Client/Foward Proxy](#proxy-client)                                           |
 | Middleware                           | [PaaS API Management](#API)                                         |
 | Middleware                           | [Functions As A Service (FAAS)](#faas)                                | 
 | Middleware                           | [Jboss as a Service](#Jboss)                                          |
@@ -53,6 +147,9 @@ The following table lists the services included in the *Platform as a Service (P
 | Networking                           | [Single public IP](#IP)                         |
 | Networking                           | [L7 Load Balancer (regional)](#L7)                                                    |
 | Networking                           | [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)                                                    |
+| Networking                           | [Managed VPN Access Service](#VPN-managed)                                                    |
+| Networking                           | [PaaS Client/Forward Proxy](#proxy-client)                                                    |
+| Networking                           | [PaaS Reverse Proxy](#proxy-reverse)                                                    |
 | Storage                              | [Block Storage (1000 GB) - High Density](#block-storage)                      |
 | Storage                              | [Archive Storage (1000 GB)](#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>
@@ -64,9 +161,10 @@ Below is the list of services belonging to the Security family:
 - [Identity & Access Management Service](#IAM)
 - [Key Vault as a Service - Standard](#key-vault)
 - [End point protection](#endpoint)
-- [NGFW platform](#ngfw)
+- [NGFW Platform](#ngfw)
 - [PAM (Privileged Access Management)](#PAM)
 - [Intrusion Prevention System (IPS)](#IPS)
+- [PaaS Web Application Firewall (WAF)](#WAF)
 
 <a id="IAM"></a>
 
@@ -216,7 +314,7 @@ The service offers the following advantages:
 
 <a id="ngfw"></a>
 
-### NGFW platform
+### NGFW Platform
 
 ![NGFW platform Overview](assets/images/extract/media/firewall.png)
 
@@ -397,6 +495,48 @@ The service offers the following advantages:
 - *Centralized management and policy control* → allows administrators to define, deploy, and manage security policies across distributed environments from a single console. Enables consistent enforcement across multi-cloud and hybrid architectures.
 - *Encrypted traffic inspection* → supports ssl/tls decryption and inspection for comprehensive visibility into encrypted traffic streams. Ensures full coverage against hidden or encrypted attacks.
 - *Automation and orchestration capabilities* → supports automated remediation workflows for threat containment and isolation. Reduces human workload and response time through integration with orchestration tools.
+
+<a id="WAF"></a>
+
+### PaaS Web Application Firewall (WAF)
+
+#### Service Description
+
+The WAF is a fully managed web application firewall service designed to safeguard applications hosted within your environment on the cloud. It provides a protective layer between your public-facing services and the internet, ensuring that malicious traffic is intercepted before it can exploit vulnerabilities. The service is delivered as a turnkey solution, meaning that all necessary components, licenses, and updates are handled by the provider, allowing administrators to focus on their applications rather than the underlying security infrastructure.  
+The WAF inspects HTTP and HTTPS traffic directed at web applications. It evaluates requests against defined rules to determine whether they are legitimate or potentially harmful. Administrators can adopt either a negative security model, which blocks traffic matching known exploit signatures, or a positive security model, which denies all traffic by default and only allows explicitly permitted requests.  
+The firewall integrates protection against the most critical threats identified by the OWASP Top 10, including injection attacks, cross-site scripting, and insecure deserialization. 
+
+#### Features and Advantages
+
+The WAF leverages OPNsense’s NGINX plugin with NAXSI (Negative Application Security for nginx) to deliver its capabilities.NAXSI is a rule-based engine specifically designed to detect and block malicious web requests. 
+
+**Rule Types**
+
+- Main Rules: These are globally valid and designed to block common attack vectors such as SQL injection, XPath injection, or cross-site scripting attempts.  
+- Basic Rules: These are used to fine-tune configurations, typically by whitelisting certain requests or creating additional rules for specific application contexts.  
+- Custom Rule Sets: Administrators can define custom rules to tailor protection to their applications. For example, they may whitelist certain parameters for trusted applications while maintaining strict controls elsewhere.  
+
+**Logging and Monitoring**
+
+Logs are generated in near real time, providing visibility into blocked and allowed requests, and can be dispatched to the centralized log analytics service to analyze traffic patterns and identify potential threats. 
+
+**OWASP Guidance**
+
+Configuration can be guided by OWASP cheat sheets, which provide best practices for securing web applications.  
+
+**Provisioning the Service**  
+
+The WAF is provisioned through the Secure Cloud Management Platform, the central portal for managing cloud services. Administrators can deploy the firewall by selecting the WAF option within the platform. Provisioning can also be performed via APIs, enabling integration into automated workflows.  
+Once deployed, the firewall is automatically patched and maintained by Leonardo, ensuring that the system remains up to date with the latest security fixes.
+
+**Configuration and Management**  
+
+Configuration is performed through the Secure Cloud Management Platform. 
+Administrators can:  
+- Define rule sets for both negative and positive security models.  
+- Apply NAXSI main and basic rules to protect against common exploits.  
+- Customize rules to allow specific traffic patterns while blocking suspicious requests.  
+- Monitor logs to gain insight into traffic directed at their applications.  
 
 ## Middleware Family
 
@@ -1272,6 +1412,27 @@ Replication between MinIO sites can be configured:
 In this deployment, thanks to the high bandwidth and low latency connections available between data centers, synchronous Site Replication was adopted between clusters, ensuring data consistency across locations.  
 Access to the different clusters can be achieved either via direct addressing or through a load balancer, depending on architectural and operational needs.From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience.  
 To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure. Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets, ensuring redundancy, fault tolerance, and operational continuity.
+
+<a id="datalake"></a>
+
+### Data Lake-Cold
+
+![Data Lake Service](assets/images/extract/media/DataLakeLDO.png)
+
+#### Service Description
+
+This is the same technology and architectural solution as the previous Data Lake service, adapted for cold storage scenarios, i.e., data that is rarely used and accessed slowly.
+
+This implies the following features:
+
+- Much less frequent data access
+- Slower data recovery times
+- Lower storage costs
+- Used for historical data, old logs, and long-term backups
+
+#### Features and Advantages
+
+For features, components, and benefits, see the full service offering [Data Lake](#datalake).
 
 <a id="BI"></a>
 
@@ -2315,7 +2476,10 @@ Below is the list of services belonging to the Networking family:
 - [PaaS DNS (Domain Name System)](#DNS)
 - [Single public IP](#IP)
 - [L7 Load Balancer (regional)](#L7)
-- [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)
+- [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)           
+- [Managed VPN Access Service](#VPN-managed)      
+- [PaaS Client/Forward Proxy](#proxy-client)  
+- [PaaS Reverse Proxy](#proxy-reverse)                                
 
 <a id="CDN"></a>
 
@@ -2384,20 +2548,16 @@ The service is offered for each DNS Instance unit.
 The main features of the service are:
 
 - *Cloud-managed OPNsense firewall instances* → fully managed virtual appliances with automated updates, monitoring, and lifecycle management.
-- *Advanced security services* → integrated IDS/IPS (Suricata), stateful firewalling, traffic shaping, and multi-layer threat protection.
 - *Zero-Trust network access* → policy-based access management for users and devices, enabling secure remote connectivity.
-- *High Availability & scalability* → cluster configurations, automated failover, and elastic capacity provisioning.
+- *High Availability & scalability* → cluster configurations, automated failover and elastic capacity provisioning.
 - *Centralized configuration & orchestration* → unified control panel for managing rules, VPNs, routing, and monitoring across multiple nodes.
-- *Multi-tenant architecture* → logical separation of environments for partners, business units, or customers.
-- *Full API integration* → REST API support for automation, CI/CD pipelines, and infrastructure-as-code workflows.
+- *Multi-tenant architecture* → logical separation of environments for partners, business units or customers.
+- *Full API integration* → REST API support for automation, CI/CD pipelines and infrastructure-as-code workflows.
 
 The main components of the service are:
 
-- *OPNsense core platform* → the foundational firewall and security engine, providing routing, filtering, and advanced security modules.
+- *OPNsense core platform* → the foundational DNS and security engine, providing routing, filtering, and advanced security modules.
 - *Management & orchestration layer* → a cloud-native platform that automates provisioning, configuration, monitoring, and scaling of OPNsense nodes.
-- *VPN & secure access gateway* → centralized services for site-to-site VPNs, remote user access (IPsec, OpenVPN, WireGuard), and zero-trust capabilities.
-- *Telemetry & monitoring stack* → real-time dashboards, logs, alerts, and analytics for performance, security events, and capacity planning.
-- *High-Availability infrastructure* → redundant cloud nodes, load balancing, and automated failover mechanisms to ensure service continuity.
 
 The service offers the following advantages:
 
@@ -2406,11 +2566,41 @@ The service offers the following advantages:
 - *Accelerated time-to-value* → rapid deployment and standardized configurations shorten rollout cycles.
 - *Improved security posture* → centralized policy enforcement and continuous updates reduce exposure to threats.
 - *Flexibility for business growth* → easily add new sites, users, or workloads without re-architecting the network.
-- *High performance & reliability* →  load balancing, clustering, and optimized routing ensure stable and performant network operation.
 - *Consistent and automated ocnfiguration* → reduces human error and ensures uniform security across the organization.
-- *Advanced threat detection* → IDS/IPS and security monitoring improve detection and response capabilities.
 - *API-first approach* →  smooth integration with DevOps pipelines and automated deployment systems.
 - *Vendor neutral and open source–absed* → avoids vendor lock-in while benefiting from the transparency and flexibility of OPNsense.
+
+#### Deployment in customer VNET
+
+The DNS service is deployed as a virtual appliance within the customer’s VNET.  
+It acts as the authoritative resolver for internal workloads while forwarding queries for external domains to upstream DNS servers. This ensures a single DNS endpoint for all workloads in the VNET, simplifying configuration and management.  
+
+#### Internal and external resolution
+
+- Internal Resolution: the OPNsense DNS Resolver (Unbound) can be configured with local zones and host overrides. Workloads in the VNET can register their names dynamically, enabling seamless resolution of private IP addresses.
+- External Resolution: queries for domains outside the VNET are forwarded to upstream DNS servers (e.g., ISP or public resolvers). Supports DNSSEC validation for secure external lookups.
+
+#### Dynamic updates
+
+The service supports dynamic DNS updates from workloads in the account, which can automatically register or update their DNS records in the OPNsense DNS Resolver.  
+This ensures that newly deployed or scaled workloads are immediately reachable by name without manual intervention.  
+Dynamic updates are authenticated using secure mechanisms (TSIG keys), preventing unauthorized changes.  
+
+*Dynamic Updates Flow*
+
+1.	Workload acquires IP address
+    - a VM, container, or host in the customer VNET requests an IP lease from DHCP
+2.	DHCP assigns lease
+3.	DNS update request (RFC2136)
+    - The DHCP service or workload sends a signed update message to the OPNsense DNS Resolver (Unbound).
+    - Authentication is handled via TSIG keys to ensure only authorized clients can modify records.
+4.	Unbound DNS updates zone records
+    - The resolver updates its local zone or forwards the update to an authoritative DNS server, and the A/AAAA records are updated with the new IP address.
+5.	Clients can resolve the updated names
+    - Other workloads in the VNET query the OPNsense DNS service.
+    - The resolver returns the updated IP address, ensuring connectivity.
+
+![Diagram of the Flow](assets/images/extract/media/DNS-chart.png)
 
 <a id="IP"></a>
 
@@ -2558,6 +2748,175 @@ The service offers the following advantages:
 - *Better compliance and data governance* → private, regional connectivity supports regulatory requirements. Data paths remain under predictable network control.
 - *Optimized application experience* → reduced jitter and packet loss improve performance for: databases, real-time apps, VoIP/UC, latency-sensitive services.
 
+<a id="VPN-managed"></a>
+
+### Managed VPN Access Service
+
+#### Service Description
+
+The Managed VPN Access Service provides secure connectivity between customer premises and cloud infrastructure using the OPNsense firewall appliance.  
+It is a fully-automated managed VPN service, meaning customers do not need to manually maintain or patch the underlying system. The service provider ensures continuous updates and security compliance.
+
+Key capabilities:
+- Provisioning via portal and APIs for automation and integration.
+- Provider-managed patching of the OPNsense appliance and service components.
+- Multiple VPN connections per virtual network supported.
+- Flexible tunneling protocols: IPsec, SSL, and WireGuard.
+- BGP support for improved failover and routing across IPsec tunnels.
+
+#### Features and Advantages
+
+The service can be provisioned through the Leonardo’s Secure Cloud Management Portal for quick setup. APIs are available for automated configuration and integration with Infrastructure-as-Code workflows. Declarative configuration files can be used to define VPN tunnels, routing policies, and security contexts.
+
+The Managed VPN Access Service supports multiple tunneling protocols over the public Internet, ensuring flexibility, interoperability, and strong security for different use cases. Each protocol offers unique advantages depending on the connectivity scenario.
+
+- IPsec VPN (Internet Protocol Security)
+    - Purpose: Industry-standard protocol suite for securing IP communications.
+    - Use Case: Commonly used for site-to-site tunnels between customer premises and cloud infrastructure.
+    - Features:
+        - Strong encryption (AES, SHA-2, etc.) for confidentiality and integrity.
+        - Widely supported across enterprise firewalls, routers, and appliances.
+        - Compatible with BGP routing to enable dynamic failover and load balancing across multiple tunnels.
+    - Benefit: Ensures highly secure, standards-based connectivity for enterprise networks.
+- SSL VPN (Secure Sockets Layer Virtual Private Network)
+    - Purpose: Provides secure remote access for individual users or devices.
+    - Use Case: Ideal for remote workforce connectivity, enabling employees to securely access internal applications from anywhere.
+    - Features:
+        - Operates over HTTPS, making it firewall-friendly and easy to deploy.
+        - Supports client-based and clientless (browser-based) access.
+        - Flexible authentication options (certificates, MFA, LDAP/AD integration).
+        - Benefit: Simplifies remote access with minimal configuration, while maintaining strong encryption and user authentication.
+- WireGuard VPN
+    - Purpose: A modern, high-performance VPN protocol designed for simplicity and speed.
+    - Use Case: Suitable for both site-to-site and remote access scenarios where performance and ease of configuration are priorities.
+    - Features:
+        - Lightweight codebase, reducing attack surface and improving maintainability.
+        - Uses state-of-the-art cryptography (Curve25519, ChaCha20, Poly1305).
+        - Faster connection setup and lower latency compared to traditional VPN protocols.
+        - Easy configuration with minimal overhead.
+    - Benefit: Delivers secure, efficient, and scalable VPN connectivity, particularly well-suited for modern cloud-native environments.
+
+#### High Availability and Failover
+
+The service supports High availability State Synchronization (pfsync), enabling VPN session states synchronization (including IPsec tunnels) between VPN service Instances, so active VPN connections continue without interruption during failover.  
+Configuration between instances is synchronized as well with a built in HA sync mechanism that replicates VPN configuration changes from the primary instance to the secondary.
+
+The service supports Border Gateway Protocol (BGP) to improve failover across IPsec VPN tunnels, to dynamically reroutes traffic in case of tunnel failure, ensuring uninterrupted connectivity. Multiple VPN connections per virtual network can be configured for redundancy and load balancing.
+
+####  Security and Compliance
+Leonardo is fully responsible for patching the VPN protocols and services, offering a secure, compliant environment without customer patching responsibilities.
+
+<a id="proxy-client"></a>
+
+### PaaS Client/Forward Proxy
+
+#### Service Description
+
+The Proxy service is a managed front-facing service designed to retrieve data from a wide range of sources across the internet.  
+It acts as an intermediary between internal users and external services, ensuring that requests are securely handled and filtered before reaching their destination.  
+The service is built on OPNsense, an open-source firewall and routing platform, and is delivered as a fully managed solution.  
+This means that all necessary updates, patches, and maintenance are handled by the provider, allowing IT staff to focus on their applications and users rather than the underlying infrastructure.  
+
+#### Features and Advantages
+
+The Proxy service functions as a gateway. When a user inside the organization requests data from an external source, the request is first directed to Proxy.  
+The service evaluates the request against configured rules and policies, determines whether it should be allowed or blocked, and then forwards it to the destination if permitted. Responses from external services are similarly inspected before being passed back to the user.  
+This approach provides several benefits: it ensures that only authorized traffic leaves the network, it prevents malicious content from entering, and it gives administrators visibility into how users interact with external services.  
+
+**Provisioning and Management**  
+
+Proxy can be provisioned through the Secure Cloud Management Platform, the central portal for managing cloud services. Administrators can deploy the service by selecting the Proxy option within the platform. Provisioning can also be performed through APIs, enabling integration into automated workflows.  
+Once deployed, the service is automatically patched and maintained by the provider. This ensures that the system remains up to date with the latest security fixes without requiring manual intervention.  
+
+**Authentication Integration**  
+
+Proxy supports integration with Active Directory and OpenID Connect for user authentication. This means that organizations can leverage their existing identity management systems to control access.  
+- With Active Directory, Proxy can validate user credentials against the domain controller, ensuring that only authorized users are able to use the service.  
+- With OpenID Connect, Proxy can redirect users to an identity provider for authentication, then use the returned tokens to grant access.  
+This integration allows organizations to enforce consistent access policies across their environment without duplicating user management. 
+
+**Request Filtering**  
+
+Proxy supports both whitelisting and blacklisting of requests. Administrators can define rules that specify which destinations or types of requests are permitted and which are denied. For example, they may allow access to trusted business applications while blocking requests to known malicious domains.  
+This filtering capability ensures that users can only access approved resources, reducing the risk of data leakage or exposure to harmful content.  
+
+**Anti-Virus and Anti-Malware Protection**  
+
+Proxy includes integrated anti-virus and anti-malware scanning, typically powered by engines such as ClamAV. All traffic passing through the service can be inspected for malicious payloads, ensuring that harmful files or code are blocked before reaching users.  
+This functionality provides an additional layer of defense, complementing endpoint protection and reducing the likelihood of infections spreading through downloaded content.  
+
+**Scalability**  
+
+The Proxy service is designed as a fixed-capacity solution. It does not scale dynamically with demand. Administrators should plan usage accordingly, ensuring that the service is deployed in environments where its capacity is sufficient for the expected traffic load.  
+
+<a id="proxy-reverse"></a>
+
+### PaaS Reverse Proxy
+
+#### Service Description
+
+The Managed Reverse Proxy service provides a secure and automated way to control and route traffic between external clients and internal applications.  
+It is built on OPNsense and HAProxy, which is widely recognized for its performance and flexibility in handling web traffic.  
+Delivered as a fully managed solution, Leonardo assumes responsibility for all patching, updates, and maintenance, ensuring that administrators benefit from a hardened and continuously updated platform.  
+
+#### Features and Advantages
+
+A reverse proxy sits in front of application servers and receives incoming requests from clients. Instead of exposing servers directly to the internet, the proxy terminates connections, applies configured rules, and forwards requests to the appropriate backend service.  
+This architecture improves security, simplifies certificate management, and enables sophisticated traffic routing.  
+The Managed Reverse Proxy service can be provisioned through the Secure Cloud Management Portal or via APIs. Once deployed, the CSP ensures that the underlying OPNsense system and HAProxy plugin remain patched and secure.  
+
+**SSL/TLS termination**  
+
+The reverse proxy provides full support for SSL/TLS termination. This means that encrypted client connections are terminated at the proxy, where traffic is decrypted. Certificates can be uploaded and managed directly within the solution, and bound to frontends. 
+
+A typical frontend definition might look like this:  
+
+```
+frontend https_frontend
+    bind *:443 ssl crt /etc/haproxy/certs/
+    mode http
+    option httplog
+```
+
+Here the proxy listens on port 443, terminates SSL/TLS using the certificate stored in `/etc/haproxy/certs/`, and then processes traffic in HTTP mode.  
+Once decrypted, traffic can be inspected, filtered, or routed, and then forwarded to backend servers either as plain HTTP or re-encrypted if desired. This centralizes certificate management and reduces the complexity of maintaining certificates across multiple backend servers.  
+HTTP Termination.  
+In addition to SSL/TLS, the reverse proxy also supports HTTP termination. This allows the proxy to handle plain HTTP traffic directly, applying rules and routing logic before passing requests to backend servers. This is useful for internal services or applications that do not require encryption, and it ensures that both encrypted and unencrypted traffic can be managed consistently through the same proxy layer. 
+
+**Server Name Indication (SNI) compatibility** 
+
+The proxy is fully compatible with the Server Name Indication (SNI) extension of TLS. This capability allows the proxy to host multiple SSL/TLS certificates on a single IP address and port. When a client initiates a connection, the proxy uses the hostname provided in the SNI field to select the correct certificate. This makes it possible to serve multiple domains securely from the same proxy instance, a critical feature for organizations hosting multiple applications or services.  
+
+For example:  
+
+```
+frontend https_frontend
+    bind *:443 ssl crt /etc/haproxy/certs/domain1.pem crt /etc/haproxy/certs/domain2.pem
+    mode http
+```
+
+When a client connects, HAProxy inspects the SNI field in the TLS handshake and selects the appropriate certificate based on the requested hostname. This allows multiple domains to be served securely from a single proxy instance.  
+
+**Routing Rules and Traffic Management**  
+
+One of HAProxy’s most powerful features is its ability to define complex routing rules. Administrators can configure rules based on request attributes such as headers, paths, query strings, or even cookies. For example, traffic containing a specific header can be routed to one backend service, while requests with a different header are directed elsewhere.  
+The proxy also supports load balancing strategies, health checks, and content switching. This means that traffic can be distributed across multiple backend servers to improve performance and reliability, or directed to specific servers depending on the nature of the request. The OPNsense HAProxy plugin provides a user-friendly interface for defining these rules, making it possible to implement sophisticated traffic management policies without requiring deep knowledge of HAProxy’s configuration syntax.
+
+Below is an example of content switching, where traffic is routed depending on request attributes. For example, administrators may want to send requests with a specific header to one backend, and all other requests to another:  
+
+```
+frontend https_frontend
+    bind *:443 ssl crt /etc/haproxy/certs/
+    mode http
+    acl api_request hdr(X-Service) -i api
+    use_backend api_backend if api_request
+    default_backend web_backend
+```
+In this configuration:  
+- The `acl` (access control list) checks whether the request contains the header `X-Service: api`.  
+- If the header is present, traffic is routed to `api_backend`.  
+- All other requests are sent to `web_backend`. 
+
 ## Storage Family
 
 Below is the list of services belonging to the Storage family:
@@ -2577,29 +2936,30 @@ The PaaS Block Storage (1000 GB) – High Density service provides enterprise-gr
 The storage layer is powered by Ceph, a distributed, fault-tolerant, and scalable SDS (Software-Defined Storage) technology that ensures durability, high availability, and efficient capacity utilization.  
 This service offers 1000 GB of high-density block storage, ideal for workloads that require large capacity at optimized cost while still benefiting from redundancy, resiliency, and seamless integration into virtualized cloud environments.
 
-The service is offered with the following metrics: *1000 GB for each unit*.
+The service is offered with the following metrics: 1000 GB for each unit.
+
 
 #### Features and Advantages
 
 The main features of the service are:
 
 - *Managed block storage volumes (1000 GB)* → provides fully provisioned 1000 GB block devices. Can be attached to Proxmox-based virtual machines. Supports OS disks, application data, databases, and file systems.
-- *High-density storage tier* → optimized for workloads requiring large capacity. Uses cost-efficient high-density disks while maintaining reliability. Suitable for: archival data, moderately I/O-intensive applications, backup staging, large datasets that don’t require ultra-high performance
-- *Ceph RBD (RADOS Block Device) integration* → volumes are exposed as Ceph RBD devices. Features:, thin provisioning, snapshot support, cloning capabilities, striping for balanced performance
+- *High-density storage tier* → optimized for workloads requiring large capacity. Uses cost-efficient high-density disks while maintaining reliability. Suitable for: archival data, moderately I/O-intensive applications, backup staging, large datasets that don’t require ultra-high performance.
+- *Ceph RBD (RADOS Block Device) integration* → volumes are exposed as Ceph RBD devices, enabling features like thin provisioning, snapshot support, cloning capabilities.
 - *High availability and data replication* → data is replicated across multiple Ceph nodes. Ensures durability even in case of disk or node failure. Automatic recovery and self-healing functions enhance resilience.
 - *Persistent and Reliable Storage* → volumes maintain data integrity across VM reboots, migrations, or failovers. Ideal for persistent disks in virtualized infrastructures.
-- Seamless VM integration → managed directly through the Proxmox interface/API. It supports: VM disk attachments and detachments, live migration with attached volumes, dynamic resizing
+- *Seamless VM integration* →  managed directly through the Proxmox interface/API. It supports: VM disk attachments and detachments, live migration with attached volumes, dynamic resizing.
 - *Performance optimization for large-capacity workloads* → balanced read/write response designed for high-density environments. Ceph intelligently distributes I/O across cluster nodes.
-- *Managed service* → No need to manage Ceph clusters, disks, or replicating policies. Handling of: monitoring, maintenance, scaling, upgrades, fault resolution
+- *Managed service* → No need to manage Ceph clusters, disks, or replicating policies. Handling of: monitoring, maintenance, scaling, upgrades, fault resolution.
 
 The main components of the service are:
 
-- *Ceph storage cluster* → distributed architecture composed of: multiple OSD nodes (Object Storage Daemons), MON nodes for cluster coordination, MGR nodes for cluster insight and APIs. Ensures high availability and horizontal scalability.
-- *Proxmox integration layer* → proxmox integrates directly with Ceph RBDs. Provides unified API and management interface for VMs and storage. Allows dynamic allocation of block devices to VMs.
-- *Replicated storage pools* → storage pools configured with replication (e.g., 3 replicas). Ensures redundancy across multiple disks and hosts. Prevents data loss from node or disk failures.
-- *Data plane* → handles all I/O operations, including: data striping, replication, rebalancing, recovery, snapshot management. Designed for reliability and optimized throughput.
-- *Control plane* → Manages: Ceph cluster coordination, health monitoring, volume lifecycle, config policies, Proxmox integration.
-- *Monitoring and observability* → continuous monitoring of: storage utilization, disk health, replication status, I/O performance. Automated alerts ensure proactive issue resolution.
+- *Ceph storage cluster* → distributed architecture composed of Object storage nodes monitoring nodes for cluster coordination and manager nodes for cluster insight and APIs. Ensures high availability and horizontal scalability.
+- *Proxmox integration layer* → Proxmox integrates directly with Ceph RBDs and provides unified API and management interface for VMs and storage. Allows dynamic allocation of block devices to VMs.
+- *Replicated storage pools* → storage pools configured with replication. Ensures redundancy across multiple disks and hosts. Prevents data loss from node or disk failures.
+- *Data plane* → handles all I/O operations, including data striping, replication, rebalancing, recovery, snapshot management. Designed for reliability and optimized throughput.
+- *Control plane* → Manages Ceph cluster coordination, health monitoring, volume lifecycle, config policies, Proxmox integration.
+- *Monitoring and observability* → continuous monitoring of storage utilization, disk health, replication status, I/O performance. Automated alerts ensure proactive issue resolution.
 - *Security and isolation* → tenant isolation at storage pool and access level. Encrypted communication between Ceph and Proxmox nodes. Optional disk encryption at rest depending on policy.
 
 The service offers the following advantages:
@@ -2614,70 +2974,6 @@ The service offers the following advantages:
 - *Enhanced data protection* → built-in replication, self-healing, and monitoring reduce risk of data loss.
 - *Simplified backup and recovery* → volume snapshots enable fast backup operations. Easy rollback to previous storage states.
 - *Enterprise-grade reliability* → Ceph’s distributed architecture provides continuous service availability and resilience.
-
-#### Disaster Recovery Process
-
-The PaaS Block Storage service is delivered on a high-density storage architecture powered by Proxmox VE and a Ceph distributed storage cluster.  
-Ceph provides native replication, self-healing and strong data durability.  
-Disaster Recovery (DR) ensures service continuity, data integrity and rapid restoration in case of partial or full site failure.
-
-**Disaster Recovery (DR) Objectives**
-
-- RPO (Recovery Point Objective): Typically near-zero, because Ceph writes are synchronously replicated across multiple OSDs and nodes before acknowledgment.
-- RTO (Recovery Time Objective): Designed to be minimal. Recovery depends on the nature of the failure (node, rack, or site).
-
-**DR Protection Levels**
-
-- Node-Level Failure
-    - Ceph automatically marks failed OSDs or nodes as “out”
-    - Data is automatically re-replicated to healthy nodes to restore the predefined replication level
-    - Proxmox migrates VMs/volumes to healthy nodes via HA framework
-
-- Rack-Level or Power Domain Failure
-    - If the CRUSH map is configured with rack-awareness, Ceph ensures that: No dataset has all its replicas in the same rack/power domain
-    - Failover is automatic and transparent
-
-- Full Site Failure (Multi-site DR) (Applicable only when a second Ceph site or stretch-cluster is deployed)
-    
-    - Block volumes are replicated to a secondary Ceph cluster through asynchronous multi-site Ceph replication, or RBD mirroring (journal-based)
-    - In case of complete primary site outage, the secondary site can promote replicated RBD images and restore service
-
-**DR Process Workflow**
-
-- Step 1 – Failure Detection
-
-    - Continuous monitoring of Ceph MONs, OSDs, Proxmox nodes and cluster health status.
-    - Automatic alerts for: Disk or node failures, Network disruption, Replication degradation, Cluster reaching “HEALTH_WARN” or “HEALTH_ERR”
-
-- Step 2 – Automatic Failover (Local Cluster)
-
-    - Ceph redistributes I/O across available OSDs
-    - Proxmox HA automatically restarts workloads on healthy nodes
-    - No manual intervention is typically required
-
-- Step 3 – Data Re-Replication
-
-    - Ceph restores the replication level (e.g. 3 copies) by copying missing replicas to healthy OSDs
-    - The process is throttled to avoid performance degradation.
-
-- Step 4 – Activation of Secondary Site
-
-    - If the failure affects the entire primary site:
-        - Administrators promote mirrored RBD images on the secondary Ceph cluster
-        - Proxmox compute nodes at the DR site attach the promoted RBDs
-        - Services are restarted according to the failover plan.
-
-- Step 5 – Service Validation
-
-    - Verification that Block Storage volumes are consistent and available
-    - Checks of application logs and integrity validation.
-
-- Step 6 – Failback (Post-Recovery)
-
-    - Once the primary site is restored:
-        - Data is synchronized back (reverse RBD mirroring)
-        - Primary Ceph cluster is reintroduced into production
-        - Normal operations resume
 
 <a id="archive-storage"></a>
 
@@ -2706,110 +3002,74 @@ The main features of the service are:
 
 The main components of the service are:
 
-- Proxmox VE Cluster: Management layer for nodes, resources, authentication, and integration with Ceph; offers UI, automation tools, and API endpoints.
-- Ceph Cluster:
+- *Proxmox VE Cluster* → Management layer for nodes, resources, authentication, and integration with Ceph; offers UI, automation tools, and API endpoints.
+- *Ceph Cluster*:
     - OSD Nodes: Storage servers providing replicated or erasure-coded archival pools.
     - MON/MGR Nodes: Ceph Monitors and Managers responsible for cluster coordination, state tracking, and health management.
     - CephFS / RBD / RGW: Optional access interfaces to expose archival storage as a filesystem, block device, or S3-compatible object store.
-- Networking Layer: High-bandwidth, redundant network for internal Ceph traffic (public and cluster networks) to ensure consistency and performance.
-- Monitoring and Logging Tools: Proxmox and Ceph dashboards, Prometheus, and alerting integrations.
+- *Networking Layer* → High-bandwidth, redundant network for internal Ceph traffic (public and cluster networks) to ensure consistency and performance.
+- *Monitoring and Logging Tools* → Proxmox and Ceph dashboards, Prometheus, and alerting integrations.
 
 The service offers the following advantages:
 
-- Cost-efficient retention: Lower TCO for storing large datasets compared to high-performance primary storage.
-- High durability and fault tolerance: Data is protected through Ceph replication or erasure coding, reducing risk of data loss.
-- Horizontal scalability: Capacity and performance can grow incrementally without downtime, supporting evolving storage needs.
-- Vendor independence: Based on open technologies, minimizing lock-in and enabling custom tailoring.
-- Operational simplicity: Unified management from Proxmox with integrated monitoring, lifecycle management, and automation.
-- Flexible access models: Filesystem, block, or object interfaces allow integration with backup systems, archival workflows, and data management tools.
-- Resilience and self-healing: Ceph automatically redistributes and recovers data in case of disk or node failures, reducing administrative overhead.
-- Compliance support: Suitable for long-term preservation and regulatory retention requirements.
+- *Cost-efficient retention* → lower TCO for storing large datasets compared to high-performance primary storage.
+- *High durability and fault tolerance* → data is protected through Ceph replication or erasure coding, reducing risk of data loss.
+- *Horizontal scalability* → capacity and performance can grow incrementally without downtime, supporting evolving storage needs.
+- *Vendor independence* → based on open technologies, minimizing lock-in and enabling custom tailoring.
+- *Operational simplicity* → unified management from Proxmox with integrated monitoring, lifecycle management, and automation.
+- *Flexible access models* → filesystem, block, or object interfaces allow integration with backup systems, archival workflows, and data management tools.
+- *Resilience and self-healing* → ceph automatically redistributes and recovers data in case of disk or node failures, reducing administrative overhead.
+- *Compliance support* → Suitable for long-term preservation and regulatory retention requirements.
 
-## Auto Scaling & Scaling-to-Zero
- 
-The PaaS services described in this document are designed to run on orchestrated, cloud-native platforms where horizontal auto scaling is a native capability. Auto scaling dynamically adjusts the number of active instances in response to application load so that services can absorb traffic peaks while avoiding unnecessary over‑provisioning during off‑peak periods.
+<a id="DR-storage"></a>
 
-At the platform level, an Horizontal Pod Autoscaler (HPA) or analogous controller continuously observes key metrics exposed by the workloads and the underlying infrastructure. These metrics commonly include CPU utilization, memory consumption, request rate, queue or backlog depth, and custom application indicators exported through standard monitoring interfaces. When the measured values exceed or fall below configured thresholds, the controller increases or decreases the replica count within the minimum and maximum limits defined for each service.  
+### Disaster Recovery Process for Block and Archive Storages
 
-The same mechanism applies to many PaaS building blocks beyond purely stateless functions. These components can be configured to scale out when demand increases, distributing traffic across additional instances, and to scale in when demand subsides, consolidating activity on fewer instances. This behavior reduces the need for manual capacity planning, while still allowing organizations to define guardrails such as per‑tenant quotas, reserved capacity, or upper bounds imposed by licensing and compliance requirements.  
+The PaaS Block Storage service is delivered on a high-density storage architecture powered by Proxmox VE and a Ceph distributed storage cluster.  
+Ceph provides native replication, self-healing and strong data durability.  
+Disaster Recovery (DR) ensures service continuity, data integrity and rapid restoration in case of partial or full site failure.
 
-For suitable workloads, several PaaS services also support scaling‑to‑zero. When a workload becomes idle and there are no active requests or tasks to process, the orchestration layer can progressively drain and stop all runtime instances associated with that service, leaving only the control and configuration plane active. In this state, compute capacity is released instead of being reserved for an idle service, which reduces the operational surface exposed to potential threats and improves infrastructure utilization. When new load arrives after a scale‑to‑zero phase, the platform automatically recreates the necessary runtime instances and starts routing work to them as soon as they become healthy; this can introduce a controlled start‑up latency, which can be mitigated for latency‑sensitive services by configuring a small minimum number of always‑on instances. 
+**Disaster Recovery (DR) Objectives**
 
-Scaling‑to‑zero applies to workloads whose runtime instances can be stopped while still meeting durability and availability requirements. State‑heavy services such as relational databases, message brokers, and some analytics engines typically maintain at least one active replica or a minimal cluster footprint to guarantee durability, failover, and predictable performance characteristics. For these services, elasticity is achieved through controlled horizontal scaling of nodes, vertical tuning of resource allocations, and scheduled maintenance windows, with the serving tier remaining continuously available.  
+- RPO (Recovery Point Objective): zero in an Availability Zone failure scenario, as Ceph writes are synchronously replicated across Zones.
+- RTO (Recovery Time Objective): designed to be minimal. Recovery depends on the nature of the failure (node, rack, or site).
 
-In all scenarios, auto scaling integrates with the platform’s monitoring, logging, and governance capabilities. Scaling events are traceable, auditable, and can be correlated with business and security metrics to validate that capacity changes remain compliant with corporate policies.
+**DR Protection Levels**
 
-## Security Patching
+- Full Availability Zone DR 
 
-Security patching is part of the Vulnerability Management (VM) process and concerns the operational activities involved in applying software updates (called patches or fixes) designed to resolve security vulnerabilities found in operating systems, applications, firmware, or other IT components.
+    - Block volumes are continuously replicated to a coupled Availability zone through synchronous replication leveraging Ceph stretched cluster and CRUSH maps.
+    In case of complete outage of an Availability Zone, the coupled AZ already contains the RBD images, and workloads can be restored automatically, or by registering the affected compute instances to the live AZ.
+    This allows for 0 RPO and a variable RTO that can span from 0 (automated failover) to minutes if automatic failover is not used.
 
-In practice, security patching:
+- Full Region DR
 
-- fixes security flaws that could be exploited by attackers.
-- improves system stability and reliability.
-- reduces the risk of attacks such as malware, ransomware, or unauthorized access.
+    - Inter-region mirroring can be enabled on a per-volume basis, allowing asynchronous replicas of data from any AZ of a given region to AZ of a paired region.
+    - Replication can be continuous or snapshots-based, with a minimum internal between snapshots of one minute.
+    - Recovery of impacted services to a new region is orchestrated by Leonard’s Secure Cloud Management Platform where a DR plan.
 
-These activities are carried out according to established schedules (Periodic VM) or as a result of risk analyses, internal/external alerts, or specific needs in response to urgent patches (such as emergency patches or zero-day patches), i.e., non-periodic (on-demand) VM.
+**Regional DR Process Workflow**
 
-The VM process pursues the following objectives:
+- *Step 1 – Failure Detection*
 
-- identifying and assessing potential weaknesses (vulnerabilities) in the technological infrastructure.
-- verifying compliance with security standards and corporate policies.
-- checking the robustness of networks, systems, or applications against the possibility of exploitation by new cyber threats.
-evaluating the effectiveness of remediation actions taken to improve the security of systems, networks, or applications.
+    - The underlying storage continuously monitors the state of the storage nodes and cluster.
+    - Automatic alerts for: Disk or node failures, Network disruption, Replication degradation, Cluster reaching “HEALTH_WARN” or “HEALTH_ERR”
 
-The Security Operation Center (SOC), manages the VM process by performing the following activities:
+- *Step 2 – Activation of workloads on the paired Region*
 
-- defines the scope of Vulnerability Management activities.
-- contributes to planning the activities.
-- relays any alerts or warnings from external or internal sources.
-- analyzes the reports produced by the SOC.
-- validates the remediation plan.
+    If the failure affects an entire Region: 
+    - Administrators promote mirrored RBD images on the remote Ceph cluster.
+    - Proxmox compute nodes at the DR site attach the promoted RBDs.
+	- Services are restarted according to the failover plan.
 
-The SOC, for its part, performs the following operational activities:
+- *Step 3 – Service Validation*
 
-- collects vulnerability alerts from both internal and external sources.
-- gathers information about the affected assets.
-- plans, together with the CISO, security assessments aimed at identifying the technological perimeter subject to VM.
-- carries out VA/PT activities and prepares the related reports.
+    - Verification that Block Storage volumes are consistent and available.
+    - Checks of application logs and integrity validation.
 
-The phases of the vulnerability management process are:
+- *Step 4 – Failback (Post-Recovery)*
 
-a) Planning
-b) Execution of activities
-c) Definition of the remediation plan
-d) Implementation of the remediation plan
-e) Monitoring
-
-In the specific case of PaaS services provided on the Kubernetes cluster, VM and security patching activities make use of the StackRox tool. StackRox  is the solution used to verify container security, providing capabilities to identify critical vulnerabilities in managed StackRox environments and supporting the processes of checking, monitoring, and correcting identified security issues:
-
-- Vulnerability Management
-- Network Segmentation
-- Compliance
-- Detection and Response
-
-## Encryption 
-
-The Data at Rest Encryption requirement—i.e., ensuring the confidentiality of data stored on the infrastructure’s disks through encryption—is fulfilled by integrating the storage solutions, for both block storage and object storage, with a centralized Key Management System (KMS).  
-
-Specifically, for block storage, the confidentiality of data within Persistent Volumes (PV) created on the Kubernetes cluster infrastructure is ensured through the Ceph storage solution, which supports volume encryption. The enablement and configuration of the integration with the external KMS is performed at the storage class level, using the Key Management Interoperability Protocol (KMIP).  
-
-For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
-
-All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
-
-## Backup
-
-The protection of data integrity and availability within the PaaS platform is ensured by integrating the Kubernetes cluster with a centralized backup service delivered through a Veeam solution.
-
-To integrate Veeam with Kubernetes clusters, the Veeam architecture must include a Media Agent responsible for executing the actual backup of the K8S cluster. Backup operations are performed through APIs exposed by the K8S infrastructure.
-
-The Kubernetes objects subject to backup are:
-
-- the distributed etcd database hosted on the master nodes.
-- the Persistent Volumes (Block & File Storage) provided by the Ceph service.
-
-Given the criticality of the etcd database - which manages and stores the state and configuration of all objects within K8S - its backup is performed at a very high frequency (several times per hour).  
-Furthermore, for certain types of applications (e.g., PostgreSQL databases) running on the K8S platform, achieving Application-Consistent backups requires integrating pre/post-backup scripts.  
-These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
-The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
+    - Once the primary Region is restored:
+        - Data is synchronized back (reverse RBD mirroring).
+        - Primary cluster is reintroduced into production.
+        - Normal operations resume.

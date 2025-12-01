@@ -27,7 +27,7 @@ For each service, you can choose from three alternative purchase options:
 |Security|[Identity & Access Management (IAM) Service](PaaS.md#IAM)|concurrent Users|100 concurrent users|454,59 €|4.909,58 €|13.092,20 €|
 |Security|[Key Vault as a Service - Standard](PaaS.md#key-vault)|Client|500 clients|18.508,98 €|199.896,94 €|533.058,50 €|
 |Security|[Endpoint Protection](PaaS.md#endpoint)| Endpoint| 100 endpoints|7.774,28 €|83.962,25 €|223.899,33 €|
-|Security|[NGFW platform](PaaS.md#ngfw)| Throughput (Gbps)|1| 1.148,53 €| 12.404,11 €| 33.077,64 €|
+|Security|[NGFW Platform](PaaS.md#ngfw)| Throughput (Gbps)|1| 1.148,53 €| 12.404,11 €| 33.077,64 €|
 |Security|[PAM (Privileged Access Management)](PaaS.md#PAM)|Number of admin users|10|2.801,62 €|30.257,50 €|80.686,66 €|
 |Security|[Intrusion Prevention System (IPS)](PaaS.md#IPS)|Throughput(Gbps)|1|7.541,19 €|81.444,88 €|217.186,36 €|
 <figcaption>Price list of the Security Family Services</figcaption>
@@ -67,7 +67,8 @@ For each service, you can choose from three alternative purchase options:
 
 |Family|Service|Unit|Value|PAYG (Monthly)|1Y Reserved|3Y Reserved|
 |------| ------| ---| ----| -------------| ----------| ----------|
-|Big Data|[Data Lake](PaaS.md#datalake)|TB|1 TB|23,25 €|251,10 €|669,60 €|
+|Big Data|[Data Lake](PaaS.md#datalake)|TB|1 TB|25,23 €|279,00 €|744,00 €|
+|Big Data|[Data Lake-Cold](PaaS.md#datalake)|TB|1 TB|23,25 €|251,10 €|669,60 €|
 |Big Data|[Business Intelligence Platform](PaaS.md#BI)|User|100 users|8.365,83 €|90.351,00 €|240.936,01 €|
 |Big Data|[PaaS ETL Batch/Real time Processing](PaaS.md#processing)|Worker node|16 vCPU-128 GB RAM per worker| 608,48 €|6.571,54 €|17.524,11 €|
 |Big Data|[Event Message](PaaS.md#event-message)|Worker node|16 vCPU-128 GB RAM per worker|291,29 €|3.145,95 €|8.389,20 €|

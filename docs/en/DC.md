@@ -418,41 +418,109 @@ Data Hall Security:
 
 ##### DC GE 1 Fiumara
 
-**General specifications**
-
 **Building** 
+
+Tier II classification.
 
 **Certifications and compliance** 
 
+ISO 27001.
+
 **Connectivity** 
+
+Two redundant Dark fiber link 100 + 100 GB between GE1 and GE2.
 
 **Energy**
 
+The Data Center has two power supply branches, A and B, that reach the same substation, capable of delivering up to 1 MW (500 kW + 500 kW).  
+The substation is served by:
+
+- 3 x 1600 kVA transformers
+- 1 medium voltage main switchboard.
+- 2 low voltage switchboards.
+- An 824 kW generator.
+- A 320 kW UPS.
+
+The work to bring the DC system into TIER III standards will be completed in 2026.
+
 **Cooling** 
+
+It features an air cooling type cooling system composed of 7 CDZ with Water technology (with the use of Chilled) + Liquid cooling.
 
 **Security** 
 
+Security levels implemented:
+
+- Perimeter walls
+- Reception
+- Internal VDS system at the data center
+- Fingerprint or badge access
+- Internal armed surveillance system, 24/7.
+
 **Fire prevention system** 
+
+Gas and NOVEC 1230 primer.
 
 <a id="GE2"></a>
 
 ##### DC GE 2 Puccini
 
-**General specifications**
-
 **Building** 
+
+It was built on TIER III logic.
 
 **Certifications and compliance** 
 
+ISO 27001.
+
 **Connectivity** 
+
+Two redundant Dark fiber link 100 + 100 GB between GE1 and GE2.
 
 **Energy**
 
+It has two certification branches, A and B.  
+Currently, depending on the air conditioning units installed, the DC can accommodate a maximum of 340 kW of IT computing power.  
+The characteristics of the two branches are as follows:
+
+- Branch A characteristics:
+
+    - DATA CENTER BRANCH "A" Distribution Cabinet
+    - 1 1000 kW transformer
+    - 1 LV main panel
+    - Equivalent earthing system connected to the main earthing system.
+    - 1 576 kW Milantractor generator.
+    - 1 UPS sized as follows:
+    - 1 Piller 500 kW rotary unit each.
+
+- Branch B characteristics:
+
+    - DATA CENTER BRANCH "B" Distribution Cabinet
+    - 1 1000 kW transformer
+    - 1 LV main panel
+    - Equivalent earthing system connected to the main earthing system.
+    - One 500 kW Perkins generator.
+    - One 576 kW Spark generator for air conditioning only.
+    - One UPS sized as follows:
+    - One 500 kW Piller rotary generator.
+
 **Cooling** 
+
+It has an Air cooling system composed of 6 CDZs with mixed Water (with the use of Chilled) and Gas technology.
 
 **Security** 
 
-**Fire prevention system** **
+Security levels implemented:
+
+- Perimeter walls
+- Reception
+- Internal VDS system at the data center
+- Fingerprint or badge access
+- Internal armed surveillance system, 24/7.
+
+**Fire prevention system**
+
+Water mist.
 
 <a id="GE3"></a>
 

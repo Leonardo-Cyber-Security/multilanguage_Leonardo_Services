@@ -91,7 +91,37 @@ Furthermore, for certain types of applications (e.g., PostgreSQL databases) runn
 These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
 The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
 
-### List of services
+### High Performance Computing description
+
+The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
+Cooling is mixed, air and liquid depending on the technology and density-
+
+Technology assets:
+
+- CPU Intel Cascade Lake
+- CPU Intel Sapphire Rapids
+- CPU AMD EPYC Rome
+- CPU AMD EPYC Genoa
+- NVIDIA A100 GPU
+- NVIDIA Grace-Hopper
+- NVIDIA H200 GPU
+- NVIDIA RTX 8000 GPU
+- NVIDIA L40s GPU
+- AMD MI 300 GPU
+
+The infrastructure is hosted in Italy and managed entirely by internal staff.  
+The architecture complies with NIST standards and is ISO27001 certified.  
+Information management and protection is guaranteed by international standards and company policies.  
+All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
+
+The virtualization platform used is OpenStack Community and OpenStack Canonical.  
+Additional features developed by an internal team have been integrated into this platform.
+
+The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
+
+A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
+
+## List of services
 
 The following table lists the services included in the *Platform as a Service (PaaS)* category.
 

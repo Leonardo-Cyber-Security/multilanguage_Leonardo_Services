@@ -104,4 +104,5 @@ For details on each service, please see the dedicated section.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)|
+| Hybrid | [Bulk Data Transfer](Hybrid.md#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>

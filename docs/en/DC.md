@@ -4,7 +4,7 @@
 
 The Cloud Services described in the relevant categories are hosted within 9 Data Centers distributed throughout Italy and spread across 3 Regions (A, B, and C), each redundant with three highly reliable Availability Zones.
 
-![Data Center Architecture and Interconnection](assets/images/extract/media/DC_design.png)  
+[![Data Center Architecture and Interconnection](assets/images/extract/media/DC_design.png)](assets/images/extract/media/DC_design.png)
 
 The infrastructure configuration is fully redundant thanks to the division of each of the three Regions, whose maximum distance exceeds 400 km.
 Each Region is composed of three Availability Zones (AZs), three Data Centers configured for business continuity, separated as the crow flies by tens of kilometers.
@@ -13,15 +13,15 @@ Specifically, the following table shows the DC association for each region:
 
 | Region   | List of Data Centers |
 | -------- | ----------- |
-| Region A | [DC MI 1 Bergamo](#MI1)       |
-| Region A | [DC MI 2 Basiglio](#MI2)       |
-| Region A | [DC MI 3 Siziano](#MI3)
-| Region B | [DC GE 1 Fiumara](#GE1)       |
-| Region B | [DC GE 2 Puccini](#GE2)       |
-| Region B | [DC GE 3](#GE3)       |
-| Region C | [DC RM 1 Rome](#RM1)        |
-| Region C | [DC RM 2 Acilia](#RM2)        |
-| Region C | [DC RM 3 Pomezia](#RM3)       |
+| Region A | [DC MI 1 Bergamo](#MI1) |
+| Region A | [DC MI 2 Basiglio](#MI2) |
+| Region A | [DC MI 3 Siziano](#MI3) |
+| Region B | [DC GE 1 Fiumara](#GE1) |
+| Region B | [DC GE 2 Puccini](#GE2) |
+| Region B | [DC GE 3 Bisagno](#GE3) |
+| Region C | [DC RM 1 Rome](#RM1) |
+| Region C | [DC RM 2 Acilia](#RM2) |
+| Region C | [DC RM 3 Pomezia](#RM3) |
 <figcaption>Nomenclature of DCs for each Region</figcaption>
 
 Below are the distances between each Region and between the DCs of each Region.
@@ -35,8 +35,8 @@ Below are the distances between each Region and between the DCs of each Region.
 - DC MI 2 Basiglio - DC MI 3 Siziano: approximate distance 10 km
 
 - DC GE 1 Fiumara - DC GE 2 Puccini: approximate distance 10 Km
-- DC GE 1 Fiumara - DC GE 3: approximate distance 15 Km
-- DC GE 2 Puccini - DC GE 3: approximate distance 15 Km
+- DC GE 1 Fiumara - DC GE 3 Bisagno: approximate distance 15 Km
+- DC GE 2 Puccini - DC GE 3 Bisagno: approximate distance 15 Km
 
 - DC RM 1 Rome - DC RM 2 Acilia: approximate distance 30 km
 - DC RM 1 Rome - DC RM 3 Pomezia: approximate distance 30 km
@@ -524,7 +524,7 @@ Water mist.
 
 <a id="GE3"></a>
 
-##### DC GE 3 
+##### DC GE 3 Bisagno
 
 **General specifications**
 

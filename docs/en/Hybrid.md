@@ -5,6 +5,7 @@ The following table lists the services included in the *Hybrid* category.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](#edge)|
+| Hybrid | [Bulk Data Transfer](#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>
 
 ## Hybrid Family
@@ -17,7 +18,7 @@ Below is the list of services belonging to the Hybrid Edge family:
 
 ### Edge Location - Pool Small (Confidential)
 
-![Edge Location - Pool Small (Confidential) Overview](assets/images/extract/media/edge.png)
+[![Edge Location - Pool Small (Confidential) Interface](assets/images/extract/media/edge.png)](assets/images/extract/media/edge.png)
 
 #### Services Description
 
@@ -56,9 +57,9 @@ that have been taken into consideration for the design of the technological solu
 - *Power management* → implement tools and technologies to monitor and manage energy consumption, optimizing resource use and reducing operating costs.
 - *Energy efficiency* → use energy-efficient equipment and infrastructure to minimize consumption and environmental impact, adhering to best practices for data center energy management.
 
-![Rack energy power output](assets/images/extract/media/energy.png)
+[![Rack energy power output](assets/images/extract/media/energy.png)](assets/images/extract/media/energy.png)
 
-![Power and BTU of appliances](assets/images/extract/media/power.png)
+[![Power and BTU of appliances](assets/images/extract/media/power.png)](assets/images/extract/media/power.png)
 
 The service offers the following advantages:
 
@@ -73,9 +74,9 @@ The service offers the following advantages:
 
 <a id="bulk"></a>
 
-## Bulk Data Transfer
+### Bulk Data Transfer
 
-### Supply Chain for Storage Hardware in the Service Context
+#### Supply Chain for Storage Hardware in the Service Context
 
 The supply chain for the specialized storage hardware used in the context of this service is a meticulously orchestrated ecosystem designed to ensure reliability, scalability, and compliance with stringent enterprise standards.  
 
@@ -87,7 +88,7 @@ The finished appliances are then integrated with proprietary firmware and securi
 
 This layered, end‑to‑end supply chain ensures that hardware is not only performant but also secure and fully traceable throughout its lifecycle, from component sourcing to customer deployment and eventual return for data ingestion and secure sanitization.
 
-### Software Architecture and Development
+#### Software Architecture and Development
 
 The software underpinning the service is architected and developed by a dedicated specialized team comprising systems architects, software engineers, and security experts. This team typically operates within a corporate research and development environment with a focus on distributed storage systems, secure data transfer protocols, and device management frameworks. 
 
@@ -96,7 +97,7 @@ Development activities are governed by agile methodologies, emphasizing iterativ
 
 Cross-functional teams collaborate closely with supply chain, security, and operations units to ensure that software updates are rigorously validated for reliability and security before full deployment.
 
-### Software Licensing, Transparency, and Adaptability
+#### Software Licensing, Transparency, and Adaptability
 
 The software components of the service embody a balanced approach to licensing and intellectual property protection, combining proprietary elements with open-source frameworks to facilitate transparency, security scrutiny, and adaptability.
 
@@ -104,7 +105,7 @@ Core platform components leverage mature open-source libraries and protocols vet
 
 For proprietary modules—particularly those dealing with encryption, device attestation, and logistics orchestration—customers and regulatory auditors are granted access to source code under non-disclosure agreements or via escrow arrangements to meet compliance and due diligence requirements. This ensures trust in the software stack’s integrity, fosters collaborative innovation in extended use cases, and mitigates vendor lock-in risks.
 
-### Security Patch Management Capabilities Independent of Non-EU Vendors:
+#### Security Patch Management Capabilities Independent of Non-EU Vendors:
 
 To address geopolitical and regulatory concerns, the service provider maintains a robust local capability for developing, testing, and applying security patches independently of non-European Union (EU) vendors.  
 

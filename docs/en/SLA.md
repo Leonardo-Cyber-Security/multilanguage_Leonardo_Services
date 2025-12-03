@@ -6,7 +6,7 @@ This section defines the terms, metrics, and service commitments applicable to t
 
 The Uptime Annual Percentage of the services is determined as follows:
 
-![Annual Uptime Percentage](assets/images/extract/media/SLA.png)  
+[![Annual Uptime Percentage](assets/images/extract/media/SLA.png)](assets/images/extract/media/SLA.png)
 
 The Uptime Percentage is calculated as Maximum Available Minutes less Downtime divided by Maximum Available Minutes, where:
 

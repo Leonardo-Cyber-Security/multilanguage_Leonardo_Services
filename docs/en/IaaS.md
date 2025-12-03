@@ -27,9 +27,9 @@ Below is the list of services belonging to the Compute family:
 
 ### Confidental Private IaaS
 
-![Confidental Private IaaS Architecture](assets/images/extract/media/iaasprivate.png)  
+[![Confidental Private IaaS Architecture](assets/images/extract/media/iaasprivate.png)](assets/images/extract/media/iaasprivate.png)
 
-![Administration of Confidental Private IaaS](assets/images/extract/media/iaas_admin.png)
+[![Administration of Confidental Private IaaS](assets/images/extract/media/iaas_admin.png)](assets/images/extract/media/iaas_admin.png)
 
 #### Services Description
 
@@ -66,9 +66,9 @@ The services offer the following advantages:
 
 [![How to create a VM - Step 1](assets/images/extract/media/VM_create.png)](assets/images/extract/media/VM_create.png)
 
-![How to create a VM - Step 2](assets/images/extract/media/VM_create02.png)  
+[![How to create a VM - Step 2](assets/images/extract/media/VM_create02.png)](assets/images/extract/media/VM_create02.png)
 
-![How to manage a VM](assets/images/extract/media/VM_view.png)
+[![How to manage a VM](assets/images/extract/media/VM_view.png)](assets/images/extract/media/VM_view.png)
 
 #### Services Description
 

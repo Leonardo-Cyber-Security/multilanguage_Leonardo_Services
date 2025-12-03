@@ -208,7 +208,7 @@ Below is the list of services belonging to the Security family:
 
 ### Identity & Access Management (IAM) Service
 
-![Identity & Access Management Service (IAM) Overview](assets/images/extract/media/IAM.png)
+[![Identity & Access Management Service (IAM) Interface](assets/images/extract/media/IAM.png)](assets/images/extract/media/IAM.png)
 
 #### Service Description
 
@@ -262,7 +262,7 @@ The service offers the following advantages:
 
 ### Key Vault as a Service - Standard
 
-![Key Vault as a service Overview](assets/images/extract/media/KeyVault.png)
+[![Key Vault as a service Interface](assets/images/extract/media/KeyVault.png)](assets/images/extract/media/KeyVault.png)
 
 #### Service Description
 
@@ -302,7 +302,7 @@ The service offers the following advantages:
 
 ### Endpoint Protection Service
 
-![Endpoint Protection Service Overview](assets/images/extract/media/endpoint.png)
+[![Endpoint Protection Service Interface](assets/images/extract/media/endpoint.png)](assets/images/extract/media/endpoint.png)
 
 #### Service Description
 
@@ -353,7 +353,7 @@ The service offers the following advantages:
 
 ### NGFW Platform
 
-![NGFW platform Overview](assets/images/extract/media/firewall.png)
+[![NGFW platform Interface](assets/images/extract/media/firewall.png)](assets/images/extract/media/firewall.png)
 
 #### Service Description
 
@@ -407,7 +407,7 @@ Application and user awareness → identifies and controls applications and user
 
 ### PAM (Privileged Access Management) Service
 
-![PAM (Privileged Access Management) Service Overview](assets/images/extract/media/ssh.png)
+[![PAM (Privileged Access Management) Service Interface](assets/images/extract/media/ssh.png)](assets/images/extract/media/ssh.png)
 
 #### Service Description
 
@@ -484,7 +484,7 @@ Extensive API and Automation Capabilities → exposes APIs for integration with 
 
 ### Intrusion Prevention System (IPS) Service
 
-![Intrusion Prevention System (IPS) Service Overview](assets/images/extract/media/IPS.png)
+[![Intrusion Prevention System (IPS) Service Interface](assets/images/extract/media/IPS.png)](assets/images/extract/media/IPS.png)
 
 #### Service Description
 
@@ -591,7 +591,7 @@ Below is the list of services belonging to the Middleware family:
 
 ### PaaS API Management
 
-![PaaS API Management](assets/images/extract/media/API.png)
+[![PaaS API Management Interface](assets/images/extract/media/API.png)](assets/images/extract/media/API.png)
 
 #### Service Description
 
@@ -638,7 +638,7 @@ The service offers the following advantages:
 
 ### Functions as a Service (FAAS)
 
-![Functions As a Service (FAAS) Interface](assets/images/extract/media/FaaS.png)
+[![Functions As a Service (FAAS) Interface](assets/images/extract/media/FaaS.png)](assets/images/extract/media/FaaS.png)
 
 #### Service Description
 
@@ -717,7 +717,7 @@ The service offers the following advantages:
 
 ### Spring boot as a Service
 
-![Spring boot as a Service](assets/images/extract/media/Spring.png)
+[![Spring boot as a Service Interface](assets/images/extract/media/Spring.png)](assets/images/extract/media/Spring.png)
 
 #### Service Description
 
@@ -759,7 +759,7 @@ The service offers the following advantages:
 
 ### Business Process as a Service
 
-![Business Process as a Service](assets/images/extract/media/BPM.png)
+[![Business Process as a Service Interface](assets/images/extract/media/BPM.png)](assets/images/extract/media/BPM.png)
 
 #### Service Description
 
@@ -803,7 +803,7 @@ The service offers the following advantages:
 
 ### Content Management Systems (CMS) as a Service
 
-![Content Management Systems (CMS) as a Service](assets/images/extract/media/CMS.png)
+[![Content Management Systems (CMS) as a Service Interface](assets/images/extract/media/CMS.png)](assets/images/extract/media/CMS.png)
 
 #### Service Description
 
@@ -841,7 +841,7 @@ The service offers the following advantages:
 
 ### Semantic Knowledge Search
 
-![Semantic Knowledge Search Service](assets/images/extract/media/Semantic.png)
+[![Semantic Knowledge Search Service Interface](assets/images/extract/media/Semantic.png)](assets/images/extract/media/Semantic.png)
 
 #### Service Description
 
@@ -896,7 +896,7 @@ Below is the list of services belonging to Data Protection family:
 
 ### Backup Platform Service
 
-![Backup Service](assets/images/extract/media/backup.png)
+[![Backup Service Interface](assets/images/extract/media/backup.png)](assets/images/extract/media/backup.png)
 
 #### Service Description
 
@@ -955,9 +955,9 @@ Below is the list of services belonging to the Infra & Ops Platform family:
 
 ### Multicloud Management Platform
 
-![Leonardo Secure Cloud Management Platform (SCMP)  - Inventory interface](assets/images/extract/media/SCMP1.png)
+[![Leonardo Secure Cloud Management Platform (SCMP)  - Inventory interface](assets/images/extract/media/SCMP1.png)](assets/images/extract/media/SCMP1.png)
 
-![Leonardo Secure Cloud Management Platform (SCMP) - Costs dashboard](assets/images/extract/media/SCMP2.png)
+[![Leonardo Secure Cloud Management Platform (SCMP)  - Costs dashboard](assets/images/extract/media/SCMP2.png)](assets/images/extract/media/SCMP2.png)
 
 #### Service Description
 
@@ -1012,7 +1012,7 @@ The service offers the following advantages:
 
 ### IT infrastructure Service Operations (Logging & Monitoring)
 
-![IT infrastructure Service Operations (Logging & Monitoring) interface](assets/images/extract/media/ITops.png)
+[![IT infrastructure Service Operations (Logging & Monitoring) interface](assets/images/extract/media/ITops.png)](assets/images/extract/media/ITops.png)
 
 #### Service Description
 
@@ -1059,7 +1059,7 @@ The service offers the following advantages:
 
 ### PaaS Ticket Management Service
 
-![Ticket Management Service interface](assets/images/extract/media/Ticket.png)
+[![Ticket Management Service interface](assets/images/extract/media/Ticket.png)](assets/images/extract/media/Ticket.png)
 
 #### Service Description
 
@@ -1103,7 +1103,7 @@ Increased support team productivity → thanks to workflow automation, the use o
 
 ### PaaS Operations Management
 
-![PaaS Operations Management Overview](assets/images/extract/media/operations.png)
+[![PaaS Operations Management interface](assets/images/extract/media/operations.png)](assets/images/extract/media/operations.png)
 
 #### Service Description
 
@@ -1164,7 +1164,7 @@ Below is the list of services belonging to the  DevSecOps family:
 
 ### Configuration Manager
 
-![Configuration Manager Service interface](assets/images/extract/media/Config.png)
+[![Configuration Manager Service interface](assets/images/extract/media/Config.png)](assets/images/extract/media/Config.png)
 
 #### Service Description
 
@@ -1209,7 +1209,7 @@ The service offers the following advantages:
 
 ### Test Automation
 
-![Test Automation Service](assets/images/extract/media/Test.png)
+[![Test Automation Service interface](assets/images/extract/media/Test.png)](assets/images/extract/media/Test.png)
 
 #### Service Description
 
@@ -1258,7 +1258,7 @@ The service offers the following advantages:
 
 ### Quality Code Analysis
 
-![Quality Code Analysis Service](assets/images/extract/media/Quality.png)
+[![Quality Code Analysis Service interface](assets/images/extract/media/Quality.png)](assets/images/extract/media/Quality.png)
 
 #### Service Description
 
@@ -1305,7 +1305,7 @@ Technical debt management → estimate the time to fix issues.
 
 ### DevSecOps As A Service
 
-![DevSecOps As A Service](assets/images/extract/media/DevSecOps.png)
+[![DevSecOps As A Service interface](assets/images/extract/media/DevSecOps.png)](assets/images/extract/media/DevSecOps.png)
 
 #### Service Description
 
@@ -1351,7 +1351,7 @@ The service offers the following advantages:
 
 ### Qualizer DevSecOps
 
-![Qualizer DevSecOps Service](assets/images/extract/media/Qualizer.png)
+[![Qualizer DevSecOps Service interface](assets/images/extract/media/Qualizer.png)](assets/images/extract/media/Qualizer.png)
 
 #### Service Description
 
@@ -1406,7 +1406,7 @@ Below is the list of services belonging to the Big Data family:
 
 ### Data Lake
 
-![Data Lake Service](assets/images/extract/media/DataLakeLDO.png)
+[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO.png)](assets/images/extract/media/DataLakeLDO.png)
 
 #### Service Description
 
@@ -1456,7 +1456,7 @@ To ensure uniform distribution, MinIO applies a striping mechanism for erasure s
 
 ### Data Lake-Cold
 
-![Data Lake Service](assets/images/extract/media/DataLakeLDO.png)
+[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO.png)](assets/images/extract/media/DataLakeLDO.png)
 
 #### Service Description
 
@@ -1477,7 +1477,7 @@ For features, components, and benefits, see the full service offering [Data Lake
 
 ### Business Intelligence
 
-![Business Intelligence Service](assets/images/extract/media/BI.png)
+[![Business Intelligence Service interface](assets/images/extract/media/BI.png)](assets/images/extract/media/BI.png)
 
 #### Service Description
 
@@ -1528,7 +1528,7 @@ Infrastructure scalability and flexibility.
 
 ### PaaS ETL - Batch/Real time Processing
 
-![PaaS ETL - Batch/Real time Processing](assets/images/extract/media/Processing.png)
+[![PaaS ETL - Batch/Real time Processing interface](assets/images/extract/media/Processing.png)](assets/images/extract/media/Processing.png)
 
 #### Service Description
 
@@ -1572,7 +1572,7 @@ The service offers the following advantages:
 
 ### Event Message
 
-![Event Message Service](assets/images/extract/media/Event.png)
+[![Event Message Service interface](assets/images/extract/media/Event.png)](assets/images/extract/media/Event.png)
 
 #### Service Description
 
@@ -1623,7 +1623,7 @@ The service offers the following advantages:
 
 ### Data Governance
 
-![Data Governance Service](assets/images/extract/media/Governance.png)
+[![Data Governance Service interface](assets/images/extract/media/Governance.png)](assets/images/extract/media/Governance.png)
 
 #### Service Description
 
@@ -1681,7 +1681,6 @@ Below is the list of services belonging to the Artificial Intelligence (AI) fami
 
 <a id="speech-to-text"></a>
 
-
 ### Speech to Text
 
 #### Service Description
@@ -1735,7 +1734,7 @@ The service offers the following advantages:
 
 ### AI Audio & Video Analytics
 
-![AI Audio & Video Analytics Services](assets/images/extract/media/AudioVideo.png)
+[![AI Audio & Video Analytics Services interface](assets/images/extract/media/AudioVideo.png)](assets/images/extract/media/AudioVideo.png)
 
 #### Services Description
 
@@ -1786,7 +1785,7 @@ The service offers the following advantages:
 
 ### Optical Character Recognition (OCR)
 
-![Optical Character Recognition (OCR) Service](assets/images/extract/media/OCR.png)
+[![Optical Character Recognition (OCR) Service](assets/images/extract/media/OCR.png)](assets/images/extract/media/OCR.png)
 
 #### Services Description
 
@@ -1834,7 +1833,7 @@ The service offers the following advantages:
 
 ### Text Analytics/NLP
 
-![Text Analytics Service](assets/images/extract/media/Text.png)
+[![Text Analytics Service interface](assets/images/extract/media/Text.png)](assets/images/extract/media/Text.png)
 
 #### Service Description
 
@@ -1922,9 +1921,7 @@ The service offers the following advantages:
 
 <a id="AI-search"></a>
 
-### AI Search - RAG
-
-![AI Search - RAG Service](assets/images/extract/media/AIsearch.png)
+[![AI Search - RAG Service interface](assets/images/extract/media/AIsearch.png)](assets/images/extract/media/AIsearch.png)
 
 #### Service Description
 
@@ -1976,7 +1973,7 @@ The service offers the following advantages:
 
 ### AI Platform
 
-![AI Platform Service](assets/images/extract/media/AIplatform.png)
+[![AI Platform Service interface](assets/images/extract/media/AIplatform.png)](assets/images/extract/media/AIplatform.png)
 
 #### Service Description
 
@@ -2025,7 +2022,7 @@ The service offers the following advantages:
 
 ### AI SLM/LLM
 
-![AI SLM/LLM Services](assets/images/extract/media/LLM.png)
+[![AI SLM/LLM Services interface](assets/images/extract/media/LLM.png)](assets/images/extract/media/LLM.png)
 
 #### Services Description
 
@@ -2115,7 +2112,7 @@ Below is the list of services belonging to the Collaboration family:
 
 ### Instant Messaging
 
-![Instant Messaging Service](assets/images/extract/media/IM.png)
+[![Instant Messaging Service interface](assets/images/extract/media/IM.png)](assets/images/extract/media/IM.png)
 
 #### Service Description
 
@@ -2170,7 +2167,7 @@ Below is the list of services belonging to the Database family:
 
 ### PaaS SQL - PostgreSQL
 
-![PostgreSQL client interface](assets/images/extract/media/postgres.png)
+[![PostgreSQL client interface](assets/images/extract/media/postgres.png)](assets/images/extract/media/postgres.png)
 
 #### Service Description
 
@@ -2226,7 +2223,7 @@ The service offers the following advantages:
 
 ### PaaS SQL - MariaDB
 
-![MariaDB client interface](assets/images/extract/media/mariaDB.jpg)
+[![MariaDB client interface](assets/images/extract/media/mariaDB.jpg)](assets/images/extract/media/mariaDB.jpg)
 
 #### Service Description
 
@@ -2284,7 +2281,7 @@ The service offers the following advantages:
 
 ### PaaS SQL - MS SQL Server EE
 
-![SQL Server EE client interface](assets/images/extract/media/sqlserver.png)
+[![SQL Server EE client interface](assets/images/extract/media/sqlserver.png)](assets/images/extract/media/sqlserver.png)
 
 #### Service Description
 
@@ -2342,7 +2339,7 @@ The service offers the following advantages:
 
 ### PaaS SQL - MS SQL Server EE (BYOL)
 
-![SQL Server EE client interface](assets/images/extract/media/sqlserver.png)
+[![SQL Server EE client interface](assets/images/extract/media/sqlserver.png)](assets/images/extract/media/sqlserver.png)
 
 #### Service Description
 
@@ -2363,7 +2360,7 @@ For all the details , please refer to the [PaaS SQL - MS SQL Server EE](#sqlserv
 
 ### PaaS GraphDB
 
-![GraphDB client interface](assets/images/extract/media/graphDB.png)
+[![GraphDB client interface](assets/images/extract/media/graphDB.png)](assets/images/extract/media/graphDB.png)
 
 #### Service Description
 
@@ -2423,7 +2420,7 @@ The service offers the following advantages:
 
 ### PaaS NoSQL - MongoDB
 
-![MongoDB client interface](assets/images/extract/media/mongoDB.png)
+[![MongoDB client interface](assets/images/extract/media/mongoDB.png)](assets/images/extract/media/mongoDB.png)
 
 #### Service Description
 
@@ -2479,7 +2476,7 @@ The service offers the following advantages:
 
 ### PaaS In Memory- Redis
 
-![Redis client interface](assets/images/extract/media/redis.png)
+[![Redis client interface](assets/images/extract/media/redis.png)](assets/images/extract/media/redis.png)
 
 #### Service Description
 
@@ -2556,7 +2553,7 @@ Below is the list of services belonging to the Networking family:
 
 ### PaaS CDN (Content Delivery Network)
 
-![PaaS CDN (Content Delivery Network) interface](assets/images/extract/media/CDN.png)
+[![PaaS CDN (Content Delivery Network) interface](assets/images/extract/media/CDN.png)](assets/images/extract/media/CDN.png)
 
 #### Service Description
 
@@ -2604,7 +2601,7 @@ The service offers the following advantages:
 
 ### PaaS DNS (Domain Name System)
 
-![PaaS DNS (Domain Name System) interface](assets/images/extract/media/DNS.png)
+[![PaaS DNS (Domain Name System) interface](assets/images/extract/media/DNS.png)](assets/images/extract/media/DNS.png)
 
 #### Service Description
 
@@ -2671,7 +2668,7 @@ Dynamic updates are authenticated using secure mechanisms (TSIG keys), preventin
     - Other workloads in the VNET query the OPNsense DNS service.
     - The resolver returns the updated IP address, ensuring connectivity.
 
-![Diagram of the Flow](assets/images/extract/media/DNS-chart.png)
+[![Diagram of the Flow](assets/images/extract/media/DNS-chart.png)](assets/images/extract/media/DNS-chart.png)
 
 <a id="IP"></a>
 
@@ -2721,7 +2718,7 @@ The service offers the following advantages:
 
 ### L7 Load Balancer (regional) Service
 
-![L7 Load Balancer (regional) Service Overview](assets/images/extract/media/L7.png)
+[![L7 Load Balancer (regional) Service Interface](assets/images/extract/media/L7.png)](assets/images/extract/media/L7.png)
 
 #### Service Description
  
@@ -2999,7 +2996,7 @@ Below is the list of services belonging to the Storage family:
 
 ### Block Storage (1000 GB) - High Density Service
 
-![Block Storage (1000 GB) - High Density Service interface](assets/images/extract/media/storage.png)
+[![Block Storage (1000 GB) - High Density Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
 
 #### Service Description
 
@@ -3050,7 +3047,7 @@ The service offers the following advantages:
 
 ### Archive Storage (1000 GB) Service
 
-![Archive Storage (1000 GB) Service interface](assets/images/extract/media/storage.png)
+[![Archive Storage (1000 GB) Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
 
 #### Service Description
 

@@ -35,7 +35,7 @@ The VM process pursues the following objectives:
 - checking the robustness of networks, systems, or applications against the possibility of exploitation by new cyber threats.
 evaluating the effectiveness of remediation actions taken to improve the security of systems, networks, or applications.
 
-The Security Operation Center (SOC), manages the VM process by performing the following activities:
+The Security Operation Center (SOC) manages the VM process by performing the following activities:
 
 - defines the scope of Vulnerability Management activities.
 - contributes to planning the activities.
@@ -91,35 +91,42 @@ Furthermore, for certain types of applications (e.g., PostgreSQL databases) runn
 These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
 The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
 
-### High Performance Computing description
+### Serverless Managed Container Platform
 
-The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
-Cooling is mixed, air and liquid depending on the technology and density-
+#### Integration with Software Development Processes
 
-Technology assets:
+The service facilitates integration with software development processes by providing declarative Infrastructure as Code (IaC) blueprints. Developers can describe the entire deployment in configuration files, which are then applied through the management portal or APIs. This allows automatic provisioning of clusters, networking, and container runtimes. Continuous deployment is supported through integration with common CI/CD tools such as GitHub Actions, GitLab CI, Azure DevOps, and Jenkins. Pipelines can push new container images to the registry, and the platform automatically redeploys workloads. Rollbacks are possible by reverting to previous IaC templates.
 
-- CPU Intel Cascade Lake
-- CPU Intel Sapphire Rapids
-- CPU AMD EPYC Rome
-- CPU AMD EPYC Genoa
-- NVIDIA A100 GPU
-- NVIDIA Grace-Hopper
-- NVIDIA H200 GPU
-- NVIDIA RTX 8000 GPU
-- NVIDIA L40s GPU
-- AMD MI 300 GPU
+Progressive rollout strategies are supported. Rolling updates can be configured to gradually replace old container replicas with new ones, with parameters such as batch size, wait time, and health checks. Blue/green deployments are possible by running two environments simultaneously and switching traffic through Envoy Proxy routing rules. Canary releases can be achieved by directing a percentage of traffic to a new version, monitoring metrics such as latency and error rate before completing the rollout.
 
-The infrastructure is hosted in Italy and managed entirely by internal staff.  
-The architecture complies with NIST standards and is ISO27001 certified.  
-Information management and protection is guaranteed by international standards and company policies.  
-All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
+Debugging and development support is provided through integration with popular IDEs such as Visual Studio Code, IntelliJ, and Eclipse. Developers can deploy, monitor logs, and debug containers directly from their IDE. Dapr sidecar provides observability features including tracing, metrics, and logging. Logs are streamed to centralized monitoring services, and health probes are automatically configured to ensure resilience. Failover to replicas ensures minimal downtime during debugging or patching.
 
-The virtualization platform used is OpenStack Community and OpenStack Canonical.  
-Additional features developed by an internal team have been integrated into this platform.
+#### High-Level User Manual
 
-The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
+*Getting Started* 
 
-A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
+Users provision the service by logging into Leonardo management portal, navigating to the Serverless Managed Container Platform, and creating a new service instance. They select the region, security context, and resource limits. Alternatively, the API can be used to provision services by submitting configuration files.
+
+*Deploying with IaC Blueprints*  
+
+Applications are defined in YAML or JSON configuration files that describe containers, scaling rules, and networking. These files are applied through the portal or CLI. For example, a configuration may specify replicas, autoscaling parameters, and port mappings. Once applied, the platform provisions the resources automatically.
+
+*Configuring Networking* 
+
+Containers are reachable via HTTPS by default. Supported protocols include HTTP/1, HTTP/2, and arbitrary TCP ports. Developers can configure ingress rules to expose services externally.
+
+*Scaling and Resilience* 
+
+Autoscaling is supported through declarative configuration based on CPU or memory thresholds. The platform supports scale-to-zero, meaning no compute costs are incurred when applications receive no requests. Replication ensures that containers are deployed across multiple nodes, with automatic failover in case of deactivation.
+
+*Security and Maintenance*  
+
+Leonardo is responsible for patching the cluster control plane and the operating system of underlying virtual machines. Users can deploy services in isolated security contexts. Maintenance notifications are provided between 24 and 72 hours in advance, except for critical security patches. Users may request postponement of scheduled maintenance.
+
+*Debugging and Monitoring*  
+
+Logs can be accessed through the portal or CLI. Metrics and traces are available through Dapr integration. IDE plugins allow developers to attach debuggers directly to running containers. Continuous monitoring ensures that applications remain resilient and available.
+
 
 ## List of services
 
@@ -204,7 +211,7 @@ Below is the list of services belonging to the Security family:
 
 #### Service Description
 
-The Service, , deveoloped by Leonardo, provides an essential level of security for identity and access management, ensuring basic protection against unauthorized access.  
+The Service, developed by Leonardo, provides an essential level of security for identity and access management, ensuring foundational protection against unauthorized access.  
 It manages single sign-on access to guarantee access to all protected resources with a single authentication. It supports standard OIDC/OAUTH and SAML protocols for easy integration with applications and products.  
 It enables first-level authentication with username/password and second-level authentication with multi-factor authentication based on Time-based One-Time Password (TOTP) protocols.  
 It manages access authorization to system-protected resources only for users with rights to use them according to the Role-based Access Control (RBAC) and Attribute-based Access Control (ABAC) paradigms. Integration with external user repositories (LDAP or Active Directory) is also available.  
@@ -270,7 +277,7 @@ The main features and functionalities of the service are:
 
 - *Secure Secret Storage* → Key/value secrets are stored in Key Vault As A Service in encrypted form, ensuring their integrity in the event of unauthorized access to raw storage.
 - *Dynamic Secrets* → Key Vault As A Service can generate secrets on demand to allow users and/or applications to access different systems.
-- *Data Encryption* → Key Vault As A Service can encrypt and decrypt workloads running on the PA infrastructure without archiving them, managing the entire lifecycle of the cryptographic material used in the encryption process.
+- *Data Encryption* → Key Vault As A Service can encrypt and decrypt workloads running on the customer infrastructure without archiving them, managing the entire lifecycle of the cryptographic material used in the encryption process.
 - *Leasing and Renewal* → Key Vault As A Service associates a lease with each key or secret managed, which will result in its automatic revocation upon expiration and which can be renewed by clients through the integrated APIs provided by the platform.
 - *Revocation* → Key Vault As A Service has integrated support for revoking keys and secrets, which can be revoked individually or in bulk (e.g., all keys of a specific user), for example in case of compromise.
 
@@ -298,9 +305,8 @@ The service offers the following advantages:
 
 #### Service Description
 
-Powered by Bitdefender technology, the Endpoint Protection Service offers comprehensive protection for endpoint devices against malware, ransomware, and other threats, including antivirus, firewall, and application control capabilities.  
-The service aims to provide the customer with an EPP platform for multi-layered protection of their endpoint devices, with capabilities to prevent, detect, and respond to cyber threats targeting those devices, including antivirus, anti-malware, personal firewall, web protection, application control, and patch management.  
-The service provides a cloud-delivered, scalable, and centrally managed solution designed to protect customer endpoint devices from a broad spectrum of cyber threats.  
+Powered by Bitdefender technology, the Endpoint Protection (EPP) Service offers comprehensive protection for endpoint devices against malware, ransomware, and other threats. 
+The service provides a cloud-delivered, scalable, and centrally managed EPP providing multi-layered protection to broad spectrum of cyber threats.  
 The service is delivered as a managed PaaS solution, offering continuous protection and simplified administration for organizations seeking robust endpoint security without the overhead of managing on-premise security infrastructures.
 
 The service is offered with the following unit metric: *100 endpoints*.
@@ -916,9 +922,10 @@ The main components of the service are:
 
 *Backup management cluster* → centralized system orchestrating all backup operations. Handles scheduling, job execution, and policy enforcement. Highly available and fully managed by the provider.
 - *Backup proxies and data movers* → distributed components that handle data transfer. Optimize performance by offloading backup/restore workloads. Integrated with cloud virtualization platforms.
-- *Backup repository layer* → Multi-tier repository infrastructure for: short-term storage, long-term retention, immutable storage. Redundant and scalable for large data volumes.
-- *Control plane* →  Manages: backup policies, job configurations, user permissions and multi-tenancy, SLA definitions, reporting and analytics, API-driven automation.à
-- *Data plane* → responsible for: VM snapshot creation, data extraction and compression, transport - *Security & compliance layer* → encryption in transit and at rest. Tenant isolation at storage and management layers. Compliance with data protection standards (GDPR, ISO, etc.).
+- *Backup repository layer* → multi-tier repository infrastructure for: short-term storage, long-term retention, immutable storage. Redundant and scalable for large data volumes.
+- *Control plane* →  manages backup policies, job configurations, user permissions and multi-tenancy, SLA definitions, reporting and analytics, API-driven automation.
+- *Data plane* → responsible for: VM snapshot creation, data extraction and compression, transport
+- *Security & compliance layer* → encryption in transit and at rest. Tenant isolation at storage and management layers. Compliance with data protection standards (GDPR, ISO, etc.).
 - *Observability & alerting layer* → real-time monitoring of backup/restore jobs. Alerts on job failures, capacity issues, and SLA violations. Audit logs for operations and access tracking.
 
 The service offers the following advantages:
@@ -1254,7 +1261,7 @@ The service offers the following advantages:
 
 #### Service Description
 
-The service, based on SonarQube, offers public administrations a robust static code analysis tool, supporting software quality and integration into CI/CD processes.  
+The service, based on SonarQube, offer a robust static code analysis tool, supporting software quality and integration into CI/CD processes.  
 Thanks to its architecture and ability to integrate into the continuous development and analysis cycle, it enables the development of high-quality software and fully supports DevSecOps initiatives. The service also enables in-depth source code security analysis, detecting known vulnerabilities, injections, poor cryptographic practices, uncontrolled access, and potential exploits.  
 Integrating directly into CI/CD pipelines or through supported DevOps platforms, it analyzes source code against a broad set of quality rules, covering aspects such as code maintainability, software reliability, and application security.
 
@@ -1437,7 +1444,7 @@ Typically, data availability and resilience in distributed object storage system
 Replication between MinIO sites can be configured:
 
 - as synchronous inside the same Region for HA configuration.
-- as ynchronous beetween different Regions for DR configuration.  
+- as asynchronous beetween different Regions for DR configuration.  
 
 In this deployment, thanks to the high bandwidth and low latency connections available between data centers, synchronous Site Replication was adopted between clusters, ensuring data consistency across locations.  
 Access to the different clusters can be achieved either via direct addressing or through a load balancer, depending on architectural and operational needs.From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience.  
@@ -1625,7 +1632,7 @@ It enables the production of data quality data (a measure of data condition base
 It allows you to oversee data error resolution efforts and maintain compliance with internal audits and external regulations.  
 It provides immediate support for the detection and classification of personal data and other sensitive data.
 
-The service is sized and offered for a single license.
+The service is sized and offered each 10 users.
 
 #### Features and Advantages
 
@@ -1671,6 +1678,7 @@ Below is the list of services belonging to the Artificial Intelligence (AI) fami
 - [AI SLM/LLM](#AI-SLM-LLM)
 
 <a id="speech-to-text"></a>
+
 
 ### Speech to Text
 
@@ -2035,7 +2043,7 @@ The services are sized per GPU unit:
 
 The service offers the following main features:
 
-- *Tenant isolation* → each customer will have a dedicated Tenant on the PSN infrastructure with complete isolation of data, configurations, and uploaded models.
+- *Tenant isolation* → each customer will have a dedicated Tenant on the customer infrastructure with complete isolation of data, configurations, and uploaded models.
 - *Resource allocation* → each customer will be assigned dedicated infrastructure resources (CPU, GPU, RAM, Storage) to their Tenant, sized appropriately.
 - *Auto-scaling* → tenant resources can scale to respond to load variations.
 - *Cloud-native deployment* → the service will be deployed in the customer's tenant in cloud-native mode on the OpenShift platform, ensuring portability, resilience, and standardization of operating procedures.
@@ -2063,6 +2071,37 @@ The service offers the following advantages:
 - *Fast and simplified model testing* → ready-to-use models thanks to the playground functionality available directly in the interface.
 -* Rapid prototyping and DevOps AI* → ready-to-use environment for developing, testing, and deploying applications through standard interfaces.
 - *Multi-model and hybrid AI* → ability to combine open source and proprietary models in the same ecosystem.
+
+### High Performance Computing description
+
+The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
+Cooling is mixed, air and liquid depending on the technology and density-
+
+Technology assets:
+
+- CPU Intel Cascade Lake
+- CPU Intel Sapphire Rapids
+- CPU AMD EPYC Rome
+- CPU AMD EPYC Genoa
+- NVIDIA A100 GPU
+- NVIDIA Grace-Hopper
+- NVIDIA H200 GPU
+- NVIDIA RTX 8000 GPU
+- NVIDIA L40s GPU
+- AMD MI 300 GPU
+
+The infrastructure is hosted in Italy and managed entirely by internal staff.  
+The architecture complies with NIST standards and is ISO27001 certified.  
+Information management and protection is guaranteed by international standards and company policies.  
+All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
+
+The virtualization platform used is OpenStack.  
+Additional features developed by an internal team have been integrated into this platform.
+
+The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
+
+A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
+
 
 ## Collaboration Family
 

@@ -1,12 +1,14 @@
-#  Kubernetes Reference Architecture
+#  Reference Architecture
 
-## Overview
+##  Kubernetes Reference Architecture
+
+### Overview
 
 This reference architecture describes the recommended baseline design for running containerized applications on **Leonardo Cloud Leonardo Kubernetes Service (LKS)**. It provides a secure, scalable, production-ready foundation aligned with cloud best practices for networking, identity, security, observability, DevOps, and resilience.
 
 This baseline architecture is suitable for most production workloads and is the recommended starting point for any Kubernetes deployment on Leonardo Cloud.
 
-## Architecture Components
+### Architecture Components
 
 #### Leonardo Kubernetes Service (LKS)
 
@@ -30,9 +32,9 @@ Node pools provide the compute layer and support:
 - Manual or automatic scaling
 - Managed node image lifecycle
     
-## Network Architecture
+### Network Architecture
 
-### Virtual Networks
+#### Virtual Networks
 
 LKS clusters are deployed into a **customer-managed Virtual Network (VNet)**. The recommended configuration includes:
 
@@ -45,7 +47,7 @@ LKS clusters are deployed into a **customer-managed Virtual Network (VNet)**. Th
 
 Pod CIDR and service CIDR must not overlap with customer VNets.
 
-### Pod and Service Networking
+#### Pod and Service Networking
 
 Leonardo Cloud LKS uses a cloud-integrated CNI supporting:
 
@@ -56,7 +58,7 @@ Leonardo Cloud LKS uses a cloud-integrated CNI supporting:
 
 Service CIDRs provide stable virtual IPs for Kubernetes services.
 
-### Ingress & Load Balancing
+#### Ingress & Load Balancing
 
 Customers can expose applications via:
 
@@ -66,9 +68,9 @@ Customers can expose applications via:
     
 Ingress provides TLS termination, routing rules, and isolation between environments.
 
-## Identity & Access Control
+### Identity & Access Control
 
-### Leonardo Cloud IAM Integration
+#### Leonardo Cloud IAM Integration
 
 LKS authentication is fully integrated with **Leonardo Cloud Identity and Access Management (IAM)**:
 
@@ -79,7 +81,7 @@ LKS authentication is fully integrated with **Leonardo Cloud Identity and Access
 
 Authorization uses Kubernetes RBAC and supports fine-grained controls.
 
-### Recommended RBAC Model
+#### Recommended RBAC Model
 
 Typical baseline roles:
 - *Cluster Admins* → full administrative access
@@ -88,16 +90,16 @@ Typical baseline roles:
 
 Quota policies and network policies help enforce multi-tenancy boundaries.
 
-## Security Best Practices
+### Security Best Practices
 
-### Control Plane Security
+#### Control Plane Security
 
 - Fully isolated, managed, and hardened control plane
 - Encrypted API traffic
 - Optional **private-only cluster endpoints**
 - Automated certificate rotation
     
-### Node and Runtime Security
+#### Node and Runtime Security
 
 - Leonardo Cloud hardened node OS image
 - Automatic security and kernel patching
@@ -105,29 +107,29 @@ Quota policies and network policies help enforce multi-tenancy boundaries.
 - Optional OPA/Gatekeeper policies
 - Encrypted secrets using KMS integration
     
-### Network Security
+#### Network Security
 
 - Built-in Kubernetes Network Policies
 - Per-namespace ingress/egress control
 - Integration with Leonardo Cloud Firewall
 - Optional WAF for HTTP(S) ingress
     
-### Image Security
+#### Image Security
 
 - Scanning in Leonardo Cloud Container Registry
 - Support for image signing & attestation
 - Policy-based enforcement for trusted registries
     
-## Resilience & Business Continuity
+### Resilience & Business Continuity
 
-### High Availability
+#### High Availability
 
 - Multi-zone support for node pools (when available)
 - Multiple replicas for control-plane components
 - Pod anti-affinity & topology spread constraints
 - Recommended use of Pod Disruption Budgets (PDBs)
     
-### Backups
+#### Backups
 
 Customers should:
 
@@ -135,7 +137,7 @@ Customers should:
 - Use Leonardo Cloud Storage snapshots for persistent volumes
 - Perform regular recovery validation
     
-### Disaster Recovery
+#### Disaster Recovery
 
 For mission-critical applications:
 
@@ -144,9 +146,9 @@ For mission-critical applications:
 - Use replicated or multi-zone storage classes
 - Enable cross-region backup replication
     
-## Observability
+### Observability
 
-### Native Observability Integration
+#### Native Observability Integration
 
 Leonardo Cloud LKS integrates with the **Leonardo Cloud Monitor** service, supporting:
 
@@ -157,7 +159,7 @@ Leonardo Cloud LKS integrates with the **Leonardo Cloud Monitor** service, suppo
     
 Observability agents are automatically deployed in the system pool.
 
-### Customer Observability Options
+#### Customer Observability Options
 
 You may deploy:
 
@@ -167,9 +169,9 @@ You may deploy:
     
 All can ship logs and metrics to Leonardo Cloud Monitor.
 
-## DevOps & GitOps
+### DevOps & GitOps
 
-### Continuous Deployment
+#### Continuous Deployment
 
 LKS supports:
 
@@ -178,16 +180,16 @@ LKS supports:
 - Helm + OCI registry integration
 - Kustomize manifests
     
-### Recommended Practices
+#### Recommended Practices
 
 - Store manifests in Git (declarative infrastructure)
 -  Use GitOps for automated reconciliation
 - Enforce policy-as-code in CI/CD pipelines
 - Separate environments (dev, test, prod) with isolated namespaces and networks
     
-## Storage Architecture
+### Storage Architecture
 
-### Storage Classes
+#### Storage Classes
 
 Leonardo Cloud provides multiple storage classes:
 
@@ -200,4 +202,3 @@ All support:
 - Dynamic provisioning
 - Persistent Volume (PV) expansion
 - Snapshots and cloning
-

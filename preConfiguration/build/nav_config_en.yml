@@ -4,13 +4,13 @@ nav:
 - Container as a Service (CaaS): CaaS.md
 - Platform as a Service (PaaS): PaaS.md
 - Hybrid Services: Hybrid.md
-- Kubernetes Reference Architecture: Reference.md
+- Reference Architecture: Reference.md
 - Data Center Description: DC.md
 - Price List: Price.md
 - Provisioning: Provisioning.md
 - Service Management: ITSM.md
 - Service Level Agreement (SLA): SLA.md
 - Test Account Management: Test.md
-- Certifications: Certifications.md
+- Certifications and Compliance: Certifications.md
 - Cyber Security Services: Security.md
 - Frequently Asked Questions (FAQ): Faq.md

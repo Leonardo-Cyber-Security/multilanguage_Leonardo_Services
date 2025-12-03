@@ -5,14 +5,13 @@ The following table lists the services included in the *Hybrid* category.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](#edge)|
-| Hybrid | [Bulk Data Transfer](#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>
 
 ## Hybrid Family
 
 Below is the list of services belonging to the Hybrid Edge family:
 
-- [Edge Location - Pool Small (Confidential](#edge)
+- [Edge Location - Pool Small (Confidential)](#edge)
 
 <a id="edge"></a>
 

@@ -125,7 +125,7 @@ You can consult the details here [Instant Messaging](PaaS.md#messaging).
 
 **11.2 When are edge services useful?**  
 Low-latency needs, distributed facilities, industrial sites, defense use cases.
-You can consult the details here [Edge Location - Pool Small (Confidential)](PaaS.md#edge)
+You can consult the details here [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)
 
 ## 12. Service Management (SLA, Ticketing, Monitoring)
 

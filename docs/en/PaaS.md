@@ -140,7 +140,7 @@ The following table lists the services included in the *Platform as a Service (P
 | Security                             | [NGFW Platform](#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](#PAM)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](#IPS)                                           |
-| Security                             | [PaaS Client/Foward Proxy](#proxy-client)                                           |
+| Security                             | [PaaS Web Application Firewall (WAF)](#WAF)                                           |
 | Middleware                           | [PaaS API Management](#API)                                         |
 | Middleware                           | [Functions As A Service (FAAS)](#faas)                                | 
 | Middleware                           | [Jboss as a Service](#Jboss)                                          |
@@ -148,7 +148,7 @@ The following table lists the services included in the *Platform as a Service (P
 | Middleware                           | [PaaS Business Process as a Service](#BPM)                          |
 | Middleware                           | [PaaS CMS as a Service](#CMS)                                       |
 | Middleware                           | [Semantic Knowledge Search](#semantic-search)                            |
-| Data Protection                      | [Backup](#backup)                            |
+| Data Protection                      | [Backup Platform](#backup)                            |
 | Infra & Ops Platform                 | [Multicloud Management Platform](#SCMP)                              |
 | Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](#ITops) |
 | Infra & Ops Platform                 | [PaaS Ticket Management Service](#ITSM)                              |
@@ -159,6 +159,7 @@ The following table lists the services included in the *Platform as a Service (P
 | DevSecOps                            | [DevSecOps As A Service](#devsecops)                                      |
 | DevSecOps                            | [Qualizer DevSecOps](#qualizer)                                          |
 | Big Data                             | [Data Lake](#datalake)                                             |
+| Big Data                             | [Data Lake-Cold](#datalake-cold)                                             |
 | Big Data                             | [Business Intelligence Platform](#BI)                              |
 | Big Data                             | [PaaS ETL Batch/Real time Processing](#processing)                       |
 | Big Data                             | [Event Message](#event-message)                                    |
@@ -1395,6 +1396,7 @@ The service offers the following advantages:
 Below is the list of services belonging to the Big Data family:
 
 - [Data Lake](#datalake)
+- [Data Lake-Cold](#datalake-cold)
 - [Business Intelligence](#BI)
 - [Batch/Real time Processing](#processing)
 - [Event Message](#event-message)
@@ -1450,7 +1452,7 @@ In this deployment, thanks to the high bandwidth and low latency connections ava
 Access to the different clusters can be achieved either via direct addressing or through a load balancer, depending on architectural and operational needs.From an internal management perspective, MinIO automatically organizes storage units into erasure sets, which are logical groups that form the foundation of system availability and resilience.  
 To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure. Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets, ensuring redundancy, fault tolerance, and operational continuity.
 
-<a id="datalake"></a>
+<a id="datalake-cold"></a>
 
 ### Data Lake-Cold
 

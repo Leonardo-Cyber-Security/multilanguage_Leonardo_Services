@@ -46,7 +46,7 @@ For details on each service, please see the dedicated section.
 | Security                             | [Intrusion Prevention System (IPS)](PaaS.md#IPS)                                           |
 | Security                             | [PaaS Web Application Firewall (WAF)](PaaS.md#WAF)                                           |
 | Middleware                           | [PaaS API Management](PaaS.md#API)                                         |
-| Middleware                              | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
+| Middleware                           | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
 | Middleware                           | [Jboss as a Service](PaaS.md#Jboss)                                          |
 | Middleware                           | [Spring boot as a Service](PaaS.md#spring-boot)                                    |
 | Middleware                           | [PaaS Business Process as a Service](PaaS.md#BPM)                          |
@@ -63,6 +63,7 @@ For details on each service, please see the dedicated section.
 | DevSecOps                            | [DevSecOps As A Service](PaaS.md#devsecops)                                      |
 | DevSecOps                            | [Qualizer DevSecOps](PaaS.md#qualizer)                                          |
 | Big Data                             | [Data Lake](PaaS.md#datalake)                                             |
+| Big Data                             | [Data Lake-Cold](PaaS.md#datalake-cold)                                             |
 | Big Data                             | [Business Intelligence Platform](PaaS.md#BI)                              |
 | Big Data                             | [PaaS ETL Batch/Real time Processing](PaaS.md#processing)                       |
 | Big Data                             | [Event Message](PaaS.md#event-message)                                    |
@@ -103,5 +104,4 @@ For details on each service, please see the dedicated section.
 | FAMILY  | LIST OF SERVICES                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | Hybrid | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)|
-| Hybrid | [Bulk Data Transfer](Hybrid.md#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>

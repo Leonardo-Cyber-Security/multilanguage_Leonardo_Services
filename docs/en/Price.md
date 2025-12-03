@@ -68,7 +68,7 @@ For each service, you can choose from three alternative purchase options:
 |Family|Service|Unit|Value|PAYG (Monthly)|1Y Reserved|3Y Reserved|
 |------| ------| ---| ----| -------------| ----------| ----------|
 |Big Data|[Data Lake](PaaS.md#datalake)|TB|1 TB|25,23 €|279,00 €|744,00 €|
-|Big Data|[Data Lake-Cold](PaaS.md#datalake)|TB|1 TB|23,25 €|251,10 €|669,60 €|
+|Big Data|[Data Lake-Cold](PaaS.md#datalake-cold)|TB|1 TB|23,25 €|251,10 €|669,60 €|
 |Big Data|[Business Intelligence Platform](PaaS.md#BI)|User|100 users|8.365,83 €|90.351,00 €|240.936,01 €|
 |Big Data|[PaaS ETL Batch/Real time Processing](PaaS.md#processing)|Worker node|16 vCPU-128 GB RAM per worker| 608,48 €|6.571,54 €|17.524,11 €|
 |Big Data|[Event Message](PaaS.md#event-message)|Worker node|16 vCPU-128 GB RAM per worker|291,29 €|3.145,95 €|8.389,20 €|

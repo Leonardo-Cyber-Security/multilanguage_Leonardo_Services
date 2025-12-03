@@ -64,7 +64,7 @@ The services offer the following advantages:
 
 ### Confidential Shared-IaaS (VMs)
 
-![How to create a VM - Step 1](assets/images/extract/media/VM_create.png)  
+[![How to create a VM - Step 1](assets/images/extract/media/VM_create.png)](assets/images/extract/media/VM_create.png)
 
 ![How to create a VM - Step 2](assets/images/extract/media/VM_create02.png)  
 

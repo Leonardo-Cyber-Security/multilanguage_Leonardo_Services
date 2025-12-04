@@ -591,7 +591,8 @@ Below is the list of services belonging to the Middleware family:
 
 ### PaaS API Management
 
-[![PaaS API Management Interface](assets/images/extract/media/API.png)](assets/images/extract/media/API.png)
+[![](assets/images/extract/media/API01.png)](assets/images/extract/media/API01.png)
+[![PaaS API Management Interface](assets/images/extract/media/API02.png)](assets/images/extract/media/API02.png)
 
 #### Service Description
 
@@ -642,7 +643,7 @@ The service offers the following advantages:
 
 #### Service Description
 
-FaaS (Function as a Service) is an event-driven system design model running on stateless containers, where developers create, deploy, and execute small, independent functions to perform specific tasks without worrying about the underlying infrastructure.  
+FaaS (Function as a Service) is an event-driven system design model running on stateless containers based on the Nuvolaris platform, where developers create, deploy, and execute small, independent functions to accomplish specific tasks without having to worry about the underlying infrastructure.  
 Adopting FaaS allows for standardization of application development and execution by centralizing cross-functional capabilities such as orchestration, automatic provisioning, monitoring, integrated service management, and event-driven flow control. 
 
 It offers tools to:
@@ -1837,8 +1838,6 @@ The service offers the following advantages:
 <a id="AI-text"></a>
 
 ### Text Analytics/NLP
-
-[![Text Analytics Service interface](assets/images/extract/media/Text.png)](assets/images/extract/media/Text.png)
 
 #### Service Description
 

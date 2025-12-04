@@ -4,7 +4,7 @@
 
 ### Overview
 
-This reference architecture describes the recommended baseline design for running containerized applications on **Leonardo Cloud Leonardo Kubernetes Service (LKS)**. It provides a secure, scalable, production-ready foundation aligned with cloud best practices for networking, identity, security, observability, DevOps, and resilience.
+This reference architecture describes the recommended baseline design for running containerized applications on **Leonardo Kubernetes Service (LKS)**. It provides a secure, scalable, production-ready foundation aligned with cloud best practices for networking, identity, security, observability, DevOps, and resilience.
 
 This baseline architecture is suitable for most production workloads and is the recommended starting point for any Kubernetes deployment on Leonardo Cloud.
 

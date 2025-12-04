@@ -10,7 +10,7 @@ For each service, you can choose from three alternative purchase options:
 
 ## Compute Services Price List
 
-|SKU|Service|Unit|Value|PAYG(Monthly)|1Y Reserved|3YReserved|
+|SKU|Service|Unit|Value|PAYG (Monthly)|1Y Reserved|3Y Reserved|
 |------| ------| ---| ----| -------------| ----------| ----------|
 |SK-COM-0001|[Kubernetes Confidential Computing](CaaS.md#kubernetes)|Node worker|15 node workers with 8 GB RAM|10.499,77€|113.397,52€|302.393,38€|
  SK-COM-0004|[Pool Small (Confidential)](IaaS.md#pool-confidential-services)| Hosts number|3 Host Number (2x 24 Core CPU - 512 GB RAM - 32 TB SSD)|21.586,03€|233.129,08€|621.677,54€|

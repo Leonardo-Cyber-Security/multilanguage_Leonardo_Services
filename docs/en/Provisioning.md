@@ -16,7 +16,7 @@ The features available for these items are identical; only the parameters entere
 
 To start provisioning a resource, click on the corresponding row to view the page containing step 1 of provisioning creation. In this step, it is necessary to select, using the dropdown on the left, the "target" subsystem where the resources are to be provisioned. Once selected, an information mirror will be displayed on the right indicating the characteristics of the resource that will be provisioned. To continue, click the "Next" button at the bottom right to go to step 2 "Config" page.
 
-[![Selection of the “target” subsystem, provisioning  - Step 1](assets/images/extract/media/image291.png)](assets/images/extract/media/image291.png)
+[![Selection of the “target” subsystem, provisioning  - Step 1](assets/images/extract/media/VM_create.png)](assets/images/extract/media/VM_create.png)
 
 On the "Config" page of step 2, fill in all mandatory fields in all sections of the form. At the bottom left, click the "Reset" button to reset all fields on the page.
 
@@ -26,6 +26,7 @@ Instead, on the right, click the "Submit" button to go to step 3 "Plan".
 [![Filling in the resource prediction form fields](assets/images/extract/media/image293.png)](assets/images/extract/media/image293.png)
 
 After clicking the "Submit" button, the user is redirected to the "Plan" page of step 3 where we can view the provisioning plan sent by Terraform, which indicates all the parameters of the resources that will be configured, and at the bottom, there is a list with a cost perspective.
+
 
 [![Forecast screen](assets/images/extract/media/image294.png)](assets/images/extract/media/image294.png)
 

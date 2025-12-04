@@ -76,6 +76,37 @@ The service offers the following advantages:
 
 ### Bulk Data Transfer
 
+#### Service Description
+
+The Bulk Data Transfer service provides a managed solution for transferring large volumes of data using specialized high-capacity storage hardware and a secure, audited delivery process.  
+The service is designed as a full-lifecycle, enterprise-grade data transfer mechanism: from sourcing and provisioning storage appliances to secure transport, data ingestion, and integration with the customer’s infrastructure. It is aimed at scenarios where massive datasets need to be moved reliably and according to strict compliance and security requirements.
+
+#### Features and Advantages
+
+Key Features:
+
+- *Specialized high-capacity storage appliances* → the service uses purpose-built storage hardware (SSDs or hybrid drives), selected through a vetted supply chain of certified manufacturers and distributors.
+- *Secure hardware supply chain and lifecycle* → fincludes careful sourcing of raw materials, assembly under quality control, firmware & security module integration, and tamper-proof packaging and chain-of-custody during transport.
+- *Flexible and modular software architecture* → the service relies on a modular software stack — including device firmware, secure-boot and attestation mechanisms, transfer orchestration engines, encryption key management, and centralized portals for device tracking, logging, and auditing.
+- *Compliance-oriented licensing and transparency* → score components use open-source libraries under permissive licences (e.g. Apache 2.0, MIT) to enable auditability and adaptability; proprietary modules (encryption, attestation, logistics orchestration) are made available under NDA or escrow to satisfy compliance and due-diligence requirements.
+- *Autonomous security patch management within EU* → security patches for critical components are developed, tested, and deployed by a European-based security engineering team — avoiding dependencies on non-EU vendors — to align with data sovereignty and regulatory demands.
+
+Main Components:
+
+- *Storage Hardware Appliances* → high-capacity storage devices (SSD/hybrid) procured via a certified global supply chain, assembled and tested before deployment.
+- *Firmware & Security Modules* → each appliance is provisioned with firmware and security layers (secure-boot, attestation, encryption key injection) according to customer-specific policies.
+- *Transfer Orchestration Engine + Management Portal* → a centralized system that manages data transfer workflows, tracks devices, handles logging/audit, and exposes interfaces for provisioning and status monitoring.
+- *Compliance & Governance Subsystems* → licensing and audit tools, security-patching infrastructure, and governance frameworks that ensure transparency, adaptability, and regulatory compliance (e.g. GDPR, security standards). 
+- *Logistics & Delivery Chain* → a controlled logistics process for transporting physical storage appliances — including tamper-proof packaging, chain-of-custody protocols, and real-time tracking until delivery at client site.
+
+Key Advantages:
+
+- *Enterprise-grade reliability and trustworthiness* → through a rigorously controlled supply-chain and full auditability, customers get a secure, traceable and compliant channel for massive data transfer.
+- *Avoidance of vendor lock-in and maximum transparency* → using a hybrid of open-source and audited proprietary modules makes the solution adaptable, auditable, and not tied to a single closed platform vendor.
+- *Regulatory & compliance readiness* → the EU-based security patch lifecycle and compliance-oriented architecture enable easier adherence to data-protection laws and industry standards.
+- *Scalability and flexibility* → the modular architecture and hardware supply-chain approach allow for scaling capacity and adapting the solution to different business needs and volumes, even very large ones.
+- *Reduced operational burden for clients* → clients don’t need to manage hardware sourcing, logistics,secure transport, firmware/security provisioning.
+
 #### Supply Chain for Storage Hardware in the Service Context
 
 The supply chain for the specialized storage hardware used in the context of this service is a meticulously orchestrated ecosystem designed to ensure reliability, scalability, and compliance with stringent enterprise standards.  

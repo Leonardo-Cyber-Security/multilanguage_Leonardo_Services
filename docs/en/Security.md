@@ -56,7 +56,7 @@ The solution also provides a comprehensive overview on brand or event sentiment,
 - Customer digital identity protection / identity theft identification. 
 - Real time detection of cyber frauds and phishing attacks identification.
 
-## Security services for respoding
+## Security services for responding
 
 ### Computer Security Incident Response Team Services
 
@@ -213,6 +213,7 @@ The provider confirms or denies within 5 business days.
 ### Test Suspension Terms
 
 The provider may suspend testing if:
+
 - Unexpected impacts occur  
 - The customer exceeds authorized scope  
 - Risks emerge for other tenants or infrastructure  
@@ -220,6 +221,7 @@ The provider may suspend testing if:
 ### Reporting
 
 Customers must provide, upon request:
+
 - Executive Summary  
 - List of vulnerabilities  
 - Methods and tools used  
@@ -248,4 +250,3 @@ Specifically:
 - If the vulnerabilities found affect its own infrastructure used to provide services, Leonardo will promptly inform the designated Italian Computer Security Incident Response Team (CSIRT).
 - If the vulnerabilities found affect customer workloads, Leonardo will provide vulnerability assessments on a dedicated infrastructure for each customer, where the methods and type of execution will be defined.  
 For this point, please see the section above regarding the Vulnerability Assessments process.
-

@@ -158,7 +158,7 @@ Provides monitoring and operational support for cloud environments and deployed 
 
 A responsibility matrix is ​​maintained to explicitly document which responsibilities fall to Leonardo, which to the organization, and which are shared.  
 
-![Division of responsibilities](assets/images/extract/media/shared_resp.png)
+[![Division of responsibilities](assets/images/extract/media/shared_resp.png)](assets/images/extract/media/shared_resp.png)
 
 The matrix includes, but is not limited to, the following domains:
 

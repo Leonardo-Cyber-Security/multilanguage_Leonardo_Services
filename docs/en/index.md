@@ -92,8 +92,8 @@ For details on each service, please see the dedicated section.
 | Networking                           | [Managed VPN Access Service](PaaS.md#VPN-managed)                                                    |
 | Networking                           | [PaaS Client/Forward Proxy](PaaS.md#proxy-client)                                           |
 | Networking                           | [PaaS Reverse Proxy](PaaS.md#proxy-client)                                           |
-| Storage                              | [Block Storage (1000 GB) - High Density](PaaS.md#block-storage)                      |
-| Storage                              | [Archive Storage (1000 GB)](PaaS.md#archive-storage)                      |                    
+| Storage                              | [Block Storage-High Density](PaaS.md#block-storage)                      |
+| Storage                              | [Archive Storage](PaaS.md#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>
 
 ## Hybrid Services

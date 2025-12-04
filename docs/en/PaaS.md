@@ -188,8 +188,8 @@ The following table lists the services included in the *Platform as a Service (P
 | Networking                           | [Managed VPN Access Service](#VPN-managed)                                                    |
 | Networking                           | [PaaS Client/Forward Proxy](#proxy-client)                                                    |
 | Networking                           | [PaaS Reverse Proxy](#proxy-reverse)                                                    |
-| Storage                              | [Block Storage (1000 GB) - High Density](#block-storage)                      |
-| Storage                              | [Archive Storage (1000 GB)](#archive-storage)                      |                    
+| Storage                              | [Block Storage-High Density](#block-storage)                      |
+| Storage                              | [Archive Storage)](#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>
 
 ## Security Family
@@ -1406,7 +1406,8 @@ Below is the list of services belonging to the Big Data family:
 
 ### Data Lake
 
-[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO.png)](assets/images/extract/media/DataLakeLDO.png)
+[![](assets/images/extract/media/DataLakeLDO01.png)](assets/images/extract/media/DataLakeLDO01.png)
+[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO02.png)](assets/images/extract/media/DataLakeLDO02.png)
 
 #### Service Description
 
@@ -1456,7 +1457,8 @@ To ensure uniform distribution, MinIO applies a striping mechanism for erasure s
 
 ### Data Lake-Cold
 
-[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO.png)](assets/images/extract/media/DataLakeLDO.png)
+[![](assets/images/extract/media/DataLakeLDO01.png)](assets/images/extract/media/DataLakeLDO01.png)
+[![Data Lake Service interface](assets/images/extract/media/DataLakeLDO02.png)](assets/images/extract/media/DataLakeLDO02.png)
 
 #### Service Description
 
@@ -1528,7 +1530,8 @@ Infrastructure scalability and flexibility.
 
 ### PaaS ETL - Batch/Real time Processing
 
-[![PaaS ETL - Batch/Real time Processing interface](assets/images/extract/media/Processing.png)](assets/images/extract/media/Processing.png)
+[![](assets/images/extract/media/Processing01.png)](assets/images/extract/media/Processing01.png)
+[![PaaS ETL - Batch/Real time Processing interface](assets/images/extract/media/Processing02.png)](assets/images/extract/media/Processing02.png)
 
 #### Service Description
 
@@ -1572,7 +1575,8 @@ The service offers the following advantages:
 
 ### Event Message
 
-[![Event Message Service interface](assets/images/extract/media/Event.png)](assets/images/extract/media/Event.png)
+[![](assets/images/extract/media/Event01.png)](assets/images/extract/media/Event01.png)
+[![Event Message Service interface](assets/images/extract/media/Event02.png)](assets/images/extract/media/Event02.png)
 
 #### Service Description
 
@@ -1623,7 +1627,8 @@ The service offers the following advantages:
 
 ### Data Governance
 
-[![Data Governance Service interface](assets/images/extract/media/Governance.png)](assets/images/extract/media/Governance.png)
+[![](assets/images/extract/media/Governance01.png)](assets/images/extract/media/Governance01.png)
+[![Data Governance Service interface](assets/images/extract/media/Governance02.png)](assets/images/extract/media/Governance02.png)
 
 #### Service Description
 
@@ -1921,6 +1926,8 @@ The service offers the following advantages:
 
 <a id="AI-search"></a>
 
+### AI Search - RAG Service
+
 [![AI Search - RAG Service interface](assets/images/extract/media/AIsearch.png)](assets/images/extract/media/AIsearch.png)
 
 #### Service Description
@@ -1973,7 +1980,8 @@ The service offers the following advantages:
 
 ### AI Platform
 
-[![AI Platform Service interface](assets/images/extract/media/AIplatform.png)](assets/images/extract/media/AIplatform.png)
+[![](assets/images/extract/media/AIplatform01.png)](assets/images/extract/media/AIplatform01.png)
+[![AI Platform Service interface](assets/images/extract/media/AIplatform02.png)](assets/images/extract/media/AIplatform02.png)
 
 #### Service Description
 
@@ -2022,7 +2030,8 @@ The service offers the following advantages:
 
 ### AI SLM/LLM
 
-[![AI SLM/LLM Services interface](assets/images/extract/media/LLM.png)](assets/images/extract/media/LLM.png)
+[![](assets/images/extract/media/LLM01.png)](assets/images/extract/media/LLM01.png)
+[![AI SLM/LLM Services interface](assets/images/extract/media/LLM02.png)](assets/images/extract/media/LLM02.png)
 
 #### Services Description
 
@@ -2989,29 +2998,29 @@ In this configuration:
 
 Below is the list of services belonging to the Storage family:
 
-- [Block Storage (1000 GB) - High Density](#block-storage)
-- [Archive Storage (1000 GB)](#archive-storage)
+- [Block Storage-High Density](#block-storage)
+- [Archive Storage](#archive-storage)
 
 <a id="block-storage"></a>
 
-### Block Storage (1000 GB) - High Density Service
+### Block Storage-High Density Service
 
-[![Block Storage (1000 GB) - High Density Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
+[![Block Storage-High Density Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
 
 #### Service Description
 
-The PaaS Block Storage (1000 GB) – High Density service provides enterprise-grade, fully managed block storage volumes designed for virtual machines and cloud workloads hosted on Proxmox platforms.  
+The PaaS Block Storage-High Density service provides enterprise-grade, fully managed block storage volumes designed for virtual machines and cloud workloads hosted on Proxmox platforms.  
 The storage layer is powered by Ceph, a distributed, fault-tolerant, and scalable SDS (Software-Defined Storage) technology that ensures durability, high availability, and efficient capacity utilization.  
-This service offers 1000 GB of high-density block storage, ideal for workloads that require large capacity at optimized cost while still benefiting from redundancy, resiliency, and seamless integration into virtualized cloud environments.
+This service offers 1 TB of high-density block storage, ideal for workloads that require large capacity at optimized cost while still benefiting from redundancy, resiliency, and seamless integration into virtualized cloud environments.
 
-The service is offered with the following metrics: 1000 GB for each unit.
+The service is offered with the following metrics: 1 TB for each unit.
 
 
 #### Features and Advantages
 
 The main features of the service are:
 
-- *Managed block storage volumes (1000 GB)* → provides fully provisioned 1000 GB block devices. Can be attached to Proxmox-based virtual machines. Supports OS disks, application data, databases, and file systems.
+- *Managed block storage volumes* → provides fully provisioned block devices. Can be attached to Proxmox-based virtual machines. Supports OS disks, application data, databases, and file systems.
 - *High-density storage tier* → optimized for workloads requiring large capacity. Uses cost-efficient high-density disks while maintaining reliability. Suitable for: archival data, moderately I/O-intensive applications, backup staging, large datasets that don’t require ultra-high performance.
 - *Ceph RBD (RADOS Block Device) integration* → volumes are exposed as Ceph RBD devices, enabling features like thin provisioning, snapshot support, cloning capabilities.
 - *High availability and data replication* → data is replicated across multiple Ceph nodes. Ensures durability even in case of disk or node failure. Automatic recovery and self-healing functions enhance resilience.
@@ -3045,15 +3054,15 @@ The service offers the following advantages:
 
 <a id="archive-storage"></a>
 
-### Archive Storage (1000 GB) Service
+### Archive Storage Service
 
-[![Archive Storage (1000 GB) Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
+[![Archive Storage Service Interface](assets/images/extract/media/storage.png)](assets/images/extract/media/storage.png)
 
 #### Service Description
 
 The service provides a scalable, low-cost, long-retention storage environment designed for infrequently accessed data. It is built on Proxmox Virtual Environment (PVE) with Ceph as the underlying distributed storage layer. The service enables organizations to store large volumes of archival datasets—such as logs, backups, compliance records, media assets, or scientific data—while ensuring durability, fault tolerance, and controlled retrieval performance.
 
-The service is offered with the following metrics: *1000 GB for each unit*.
+The service is offered with the following metrics: *1 TB for each unit*.
 
 #### Features and Advantages
 

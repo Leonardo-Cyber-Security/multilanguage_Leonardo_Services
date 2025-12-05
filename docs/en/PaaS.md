@@ -65,16 +65,6 @@ In the specific case of PaaS services provided on the Kubernetes cluster, VM and
 - Compliance
 - Detection and Response
 
-### Encryption 
-
-The Data at Rest Encryption requirement—i.e., ensuring the confidentiality of data stored on the infrastructure’s disks through encryption—is fulfilled by integrating the storage solutions, for both block storage and object storage, with a centralized Key Management System (KMS).  
-
-Specifically, for block storage, the confidentiality of data within Persistent Volumes (PV) created on the Kubernetes cluster infrastructure is ensured through the Ceph storage solution, which supports volume encryption. The enablement and configuration of the integration with the external KMS is performed at the storage class level, using the Key Management Interoperability Protocol (KMIP).  
-
-For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
-
-All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
-
 ### Replication
 
 The protection of data integrity and availability within the PaaS platform is ensured by integrating the Kubernetes cluster with a centralized backup service delivered through a Veeam solution.
@@ -91,41 +81,72 @@ Furthermore, for certain types of applications (e.g., PostgreSQL databases) runn
 These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
 The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
 
-### Serverless Managed Container Platform
+### High Performance Computing description
 
-#### Integration with Software Development Processes
+The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
+Cooling is mixed, air and liquid depending on the technology and density-
 
-The service facilitates integration with software development processes by providing declarative Infrastructure as Code (IaC) blueprints. Developers can describe the entire deployment in configuration files, which are then applied through the management portal or APIs. This allows automatic provisioning of clusters, networking, and container runtimes. Continuous deployment is supported through integration with common CI/CD tools such as GitHub Actions, GitLab CI, Azure DevOps, and Jenkins. Pipelines can push new container images to the registry, and the platform automatically redeploys workloads. Rollbacks are possible by reverting to previous IaC templates.
+Technology assets:
 
-Progressive rollout strategies are supported. Rolling updates can be configured to gradually replace old container replicas with new ones, with parameters such as batch size, wait time, and health checks. Blue/green deployments are possible by running two environments simultaneously and switching traffic through Envoy Proxy routing rules. Canary releases can be achieved by directing a percentage of traffic to a new version, monitoring metrics such as latency and error rate before completing the rollout.
+- CPU Intel Cascade Lake
+- CPU Intel Sapphire Rapids
+- CPU AMD EPYC Rome
+- CPU AMD EPYC Genoa
+- NVIDIA A100 GPU
+- NVIDIA Grace-Hopper
+- NVIDIA H200 GPU
+- NVIDIA RTX 8000 GPU
+- NVIDIA L40s GPU
+- AMD MI 300 GPU
 
-Debugging and development support is provided through integration with popular IDEs such as Visual Studio Code, IntelliJ, and Eclipse. Developers can deploy, monitor logs, and debug containers directly from their IDE. Dapr sidecar provides observability features including tracing, metrics, and logging. Logs are streamed to centralized monitoring services, and health probes are automatically configured to ensure resilience. Failover to replicas ensures minimal downtime during debugging or patching.
+The infrastructure is hosted in Italy and managed entirely by internal staff.  
+The architecture complies with NIST standards and is ISO27001 certified.  
+Information management and protection is guaranteed by international standards and company policies.  
+All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
 
-#### High-Level User Manual
+The virtualization platform used is OpenStack.  
+Additional features developed by an internal team have been integrated into this platform.
 
-*Getting Started* 
+The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
 
-Users provision the service by logging into Leonardo management portal, navigating to the Serverless Managed Container Platform, and creating a new service instance. They select the region, security context, and resource limits. Alternatively, the API can be used to provision services by submitting configuration files.
+A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
 
-*Deploying with IaC Blueprints*  
+### Supply Chain 
 
-Applications are defined in YAML or JSON configuration files that describe containers, scaling rules, and networking. These files are applied through the portal or CLI. For example, a configuration may specify replicas, autoscaling parameters, and port mappings. Once applied, the platform provisions the resources automatically.
+In this section you will find the specifications on the supply chain.
 
-*Configuring Networking* 
+Our network hardware supply chain is based on established enterprise-grade vendors, selected to ensure reliability, scalability, and long-term support across all network layers. The model guarantees continuity, certified sourcing, and vendor-backed maintenance.
 
-Containers are reachable via HTTPS by default. Supported protocols include HTTP/1, HTTP/2, and arbitrary TCP ports. Developers can configure ingress rules to expose services externally.
+#### LAN Network Infrastructure (Switching)
 
-*Scaling and Resilience* 
+LAN switching equipment is sourced directly from Hewlett Packard Enterprise (HPE), providing:
 
-Autoscaling is supported through declarative configuration based on CPU or memory thresholds. The platform supports scale-to-zero, meaning no compute costs are incurred when applications receive no requests. Replication ensures that containers are deployed across multiple nodes, with automatic failover in case of deactivation.
+- Enterprise-class switches for access, aggregation, and distribution layers
+- Long-term hardware support and firmware lifecycle management
+- Direct vendor-managed delivery, warranty, and replacement services
 
-*Security and Maintenance*  
+All devices are procured via authorized HPE channels to ensure certified origin and compliance.
 
-Leonardo is responsible for patching the cluster control plane and the operating system of underlying virtual machines. Users can deploy services in isolated security contexts. Maintenance notifications are provided between 24 and 72 hours in advance, except for critical security patches. Users may request postponement of scheduled maintenance.
+#### Regional and Interregional Backbone Connectivity
 
-*Debugging and Monitoring*  
+Backbone components and connectivity services are provided by Aruba and Netalia, chosen for their national presence and carrier-grade infrastructure.  
+Services include:
 
-Logs can be accessed through the portal or CLI. Metrics and traces are available through Dapr integration. IDE plugins allow developers to attach debuggers directly to running containers. Continuous monitoring ensures that applications remain resilient and available.
+- High-capacity regional and interregional links
+- Redundant paths and resilient transport platforms
+- Compliance with enterprise network standards
+
+Hardware and services are acquired under framework agreements to ensure continuity and consistent service levels.
+
+#### Security Appliances (Firewalls)
+
+Perimeter and internal security appliances are supplied by Check Point and Fortinet, offering:
+
+- Next-generation firewall platforms (NGFW)
+- Advanced threat prevention, intrusion detection, and VPN capabilities
+- Certified hardware security modules with centralized management
+
+All appliances are obtained through certified partners, ensuring compliance with vendor specifications, firmware integrity, and security best practices.
 
 
 ## List of services
@@ -140,7 +161,6 @@ The following table lists the services included in the *Platform as a Service (P
 | Security                             | [NGFW Platform](#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](#PAM)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](#IPS)                                           |
-| Security                             | [PaaS Web Application Firewall (WAF)](#WAF)                                           |
 | Middleware                           | [PaaS API Management](#API)                                         |
 | Middleware                           | [Functions As A Service (FAAS)](#faas)                                | 
 | Middleware                           | [Jboss as a Service](#Jboss)                                          |
@@ -184,10 +204,7 @@ The following table lists the services included in the *Platform as a Service (P
 | Networking                           | [PaaS Domain Name System (DNS)](#DNS)                               |
 | Networking                           | [Single public IP](#IP)                         |
 | Networking                           | [L7 Load Balancer (regional)](#L7)                                                    |
-| Networking                           | [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)                                                    |
-| Networking                           | [Managed VPN Access Service](#VPN-managed)                                                    |
-| Networking                           | [PaaS Client/Forward Proxy](#proxy-client)                                                    |
-| Networking                           | [PaaS Reverse Proxy](#proxy-reverse)                                                    |
+| Networking                           | [ Cloud connected Service](#gold)                                                    |
 | Storage                              | [Block Storage-High Density](#block-storage)                      |
 | Storage                              | [Archive Storage)](#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>
@@ -202,7 +219,6 @@ Below is the list of services belonging to the Security family:
 - [NGFW Platform](#ngfw)
 - [PAM (Privileged Access Management)](#PAM)
 - [Intrusion Prevention System (IPS)](#IPS)
-- [PaaS Web Application Firewall (WAF)](#WAF)
 
 <a id="IAM"></a>
 
@@ -250,6 +266,11 @@ The main features and functionalities of the service are:
     - REST API for automated user, role, and client management.
     - SPI (Service Provider Interfaces) for extending authentication, validation, or provisioning capabilities.
     - Ability to implement custom authenticators or connect to external systems.
+
+**Single Pane of Glass**
+
+The Identity & Access Management (IAM) service provides a Single Pane of Glass that centralizes identity and access control across the platform. A unified console enables administrators to manage identity lifecycle, roles and authorization policies, authentication requirements (including MFA), and federation with external directories such as LDAP and Active Directory.  
+Applications and services can be integrated using standard protocols (OIDC, OAuth2, SAML2), while sessions and tokens are centrally monitored and controlled. The platform applies security and governance policies consistently across all PaaS resources, ensuring a streamlined, coherent, and cloud-native IAM management experience.
 
 The service offers the following advantages:
 
@@ -375,7 +396,7 @@ The main features and functionalities of the service are:
 
 The main components of the service are:
 
-- *Web filtering and URL categorization / Web and email security* → filters web traffic by category, blocks o restringe accesso a siti malevoli o non autorizzati.” — Corretto, almeno a livello di proxy/filtraggio tramite plugin (es. proxy HTTP/HTTPS, filtraggio URL/blacklist). 
+- *Web filtering and URL categorization / Web and email security* → filters Web traffic by category, blocks or limits access to malicious or unauthorized sites (HTTP/HTTPS proxy, URL filtering/blacklist).
 - *Firewall enforcement nodes / Stateful firewall, policy-based filtering, support VLAN, NAT, port forwarding, etc*.
 
 The service offers the following advantages:
@@ -532,48 +553,6 @@ The service offers the following advantages:
 - *Centralized management and policy control* → allows administrators to define, deploy, and manage security policies across distributed environments from a single console. Enables consistent enforcement across multi-cloud and hybrid architectures.
 - *Encrypted traffic inspection* → supports ssl/tls decryption and inspection for comprehensive visibility into encrypted traffic streams. Ensures full coverage against hidden or encrypted attacks.
 - *Automation and orchestration capabilities* → supports automated remediation workflows for threat containment and isolation. Reduces human workload and response time through integration with orchestration tools.
-
-<a id="WAF"></a>
-
-### PaaS Web Application Firewall (WAF)
-
-#### Service Description
-
-The WAF is a fully managed web application firewall service designed to safeguard applications hosted within your environment on the cloud. It provides a protective layer between your public-facing services and the internet, ensuring that malicious traffic is intercepted before it can exploit vulnerabilities. The service is delivered as a turnkey solution, meaning that all necessary components, licenses, and updates are handled by the provider, allowing administrators to focus on their applications rather than the underlying security infrastructure.  
-The WAF inspects HTTP and HTTPS traffic directed at web applications. It evaluates requests against defined rules to determine whether they are legitimate or potentially harmful. Administrators can adopt either a negative security model, which blocks traffic matching known exploit signatures, or a positive security model, which denies all traffic by default and only allows explicitly permitted requests.  
-The firewall integrates protection against the most critical threats identified by the OWASP Top 10, including injection attacks, cross-site scripting, and insecure deserialization. 
-
-#### Features and Advantages
-
-The WAF leverages OPNsense’s NGINX plugin with NAXSI (Negative Application Security for nginx) to deliver its capabilities.NAXSI is a rule-based engine specifically designed to detect and block malicious web requests. 
-
-**Rule Types**
-
-- Main Rules: These are globally valid and designed to block common attack vectors such as SQL injection, XPath injection, or cross-site scripting attempts.  
-- Basic Rules: These are used to fine-tune configurations, typically by whitelisting certain requests or creating additional rules for specific application contexts.  
-- Custom Rule Sets: Administrators can define custom rules to tailor protection to their applications. For example, they may whitelist certain parameters for trusted applications while maintaining strict controls elsewhere.  
-
-**Logging and Monitoring**
-
-Logs are generated in near real time, providing visibility into blocked and allowed requests, and can be dispatched to the centralized log analytics service to analyze traffic patterns and identify potential threats. 
-
-**OWASP Guidance**
-
-Configuration can be guided by OWASP cheat sheets, which provide best practices for securing web applications.  
-
-**Provisioning the Service**  
-
-The WAF is provisioned through the Secure Cloud Management Platform, the central portal for managing cloud services. Administrators can deploy the firewall by selecting the WAF option within the platform. Provisioning can also be performed via APIs, enabling integration into automated workflows.  
-Once deployed, the firewall is automatically patched and maintained by Leonardo, ensuring that the system remains up to date with the latest security fixes.
-
-**Configuration and Management**  
-
-Configuration is performed through the Secure Cloud Management Platform. 
-Administrators can:  
-- Define rule sets for both negative and positive security models.  
-- Apply NAXSI main and basic rules to protect against common exploits.  
-- Customize rules to allow specific traffic patterns while blocking suspicious requests.  
-- Monitor logs to gain insight into traffic directed at their applications.  
 
 ## Middleware Family
 
@@ -2079,37 +2058,6 @@ The service offers the following advantages:
 -* Rapid prototyping and DevOps AI* → ready-to-use environment for developing, testing, and deploying applications through standard interfaces.
 - *Multi-model and hybrid AI* → ability to combine open source and proprietary models in the same ecosystem.
 
-### High Performance Computing description
-
-The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
-Cooling is mixed, air and liquid depending on the technology and density-
-
-Technology assets:
-
-- CPU Intel Cascade Lake
-- CPU Intel Sapphire Rapids
-- CPU AMD EPYC Rome
-- CPU AMD EPYC Genoa
-- NVIDIA A100 GPU
-- NVIDIA Grace-Hopper
-- NVIDIA H200 GPU
-- NVIDIA RTX 8000 GPU
-- NVIDIA L40s GPU
-- AMD MI 300 GPU
-
-The infrastructure is hosted in Italy and managed entirely by internal staff.  
-The architecture complies with NIST standards and is ISO27001 certified.  
-Information management and protection is guaranteed by international standards and company policies.  
-All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
-
-The virtualization platform used is OpenStack.  
-Additional features developed by an internal team have been integrated into this platform.
-
-The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
-
-A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
-
-
 ## Collaboration Family
 
 Below is the list of services belonging to the Collaboration family:
@@ -2552,10 +2500,7 @@ Below is the list of services belonging to the Networking family:
 - [PaaS DNS (Domain Name System)](#DNS)
 - [Single public IP](#IP)
 - [L7 Load Balancer (regional)](#L7)
-- [Cloud interconnect Gold SW (10 Gbps max throughput)](#gold)           
-- [Managed VPN Access Service](#VPN-managed)      
-- [PaaS Client/Forward Proxy](#proxy-client)  
-- [PaaS Reverse Proxy](#proxy-reverse)                                
+- [Cloud connected services](#gold)                                        
 
 <a id="CDN"></a>
 
@@ -2748,7 +2693,7 @@ The main features of the service are:
 - *URL rewriting and traffic transformation* → rewrite URLs, headers, or cookies. Inject or remove headers for security or routing logic. Useful for legacy system integration or microservices migration.
 - *Regional scope* → traffic is handled within a specific cloud region for: predictable latency, compliance requirements, locality of data and workloads. Ideal for regional failover patterns.
 - *Logging, monitoring, and metrics* → provides: request/response logs, traffic and error statistics, performance metrics, WAF alerts. Enables effective debugging and performance optimization.
-- *Zero infrastructure management* → no need to deploy virtual appliances, firewalls, or proxies. The platform maintains: high availability, patching, upgrades, scaling, failover
+- *Zero infrastructure management* → no need to deploy virtual appliances, firewalls, or proxies. The platform maintains: high availability, patching, upgrades, scaling, failover.
 
 The main components of the service are:
 
@@ -2766,16 +2711,54 @@ The service offers the following advantages:
 - *Better performance and lower latency* → efficient L7 traffic distribution within the same region. TLS offloading improves backend performance.
 - *Strong security posture* → built-in WAF protects against common web threats. TLS best practices and centralized certificate management.
 - *Simplified operations* → fully managed service—no appliance deployment or patching. Easy configuration from UI or APIs. Reduces operational and networking overhead.
-- High flexibility in routing → content-based routing for modern microservices architectures. Easy to map multiple applications under the same IP/hostname.
+- *High flexibility in routing * → content-based routing for modern microservices architectures. Easy to map multiple applications under the same IP/hostname.
 - *Cost efficiency* → eliminates need for dedicated load balancer appliances.
-- Consistent user experience → evenly balances traffic to healthy backends. Ensures predictable application responsiveness.
+- *Consistent user experience* → evenly balances traffic to healthy backends. Ensures predictable application responsiveness.
 - *Enhanced observability* → access to detailed logs, metrics, and WAF events. Faster troubleshooting and monitoring.
 - *Compliance and regional data control* → all traffic processing remains within a specific geographic region. Helps meet regulatory and data residency requirements.
 - *Rapid deployment and DevOps integration* → instant provisioning with minimal configuration. API-driven automation for CI/CD pipelines.
 
+#### Client/Forward Proxy
+
+The Proxy service is a managed front-facing service designed to retrieve data from a wide range of sources across the internet.  
+The service is built on OPNsense, an open-source firewall and routing platform, and is delivered as a fully managed solution.  
+This means that all necessary updates, patches, and maintenance are handled by the provider, allowing IT staff to focus on their applications and users rather than the underlying infrastructure.  
+
+The Proxy service functions as a gateway. When a user inside the organization requests data from an external source, the request is first directed to Proxy.  
+The service evaluates the request against configured rules and policies, determines whether it should be allowed or blocked, and then forwards it to the destination if permitted. Responses from external services are similarly inspected before being passed back to the user.  
+This approach provides several benefits: it ensures that only authorized traffic leaves the network, it prevents malicious content from entering, and it gives administrators visibility into how users interact with external services.  
+
+Proxy supports integration with Active Directory and OpenID Connect for user authentication. This means that organizations can leverage their existing identity management systems to control access.  
+- With Active Directory, Proxy can validate user credentials against the domain controller, ensuring that only authorized users are able to use the service.  
+- With OpenID Connect, Proxy can redirect users to an identity provider for authentication, then use the returned tokens to grant access.  
+This integration allows organizations to enforce consistent access policies across their environment without duplicating user management. 
+
+**Request Filtering**  
+
+Proxy supports both whitelisting and blacklisting of requests. Administrators can define rules that specify which destinations or types of requests are permitted and which are denied. For example, they may allow access to trusted business applications while blocking requests to known malicious domains.  
+This filtering capability ensures that users can only access approved resources, reducing the risk of data leakage or exposure to harmful content.  
+
+#### Reverse Proxy
+
+The Reverse Proxy provides a secure and automated way to control and route traffic between external clients and internal applications.  
+It is built on OPNsense and HAProxy, which is widely recognized for its performance and flexibility in handling web traffic.  
+Delivered as a fully managed solution, Leonardo assumes responsibility for all patching, updates, and maintenance, ensuring that administrators benefit from a hardened and continuously updated platform.  
+
+A reverse proxy sits in front of application servers and receives incoming requests from clients. Instead of exposing servers directly to the internet, the proxy terminates connections, applies configured rules, and forwards requests to the appropriate backend service.  
+This architecture improves security, simplifies certificate management, and enables sophisticated traffic routing.  
+The Reverse Proxy service can be provisioned through the Secure Cloud Management Portal or via APIs. Once deployed, the CSP ensures that the underlying OPNsense system and HAProxy plugin remain patched and secure.  
+
+#### Web Application Firewall (WAF)
+
+It provides a protective layer between your public-facing services and the internet, ensuring that malicious traffic is intercepted before it can exploit vulnerabilities. The service is delivered as a turnkey solution, meaning that all necessary components, licenses, and updates are handled by the provider, allowing administrators to focus on their applications rather than the underlying security infrastructure.  
+The WAF inspects HTTP and HTTPS traffic directed at web applications. It evaluates requests against defined rules to determine whether they are legitimate or potentially harmful. Administrators can adopt either a negative security model, which blocks traffic matching known exploit signatures, or a positive security model, which denies all traffic by default and only allows explicitly permitted requests.  
+The firewall integrates protection against the most critical threats identified by the OWASP Top 10, including injection attacks, cross-site scripting, and insecure deserialization. 
+
+The WAF leverages OPNsense’s NGINX plugin with NAXSI (Negative Application Security for nginx) to deliver its capabilities.NAXSI is a rule-based engine specifically designed to detect and block malicious web requests. 
+
 <a id="gold"></a>
 
-### Cloud interconnect Gold SW (10 Gbps max throughput)
+### Cloud connected Service
 
 #### Service Description
 
@@ -2823,175 +2806,6 @@ The service offers the following advantages:
 - *Simplified network operations* → centralized management via API/portal. Automated routing and monitoring reduce operational overhead.
 - *Better compliance and data governance* → private, regional connectivity supports regulatory requirements. Data paths remain under predictable network control.
 - *Optimized application experience* → reduced jitter and packet loss improve performance for: databases, real-time apps, VoIP/UC, latency-sensitive services.
-
-<a id="VPN-managed"></a>
-
-### Managed VPN Access Service
-
-#### Service Description
-
-The Managed VPN Access Service provides secure connectivity between customer premises and cloud infrastructure using the OPNsense firewall appliance.  
-It is a fully-automated managed VPN service, meaning customers do not need to manually maintain or patch the underlying system. The service provider ensures continuous updates and security compliance.
-
-Key capabilities:
-- Provisioning via portal and APIs for automation and integration.
-- Provider-managed patching of the OPNsense appliance and service components.
-- Multiple VPN connections per virtual network supported.
-- Flexible tunneling protocols: IPsec, SSL, and WireGuard.
-- BGP support for improved failover and routing across IPsec tunnels.
-
-#### Features and Advantages
-
-The service can be provisioned through the Leonardo’s Secure Cloud Management Portal for quick setup. APIs are available for automated configuration and integration with Infrastructure-as-Code workflows. Declarative configuration files can be used to define VPN tunnels, routing policies, and security contexts.
-
-The Managed VPN Access Service supports multiple tunneling protocols over the public Internet, ensuring flexibility, interoperability, and strong security for different use cases. Each protocol offers unique advantages depending on the connectivity scenario.
-
-- IPsec VPN (Internet Protocol Security)
-    - Purpose: Industry-standard protocol suite for securing IP communications.
-    - Use Case: Commonly used for site-to-site tunnels between customer premises and cloud infrastructure.
-    - Features:
-        - Strong encryption (AES, SHA-2, etc.) for confidentiality and integrity.
-        - Widely supported across enterprise firewalls, routers, and appliances.
-        - Compatible with BGP routing to enable dynamic failover and load balancing across multiple tunnels.
-    - Benefit: Ensures highly secure, standards-based connectivity for enterprise networks.
-- SSL VPN (Secure Sockets Layer Virtual Private Network)
-    - Purpose: Provides secure remote access for individual users or devices.
-    - Use Case: Ideal for remote workforce connectivity, enabling employees to securely access internal applications from anywhere.
-    - Features:
-        - Operates over HTTPS, making it firewall-friendly and easy to deploy.
-        - Supports client-based and clientless (browser-based) access.
-        - Flexible authentication options (certificates, MFA, LDAP/AD integration).
-        - Benefit: Simplifies remote access with minimal configuration, while maintaining strong encryption and user authentication.
-- WireGuard VPN
-    - Purpose: A modern, high-performance VPN protocol designed for simplicity and speed.
-    - Use Case: Suitable for both site-to-site and remote access scenarios where performance and ease of configuration are priorities.
-    - Features:
-        - Lightweight codebase, reducing attack surface and improving maintainability.
-        - Uses state-of-the-art cryptography (Curve25519, ChaCha20, Poly1305).
-        - Faster connection setup and lower latency compared to traditional VPN protocols.
-        - Easy configuration with minimal overhead.
-    - Benefit: Delivers secure, efficient, and scalable VPN connectivity, particularly well-suited for modern cloud-native environments.
-
-#### High Availability and Failover
-
-The service supports High availability State Synchronization (pfsync), enabling VPN session states synchronization (including IPsec tunnels) between VPN service Instances, so active VPN connections continue without interruption during failover.  
-Configuration between instances is synchronized as well with a built in HA sync mechanism that replicates VPN configuration changes from the primary instance to the secondary.
-
-The service supports Border Gateway Protocol (BGP) to improve failover across IPsec VPN tunnels, to dynamically reroutes traffic in case of tunnel failure, ensuring uninterrupted connectivity. Multiple VPN connections per virtual network can be configured for redundancy and load balancing.
-
-####  Security and Compliance
-Leonardo is fully responsible for patching the VPN protocols and services, offering a secure, compliant environment without customer patching responsibilities.
-
-<a id="proxy-client"></a>
-
-### PaaS Client/Forward Proxy
-
-#### Service Description
-
-The Proxy service is a managed front-facing service designed to retrieve data from a wide range of sources across the internet.  
-It acts as an intermediary between internal users and external services, ensuring that requests are securely handled and filtered before reaching their destination.  
-The service is built on OPNsense, an open-source firewall and routing platform, and is delivered as a fully managed solution.  
-This means that all necessary updates, patches, and maintenance are handled by the provider, allowing IT staff to focus on their applications and users rather than the underlying infrastructure.  
-
-#### Features and Advantages
-
-The Proxy service functions as a gateway. When a user inside the organization requests data from an external source, the request is first directed to Proxy.  
-The service evaluates the request against configured rules and policies, determines whether it should be allowed or blocked, and then forwards it to the destination if permitted. Responses from external services are similarly inspected before being passed back to the user.  
-This approach provides several benefits: it ensures that only authorized traffic leaves the network, it prevents malicious content from entering, and it gives administrators visibility into how users interact with external services.  
-
-**Provisioning and Management**  
-
-Proxy can be provisioned through the Secure Cloud Management Platform, the central portal for managing cloud services. Administrators can deploy the service by selecting the Proxy option within the platform. Provisioning can also be performed through APIs, enabling integration into automated workflows.  
-Once deployed, the service is automatically patched and maintained by the provider. This ensures that the system remains up to date with the latest security fixes without requiring manual intervention.  
-
-**Authentication Integration**  
-
-Proxy supports integration with Active Directory and OpenID Connect for user authentication. This means that organizations can leverage their existing identity management systems to control access.  
-- With Active Directory, Proxy can validate user credentials against the domain controller, ensuring that only authorized users are able to use the service.  
-- With OpenID Connect, Proxy can redirect users to an identity provider for authentication, then use the returned tokens to grant access.  
-This integration allows organizations to enforce consistent access policies across their environment without duplicating user management. 
-
-**Request Filtering**  
-
-Proxy supports both whitelisting and blacklisting of requests. Administrators can define rules that specify which destinations or types of requests are permitted and which are denied. For example, they may allow access to trusted business applications while blocking requests to known malicious domains.  
-This filtering capability ensures that users can only access approved resources, reducing the risk of data leakage or exposure to harmful content.  
-
-**Anti-Virus and Anti-Malware Protection**  
-
-Proxy includes integrated anti-virus and anti-malware scanning, typically powered by engines such as ClamAV. All traffic passing through the service can be inspected for malicious payloads, ensuring that harmful files or code are blocked before reaching users.  
-This functionality provides an additional layer of defense, complementing endpoint protection and reducing the likelihood of infections spreading through downloaded content.  
-
-**Scalability**  
-
-The Proxy service is designed as a fixed-capacity solution. It does not scale dynamically with demand. Administrators should plan usage accordingly, ensuring that the service is deployed in environments where its capacity is sufficient for the expected traffic load.  
-
-<a id="proxy-reverse"></a>
-
-### PaaS Reverse Proxy
-
-#### Service Description
-
-The Managed Reverse Proxy service provides a secure and automated way to control and route traffic between external clients and internal applications.  
-It is built on OPNsense and HAProxy, which is widely recognized for its performance and flexibility in handling web traffic.  
-Delivered as a fully managed solution, Leonardo assumes responsibility for all patching, updates, and maintenance, ensuring that administrators benefit from a hardened and continuously updated platform.  
-
-#### Features and Advantages
-
-A reverse proxy sits in front of application servers and receives incoming requests from clients. Instead of exposing servers directly to the internet, the proxy terminates connections, applies configured rules, and forwards requests to the appropriate backend service.  
-This architecture improves security, simplifies certificate management, and enables sophisticated traffic routing.  
-The Managed Reverse Proxy service can be provisioned through the Secure Cloud Management Portal or via APIs. Once deployed, the CSP ensures that the underlying OPNsense system and HAProxy plugin remain patched and secure.  
-
-**SSL/TLS termination**  
-
-The reverse proxy provides full support for SSL/TLS termination. This means that encrypted client connections are terminated at the proxy, where traffic is decrypted. Certificates can be uploaded and managed directly within the solution, and bound to frontends. 
-
-A typical frontend definition might look like this:  
-
-```
-frontend https_frontend
-    bind *:443 ssl crt /etc/haproxy/certs/
-    mode http
-    option httplog
-```
-
-Here the proxy listens on port 443, terminates SSL/TLS using the certificate stored in `/etc/haproxy/certs/`, and then processes traffic in HTTP mode.  
-Once decrypted, traffic can be inspected, filtered, or routed, and then forwarded to backend servers either as plain HTTP or re-encrypted if desired. This centralizes certificate management and reduces the complexity of maintaining certificates across multiple backend servers.  
-HTTP Termination.  
-In addition to SSL/TLS, the reverse proxy also supports HTTP termination. This allows the proxy to handle plain HTTP traffic directly, applying rules and routing logic before passing requests to backend servers. This is useful for internal services or applications that do not require encryption, and it ensures that both encrypted and unencrypted traffic can be managed consistently through the same proxy layer. 
-
-**Server Name Indication (SNI) compatibility** 
-
-The proxy is fully compatible with the Server Name Indication (SNI) extension of TLS. This capability allows the proxy to host multiple SSL/TLS certificates on a single IP address and port. When a client initiates a connection, the proxy uses the hostname provided in the SNI field to select the correct certificate. This makes it possible to serve multiple domains securely from the same proxy instance, a critical feature for organizations hosting multiple applications or services.  
-
-For example:  
-
-```
-frontend https_frontend
-    bind *:443 ssl crt /etc/haproxy/certs/domain1.pem crt /etc/haproxy/certs/domain2.pem
-    mode http
-```
-
-When a client connects, HAProxy inspects the SNI field in the TLS handshake and selects the appropriate certificate based on the requested hostname. This allows multiple domains to be served securely from a single proxy instance.  
-
-**Routing Rules and Traffic Management**  
-
-One of HAProxy’s most powerful features is its ability to define complex routing rules. Administrators can configure rules based on request attributes such as headers, paths, query strings, or even cookies. For example, traffic containing a specific header can be routed to one backend service, while requests with a different header are directed elsewhere.  
-The proxy also supports load balancing strategies, health checks, and content switching. This means that traffic can be distributed across multiple backend servers to improve performance and reliability, or directed to specific servers depending on the nature of the request. The OPNsense HAProxy plugin provides a user-friendly interface for defining these rules, making it possible to implement sophisticated traffic management policies without requiring deep knowledge of HAProxy’s configuration syntax.
-
-Below is an example of content switching, where traffic is routed depending on request attributes. For example, administrators may want to send requests with a specific header to one backend, and all other requests to another:  
-
-```
-frontend https_frontend
-    bind *:443 ssl crt /etc/haproxy/certs/
-    mode http
-    acl api_request hdr(X-Service) -i api
-    use_backend api_backend if api_request
-    default_backend web_backend
-```
-In this configuration:  
-- The `acl` (access control list) checks whether the request contains the header `X-Service: api`.  
-- If the header is present, traffic is routed to `api_backend`.  
-- All other requests are sent to `web_backend`. 
 
 ## Storage Family
 

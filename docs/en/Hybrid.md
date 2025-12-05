@@ -1,5 +1,48 @@
 # Hybrid Services
 
+## General features
+
+### Supply Chain for Storage Hardware
+
+The supply chain for the specialized storage hardware used in the context of this service is a meticulously orchestrated ecosystem designed to ensure reliability, scalability, and compliance with stringent enterprise standards.  
+
+The hardware components—primarily high-capacity storage appliances equipped with solid-state drives (SSD) or hybrid storage configurations—are sourced through a vetted network of global manufacturers and distributors, emphasizing compatibility, resilience, and sustained performance under demanding operational conditions.  
+
+Raw materials and core electronic components typically originate from certified suppliers with strict quality controls and compliance certifications, encompassing ISO standards for manufacturing and environmental responsibility. These parts undergo assembly and rigorous quality assurance testing in strategically located manufacturing centers equipped with state-of-the-art fabrication and diagnostics tools to meet the exacting requirements of enterprise-grade data transfer solutions.  
+
+The finished appliances are then integrated with proprietary firmware and security modules before being provisioned at distribution hubs. These hubs serve as staging areas where customization—such as encryption key injection, network configuration, and audit logging setup—is applied in accordance with customer-specific parameters and security policies. From there, logistics chains involve carefully coordinated transportation utilizing trusted carriers capable of maintaining chain-of-custody protocols, tamper-proof packaging, and real-time tracking until delivery to the client site. 
+
+This layered, end‑to‑end supply chain ensures that hardware is not only performant but also secure and fully traceable throughout its lifecycle, from component sourcing to customer deployment and eventual return for data ingestion and secure sanitization.
+
+### Software Architecture and Development
+
+The software underpinning the service is architected and developed by a dedicated specialized team comprising systems architects, software engineers, and security experts. This team typically operates within a corporate research and development environment with a focus on distributed storage systems, secure data transfer protocols, and device management frameworks. 
+
+System architecture is designed to be modular, supporting scalability and interoperability with diverse enterprise environments and cloud storage backends. Software modules encompass embedded device firmware, secure boot and attestation layers, transfer orchestration engines, encryption key management subsystems, and centralized portals for device tracking, logging, and audit reporting.  
+Development activities are governed by agile methodologies, emphasizing iterative testing, continuous integration/continuous deployment (CI/CD) pipelines, and strict adherence to internal coding standards as well as external compliance frameworks such as SOC 2, ISO/IEC 27001, and GDPR where applicable.  
+
+Cross-functional teams collaborate closely with supply chain, security, and operations units to ensure that software updates are rigorously validated for reliability and security before full deployment.
+
+### Software Licensing, Transparency, and Adaptability
+
+The software components of the service embody a balanced approach to licensing and intellectual property protection, combining proprietary elements with open-source frameworks to facilitate transparency, security scrutiny, and adaptability.
+
+Core platform components leverage mature open-source libraries and protocols vetted by the community for security and performance, enabling rights for the client or partners to audit, adapt, and extend functionalities within defined license parameters (such as Apache 2.0, MIT, or similar permissive licenses).  
+
+For proprietary modules—particularly those dealing with encryption, device attestation, and logistics orchestration—customers and regulatory auditors are granted access to source code under non-disclosure agreements or via escrow arrangements to meet compliance and due diligence requirements. This ensures trust in the software stack’s integrity, fosters collaborative innovation in extended use cases, and mitigates vendor lock-in risks.
+
+### Security Patch Management Capabilities Independent of Non-EU Vendors
+
+To address geopolitical and regulatory concerns, the service provider maintains a robust local capability for developing, testing, and applying security patches independently of non-European Union (EU) vendors.  
+
+This strategy encompasses a dedicated European-based security engineering team integrated within the broader development organization, empowered to rapidly respond to emerging vulnerabilities and compliance directives. The team employs advanced vulnerability scanning, static and dynamic code analysis, and threat modeling tools supported by incident response program.  
+
+Patch development follows a rigorous lifecycle: discovery, analysis, coding remediation, multi-environment testing—including integration and regression—and staged rollout guided by well-defined risk criteria and communication protocols with customers.  
+
+This autonomous ecosystem reduces dependency on foreign-sourced software updates for critical security components, minimizes patching latency, and aligns with EU data sovereignty frameworks, reinforcing trust and operational continuity for customers with stringent data protection and audit requirements.
+
+## List of Services
+
 The following table lists the services included in the *Hybrid* category.
 
 | FAMILY  | LIST OF SERVICES                                                                                                    |
@@ -7,12 +50,6 @@ The following table lists the services included in the *Hybrid* category.
 | Hybrid | [Edge Location - Pool Small (Confidential)](#edge)|
 | Hybrid | [Bulk Data Transfer](#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>
-
-## Hybrid Family
-
-Below is the list of services belonging to the Hybrid Edge family:
-
-- [Edge Location - Pool Small (Confidential)](#edge)
 
 <a id="edge"></a>
 
@@ -106,42 +143,3 @@ Key Advantages:
 - *Regulatory & compliance readiness* → the EU-based security patch lifecycle and compliance-oriented architecture enable easier adherence to data-protection laws and industry standards.
 - *Scalability and flexibility* → the modular architecture and hardware supply-chain approach allow for scaling capacity and adapting the solution to different business needs and volumes, even very large ones.
 - *Reduced operational burden for clients* → clients don’t need to manage hardware sourcing, logistics,secure transport, firmware/security provisioning.
-
-#### Supply Chain for Storage Hardware in the Service Context
-
-The supply chain for the specialized storage hardware used in the context of this service is a meticulously orchestrated ecosystem designed to ensure reliability, scalability, and compliance with stringent enterprise standards.  
-
-The hardware components—primarily high-capacity storage appliances equipped with solid-state drives (SSD) or hybrid storage configurations—are sourced through a vetted network of global manufacturers and distributors, emphasizing compatibility, resilience, and sustained performance under demanding operational conditions.  
-
-Raw materials and core electronic components typically originate from certified suppliers with strict quality controls and compliance certifications, encompassing ISO standards for manufacturing and environmental responsibility. These parts undergo assembly and rigorous quality assurance testing in strategically located manufacturing centers equipped with state-of-the-art fabrication and diagnostics tools to meet the exacting requirements of enterprise-grade data transfer solutions.  
-
-The finished appliances are then integrated with proprietary firmware and security modules before being provisioned at distribution hubs. These hubs serve as staging areas where customization—such as encryption key injection, network configuration, and audit logging setup—is applied in accordance with customer-specific parameters and security policies. From there, logistics chains involve carefully coordinated transportation utilizing trusted carriers capable of maintaining chain-of-custody protocols, tamper-proof packaging, and real-time tracking until delivery to the client site. 
-
-This layered, end‑to‑end supply chain ensures that hardware is not only performant but also secure and fully traceable throughout its lifecycle, from component sourcing to customer deployment and eventual return for data ingestion and secure sanitization.
-
-#### Software Architecture and Development
-
-The software underpinning the service is architected and developed by a dedicated specialized team comprising systems architects, software engineers, and security experts. This team typically operates within a corporate research and development environment with a focus on distributed storage systems, secure data transfer protocols, and device management frameworks. 
-
-System architecture is designed to be modular, supporting scalability and interoperability with diverse enterprise environments and cloud storage backends. Software modules encompass embedded device firmware, secure boot and attestation layers, transfer orchestration engines, encryption key management subsystems, and centralized portals for device tracking, logging, and audit reporting.  
-Development activities are governed by agile methodologies, emphasizing iterative testing, continuous integration/continuous deployment (CI/CD) pipelines, and strict adherence to internal coding standards as well as external compliance frameworks such as SOC 2, ISO/IEC 27001, and GDPR where applicable.  
-
-Cross-functional teams collaborate closely with supply chain, security, and operations units to ensure that software updates are rigorously validated for reliability and security before full deployment.
-
-#### Software Licensing, Transparency, and Adaptability
-
-The software components of the service embody a balanced approach to licensing and intellectual property protection, combining proprietary elements with open-source frameworks to facilitate transparency, security scrutiny, and adaptability.
-
-Core platform components leverage mature open-source libraries and protocols vetted by the community for security and performance, enabling rights for the client or partners to audit, adapt, and extend functionalities within defined license parameters (such as Apache 2.0, MIT, or similar permissive licenses).  
-
-For proprietary modules—particularly those dealing with encryption, device attestation, and logistics orchestration—customers and regulatory auditors are granted access to source code under non-disclosure agreements or via escrow arrangements to meet compliance and due diligence requirements. This ensures trust in the software stack’s integrity, fosters collaborative innovation in extended use cases, and mitigates vendor lock-in risks.
-
-#### Security Patch Management Capabilities Independent of Non-EU Vendors:
-
-To address geopolitical and regulatory concerns, the service provider maintains a robust local capability for developing, testing, and applying security patches independently of non-European Union (EU) vendors.  
-
-This strategy encompasses a dedicated European-based security engineering team integrated within the broader development organization, empowered to rapidly respond to emerging vulnerabilities and compliance directives. The team employs advanced vulnerability scanning, static and dynamic code analysis, and threat modeling tools supported by incident response program.  
-
-Patch development follows a rigorous lifecycle: discovery, analysis, coding remediation, multi-environment testing—including integration and regression—and staged rollout guided by well-defined risk criteria and communication protocols with customers.  
-
-This autonomous ecosystem reduces dependency on foreign-sourced software updates for critical security components, minimizes patching latency, and aligns with EU data sovereignty frameworks, reinforcing trust and operational continuity for customers with stringent data protection and audit requirements.

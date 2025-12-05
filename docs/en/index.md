@@ -44,7 +44,6 @@ For details on each service, please see the dedicated section.
 | Security                             | [NGFW Platform](PaaS.md#ngfw)                                           |
 | Security                             | [PAM (Privileged Access Management)](PaaS.md#PAM)                                           |
 | Security                             | [Intrusion Prevention System (IPS)](PaaS.md#IPS)                                           |
-| Security                             | [PaaS Web Application Firewall (WAF)](PaaS.md#WAF)                                           |
 | Middleware                           | [PaaS API Management](PaaS.md#API)                                         |
 | Middleware                           | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
 | Middleware                           | [Jboss as a Service](PaaS.md#Jboss)                                          |
@@ -88,10 +87,7 @@ For details on each service, please see the dedicated section.
 | Networking                           | [PaaS Domain Name System (DNS)](PaaS.md#DNS)                               |
 | Networking                           | [Single public IP](#IP)                         |
 | Networking                           | [L7 Load Balancer (regional)](PaaS.md#L7)                                                    |
-| Networking                           | [Cloud interconnect Gold SW (10 Gbps max throughput)](PaaS.md#gold)                                                    |
-| Networking                           | [Managed VPN Access Service](PaaS.md#VPN-managed)                                                    |
-| Networking                           | [PaaS Client/Forward Proxy](PaaS.md#proxy-client)                                           |
-| Networking                           | [PaaS Reverse Proxy](PaaS.md#proxy-client)                                           |
+| Networking                           | [Cloud connected Service](PaaS.md#gold)                                                    |
 | Storage                              | [Block Storage-High Density](PaaS.md#block-storage)                      |
 | Storage                              | [Archive Storage](PaaS.md#archive-storage)                      |                    
 <figcaption>List of families and related PaaS services</figcaption>

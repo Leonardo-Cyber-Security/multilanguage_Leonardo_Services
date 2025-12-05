@@ -131,7 +131,7 @@ For each service, you can choose from three alternative purchase options:
 |SK-NW-0001|[PaaS Domain Name System (DNS)](PaaS.md#DNS)|DNS Instance| 1|3.899,57€|42.115,37€|112.307,66€|
 |SK-NW-0002|[Single public IP](PaaS.md#IP)|#Public IP| 1|4,67€|50,40€|134,40€|
 |SK-NW-0003|[L7 Load Balancer (regional)](PaaS.md#L7)|Instance|1| 994,08€|10.736,04€|28.629,43€|
-|SK-NW-0004|[Cloud interconnect Gold SW (10 Gbps max throughput)](PaaS.md#gold)|Throughput(Gbps)|10|9.112,76€|98.417,78€|262.447,40€|
+|SK-NW-0004|[Cloud connected Service](PaaS.md#gold)|Throughput(Gbps)|10|9.112,76€|98.417,78€|262.447,40€|
 |SK-NW-0005|[PaaS CDN (Content Delivery Network)](PaaS.md#CDN)|Throughput 10 Gbps(Inbound & Outbound)|10|566,00€|6.112,80€|16.300,80€|
 <figcaption>Price list of the Networking Family Services</figcaption>
 

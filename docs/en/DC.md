@@ -86,39 +86,6 @@ It includes:
 
 The WAN ensures each Organization has isolated, secure channels for interacting with the infrastructure while maintaining high security and reliability.
 
-### Local Area Network (LAN) 
-
-Our cloud platform integrates a Software-Defined Networking (SDN) solution that allows customers to design and manage virtual networks directly from the management console.  
-Clients can define complex topologies, segment traffic, and configure IP addressing without interacting with physical infrastructure.
-
-Technical Features:
-
-- *Virtual network creation* → create virtual bridges and dedicated network segments to isolate environments (e.g., production, testing) and ensure traffic separation.
-- *Dual-stack IPv4/IPv6 support* → each network can be configured with IPv4 and IPv6 addresses, with options to set dedicated gateways and custom subnets.
-    - IPv4: static or DHCP configuration.
-    - IPv6: support for static addresses and DHCPv6.
-- *IP and routing management* → the console enables you to define IP ranges, gateways, and internal routing rules between subnets, without address translation functions.
-- *Advanced segmentation* → support for VLAN tagging and isolated networks to ensure security and compliance.
-    - Configurable VLAN IDs for each bridge.
-    - Options for private and public networks.
-- *Scalability and performance* → architecture optimized for low latency and high throughput, with the ability to add new networks and nodes without downtime.
-
-*Example Scenario*
-
-A customer can:
-1.	Create a private network with IPv4 (e.g., 10.0.0.0/24) and IPv6 (e.g., fd00::/64).
-2.	Connect multiple VMs and containers to the network via virtual bridges.
-3.	Define internal routing rules between subnets.
-4.	Add a VLAN to separate test traffic from production traffic.
-
-Benefits:
-
-- Self-Service: Everything managed from the console, no manual intervention.
-- Flexibility: Custom configurations for each project.
-- Compatibility: Full IPv4/IPv6 support.
-- Integrated Security
-
-
 ## Data Centers characteristics and technical specification
 
 This section lists the general characteristics and technical specifications of the Data Center.

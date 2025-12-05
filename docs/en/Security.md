@@ -1,12 +1,22 @@
-# Cyber Security Services
+# Cyber Security
 
-This section lists the Cyber Security specifications and services provided by Leonardo Security Operation Centre (SOC).
+This section lists the IT security specifications provided by the Leonardo Security Operation Centre (SOC) relating to its Cloud infrastructures on which the services provided are based.
 
-## Security services for detection
+## Encryption 
+
+The Data at Rest Encryption requirement—i.e., ensuring the confidentiality of data stored on the infrastructure’s disks through encryption—is fulfilled by integrating the storage solutions, for both block storage and object storage, with a centralized Key Management System (KMS).  
+
+Specifically, for block storage, the confidentiality of data within Persistent Volumes (PV) created on the Kubernetes cluster infrastructure is ensured through the Ceph storage solution, which supports volume encryption. The enablement and configuration of the integration with the external KMS is performed at the storage class level, using the Key Management Interoperability Protocol (KMIP).  
+
+For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
+
+All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
+
+## Security for detection
 
 ### Real time Security Monitoring (RTSM)
 
-Real time security incident management services provided by Leonardo Security Operation Centre (SOC)   assure real time notifications about security alarms, behaviour anomalies and potential threats, leveraging best of breed detection platforms capabilities and Leonardo SOC analysts’ skills and knowledge base.
+Real time security incident management services provided by Leonardo Security Operation Centre (SOC)  assure real time notifications about security alarms, behaviour anomalies and potential threats, leveraging best of breed detection platforms capabilities and Leonardo SOC analysts’ skills and knowledge base.
 
 **Services’ Deliverable**
 
@@ -32,7 +42,6 @@ The Threat Intelligence Services monitor and analyse large amounts of data, both
 The service also identifies cyber threat actors’ activities and information illegally stolen and published on the web.  
 The solution also provides a comprehensive overview on brand or event sentiment, and guidance on the prevention of cyber frauds.
 
-
 **Services’ Deliverable**
 
 - Periodical or	event-based	threat	intelligence reports.
@@ -56,7 +65,7 @@ The solution also provides a comprehensive overview on brand or event sentiment,
 - Customer digital identity protection / identity theft identification. 
 - Real time detection of cyber frauds and phishing attacks identification.
 
-## Security services for responding
+## Security for responding
 
 ### Computer Security Incident Response Team Services
 
@@ -250,3 +259,65 @@ Specifically:
 - If the vulnerabilities found affect its own infrastructure used to provide services, Leonardo will promptly inform the designated Italian Computer Security Incident Response Team (CSIRT).
 - If the vulnerabilities found affect customer workloads, Leonardo will provide vulnerability assessments on a dedicated infrastructure for each customer, where the methods and type of execution will be defined.  
 For this point, please see the section above regarding the Vulnerability Assessments process.
+
+## Certification Authority
+
+The Certification Authority (CA) provides centralized services for issuing, managing, and revoking digital certificates used for system authentication and encrypted data exchange over public or private endpoints.
+
+### Services covered
+
+The CA can issue certificates for:
+
+- *Internal IT Infrastructure*
+
+  - Servers, virtual machines, and application services.
+  - Administrative portals and management interfaces.
+  - Endpoints requiring TLS/SSL or certificate-based authentication.
+
+- *Security Components*
+
+  - Data security, network security, and endpoint protection systems.
+  - Identity and access management solutions.
+  - Monitoring, logging, and incident response services.
+
+- *Services Exposed via Secure Protocols*
+
+  - Web servers and APIs.
+  - Services requiring mutual TLS (mTLS).
+  - Devices and appliances supporting X.509 certificates.
+
+### Integration with Services
+
+The CA integrates with infrastructure services through:
+
+- *AD/LDAP Integration (Enterprise CA)*
+
+  - Certificate Templates.
+  - Auto-enrollment for automated certificate issuance and renewal.
+  - Centralized policy and lifecycle management.
+
+- *Standard Communication Protocols*
+
+  - RPC (TCP/135), SMB (TCP/445/139), dynamic TCP ports (1024–65535).
+  - Native support for operating system enrollment mechanisms.
+
+- *Hardware Security Module (HSM) Key Protection*
+
+  - Secure storage of CA private keys.
+  - Replication of HSM partitions for high availability and continuity.
+  - Support for Root CA and SubCA certificate renewal processes.
+
+- *CRL Publication*
+
+  - Dedicated web servers publishing CRLs over HTTP.
+  - Redundancy and load balancing for high CRL availability.
+
+- *Logging and Monitoring*
+
+  - Forwarding of security and audit logs to SIEM platforms via secure channels.
+  - Full traceability of issuance, renewal, and revocation operations.
+
+- *Secure Administrative Management*
+
+  - Privileged Access Workstations (PAWs) with RSAT tools.
+  - Integration with Privileged Access Management (PAM) systems to control administrative permissions.

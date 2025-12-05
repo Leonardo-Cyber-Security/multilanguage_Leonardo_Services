@@ -1,4 +1,4 @@
-# Cyber Security
+# Cyber Security specifications
 
 This section lists the IT security specifications provided by the Leonardo Security Operation Centre (SOC) relating to its Cloud infrastructures on which the services provided are based.
 
@@ -268,56 +268,56 @@ The Certification Authority (CA) provides centralized services for issuing, mana
 
 The CA can issue certificates for:
 
-- *Internal IT Infrastructure*
+**Internal IT Infrastructure**
 
-  - Servers, virtual machines, and application services.
-  - Administrative portals and management interfaces.
-  - Endpoints requiring TLS/SSL or certificate-based authentication.
+- Servers, virtual machines, and application services.
+- Administrative portals and management interfaces.
+- Endpoints requiring TLS/SSL or certificate-based authentication.
 
-- *Security Components*
+**Security Components**
 
-  - Data security, network security, and endpoint protection systems.
-  - Identity and access management solutions.
-  - Monitoring, logging, and incident response services.
+Data security, network security, and endpoint protection systems.
+- Identity and access management solutions.
+- Monitoring, logging, and incident response services.
 
-- *Services Exposed via Secure Protocols*
+**Services Exposed via Secure Protocols**
 
-  - Web servers and APIs.
-  - Services requiring mutual TLS (mTLS).
-  - Devices and appliances supporting X.509 certificates.
+- Web servers and APIs.
+- Services requiring mutual TLS (mTLS).
+- Devices and appliances supporting X.509 certificates.
 
 ### Integration with Services
 
 The CA integrates with infrastructure services through:
 
-- *AD/LDAP Integration (Enterprise CA)*
+**AD/LDAP Integration (Enterprise CA)**
 
-  - Certificate Templates.
-  - Auto-enrollment for automated certificate issuance and renewal.
-  - Centralized policy and lifecycle management.
+- Certificate Templates.
+- Auto-enrollment for automated certificate issuance and renewal.
+- Centralized policy and lifecycle management.
 
-- *Standard Communication Protocols*
+**Standard Communication Protocols**
 
-  - RPC (TCP/135), SMB (TCP/445/139), dynamic TCP ports (1024–65535).
-  - Native support for operating system enrollment mechanisms.
+- RPC (TCP/135), SMB (TCP/445/139), dynamic TCP ports (1024–65535).
+- Native support for operating system enrollment mechanisms.
 
-- *Hardware Security Module (HSM) Key Protection*
+**Hardware Security Module (HSM) Key Protection**
 
-  - Secure storage of CA private keys.
-  - Replication of HSM partitions for high availability and continuity.
-  - Support for Root CA and SubCA certificate renewal processes.
+- Secure storage of CA private keys.
+- Replication of HSM partitions for high availability and continuity.
+- Support for Root CA and SubCA certificate renewal processes.
 
-- *CRL Publication*
+**CRL Publication**
 
-  - Dedicated web servers publishing CRLs over HTTP.
-  - Redundancy and load balancing for high CRL availability.
+- Dedicated web servers publishing CRLs over HTTP.
+- Redundancy and load balancing for high CRL availability.
 
-- *Logging and Monitoring*
+**Logging and Monitoring**
 
-  - Forwarding of security and audit logs to SIEM platforms via secure channels.
-  - Full traceability of issuance, renewal, and revocation operations.
+- Forwarding of security and audit logs to SIEM platforms via secure channels.
+- Full traceability of issuance, renewal, and revocation operations.
 
-- *Secure Administrative Management*
+**Secure Administrative Management**
 
-  - Privileged Access Workstations (PAWs) with RSAT tools.
-  - Integration with Privileged Access Management (PAM) systems to control administrative permissions.
+- Privileged Access Workstations (PAWs) with RSAT tools.
+- Integration with Privileged Access Management (PAM) systems to control administrative permissions.

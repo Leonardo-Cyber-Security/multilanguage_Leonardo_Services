@@ -81,74 +81,6 @@ Furthermore, for certain types of applications (e.g., PostgreSQL databases) runn
 These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
 The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
 
-### High Performance Computing description
-
-The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
-Cooling is mixed, air and liquid depending on the technology and density-
-
-Technology assets:
-
-- CPU Intel Cascade Lake
-- CPU Intel Sapphire Rapids
-- CPU AMD EPYC Rome
-- CPU AMD EPYC Genoa
-- NVIDIA A100 GPU
-- NVIDIA Grace-Hopper
-- NVIDIA H200 GPU
-- NVIDIA RTX 8000 GPU
-- NVIDIA L40s GPU
-- AMD MI 300 GPU
-
-The infrastructure is hosted in Italy and managed entirely by internal staff.  
-The architecture complies with NIST standards and is ISO27001 certified.  
-Information management and protection is guaranteed by international standards and company policies.  
-All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
-
-The virtualization platform used is OpenStack.  
-Additional features developed by an internal team have been integrated into this platform.
-
-The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
-
-A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
-
-### Supply Chain 
-
-In this section you will find the specifications on the supply chain.
-
-Our network hardware supply chain is based on established enterprise-grade vendors, selected to ensure reliability, scalability, and long-term support across all network layers. The model guarantees continuity, certified sourcing, and vendor-backed maintenance.
-
-#### LAN Network Infrastructure (Switching)
-
-LAN switching equipment is sourced directly from Hewlett Packard Enterprise (HPE), providing:
-
-- Enterprise-class switches for access, aggregation, and distribution layers
-- Long-term hardware support and firmware lifecycle management
-- Direct vendor-managed delivery, warranty, and replacement services
-
-All devices are procured via authorized HPE channels to ensure certified origin and compliance.
-
-#### Regional and Interregional Backbone Connectivity
-
-Backbone components and connectivity services are provided by Aruba and Netalia, chosen for their national presence and carrier-grade infrastructure.  
-Services include:
-
-- High-capacity regional and interregional links
-- Redundant paths and resilient transport platforms
-- Compliance with enterprise network standards
-
-Hardware and services are acquired under framework agreements to ensure continuity and consistent service levels.
-
-#### Security Appliances (Firewalls)
-
-Perimeter and internal security appliances are supplied by Check Point and Fortinet, offering:
-
-- Next-generation firewall platforms (NGFW)
-- Advanced threat prevention, intrusion detection, and VPN capabilities
-- Certified hardware security modules with centralized management
-
-All appliances are obtained through certified partners, ensuring compliance with vendor specifications, firmware integrity, and security best practices.
-
-
 ## List of services
 
 The following table lists the services included in the *Platform as a Service (PaaS)* category.
@@ -2963,3 +2895,73 @@ Disaster Recovery (DR) ensures service continuity, data integrity and rapid rest
         - Data is synchronized back (reverse RBD mirroring).
         - Primary cluster is reintroduced into production.
         - Normal operations resume.
+
+## High Performance Computing description
+
+This section outlines the high-performance computing infrastructure that enables the delivery of our Artificial Intelligence service portfolio.  
+It highlights the computational power, advanced hardware resources, and secure, standards-compliant architecture that support the training, optimization, and execution of demanding AI workloads.
+
+The computational capacity is 14.3PFlops for the Davinci-2 is provided throught the GPUs NVIDIA H200 while 5PFlops for the Davinci-1 that is provided throught the GPU NVIDIA A100.  
+Cooling is mixed, air and liquid depending on the technology and density-
+
+Technology assets:
+
+- CPU Intel Cascade Lake
+- CPU Intel Sapphire Rapids
+- CPU AMD EPYC Rome
+- CPU AMD EPYC Genoa
+- NVIDIA A100 GPU
+- NVIDIA Grace-Hopper
+- NVIDIA H200 GPU
+- NVIDIA RTX 8000 GPU
+- NVIDIA L40s GPU
+- AMD MI 300 GPU
+
+The infrastructure is hosted in Italy and managed entirely by internal staff.  
+The architecture complies with NIST standards and is ISO27001 certified.  
+Information management and protection is guaranteed by international standards and company policies.  
+All data and infrastructure are hosted in Italy, with copying, backup, and redundancy systems.
+
+The virtualization platform used is OpenStack.  
+Additional features developed by an internal team have been integrated into this platform.
+
+The entire application layer is based on Linux operating systems and open source software such as: Openstack, OpenPBS, Slurm.
+
+A testing system inside allows us to replicate features, so we can apply changes and patches without compromising production.
+
+## Supply Chain 
+
+In this section you will find the specifications on the supply chain.
+
+Our network hardware supply chain is based on established enterprise-grade vendors, selected to ensure reliability, scalability, and long-term support across all network layers. The model guarantees continuity, certified sourcing, and vendor-backed maintenance.
+
+### LAN Network Infrastructure (Switching)
+
+LAN switching equipment is sourced directly from Hewlett Packard Enterprise (HPE), providing:
+
+- Enterprise-class switches for access, aggregation, and distribution layers
+- Long-term hardware support and firmware lifecycle management
+- Direct vendor-managed delivery, warranty, and replacement services
+
+All devices are procured via authorized HPE channels to ensure certified origin and compliance.
+
+### Regional and Interregional Backbone Connectivity
+
+Backbone components and connectivity services are provided by Aruba and Netalia, chosen for their national presence and carrier-grade infrastructure.  
+Services include:
+
+- High-capacity regional and interregional links
+- Redundant paths and resilient transport platforms
+- Compliance with enterprise network standards
+
+Hardware and services are acquired under framework agreements to ensure continuity and consistent service levels.
+
+### Security Appliances (Firewalls)
+
+Perimeter and internal security appliances are supplied by Check Point and Fortinet, offering:
+
+- Next-generation firewall platforms (NGFW)
+- Advanced threat prevention, intrusion detection, and VPN capabilities
+- Certified hardware security modules with centralized management
+
+All appliances are obtained through certified partners, ensuring compliance with vendor specifications, firmware integrity, and security best practices.

@@ -1583,7 +1583,7 @@ The service offers the following advantages:
 - *Automation and Self-Service* → Fosters a self-service data discovery model for data engineers and data scientists.
 - *Scalability and modern architecture* → Microservices architecture and Metadata Graph.
 
-## Artificial Intelligence (AI) Family
+## Artificial Intelligence Family
 
 Below is the list of services belonging to the Artificial Intelligence (AI) family:
 

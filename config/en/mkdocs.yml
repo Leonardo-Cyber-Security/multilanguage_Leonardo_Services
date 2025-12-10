@@ -1,4 +1,4 @@
-site_name: 'Leonardo Services Documentation'
+site_name: 'Leonardo Cloud Everywhere Documentation'
 docs_dir: '../../docs/en'                           # Where to find the markdown files
 site_dir: '../../generated/en'                           # Where to put the HTML files
 

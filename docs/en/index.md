@@ -1,4 +1,4 @@
-# Overview of Leonardo Cloud Everywhere
+# Leonardo Cloud Everywhere's Overview
 
 Leonardo Cloud Everywhere is a **Full-Stack Cloud Services Platform** with a focus on security and privacy.
 

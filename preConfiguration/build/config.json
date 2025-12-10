@@ -78,7 +78,7 @@
 
     "en": {
       "path": "config/en/mkdocs.yml",
-      "site_name": "Leonardo Services Documentation",
+      "site_name": "Leonardo Cloud Everywhere Documentation",
       "author": "Elio Arena",
       "numeroDocumento": "C000CMP01STP01",
       "revisione": "01.00",
@@ -92,7 +92,7 @@
       "nav_config_file": "nav_config_en.yml",
       
       "titoli": {
-        "titolo1": "Leonardo Services Documentation",
+        "titolo1": "Leonardo Cloud Everywhere Documentation",
         "titolo2": "", 
         "titolo3": ""
       },

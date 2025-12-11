@@ -1,5 +1,5 @@
 nav:
-- General overview: index.md
+- General Overview: index.md
 - Infrastructure as a Service (IaaS): IaaS.md
 - Container as a Service (CaaS): CaaS.md
 - Platform as a Service (PaaS): PaaS.md
@@ -10,7 +10,7 @@ nav:
 - Provisioning: Provisioning.md
 - Service Management: ITSM.md
 - Service Level Agreement (SLA): SLA.md
-- Test Account Management: Test.md
+- Test ccount Management: Test.md
 - Certifications: Certifications.md
 - Cyber Security specifications: Security.md
 - Frequently Asked Questions (FAQ): Faq.md

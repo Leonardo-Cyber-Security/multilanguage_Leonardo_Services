@@ -1,4 +1,4 @@
-# Leonardo Cloud Everywhere's Overview
+# Leonardo Cloud Everywhere Overview
 
 Leonardo Cloud Everywhere is a **Full-Stack Cloud Services Platform** with a focus on security and privacy.
 
@@ -20,9 +20,9 @@ At the PaaS/management level, services include [Identity & Access Management (IA
 
 ### Data sovereignty and the "European/Italian supply chain"
 
-The offering is the result of a partnership between Leonardo, Aruba, and Netalia: the cloud is delivered "through a completely Italian supply chain."  
+The cloud services are delivered "through a completely Italian supply chain".  
 
-The services are provided by Aruba and Netalia's proprietary data centers located in Italy, not by "global" servers scattered around the world. This means that data and metadata never leave Italy or Europe, guaranteeing "in-house/in-EU" sovereignty and control.
+The services are hosted in data centers located in Italy, not on "global" servers scattered around the world. This means that data and metadata never leave Italy or Europe, guaranteeing internal/in-EU sovereignty and control.
 
 This approach aims to offer a "sovereign" alternative to foreign hyperscalers, mitigating legal and regulatory risks associated with extraterritorial laws such as the CLOUD Act or FISA. As analyses on the European cloud also explain, using an EU-based provider, with EU data centers and local jurisdiction, simplifies **compliance and control**.
 

@@ -1,5 +1,5 @@
 nav:
-- Services Overview: index.md
+- General overview: index.md
 - Infrastructure as a Service (IaaS): IaaS.md
 - Container as a Service (CaaS): CaaS.md
 - Platform as a Service (PaaS): PaaS.md

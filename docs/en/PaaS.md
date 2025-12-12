@@ -2438,8 +2438,6 @@ Below is the list of services belonging to the Networking family:
 
 ### PaaS CDN (Content Delivery Network)
 
-[![PaaS CDN (Content Delivery Network) interface](assets/images/extract/media/CDN.png)](assets/images/extract/media/CDN.png)
-
 #### Service Description
 
 The PaaS CDN (Content Delivery Network) service based on Nginx memory cache is a cloud-managed platform designed to accelerate content delivery, reduce latency, and ensure high availability for web applications and digital services.  

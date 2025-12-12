@@ -1,4 +1,4 @@
-# Cyber Security specifications
+# Infrastructure Security Specifications
 
 This section lists the IT security specifications provided by the Leonardo Security Operation Centre (SOC) relating to its Cloud infrastructures on which the services provided are based.
 

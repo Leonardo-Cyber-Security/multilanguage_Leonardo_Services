@@ -1,0 +1,997 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Hybrid Services - Leonardo Cloud Everywhere Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/eng-standard-theme.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/fabric.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/toc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/language-switcher.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hybrid-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-header__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leonardo Cloud Everywhere Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hybrid Services
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-nav__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Leonardo Cloud Everywhere Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as a Service (IaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container as a Service (CaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform as a Service (PaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hybrid Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DC/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Center Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Price/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provisioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITSM/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SLA/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Level Agreement (SLA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Account Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Certifications/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Faq/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions (FAQ)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supply-chain-for-storage-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Chain for Storage Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-architecture-and-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Architecture and Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-licensing-transparency-and-adaptability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Licensing, Transparency, and Adaptability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-patch-management-capabilities-independent-of-non-eu-vendors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Patch Management Capabilities Independent of Non-EU Vendors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List of Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-location-pool-small-confidential" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Location - Pool Small (Confidential)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edge Location - Pool Small (Confidential)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#services-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Data Transfer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Data Transfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hybrid-services">Hybrid Services</h1>
+<h2 id="general-features">General features</h2>
+<h3 id="supply-chain-for-storage-hardware">Supply Chain for Storage Hardware</h3>
+<p>The supply chain for the specialized storage hardware used in the context of this service is a meticulously orchestrated ecosystem designed to ensure reliability, scalability, and compliance with stringent enterprise standards.  </p>
+<p>The hardware components—primarily high-capacity storage appliances equipped with solid-state drives (SSD) or hybrid storage configurations—are sourced through a vetted network of global manufacturers and distributors, emphasizing compatibility, resilience, and sustained performance under demanding operational conditions.  </p>
+<p>Raw materials and core electronic components typically originate from certified suppliers with strict quality controls and compliance certifications, encompassing ISO standards for manufacturing and environmental responsibility. These parts undergo assembly and rigorous quality assurance testing in strategically located manufacturing centers equipped with state-of-the-art fabrication and diagnostics tools to meet the exacting requirements of enterprise-grade data transfer solutions.  </p>
+<p>The finished appliances are then integrated with proprietary firmware and security modules before being provisioned at distribution hubs. These hubs serve as staging areas where customization—such as encryption key injection, network configuration, and audit logging setup—is applied in accordance with customer-specific parameters and security policies. From there, logistics chains involve carefully coordinated transportation utilizing trusted carriers capable of maintaining chain-of-custody protocols, tamper-proof packaging, and real-time tracking until delivery to the client site. </p>
+<p>This layered, end‑to‑end supply chain ensures that hardware is not only performant but also secure and fully traceable throughout its lifecycle, from component sourcing to customer deployment and eventual return for data ingestion and secure sanitization.</p>
+<h3 id="software-architecture-and-development">Software Architecture and Development</h3>
+<p>The software underpinning the service is architected and developed by a dedicated specialized team comprising systems architects, software engineers, and security experts. This team typically operates within a corporate research and development environment with a focus on distributed storage systems, secure data transfer protocols, and device management frameworks. </p>
+<p>System architecture is designed to be modular, supporting scalability and interoperability with diverse enterprise environments and cloud storage backends. Software modules encompass embedded device firmware, secure boot and attestation layers, transfer orchestration engines, encryption key management subsystems, and centralized portals for device tracking, logging, and audit reporting.<br />
+Development activities are governed by agile methodologies, emphasizing iterative testing, continuous integration/continuous deployment (CI/CD) pipelines, and strict adherence to internal coding standards as well as external compliance frameworks such as SOC 2, ISO/IEC 27001, and GDPR where applicable.  </p>
+<p>Cross-functional teams collaborate closely with supply chain, security, and operations units to ensure that software updates are rigorously validated for reliability and security before full deployment.</p>
+<h3 id="software-licensing-transparency-and-adaptability">Software Licensing, Transparency, and Adaptability</h3>
+<p>The software components of the service embody a balanced approach to licensing and intellectual property protection, combining proprietary elements with open-source frameworks to facilitate transparency, security scrutiny, and adaptability.</p>
+<p>Core platform components leverage mature open-source libraries and protocols vetted by the community for security and performance, enabling rights for the client or partners to audit, adapt, and extend functionalities within defined license parameters (such as Apache 2.0, MIT, or similar permissive licenses).  </p>
+<p>For proprietary modules—particularly those dealing with encryption, device attestation, and logistics orchestration—customers and regulatory auditors are granted access to source code under non-disclosure agreements or via escrow arrangements to meet compliance and due diligence requirements. This ensures trust in the software stack’s integrity, fosters collaborative innovation in extended use cases, and mitigates vendor lock-in risks.</p>
+<h3 id="security-patch-management-capabilities-independent-of-non-eu-vendors">Security Patch Management Capabilities Independent of Non-EU Vendors</h3>
+<p>To address geopolitical and regulatory concerns, the service provider maintains a robust local capability for developing, testing, and applying security patches independently of non-European Union (EU) vendors.  </p>
+<p>This strategy encompasses a dedicated European-based security engineering team integrated within the broader development organization, empowered to rapidly respond to emerging vulnerabilities and compliance directives. The team employs advanced vulnerability scanning, static and dynamic code analysis, and threat modeling tools supported by incident response program.  </p>
+<p>Patch development follows a rigorous lifecycle: discovery, analysis, coding remediation, multi-environment testing—including integration and regression—and staged rollout guided by well-defined risk criteria and communication protocols with customers.  </p>
+<p>This autonomous ecosystem reduces dependency on foreign-sourced software updates for critical security components, minimizes patching latency, and aligns with EU data sovereignty frameworks, reinforcing trust and operational continuity for customers with stringent data protection and audit requirements.</p>
+<h2 id="list-of-services">List of Services</h2>
+<p>The following table lists the services included in the <em>Hybrid</em> category.</p>
+<table>
+<thead>
+<tr>
+<th>FAMILY</th>
+<th>LIST OF SERVICES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hybrid</td>
+<td><a href="#edge">Edge Location - Pool Small (Confidential)</a></td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td><a href="#bulk">Bulk Data Transfer</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption>List of families and related Hybrid services</figcaption>
+
+<p><a id="edge"></a></p>
+<h3 id="edge-location-pool-small-confidential">Edge Location - Pool Small (Confidential)</h3>
+<p><a href="../assets/images/extract/media/edge.png"><figure><img src="../assets/images/extract/media/edge.png" /><figcaption>Edge Location - Pool Small (Confidential) Interface</figcaption></figure></a></p>
+<h4 id="services-description">Services Description</h4>
+<p>The Edge Location Service provides a localized computing platform delivered across distributed edge locations, designed to offer low-latency processing, high availability, and centralized management.<br />
+Built on Proxmox Virtual Environment as the core virtualization layer and integrated with a Leonardo Secure Cloud Management Platform (SCMP) for orchestration, automation, and governance, the service enables customers to deploy, manage, and scale applications and workloads directly at the edge, close to the point of data generation or consumption.<br />
+The edge infrastructure operates as an extension of the corporate or hybrid cloud environment, maintaining consistent operational standards, security policies, and automation capabilities.</p>
+<p>The service is sized in host unit. A single unit is composed by 3 Hosts, with the following settings: 2x 24 Core CPU - 512 GB RAM - 32 TB SSD.</p>
+<h4 id="features-and-advantages">Features and Advantages</h4>
+<p>The main functional capabilities of the service are:</p>
+<ul>
+<li><em>Application Hosting</em> → execution of container-based or virtual machine–based applications. Support for real-time workloads, IoT scenarios, and local data processing. Automated provisioning of application environments via CMP orchestration.</li>
+<li><em>Multi-tenant resource management</em> → logical segmentation of resources for tenants or business units. Quota-based allocation of CPU, memory, storage, and network resources. Role-based access and differentiated permissions.</li>
+<li><em>Automation &amp; orchestration</em> → automated provisioning of VMs, containers, and PaaS components. Standardized deployment workflows. Full lifecycle management of workloads (creation, update, decommissioning).</li>
+<li><em>Governance &amp; security</em> → integration with Identity &amp; Access Management (IAM) systems. Enforcement of compliance and security policies. Centralized logging, audit trail capabilities, and continuous monitoring</li>
+<li><em>High availability &amp; resilience</em> → Proxmox high-availability clustering with automated failover. Fault isolation and hardware resilience. Integrated backup and restore capabilities.</li>
+</ul>
+<p>The Architectural components are: </p>
+<ul>
+<li><em>Edge Compute Layer (Proxmox VE)</em> → KVM hypervisor and LXC container virtualization. Proxmox clusters with distributed resource management. Local or distributed storage (Ceph, ZFS, or shared storage systems). Virtual networking using bridges, VLANs, and SDN capabilities</li>
+<li><em>Secure Cloud Management Platform (SCMP)</em> → Central orchestration system managing all edge locations. Self-service portal for tenants and administrators. Policy engine for governance, permissions, and compliance enforcement. Monitoring, metering, and alerting functionalities. PIs for integration with external systems (CI/CD, ITSM, ERP)
+-<em> Networking &amp; connectivity</em> → secure connectivity between edge locations and datacenters (VPN, SD-WAN, MPLS). Network segmentation via virtualization technologies. Support for public and private addressing of workloads</li>
+<li><em>Integration with enterprise systems</em> → integration with corporate authentication systems (LDAP, AD, SSO). Optional integration with Kubernetes for container-native workloads. Interoperability with public cloud platforms as part of a hybrid cloud model.</li>
+</ul>
+<p>Below are the technical and infrastructural requirements of cloud physical appliances
+that have been taken into consideration for the design of the technological solution for the services:</p>
+<ul>
+<li><em>Size and layout</em> → the data center must have sufficient space to accommodate the necessary racks, with standard sizes (42U, 45U, or 48U) and configurations that allow easy access for maintenance and component management.</li>
+<li><em>Cabling</em> → an organized and optimized cabling system is essential, with cables labeled and routed to minimize interference and facilitate technical interventions.</li>
+<li><em>Ventilation and cooling</em> → racks must be located in spaces with adequate ventilation and cooling systems to prevent overheating and keep electronic components at optimal operating temperatures.</li>
+<li><em>Physical security</em> → rack spaces must be protected from unauthorized access with physical security systems such as locks, biometric access controls, and continuous video surveillance.</li>
+<li><em>Power capacity</em> → the data center must have adequate power to support expected workloads. This includes assessing the power required for each rack and planning the total capacity required.</li>
+<li><em>Redundant power supply</em> → to ensure business continuity, it is necessary to provide redundant power systems such as uninterruptible power supplies (UPS) and emergency generators that can intervene in the event of a primary power outage.</li>
+<li><em>Power management</em> → implement tools and technologies to monitor and manage energy consumption, optimizing resource use and reducing operating costs.</li>
+<li><em>Energy efficiency</em> → use energy-efficient equipment and infrastructure to minimize consumption and environmental impact, adhering to best practices for data center energy management.</li>
+</ul>
+<p><a href="../assets/images/extract/media/energy.png"><figure><img src="../assets/images/extract/media/energy.png" /><figcaption>Rack energy power output</figcaption></figure></a></p>
+<p><a href="../assets/images/extract/media/power.png"><figure><img src="../assets/images/extract/media/power.png" /><figcaption>Power and BTU of appliances</figcaption></figure></a></p>
+<p>The service offers the following advantages:</p>
+<ul>
+<li><em>Reduced latency</em> → processing occurs closer to the data source, improving performance for IoT, analytics, and real-time applications.</li>
+<li><em>Operational continuity</em> → edge sites remain functional even in the event of connectivity loss to the central datacenter.</li>
+<li><em>Local data compliance</em> → data remains within specific geographic boundaries, enabling regulatory adherence.</li>
+<li><em>Accelerated innovation</em> → new services can be deployed rapidly across multiple sites using centralized orchestration.</li>
+<li><em>Unified management</em> → a single platform controls all edge and cloud resources. Lower operational costs through automation of provisioning and routine maintenance.</li>
+<li><em>Modular scalability</em> → the edge infrastructure can be expanded quickly with new nodes. Enhanced security through consistent policies and centralized logging.</li>
+<li><em>Architectural flexibility</em> → support for VM-based, containerized, and mixed workloads.</li>
+<li><em>Operational efficiency</em> → standardized processes for deployment, updates, and governance.</li>
+</ul>
+<p><a id="bulk"></a></p>
+<h3 id="bulk-data-transfer">Bulk Data Transfer</h3>
+<h4 id="service-description">Service Description</h4>
+<p>The Bulk Data Transfer service provides a managed solution for transferring large volumes of data using specialized high-capacity storage hardware and a secure, audited delivery process.<br />
+The service is designed as a full-lifecycle, enterprise-grade data transfer mechanism: from sourcing and provisioning storage appliances to secure transport, data ingestion, and integration with the customer’s infrastructure. It is aimed at scenarios where massive datasets need to be moved reliably and according to strict compliance and security requirements.</p>
+<h4 id="features-and-advantages_1">Features and Advantages</h4>
+<p>Key Features:</p>
+<ul>
+<li><em>Specialized high-capacity storage appliances</em> → the service uses purpose-built storage hardware (SSDs or hybrid drives), selected through a vetted supply chain of certified manufacturers and distributors.</li>
+<li><em>Secure hardware supply chain and lifecycle</em> → fincludes careful sourcing of raw materials, assembly under quality control, firmware &amp; security module integration, and tamper-proof packaging and chain-of-custody during transport.</li>
+<li><em>Flexible and modular software architecture</em> → the service relies on a modular software stack — including device firmware, secure-boot and attestation mechanisms, transfer orchestration engines, encryption key management, and centralized portals for device tracking, logging, and auditing.</li>
+<li><em>Compliance-oriented licensing and transparency</em> → score components use open-source libraries under permissive licences (e.g. Apache 2.0, MIT) to enable auditability and adaptability; proprietary modules (encryption, attestation, logistics orchestration) are made available under NDA or escrow to satisfy compliance and due-diligence requirements.</li>
+<li><em>Autonomous security patch management within EU</em> → security patches for critical components are developed, tested, and deployed by a European-based security engineering team — avoiding dependencies on non-EU vendors — to align with data sovereignty and regulatory demands.</li>
+</ul>
+<p>Main Components:</p>
+<ul>
+<li><em>Storage Hardware Appliances</em> → high-capacity storage devices (SSD/hybrid) procured via a certified global supply chain, assembled and tested before deployment.</li>
+<li><em>Firmware &amp; Security Modules</em> → each appliance is provisioned with firmware and security layers (secure-boot, attestation, encryption key injection) according to customer-specific policies.</li>
+<li><em>Transfer Orchestration Engine + Management Portal</em> → a centralized system that manages data transfer workflows, tracks devices, handles logging/audit, and exposes interfaces for provisioning and status monitoring.</li>
+<li><em>Compliance &amp; Governance Subsystems</em> → licensing and audit tools, security-patching infrastructure, and governance frameworks that ensure transparency, adaptability, and regulatory compliance (e.g. GDPR, security standards). </li>
+<li><em>Logistics &amp; Delivery Chain</em> → a controlled logistics process for transporting physical storage appliances — including tamper-proof packaging, chain-of-custody protocols, and real-time tracking until delivery at client site.</li>
+</ul>
+<p>Key Advantages:</p>
+<ul>
+<li><em>Enterprise-grade reliability and trustworthiness</em> → through a rigorously controlled supply-chain and full auditability, customers get a secure, traceable and compliant channel for massive data transfer.</li>
+<li><em>Avoidance of vendor lock-in and maximum transparency</em> → using a hybrid of open-source and audited proprietary modules makes the solution adaptable, auditable, and not tied to a single closed platform vendor.</li>
+<li><em>Regulatory &amp; compliance readiness</em> → the EU-based security patch lifecycle and compliance-oriented architecture enable easier adherence to data-protection laws and industry standards.</li>
+<li><em>Scalability and flexibility</em> → the modular architecture and hardware supply-chain approach allow for scaling capacity and adapting the solution to different business needs and volumes, even very large ones.</li>
+<li><em>Reduced operational burden for clients</em> → clients don’t need to manage hardware sourcing, logistics,secure transport, firmware/security provisioning.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/toc.js"></script>
+      
+        <script src="../assets/js/language-switcher.js"></script>
+      
+    
+  </body>
+</html>

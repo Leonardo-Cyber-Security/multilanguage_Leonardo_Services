@@ -76,7 +76,7 @@ Yes, with integration across cloud, edge, and data centers.
 
 **6.1 What storage options are available?**  
 Block storage, high-performance storage, archiving are some storage services available.  
-You can consult the complete list here [Storage Services)](PaaS.md#storage-family).
+You can consult the complete list here [Storage Services](PaaS.md#storage-family).
 
 **6.2 Is a native backup service available?**  
 Yes, Data Protection provides managed backups.
@@ -203,7 +203,7 @@ Yes. Through Leonardo’s certifications and robust security frameworks, the pla
 ## 15. Cyber Security specification
 
 **15.1 What security measures does Leonardo Cloud Everywhere offer?**
-You can consult the complete list here [Cyber Security specifications)](Security.md).
+You can consult the complete list here [Cyber Security specifications](Security.md).
 
 **15.2 Does Leonardo supports a Zero Trust security model?**
 Yes. Leonardo is strengthening its cyber portfolio toward a **Zero Trust** architecture, where access is continuously validated, regardless of the user’s position inside or outside the network.

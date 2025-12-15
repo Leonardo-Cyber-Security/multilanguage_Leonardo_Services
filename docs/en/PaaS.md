@@ -287,7 +287,7 @@ The main components of the service are:
 - *Policy management module* → defines and distributes security configurations and operational rules across endpoint agents, ensuring uniform protection and compliance.
 - *Update and Patch Repository* → centralized repository for antivirus signatures, security updates, and software patches, ensuring endpoints are continuously updated with the latest protection mechanisms.
 *Event correlation and logging module* → collects and analyzes security events from all endpoints, correlating data to detect anomalies and trigger automated responses when threats are identified.
-*Integration and API layer* → enables interoperability with other PSN security services (such as SIEM, SOC, or IAM systems) for advanced monitoring, alerting, and orchestration.
+*Integration and API layer* → enables interoperability with other security services for advanced monitoring, alerting, and orchestration.
 
 The service offers the following advantages:
 
@@ -1966,7 +1966,7 @@ The service offers the following main features:
 - *Auto-scaling* → tenant resources can scale to respond to load variations.
 - *Cloud-native deployment* → the service will be deployed in the customer's tenant in cloud-native mode on the OpenShift platform, ensuring portability, resilience, and standardization of operating procedures.
 - *Centralized observability* → provides centralized platform monitoring services with log collection, metrics, and alerting for complete observability, audit trails, and advanced troubleshooting.
-- *PaaS integration* → uses PSN PaaS components for storage, networking, security, and identity management, ensuring compliance with project requirements and leveraging the economies of scale of shared infrastructure.
+- *PaaS integration* → uses other PaaS components for storage, networking, security, and identity management, ensuring compliance with project requirements and leveraging the economies of scale of shared infrastructure.
 
 Both services feature a modular architecture designed to ensure scalability, flow segregation, and ease of integration into public administration processes.
 

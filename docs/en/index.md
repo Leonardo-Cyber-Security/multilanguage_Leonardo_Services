@@ -47,13 +47,13 @@ The major hyperscalers offer global scale, a vast ecosystem, and numerous servic
 Companies that operate globally or require massive scalability and an international presence often prefer them.  
 This is partly recognized by the European market as well: according to European cloud sources, US hyperscalers continue to hold the majority of the market.  
 
-However, if the company/organization's priority is **data sovereignty, European regulatory compliance, privacy protection, and minimal exposure to extraterritorial laws (CLOUD Act, FISA, etc.)**, then a European cloud like Leonardo Cloud Everywhere can offer an **interesting trade-off**: perhaps less "global reach/ecosystem" than AWS/Azure, but with greater control, transparency, and legal guarantees. This is a well-known theme: many "private/European" providers are seen as having advantages, especially in terms of regulatory compliance, privacy, and sovereignty.  
+However, if the company/organization's priority is **data sovereignty, European regulatory compliance, privacy protection, and minimal exposure to extraterritorial laws (CLOUD Act, FISA, etc.)**, then a European cloud like Leonardo Cloud Everywhere can offer an **interesting trade-off**: perhaps a less global "reach/ecosystem" than global hyperscalers, but with greater control, transparency, and legal guarantees. This is a well-known theme: many "private/European" providers are seen as having advantages, especially in terms of regulatory compliance, privacy, and sovereignty.  
 
 Another aspect is that many "sovereign cloud" infrastructures (European or national) still struggle to offer **all the advanced services** they require. They still represent the majority of the European market in terms of capacity and speed of innovation, and lack self-provisioning capabilities.
 
 In summary: choosing Leonardo Cloud Everywhere offers **greater sovereignty, security, compliance, and reduced legal/jurisdictional risk, and lays the foundation for national and European digital independence**.
 
-## The logical categories of Leonardo Cloud Everywhere
+## The four logical categories of the offering
 
 ### Infrastructure as a Service (IaaS)
 

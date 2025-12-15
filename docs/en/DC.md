@@ -663,7 +663,7 @@ Use of advanced cooling systems (including "green" techniques) and lithium-ion b
 - Internal security patrols / rounds. 
 - Access to critical system rooms (data halls) is through security airlocks (bussole) and requires badge-based dual authentication. 
 - Cybersecurity: the infrastructure is monitored by a Security Operation Center (SOC), providing continuous threat detection. 
-- The facility complies with the PSN’s Technical Security Measures (MTMS), which define guidelines for logical segmentation, risk management, and protection
+- The facility complies with the Technical Security Measures (MTMS), which define guidelines for logical segmentation, risk management, and protection
 
 **Fire prevention system** 
 

@@ -28,7 +28,7 @@ The request must include:
 
 A functionality check is performed to confirm proper access.
 
-5) Within 10 business days, the customer receives an email including:
+5) Within 10 days, the customer receives an email including:
 
 - Credentials or activation instructions
 - Overview of assigned permissions

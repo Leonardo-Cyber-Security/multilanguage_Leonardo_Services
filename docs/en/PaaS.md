@@ -2488,11 +2488,17 @@ The service offers the following advantages:
 
 #### Service Description
 
-The PaaS DSN (Distributed Secure Network) service based on OPNsense provides a cloud-delivered, fully managed network security and routing platform designed for organizations that require scalable, secure, and highly available connectivity.  
-Built on OPNsense’s open-source firewall and security capabilities, this service abstracts infrastructure complexity and offers customers a ready-to-use network environment delivered as a Platform-as-a-Service.  
-The solution centralizes policy management, simplifies deployment, and ensures consistent security enforcement across distributed sites, remote users, and cloud workloads.
+The PaaS DNS service is a fully managed, cloud-native solution that provides internal and external Domain Name System (DNS) resolution within the customer’s Virtual Network (VNET). It is designed for high availability, automated scalability, and integrated security, enabling seamless management of DNS names for dynamic workloads.
 
-The service is offered for each DNS Instance unit. 
+Key characteristics include:
+
+- A self-contained DNS resolver based on OPNsense, acting as the authoritative DNS point for the VNET.
+- Internal name resolution for virtual machines, containers, and cloud services.
+- Secure forwarding of DNS queries to external resolvers with DNSSEC support.
+- Automated provisioning that covers instance deployment, zone configuration, and dynamic record management, fully compatible with DevOps pipelines via REST APIs.
+- Continuous security patching and updates applied automatically without user intervention, ensuring protection against known vulnerabilities.
+
+The service also supports protocol-level traffic handling, primarily DNS over TCP and UDP, with underlying network infrastructure supporting ICMP for connectivity diagnostics.
 
 #### Features and Advantages
 

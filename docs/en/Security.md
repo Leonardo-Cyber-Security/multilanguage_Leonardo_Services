@@ -28,3 +28,65 @@ Specifically, for block storage, the confidentiality of data within Persistent V
 For object storage, the confidentiality of stored data is guaranteed through the native integration provided by the storage application solution (MinIO) with the KMS. MinIO supports automated SSE-KMS encryption for all objects written to a bucket, using a specific external key (EK) stored in the external KMS. MinIO encrypts stored data using a unique key retrieved from the KMS. The KMS is responsible for storing and managing the master key used to protect the data-encryption key utilized by the MinIO system.  
 
 All data-transmission communications are secured in accordance with the Data in Transit Encryption requirement. Protection is ensured through the mandatory use of the Transport Layer Security (TLS) protocol across all network channels. TLS provides confidentiality, integrity, and authentication for data exchanged between system components.
+
+## Certification Authority
+
+The Certification Authority (CA) provides centralized services for issuing, managing, and revoking digital certificates used for system authentication and encrypted data exchange over public or private endpoints.
+
+### Services covered
+
+The CA can issue certificates for:
+
+**Internal IT Infrastructure**
+
+- Servers, virtual machines, and application services.
+- Administrative portals and management interfaces.
+- Endpoints requiring TLS/SSL or certificate-based authentication.
+
+**Security Components**
+
+Data security, network security, and endpoint protection systems.
+- Identity and access management solutions.
+- Monitoring, logging, and incident response services.
+
+**Services Exposed via Secure Protocols**
+
+- Web servers and APIs.
+- Services requiring mutual TLS (mTLS).
+- Devices and appliances supporting X.509 certificates.
+
+### Integration with Services
+
+The CA integrates with infrastructure services through:
+
+**AD/LDAP Integration (Enterprise CA)**
+
+- Certificate Templates.
+- Auto-enrollment for automated certificate issuance and renewal.
+- Centralized policy and lifecycle management.
+
+**Standard Communication Protocols**
+
+- RPC (TCP/135), SMB (TCP/445/139), dynamic TCP ports (1024–65535).
+- Native support for operating system enrollment mechanisms.
+
+**Hardware Security Module (HSM) Key Protection**
+
+- Secure storage of CA private keys.
+- Replication of HSM partitions for high availability and continuity.
+- Support for Root CA and SubCA certificate renewal processes.
+
+**CRL Publication**
+
+- Dedicated web servers publishing CRLs over HTTP.
+- Redundancy and load balancing for high CRL availability.
+
+**Logging and Monitoring**
+
+- Forwarding of security and audit logs to SIEM platforms via secure channels.
+- Full traceability of issuance, renewal, and revocation operations.
+
+**Secure Administrative Management**
+
+- Privileged Access Workstations (PAWs) with RSAT tools.
+- Integration with Privileged Access Management (PAM) systems to control administrative permissions.

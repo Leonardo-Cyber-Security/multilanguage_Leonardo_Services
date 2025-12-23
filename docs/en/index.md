@@ -1,6 +1,6 @@
 # Leonardo Cloud Everywhere Overview
 
-Leonardo Cloud Everywhere is a **Full-Stack Cloud Services Platform** with a focus on security and privacy.
+Leonardo Cloud Everywhere (LCE) is a **Full-Stack Cloud Services Platform** with a focus on security and privacy.
 
 The Cloud offering, grouped into [Infrastructure as a Service (IaaS)](IaaS.md), [Container as a Service (CaaS)](CaaS.md), [Platform as a Service (PaaS)](PaaS.md) and [Hybrid Services](Hybrid.md), covers the entire spectrum of self-provisioned cloud infrastructure. 
 

@@ -8,7 +8,7 @@ The GCC provides end-to-end security for Leonardo Cloud Everywhere covering the 
 
 All security services of the LCE infrastructure are delivered through the **GCC Platform**, which is natively designed **around Zero Trust principles** and **multi-agent artificial intelligence** to ensure **Cyber Mission Assurance**. The GCC Platform is conceptually grounded in the **NIST Cybersecurity Framework (CSF) 2.0** and the **MITRE ATT&CK framework** and implements dedicated cybersecurity capabilities through its agents.
 
-[![](assets/images/extract/media/security_1.jpg)](assets/images/extract/media/security_1.jpg)
+[![](assets/images/extract/media/security_1.png)](assets/images/extract/media/security_1.png)
 
 The platform consolidates Leonardo’s proprietary solutions and third-party technologies into a federated ecosystem that ensures interoperability. 
 

@@ -81,6 +81,12 @@ Furthermore, for certain types of applications (e.g., PostgreSQL databases) runn
 These scripts place the application in a “quiesce” (read-only) state for the duration of the volume snapshot, and then perform an “unquiesce” operation to restore normal read-write activity.  
 The Veeam backup platform allows the configuration of these pre/post scripts for each application requiring this approach to ensure Application-Consistent backup execution.
 
+### Disaster Recovery
+ 
+The PaaS platform leverages the multi-region, multi-availability-zone infrastructure of Leonardo Cloud Everywhere to support disaster recovery strategies at both the infrastructure and application level.  
+
+The underlying architecture is organized into three geographically distributed Regions, each composed of three Availability Zones hosted in physically separate Data Centers. Within a Region, the Availability Zones are interconnected through a dedicated high-throughput, low-latency backbone that supports synchronous data replication across the tri-site storage configuration. Across Regions, asynchronous replication is available over dedicated interregional backbones, enabling recovery scenarios while maintaining data sovereignty within Italian territory.
+
 ## List of services
 
 The following table lists the services included in the *Platform as a Service (PaaS)* category.

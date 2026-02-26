@@ -14,9 +14,9 @@ The platform consolidates Leonardo’s proprietary solutions and third-party tec
 
 Its building blocks are **Smart View** (intelligent interfaces that centralize governance of the cyber domain and provide real-time monitoring of the LCE’s cybersecurity posture), **AI Multi Agentic System** (specialized agents operating across the different NIST functions), **Use Cases** (operational use cases that provide intelligent integration and automation of data, processes, and technologies) and **Cyber Platforming** (the seamless integration of both Leonardo proprietary products and trusted third-party solutions).
 
-Through this platform, security events and telemetry related exclusively to the **LCE infrastructure** are centralized, correlated, and analysed, providing a unified and measurable view of the platform security posture and significantly enhancing **cyber observability** and **incident response capabilities at infrastructure level**.
-
 [![](assets/images/extract/media/security_2.png)](assets/images/extract/media/security_2.png)
+
+Through this platform, security events and telemetry related exclusively to the **LCE infrastructure** are centralized, correlated, and analysed, providing a unified and measurable view of the platform security posture and significantly enhancing **cyber observability** and **incident response capabilities at infrastructure level**.
 
 All activities are performed by **Italian qualified personnel** operating **under European Union jurisdiction**, ensuring that security monitoring, analysis, and decision-making functions for the LCE infrastructure remain under full European control.
 

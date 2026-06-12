@@ -38,26 +38,18 @@ Benefits:
 
 The following table lists the services included in the *Infrastructure as a Service (IaaS)* category.
 
-| FAMILY  | LIST OF SERVICES                                                                                                    |
-| ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Compute | [Confidental Private IaaS](#pool-confidential-services)|
-| Compute | [Confidental Shared-IaaS (VMs)](#VMs)|
+| FAMILY | SERVICES |
+|----------|----------|
+| **Compute** | • [Confidential Private IaaS](IaaS.md#pool-confidential-services)<br>• [Confidential Shared-IaaS (VMs)](#VMs)|
 <figcaption>List of families and related IaaS services</figcaption>
 
 ## Compute Family
 
 Below is the list of services belonging to the Compute family:
-
-- [Confidental Private IaaS](#pool-confidential-services)
-    - Pool Small (Confidential)
-    - Pool Medium (Confidential)
-    - Pool Large (Confidential)
-    - Pool X-Large (Confidential)
-- [Confidential Shared-IaaS (VMs)](#VMs)
-    - VM Small (Confidential)
-    - VM Medium (Confidential)
-    - VM Large (Confidential)
-    - VM X-Large (Confidential)
+| SERVICE | AVAILABLE SIZES |
+|----------|----------|
+| [Confidential Private IaaS](#pool-confidential-services) | Pool Small (Confidential)<br>Pool Medium (Confidential)<br>Pool Large (Confidential)<br>Pool X-Large (Confidential) |
+| [Confidential Shared-IaaS (VMs)](#VMs) | VM Small (Confidential)<br>VM Medium (Confidential)<br>VM Large (Confidential)<br>VM X-Large (Confidential) |
 
 <a id="pool-confidential-services"></a>
 

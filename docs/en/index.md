@@ -14,9 +14,11 @@ By consulting the left-hand menu of the site you can also access the other speci
 
 Leonardo Cloud Everywhere presents itself as a “complete cloud” but with a strong focus on **confidentiality/confidential computing**, reducing the attack surface.
 
-Among the IaaS/CaaS offerings, the [Confidental Private IaaS](IaaS.md#pool-confidential-services) and [Confidential Shared-IaaS (VMs)](IaaS.md#VMs) segments stand out, as well as a [Kubernetes Confidential Computing](CaaS.md#kubernetes) service for containers.  
+Among the IaaS services offered, notable offerings include [Confidential Private IaaS](IaaS.md#pool-confidential-services) and [Confidential Shared-IaaS (VMs)](IaaS.md#VMs).
 
-At the PaaS/management level, services include [Identity & Access Management (IAM) Service](PaaS.md#IAM), [Key Vault as a Service - Standard](PaaS.md#key-vault), [PAM (Privileged Access Management)](PaaS.md#PAM), [Endpoint Protection](PaaS.md#endpoint), [Intrusion Prevention System (IPS)](PaaS.md#IPS),[NGFW Platform](PaaS.md#ngfw),[IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops), [PaaS Operations Management](PaaS.md#operations), [Backup Platform](PaaS.md#backup), [Data Governance](PaaS.md#governance), [Big Data Platforms](PaaS.md#big-data-family), [Databases](PaaS.md#database-family), [AI](PaaS.md#artificial-intelligence-family), etc. — a very comprehensive set, not just "VMs + storage."  
+Among the CaaS services offered, you can find [Kubernetes](CaaS.md#kubernetes) and [Kubernetes Confidential Computing](CaaS.md#kubernetes-conf) container orchestrators.
+
+Among the PaaS services offered, there are services in the following areas: [Security](PaaS.md#security-family), [Middleware](PaaS.md#middleware-family), [Infra & Ops Platform](PaaS.md#infra-ops-platform-family), [DevSecOps](PaaS.md#devsecops-family), [Data Platform](PaaS.md#big-data-family), [AI](PaaS.md#ai-family), [Database](PaaS.md#database-family), and [Networking](PaaS.md#networking-family).
 
 ### Data sovereignty and the "European/Italian supply chain"
 
@@ -60,10 +62,9 @@ In summary: choosing Leonardo Cloud Everywhere offers **greater sovereignty, sec
 Below is a list of services included in this category.  
 For details on each service, please see the dedicated section. 
 
-| FAMILY  | LIST OF SERVICES                                                                                                    |
-| ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Compute | [Confidental Private IaaS](IaaS.md#pool-confidential-services)|
-| Compute | [Confidential Shared-IaaS (VMs)](IaaS.md#VMs)|
+| FAMILY | SERVICES |
+|----------|----------|
+| **Compute** | • [Confidential Private IaaS](IaaS.md#pool-confidential-services)<br>• [Confidential Shared-IaaS (VMs)](IaaS.md#VMs) |
 <figcaption>List of families and related IaaS services</figcaption>
 
 ### Container as a Service (CaaS)
@@ -71,9 +72,10 @@ For details on each service, please see the dedicated section.
 Below is a list of services included in this category.  
 For details on each service, please see the dedicated section. 
 
-| FAMILY  | LIST OF SERVICES                  |
-| ------- | --------------------------------- |
-| Compute | [Kubernetes Confidential Computing](CaaS.md#kubernetes)|
+| FAMILY | SERVICES |
+|----------|----------|
+| **Compute** | • [Kubernetes](CaaS.md#kubernetes)<br>• [Kubernetes Confidential Computing](CaaS.md#kubernetes.conf) |
+
 <figcaption>List of families and related CaaS services</figcaption>
 
 ### Platform as a Service (PaaS)
@@ -81,60 +83,16 @@ For details on each service, please see the dedicated section.
 Below is a list of services included in this category.  
 For details on each service, please see the dedicated section. 
 
-| FAMILY                               | LIST OF SERVICES                                            |
-| ------------------------------------ | ----------------------------------------------------------- |                            
-| Security                             | [Identity & Access Management (IAM) Service](PaaS.md#IAM)|
-| Security                             | [Key Vault as a Service - Standard](PaaS.md#key-vault)                           |
-| Security                             | [Endpoint Protection](PaaS.md#endpoint)                                           |
-| Security                             | [NGFW Platform](PaaS.md#ngfw)                                           |
-| Security                             | [PAM (Privileged Access Management)](PaaS.md#PAM)                                           |
-| Security                             | [Intrusion Prevention System (IPS)](PaaS.md#IPS)                                           |
-| Middleware                           | [PaaS API Management](PaaS.md#API)                                         |
-| Middleware                           | [Functions As A Service (FAAS)](PaaS.md#faas)                                |       
-| Middleware                           | [Jboss as a Service](PaaS.md#Jboss)                                          |
-| Middleware                           | [Spring boot as a Service](PaaS.md#spring-boot)                                    |
-| Middleware                           | [PaaS Business Process as a Service](PaaS.md#BPM)                          |
-| Middleware                           | [PaaS CMS as a Service](PaaS.md#CMS)                                       |
-| Middleware                           | [Semantic Knowledge Search](PaaS.md#semantic-search)                            |
-| Data Protection                      | [Backup Platform](PaaS.md#backup)                            |
-| Infra & Ops Platform                 | [Multicloud Management Platform](PaaS.md#SCMP)                              |
-| Infra & Ops Platform                 | [IT infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops)|
-| Infra & Ops Platform                 | [PaaS Ticket Management Service](PaaS.md#ITSM)                              |
-| Infra & Ops Platform                 | [PaaS Operations Management](PaaS.md#operations)                              |
-| DevSecOps                            | [Configuration Manager](PaaS.md#config)                                       |
-| DevSecOps                            | [Test Automation](PaaS.md#test)                                             |
-| DevSecOps                            | [Quality Code Analysis](PaaS.md#quality)                                       |
-| DevSecOps                            | [DevSecOps As A Service](PaaS.md#devsecops)                                      |
-| DevSecOps                            | [Qualizer DevSecOps](PaaS.md#qualizer)                                          |
-| Big Data                             | [Data Lake](PaaS.md#datalake)                                             |
-| Big Data                             | [Data Lake-Cold](PaaS.md#datalake-cold)                                             |
-| Big Data                             | [Business Intelligence Platform](PaaS.md#BI)                              |
-| Big Data                             | [PaaS ETL Batch/Real time Processing](PaaS.md#processing)                       |
-| Big Data                             | [Event Message](PaaS.md#event-message)                                    |
-| Big Data                             | [Data Governance](PaaS.md#governance)                                             |
-| Artificial Intelligence (AI)         | [Speech to Text](PaaS.md#speech-to-text)                                              |
-| Artificial Intelligence (AI)         | [PaaS - AI Audio & Video Analytics](PaaS.md#AI-audio-video)                           |
-| Artificial Intelligence (AI)         | [OCR](PaaS.md#AI-OCR)                                                          |
-| Artificial Intelligence (AI)         | [Text Analytics/NLP](PaaS.md#AI-text)                                              |
-| Artificial Intelligence (AI)         | [Translation](PaaS.md#AI-translation)                                                 |
-| Artificial Intelligence (AI)         | [AI Search - RAG](PaaS.md#AI-search)                                             |
-| Artificial Intelligence (AI)         | [AI Platform](PaaS.md#AI-platform)                                          |
-| Artificial Intelligence (AI)         | [AI SLM/LLM](PaaS.md#AI-SLM-LLM)                                                  |
-| Collaboration                        | [Instant Messaging](PaaS.md#messaging)                                           |
-| Database                             | [PaaS SQL - PostgreSQL](PaaS.md#postgres)                                         |
-| Database                             | [PaaS SQL - MariaDB](PaaS.md#mariaDB)                                             |
-| Database                             | [PaaS SQL - MS SQL Server EE](PaaS.md#sqlserver)                                                |
-| Database                             | [PaaS SQL - MS SQL Server EE (BYOL)](PaaS.md#sqlserver-byol)                                                  |
-| Database                             | [PaaS GraphDB](PaaS.md#graphDB)                                               |
-| Database                             | [PaaS NoSQL - MongoDB](PaaS.md#mongoDB)                                               |
-| Database                             | [PaaS In Memory - Redis](PaaS.md#redis)                                               |
-| Networking                           | [PaaS CDN (Content Delivery Network)](PaaS.md#CDN)                         |
-| Networking                           | [PaaS Domain Name System (DNS)](PaaS.md#DNS)                               |
-| Networking                           | [Single public IP](#IP)                         |
-| Networking                           | [L7 Load Balancer (regional)](PaaS.md#L7)                                                    |
-| Networking                           | [Cloud connected Service](PaaS.md#gold)                                                    |
-| Storage                              | [Block Storage-High Density](PaaS.md#block-storage)                      |
-| Storage                              | [Archive Storage](PaaS.md#archive-storage)                      |                    
+| FAMILY | SERVICES |
+|----------|----------|
+| **Security** | • [Identity & Access Management (IAM) Service](PaaS.md#IAM)<br>• [Key Vault as a Service - Standard](PaaS.md#key-vault)<br>• [Endpoint Protection](PaaS.md#endpoint)<br>• [NGFW Platform](PaaS.md#ngfw) |
+| **Middleware** | • [PaaS API Management](PaaS.md#API)<br>• [Functions As A Service (FAAS)](PaaS.md#faas) |
+| **Infra & Ops Platform** | • [IT Infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
+| **DevSecOps** | • [DevSecOps As A Service](PaaS.md#devsecops)<br>• [Qualizer DevSecOps](PaaS.md#qualizer) |
+| **Big Data** | • [Data Lake](PaaS.md#datalake)<br>• [Data Platform](PaaS.md#dataplatform)<br>• [Business Intelligence Platform](PaaS.md#BI)<br>• [Event Message](PaaS.md#event-message) |
+| **Artificial Intelligence (AI)** | • [AI Platform](PaaS.md#AI-platform) |
+| **Database** | • [PaaS SQL - PostgreSQL](PaaS.md#postgres)<br>• [PaaS In Memory - Redis](PaaS.md#redis) |
+| **Networking** | • [PaaS Domain Name System (DNS)](PaaS.md#DNS) |
 <figcaption>List of families and related PaaS services</figcaption>
 
 ### Hybrid Services
@@ -142,8 +100,7 @@ For details on each service, please see the dedicated section.
 Below is a list of services included in this category.  
 For details on each service, please see the dedicated section. 
 
-| FAMILY  | LIST OF SERVICES                                                                                                    |
-| ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Hybrid | [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)|
-| Hybrid | [Bulk Data Transfer](Hybrid.md#bulk)|
+| FAMILY | SERVICES |
+|----------|----------|
+| **Hybrid** | • [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)<br>• [Bulk Data Transfer](Hybrid.md#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>

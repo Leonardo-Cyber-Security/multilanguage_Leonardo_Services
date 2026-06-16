@@ -19,70 +19,61 @@ The ITIL® framework has been used as a reference for delivering and improving s
 
 This section lists the process sequences for customer support requests.
 
-1) **Ticket Intake**  
-The customer sends a request via email to the support address listed here: <a href="mailto:lce.support@leonardo.com?subject=Request support%20for%20....&body=Insert%20your%20specific%20requests%20following%20the%20instrucions%20">Send an email</a>
+The customer starts a request via email to the support address listed here: <a href="mailto:lce.support@leonardo.com?subject=Request support%20for%20....&body=Insert%20your%20specific%20requests%20following%20the%20instrucions%20">Send an email</a>
 
-Upon receipt, the Service Desk (or designated support function) performs:
+### Ticket Management Process
 
-- Logging of the request into the ticketing system.
-- Attribution of a unique ticket ID.
-- Initial verification of provided information.
-
-All tickets are timestamped and stored for auditability.
-
-2) **Classification and Prioritization**  
-The Service Desk categorizes the ticket into one of the predefined classes (Incident, Request, Access, etc.).  
-Priority is determined using criteria such as:
-
-- Impact (number of users/services affected).
-- Urgency (time sensitivity of the issue).
-- Service criticality (business relevance of the affected system).
-
-This ensures coherent treatment of tickets and alignment with Service Level Agreements (SLAs).
-
-3) **Assignment**  
-After classification, the ticket is routed to the appropriate resolver group (e.g., Infrastructure, Application Support, Network Operations, Security, Service Delivery).  
-Assignment criteria include:
-
-- Required technical expertise.
-- Workload distribution.
-- Escalation rules.
-- Operational hours and on-call availability.
-
-The resolver group assumes ownership of the ticket until resolution.
-
-4) **Investigation and Resolution**  
-The assigned team performs root-cause investigation, corrective actions, or fulfillment activities depending on the ticket type.  
-Typical activities include:
-
-- System checks and diagnostics.
-- Configuration adjustments.
-- User guidance or remote assistance.
-- Deployment of fixes or patches.
-- Coordination with third-party vendors when applicable.
-
-Progress is continuously updated in the ticketing system.
-
-5) **Customer Communication**  
-The customer is informed throughout the lifecycle of the ticket, including:
-
+```text
+Customer submits request
+            │
+            ▼
+Ticket Intake
+- Request logged in the ticketing system
+- Unique ticket ID assigned
+- Initial information verification
+            │
+            ▼
+Classification & Prioritization
+- Ticket categorization
+  (Incident, Request, Access, etc.)
+- Priority assessment based on:
+  • Impact
+  • Urgency
+  • Service criticality
+            │
+            ▼
+Assignment
+- Routing to the appropriate resolver group
+- Assignment based on:
+  • Technical expertise
+  • Workload distribution
+  • Escalation rules
+  • Operational availability
+            │
+            ▼
+Investigation & Resolution
+- Diagnostics and root-cause analysis
+- Corrective actions or request fulfillment
+- Fix deployment and vendor coordination
+- Progress tracked in the ticketing system
+            │
+            ▼
+Customer Communication
 - Acknowledgement of receipt
-- Status updates (especially for high-priority issues)
-- Request for additional information
-- Notification upon resolution
-
-Communication follows predefined templates and response-time commitments.
-
-6) **Ticket Closure**  
-A ticket is closed only when:
-
-- The solution has been delivered and validated.
-- The customer has been informed.
-- Documentation of actions taken is complete.
-- Linked tickets (if any) have been updated.
-
-Quality controls ensure closure accuracy and SLA compliance.
-
+- Status updates
+- Information requests
+- Resolution notification
+            │
+            ▼
+Ticket Closure
+- Resolution validated
+- Customer informed
+- Documentation completed
+- Related tickets updated
+            │
+            ▼
+Quality Review & SLA Verification
+```
 ## Escalation management
 
 Escalations ensure that prolonged or high-impact issues receive timely attention.  
@@ -121,38 +112,13 @@ The distribution of responsibilities varies depending on the service model. As t
 
 To ensure effective management of shared responsibilities, the following internal roles are established:
 
-*A) Platform/Cloud team*
-
-Dedicated to the design, implementation, and management of the core cloud infrastructure.  
-- Implements shared technical controls, including network configurations, platform security baselines, and monitoring frameworks.
-- Ennsures that Cloud environments comply with the organization's policies and technical standards.
-
-*B) Workload/Application team*
-
-Owns the design, security, and operation of specific workloads hosted in the cloud.  
-- Manages application configurations, secure coding practices, updates, and lifecycle management.
-- Ensures appropriate data classification, protection, retention, and deletion practices.
-
-*C) Security and compliance team*
-
-Defines organizational security policies, standards, and regulatory controls.
-
-- Conducts risk assessments and oversees compliance across cloud deployments.
-- Implements identity and access management policies, encryption standards, and mandatory security controls.
-
-*D) Governance and risk management*
-
-Maintains the cloud governance framework, including the shared responsibility matrix.
-
-- Ensures that cloud operations remain aligned with legal, regulatory, and organizational requirements.
-- Coordinates reviews and audits to validate compliance and role execution.
-
-*E) Operations and incident response team*
-
-Provides monitoring and operational support for cloud environments and deployed workloads.
-
-- Manages incident response procedures, including triage, remediation, and coordination with Microsoft where required.
-- Ensures proper execution of change management policies.
+| ROLE | RESPONSIBILITIES |
+|----------|----------|
+| *Platform/Cloud Team* | Responsible for the design, implementation, and operation of the core cloud infrastructure, including networking, platform security baselines, monitoring frameworks, and compliance with organizational technical standards. |
+| *Workload/Application Team* | Responsible for the design, deployment, security, and lifecycle management of cloud-hosted applications and workloads, including application configurations, secure development practices, and data protection requirements. |
+| *Security & Compliance Team* | Defines and enforces security policies, compliance standards, identity and access management requirements, encryption controls, and risk management activities across cloud environments. |
+| *Governance & Risk Management Team* | Maintains the cloud governance framework and shared responsibility model, ensuring alignment with legal, regulatory, and organizational requirements through audits and compliance reviews. |
+| *Operations & Incident Response Team* | Provides operational support, monitoring, incident management, remediation activities, and change management processes to ensure service continuity and operational resilience. |
 
 ###  Responsibility matrix
 
@@ -174,37 +140,19 @@ This matrix is reviewed regularly and updated whenever service models, technolog
 
 ###  Operational processes
 
-The organization adopts a shared management operating model.
-The Platform Team provides standardized and secure environments and security barriers; the Workload Teams manage their solutions within these constraints.
-The Security and Governance Teams define mandatory controls and oversee compliance.
+The organization adopts a shared management operating model:
 
-Identity governance remains the organization's responsibility.
-The principles of least privilege, role-based access control (RBAC), and secure authentication must be implemented.
-Microsoft provides the identity platform, while the organization manages users, groups, and access permissions.
+- The Platform Team provides standardized and secure environments and security barriers.
+- The Workload Teams manage their solutions within these constraints.  
+- The Security and Governance Teams define mandatory controls and oversee compliance.
 
-The Workload Teams are responsible for ensuring the correct data classification and implementing the necessary protections, such as encryption, retention controls, and deletion policies.
 
-The Platform Team provides the technical capabilities for encryption, secure storage, and backup.
-
-Monitoring activities are shared:
-
-- Leonardo monitors the security of the underlying cloud platform.
-- The organization monitors workload behavior, user activity, configuration changes, and potential threats using security tools and logs.
-
-Incident responsibilities are divided by domain:
-
-- Cloud infrastructure-related incidents may involve Leonardo.
-- Incidents involving data, identities, workloads, or configurations fall within the responsibility of internal teams.  
-A coordinated response plan ensures that escalation paths, communication channels, and reporting requirements are clearly defined.
-
-All changes to cloud resources must comply with the organization's change control procedures.
-Platform-level changes require coordination with the platform team; workload-level changes must be approved by the application teams, while remaining aligned with established Security and Governance policies.
-
-This framework is reviewed on a periodic basis to ensure continued relevance.  
-Updates may be required when:
-
-- new cloud services are introduced,
-- organizational roles evolve,
-- regulatory obligations change, or lessons learned from audits and incidents highlight areas for improvement.
-
-Continuous improvement is essential to maintaining a secure and well-governed cloud environment.
+| PROCESS AREA | RESPONSIBILITY MODEL |
+|----------|----------|
+| *Environment Management* | The Platform Team provides standardized and secure cloud environments, while Workload Teams operate their solutions within the established technical and security boundaries. Security and Governance Teams define mandatory controls and oversee compliance. |
+| *Identity & Access Management* | The organization retains responsibility for identity governance, implementing least-privilege principles, RBAC, and secure authentication. Leonardo provides the identity platform, while users, groups, and permissions are managed by the organization. |
+| *Data Protection* | Workload Teams are responsible for data classification and the implementation of protection measures, including encryption, retention, and deletion policies. The Platform Team provides the underlying capabilities for encryption, secure storage, and backup. |
+| *Monitoring & Security Operations* | Monitoring activities are shared. Leonardo monitors the underlying cloud platform, while the organization monitors workloads, user activities, configuration changes, and potential threats through security tools and logs. |
+| *Incident Management* | Responsibility is divided by domain. Infrastructure-related incidents may involve Leonardo, while incidents affecting data, identities, workloads, or configurations remain under the responsibility of the organization. Escalation paths and communication procedures are governed by a coordinated response plan. |
+| *Change Management* | All cloud resource changes must follow organizational change control procedures. Platform-level changes require coordination with the Platform Team, while workload-level changes are managed by Application Teams in accordance with Security and Governance policies. |
+| *Continuous Improvement* | The governance framework is periodically reviewed to ensure alignment with organizational, regulatory, and operational requirements. Updates may be required when new services are introduced, roles evolve, regulations change, or audits and incidents identify improvement opportunities. |

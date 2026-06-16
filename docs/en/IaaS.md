@@ -7,17 +7,13 @@
 Our cloud platform integrates a Software-Defined Networking (SDN) solution that allows customers to design and manage virtual networks directly from the management console.  
 Clients can define complex topologies, segment traffic, and configure IP addressing without interacting with physical infrastructure.
 
-Technical Features:
-
-- *Virtual network creation* → create virtual bridges and dedicated network segments to isolate environments (e.g., production, testing) and ensure traffic separation.
-- *Dual-stack IPv4/IPv6 support* → each network can be configured with IPv4 and IPv6 addresses, with options to set dedicated gateways and custom subnets.
-    - IPv4: static or DHCP configuration.
-    - IPv6: support for static addresses and DHCPv6.
-- *IP and routing management* → the console enables you to define IP ranges, gateways, and internal routing rules between subnets, without address translation functions.
-- *Advanced segmentation* → support for VLAN tagging and isolated networks to ensure security and compliance.
-    - Configurable VLAN IDs for each bridge.
-    - Options for private and public networks.
-- *Scalability and performance* → architecture optimized for low latency and high throughput, with the ability to add new networks and nodes without downtime.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Virtual Network Creation** | Create virtual bridges and dedicated network segments to isolate environments (e.g., production, testing) and ensure traffic separation. |
+| **Dual-Stack IPv4/IPv6 Support** | Each network can be configured with IPv4 and IPv6 addresses, with options to set dedicated gateways and custom subnets.<br><br>• IPv4: static or DHCP configuration.<br>• IPv6: support for static addresses and DHCPv6. |
+| **IP and Routing Management** | Define IP ranges, gateways, and internal routing rules between subnets through the management console, without address translation functions. |
+| **Advanced Segmentation** | Support for VLAN tagging and isolated networks to ensure security and compliance.<br><br>• Configurable VLAN IDs for each bridge.<br>• Options for private and public networks. |
+| **Scalability and Performance** | Architecture optimized for low latency and high throughput, with the ability to add new networks and nodes without downtime. |
 
 *Example Scenario*
 
@@ -83,10 +79,12 @@ They use advanced remote attestation systems to verify the correctness of the TE
 
 The services offer the following advantages:
 
-- *Multi-Layer Security* → data security and confidentiality in dedicated environments. Workload isolation through advanced virtualization. Dedicated firewalls and network micro-segmentation
-- *Faster Time-to-Market* → automated provisioning and rapid resource management.
-- *Comprehensive control and centralized governance*: centralized monitoring and auditing for traceability.
-- *Business continuity* → built-in backup, snapshot, and high availability (HA) features ensure service continuity in case of hardware failures. Minimizes operational risk for critical applications.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Multi-Layer Security** | Data security and confidentiality in dedicated environments through workload isolation enabled by advanced virtualization technologies.<br><br>• Dedicated firewalls<br>• Network micro-segmentation |
+| **Faster Time-to-Market** | Automated provisioning and rapid resource management accelerate deployment and operational readiness. |
+| **Comprehensive Control and Centralized Governance** | Centralized monitoring, auditing, and governance capabilities provide full visibility, operational control, and traceability across the environment. |
+| **Business Continuity** | Built-in backup, snapshot, and High Availability (HA) features ensure service continuity in case of hardware failures and minimize operational risks for critical applications. |
 
 <a id="VMs"></a>
 
@@ -117,16 +115,18 @@ Depending on the resource pool required by each individual organization, the mos
 
 The services offer the following features:
 
-- *High Availability (HA)* → automatic VM failover in case of node failure when HA is enabled.
-- *Backups* → scheduled full or incremental backups using Proxmox Backup Server integration.
-- *Templates* → predefined OS images (e.g., Ubuntu, Debian, CentOS, Windows Server) for rapid VM deployment.
-- *User Access* → secure web interface and console access (noVNC/SPICE).
-- *Monitoring* → real-time performance metrics and resource usage monitoring.
-- *Security and isolation* → tenant isolation using VLANs and hypervisor-level separation.
-- *Access Control* → role-based access control (RBAC).
-- *Data protection* → encrypted storage backends and secure backup transfer protocols.
-- *Audit logging* → comprehensive logging of user and system activities for compliance and troubleshooting.
-- *Provisioning* → fully automated via API or web interface.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **High Availability (HA)** | Automatic VM failover in the event of a node failure when High Availability (HA) is enabled, ensuring service continuity and minimizing downtime. |
+| **Backups** | Scheduled full or incremental backups through integration with Proxmox Backup Server, enabling reliable data protection and recovery. |
+| **Templates** | Predefined operating system images (e.g., Ubuntu, Debian, CentOS, Windows Server) for rapid and standardized virtual machine deployment. |
+| **User Access** | Secure access through a web-based management interface and integrated console technologies (noVNC/SPICE). |
+| **Monitoring** | Real-time monitoring of performance metrics and resource utilization across virtual machines and infrastructure components. |
+| **Security and Isolation** | Tenant isolation through VLAN-based network segmentation and hypervisor-level separation mechanisms. |
+| **Access Control** | Role-Based Access Control (RBAC) to manage permissions and enforce least-privilege access policies. |
+| **Data Protection** | Encrypted storage backends and secure backup transfer protocols to protect data at rest and in transit. |
+| **Audit Logging** | Comprehensive logging of user and system activities to support compliance, auditing, and troubleshooting requirements. |
+| **Provisioning** | Fully automated provisioning and lifecycle management through APIs or the web management interface. |
 
 The service architecture is built on a Proxmox cluster consisting of multiple physical nodes connected via a high-speed network.  
 Each node contributes CPU, memory, and storage resources to a shared resource pool managed by Proxmox VE.  
@@ -140,8 +140,10 @@ The main components of the service are:
 
 The services offer the following advantages:
 
-- *Cost reduction* → no upfront investment in physical hardware, expensive hypervisor licenses, or datacenter infrastructure.
-- *Flexibility* → resources (CPU, RAM, storage) can be scaled up or down quickly according to business needs.
-- *Faster Time-to-Market* → virtual environments can be provisioned quickly. Ideal for testing, development, or rapid deployment of new services and applications. It reduces provisioning and approval times inside the organization.
-- *Capital and resource optimization* → unused resources are dynamically shared across tenants, maximizing infrastructure efficiency. Better capital utilization compared to underused dedicated environments.
-- *Business Continuity* → built-in backup and high availability (HA) features ensure service continuity in case of hardware failures. Minimizes operational risk for critical applications.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Cost Reduction** | Eliminates upfront investments in physical hardware, hypervisor licensing, and datacenter infrastructure, reducing capital expenditure and operational complexity. |
+| **Flexibility** | Compute, memory, and storage resources can be scaled up or down rapidly to meet changing business and workload requirements. |
+| **Faster Time-to-Market** | Virtual environments can be provisioned quickly, making the platform ideal for testing, development, and rapid deployment of new services and applications. This significantly reduces provisioning and approval times within the organization. |
+| **Capital and Resource Optimization** | Unused resources are dynamically shared across tenants, maximizing infrastructure utilization and improving capital efficiency compared to underutilized dedicated environments. |
+| **Business Continuity** | Integrated backup and High Availability (HA) capabilities ensure service continuity in the event of hardware failures, reducing operational risks for business-critical applications. |

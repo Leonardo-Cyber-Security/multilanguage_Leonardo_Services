@@ -36,35 +36,31 @@ The implementation is based on a private and secure Kubernetes infrastructure, i
 
 Features included:
 
-- *Automated container orchestration* → Automated deployment, management, and updating of containerized applications through Kubernetes.
-- *High availability* → Architecture designed to ensure service continuity and resilience for running workloads.
-- *Auto-scaling* → Dynamic adjustment of compute resources according to workload demands and application requirements.
-- *Simplified management* → As a managed Kubernetes solution, the customer does not have to worry about managing the infrastructure and its complexity, as the infrastructure layer is managed by Leonardo throughout the service lifecycle.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Automated container orchestration** | Automated deployment, management, scaling, and lifecycle operations of containerized applications through Kubernetes orchestration. |
+| **High Availability** | Architecture designed to provide resilience and service continuity, ensuring workloads remain available even in the event of infrastructure failures. |
+| **Auto-scaling** | Dynamic allocation and adjustment of compute resources based on workload demands and application requirements, optimizing performance and resource utilization. |
+| **Simplified management** | Fully managed Kubernetes service where Leonardo operates and maintains the underlying infrastructure, reducing operational complexity and allowing customers to focus on application development and business objectives. |
 
 The service includes a comprehensive set of security tools and services designed to ensure the secure operation of containers running on the managed Kubernetes platform.  
 It implements a multilayered infrastructure security model that safeguards the entire container lifecycle—from image creation to runtime execution—ensuring platform integrity, operational compliance, and consistent protection of containerized workloads.
 
-Platform security:
-
-- Real-time security monitoring and vulnerability scanning are implemented through the use of StackRox, providing continuous assessment of container images and runtime workloads. The platform enables automated detection of CVEs, policy violations, and security threats, ensuring a secure, compliant, and continuously monitored environment without operational intervention.
-- Host-level malware and virus detection to secure container nodes through EDR solutions provided by Bitdefender.
-- Kernel-level hardening and enforcement of mandatory security profiles to isolate workloads (security by design).
-
-Access security:
-
-- Identity-based access controls (RBAC) and integration with centralized identity management systems.
-
-Compliance, Monitoring, and Auditing:
-
-- Centralized logging and security-related events are forwarded directly to the SOC team's SIEM, enabling correlation, alerting, and continuous security monitoring.
+| SECURITY DOMAIN | DESCRIPTION |
+|----------|----------|
+| **Platform security** | • Real-time security monitoring and vulnerability scanning through StackRox, providing continuous assessment of container images and runtime workloads. Automated detection of CVEs, policy violations, and security threats ensures a secure, compliant, and continuously monitored environment.<br><br>• Host-level malware and virus detection through Bitdefender EDR solutions to protect container nodes.<br><br>• Kernel-level hardening and enforcement of mandatory security profiles to isolate workloads and implement a security-by-design approach. |
+| **Access security** | • Identity-based access controls through Role-Based Access Control (RBAC).<br><br>• Integration with centralized Identity and Access Management (IAM) systems. |
+| **Compliance, monitoring & auditing** | • Centralized logging and forwarding of security-related events to the SOC team's SIEM platform for event correlation, alerting, auditing, and continuous security monitoring. |
 
 The service offers the following advantages:
 
-- *Secure management of containerized applications* → Integrated security policies, continuous monitoring, advanced RBAC controls, and multilayer protection for containerized workloads.
-- *Centralized cluster control and governance*.
-- *Scalability and flexibility*.
-- *Reduced operational complexity through fully managed service delivery by Leonardo*.
-- *Integration with multicloud and legacy environments*.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Secure management of containerized applications** | Integrated security policies, continuous monitoring, advanced Role-Based Access Control (RBAC), and multilayer protection mechanisms for containerized workloads. |
+| **Centralized cluster control and governance** | Centralized management, governance, and policy enforcement across Kubernetes clusters, ensuring operational consistency and compliance. |
+| **Scalability and flexibility** | Ability to dynamically scale resources and workloads according to business and application requirements while maintaining operational efficiency. |
+| **Reduced operational complexity** | Fully managed service delivery by Leonardo, including platform operations, maintenance, updates, and lifecycle management, allowing customers to focus on application development. |
+| **Integration with multicloud and legacy environments** | Seamless integration with multicloud architectures and existing legacy systems, enabling hybrid deployment models and workload portability. |
 
 <a id="kubernetes-conf"></a>
 
@@ -89,32 +85,27 @@ This approach ensures architectural consistency, predictable performance, and al
 Implementation requires a combination of hardware certified for Confidential Computing, a private, security-hardened Kubernetes infrastructure, and a suite of observability and governance tools to maintain complete control over the container lifecycle.
 
 Features included:
-
-- *Data protection* → The operating system is configured to ensure protection at all stages: data in memory, through full disk encryption; data in transit, using secure and encrypted communication protocols; and data in use, adopting Confidential Computing practices and secure execution environments.
-- *Secure enclaves* → Enforces isolation and encryption, ensuring that only authorized parties can access data.
-- *Trusted execution environments (TEEs)* → Adds a secure computing environment, protecting data from external threats.
-- As a managed Kubernetes solution, the customer does not have to worry about managing the infrastructure and its complexity, as the infrastructure layer is managed by Leonardo throughout the service lifecycle.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Data protection** | The operating system is configured to protect data throughout its lifecycle: data at rest through full disk encryption, data in transit through secure and encrypted communication protocols, and data in use through Confidential Computing technologies and secure execution environments. |
+| **Secure enclaves** | Hardware-based isolation and encryption mechanisms ensure that sensitive data can only be accessed by authorized parties, reducing exposure to unauthorized access and insider threats. |
+| **Trusted Execution Environments (TEEs)** | Dedicated secure execution environments protect applications and data from external threats, even in scenarios where the underlying infrastructure could be compromised. |
+| **Simplified management** | Fully managed Kubernetes service where Leonardo operates and maintains the infrastructure layer throughout the service lifecycle, reducing operational complexity and allowing customers to focus on their applications and business workloads. |
 
 The service includes a comprehensive set of security tools and services designed to ensure the secure usage of containers running on the Managed Service for Containers.  
 It implements a multilayered infrastructure security model that safeguards the entire container lifecycle—from image creation to runtime execution—ensuring platform integrity, operational compliance, and consistent protection of containerized workloads. 
 
-Platform security:
-
-- Real-time security monitoring and vulnerability scanning are implemented through the use of StackRox, providing continuous assessment of container images and runtime workloads. The platform enables automated detection of CVEs, policy violations, and security threats ensuring a secure, compliant, and monitored environment without operational intervention.
-- Host-level malware and virus detection to secure container nodes with EDR provided by Bitdefender
-- Kernel-level hardening and enforcement of mandatory security profiles to isolate workloads (by design)
-
-Access Security:
-
-- Identity-based access controls (RBAC) and integration with centralized identity management systems.
-
-Compliance, Monitoring, and Auditing:
-
-- Centralized logging and security-related events are forwarded directly to the SOC team SIEM, enabling correlation, alerting, and continuous security monitoring.
+| SECURITY DOMAIN | DESCRIPTION |
+|----------|----------|
+| **Platform Security** | • Real-time security monitoring and vulnerability scanning through StackRox, providing continuous assessment of container images and runtime workloads. Automated detection of CVEs, policy violations, and security threats ensures a secure, compliant, and continuously monitored environment.<br><br>• Host-level malware and virus detection for container nodes through Endpoint Detection and Response (EDR) solutions.<br><br>• Kernel-level hardening and enforcement of mandatory security profiles to isolate workloads and implement a security-by-design approach. |
+| **Access Security** | • Identity-based access controls through Role-Based Access Control (RBAC).<br><br>• Integration with centralized Identity and Access Management (IAM) systems. |
+| **Compliance, Monitoring & Auditing** | • Centralized logging and forwarding of security-related events to the SOC team's SIEM platform, enabling event correlation, alerting, auditing, and continuous security monitoring. |
 
 The service offers the following advantages:
 
-- *Security and confidentiality of containerized applications* → end-to-end encryption, confidential computing for workloads, container isolation on dedicated nodes with hardware-based protection, integrated security policies, and advanced RBAC.
-- *Centralized cluster control and governance*.
-- *Scalability and flexibility*.
-- *Integration with multicloud and legacy environments*.
+| FEATURE | DESCRIPTION |
+|----------|----------|
+| **Security and confidentiality** | End-to-end encryption, Confidential Computing technologies for workloads, container isolation on dedicated nodes with hardware-based protection, integrated security policies, and advanced Role-Based Access Control (RBAC) mechanisms ensure a secure and trusted execution environment. |
+| **Centralized cluster control and governance** | Centralized management, governance, and policy enforcement across Kubernetes clusters, ensuring operational consistency, visibility, and compliance. |
+| **Scalability and flexibility** | Dynamic scaling of resources and workloads according to business and application requirements, enabling efficient resource utilization and operational agility. |
+| **Integration with multicloud and legacy environments** | Seamless integration with multicloud architectures and existing legacy systems, supporting hybrid deployment models and workload portability. |

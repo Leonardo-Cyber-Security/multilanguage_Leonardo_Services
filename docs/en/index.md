@@ -64,7 +64,7 @@ For details on each service, please see the dedicated section.
 
 | FAMILY | SERVICES |
 |----------|----------|
-| **Compute** | • [Confidential Private IaaS](IaaS.md#pool-confidential-services)<br>• [Confidential Shared-IaaS (VMs)](IaaS.md#VMs) |
+| *Compute* | • [Confidential Private IaaS](IaaS.md#pool-confidential-services)<br>• [Confidential Shared-IaaS (VMs)](IaaS.md#VMs) |
 <figcaption>List of families and related IaaS services</figcaption>
 
 ### Container as a Service (CaaS)
@@ -74,7 +74,7 @@ For details on each service, please see the dedicated section.
 
 | FAMILY | SERVICES |
 |----------|----------|
-| **Compute** | • [Kubernetes](CaaS.md#kubernetes)<br>• [Kubernetes Confidential Computing](CaaS.md#kubernetes.conf) |
+| *Compute* | • [Kubernetes](CaaS.md#kubernetes)<br>• [Kubernetes Confidential Computing](CaaS.md#kubernetes.conf) |
 
 <figcaption>List of families and related CaaS services</figcaption>
 
@@ -85,14 +85,14 @@ For details on each service, please see the dedicated section.
 
 | FAMILY | SERVICES |
 |----------|----------|
-| **Security** | • [Identity & Access Management (IAM) Service](PaaS.md#IAM)<br>• [Key Vault as a Service - Standard](PaaS.md#key-vault)<br>• [Endpoint Protection](PaaS.md#endpoint)<br>• [NGFW Platform](PaaS.md#ngfw) |
-| **Middleware** | • [PaaS API Management](PaaS.md#API)<br>• [Functions As A Service (FAAS)](PaaS.md#faas) |
-| **Infra & Ops Platform** | • [IT Infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
-| **DevSecOps** | • [DevSecOps As A Service](PaaS.md#devsecops)<br>• [Qualizer DevSecOps](PaaS.md#qualizer) |
-| **Big Data** | • [Data Lake](PaaS.md#datalake)<br>• [Data Platform](PaaS.md#dataplatform)<br>• [Business Intelligence Platform](PaaS.md#BI)<br>• [Event Message](PaaS.md#event-message) |
-| **Artificial Intelligence (AI)** | • [AI Platform](PaaS.md#AI-platform) |
-| **Database** | • [PaaS SQL - PostgreSQL](PaaS.md#postgres)<br>• [PaaS In Memory - Redis](PaaS.md#redis) |
-| **Networking** | • [PaaS Domain Name System (DNS)](PaaS.md#DNS) |
+| *Security* | • [Identity & Access Management (IAM) Service](PaaS.md#IAM)<br>• [Key Vault as a Service - Standard](PaaS.md#key-vault)<br>• [Endpoint Protection](PaaS.md#endpoint)<br>• [NGFW Platform](PaaS.md#ngfw) |
+| *Middleware* | • [PaaS API Management](PaaS.md#API)<br>• [Functions As A Service (FAAS)](PaaS.md#faas) |
+| *Infra & Ops Platform* | • [IT Infrastructure Service Operations (Logging & Monitoring)](PaaS.md#ITops) |
+| *DevSecOps* | • [DevSecOps As A Service](PaaS.md#devsecops)<br>• [Qualizer DevSecOps](PaaS.md#qualizer) |
+| *Big Data* | • [Data Lake](PaaS.md#datalake)<br>• [Data Platform](PaaS.md#dataplatform)<br>• [Business Intelligence Platform](PaaS.md#BI)<br>• [Event Message](PaaS.md#event-message) |
+| *Artificial Intelligence (AI)* | • [AI Platform](PaaS.md#AI-platform) |
+| *Database* | • [PaaS SQL - PostgreSQL](PaaS.md#postgres)<br>• [PaaS In Memory - Redis](PaaS.md#redis) |
+| *Networking* | • [PaaS Domain Name System (DNS)](PaaS.md#DNS) |
 <figcaption>List of families and related PaaS services</figcaption>
 
 ### Hybrid Services
@@ -102,5 +102,5 @@ For details on each service, please see the dedicated section.
 
 | FAMILY | SERVICES |
 |----------|----------|
-| **Hybrid** | • [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)<br>• [Bulk Data Transfer](Hybrid.md#bulk)|
+| *Hybrid* | • [Edge Location - Pool Small (Confidential)](Hybrid.md#edge)<br>• [Bulk Data Transfer](Hybrid.md#bulk)|
 <figcaption>List of families and related Hybrid services</figcaption>

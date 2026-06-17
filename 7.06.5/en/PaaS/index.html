@@ -1,0 +1,4529 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Platform as a Service (PaaS) - Leonardo Cloud Everywhere Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/eng-standard-theme.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/fabric.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/toc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/language-switcher.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#platform-as-a-service-paas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-header__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leonardo Cloud Everywhere Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Platform as a Service (PaaS)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-nav__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Leonardo Cloud Everywhere Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as a Service (IaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container as a Service (CaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform as a Service (PaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hybrid/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hybrid Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DC/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Center Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Price/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provisioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITSM/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SLA/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Level Agreement (SLA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Account Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Certifications/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Faq/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions (FAQ)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-scaling-scaling-to-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Scaling &amp; Scaling-to-Zero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-patching-vulnerability-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Patching &amp; Vulnerability Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Patching &amp; Vulnerability Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-management-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vulnerability management scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-management-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch Management Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes-security-and-stackrox-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kubernetes security and StackRox integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-access-management-iam-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity &amp; Access Management (IAM) Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity &amp; Access Management (IAM) Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-vault-as-a-service-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Vault as a Service - Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Vault as a Service - Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-protection-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint Protection Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint Protection Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ngfw-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NGFW Platform
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NGFW Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middleware Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paas-api-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaaS API Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PaaS API Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions-as-a-service-faas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions as a Service (FAAS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions as a Service (FAAS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infra-ops-platform-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infra &amp; Ops Platform Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infra &amp; Ops Platform Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#it-infrastructure-service-operations-logging-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IT infrastructure Service Operations (Logging &amp; Monitoring)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IT infrastructure Service Operations (Logging &amp; Monitoring)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devsecops-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevSecOps Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devsecops-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevSecOps As A Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps As A Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualizer-devsecops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qualizer DevSecOps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qualizer DevSecOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-data-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Big Data Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Big Data Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Lake
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Lake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery-dr-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery (DR) architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-platform-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Platform Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Platform Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paas-etl-batchreal-time-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaaS ETL - Batch/Real time Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PaaS ETL - Batch/Real time Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Governance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Intelligence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Intelligence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Message
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Message">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artificial-intelligence-ai-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artificial Intelligence (AI) Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Artificial Intelligence (AI) Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-platform-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Platform services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Platform services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-search-rag-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Search - RAG Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Search - RAG Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-slm-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI SLM service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI SLM service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#services-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paas-sql-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaaS SQL - PostgreSQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PaaS SQL - PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paas-in-memory-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaaS In Memory- Redis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PaaS In Memory- Redis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Networking Family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking Family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paas-dns-domain-name-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaaS DNS (Domain Name System)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PaaS DNS (Domain Name System)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-in-customer-vnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment in customer VNET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-and-external-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal and external resolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-connected-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud connected Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud connected Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-description_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-advantages_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features and Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="platform-as-a-service-paas">Platform as a Service (PaaS)</h1>
+<h2 id="general-features">General features</h2>
+<h3 id="auto-scaling-scaling-to-zero">Auto Scaling &amp; Scaling-to-Zero</h3>
+<p>The PaaS services described in this document are designed to run on orchestrated, cloud-native platforms where horizontal auto scaling is a native capability. Auto scaling dynamically adjusts the number of active instances in response to application load so that services can absorb traffic peaks while avoiding unnecessary over‑provisioning during off‑peak periods.</p>
+<p>At the platform level, an Horizontal Pod Autoscaler (HPA) or analogous controller continuously observes key metrics exposed by the workloads and the underlying infrastructure. These metrics commonly include CPU utilization, memory consumption, request rate, queue or backlog depth, and custom application indicators exported through standard monitoring interfaces. When the measured values exceed or fall below configured thresholds, the controller increases or decreases the replica count within the minimum and maximum limits defined for each service.  </p>
+<p>The same mechanism applies to many PaaS building blocks beyond purely stateless functions. These components can be configured to scale out when demand increases, distributing traffic across additional instances, and to scale in when demand subsides, consolidating activity on fewer instances. This behavior reduces the need for manual capacity planning, while still allowing organizations to define guardrails such as per‑tenant quotas, reserved capacity, or upper bounds imposed by licensing and compliance requirements.  </p>
+<p>For suitable workloads, several PaaS services also support scaling‑to‑zero. When a workload becomes idle and there are no active requests or tasks to process, the orchestration layer can progressively drain and stop all runtime instances associated with that service, leaving only the control and configuration plane active. In this state, compute capacity is released instead of being reserved for an idle service, which reduces the operational surface exposed to potential threats and improves infrastructure utilization. When new load arrives after a scale‑to‑zero phase, the platform automatically recreates the necessary runtime instances and starts routing work to them as soon as they become healthy; this can introduce a controlled start‑up latency, which can be mitigated for latency‑sensitive services by configuring a small minimum number of always‑on instances. </p>
+<p>Scaling‑to‑zero applies to workloads whose runtime instances can be stopped while still meeting durability and availability requirements. State‑heavy services such as relational databases, message brokers, and some analytics engines typically maintain at least one active replica or a minimal cluster footprint to guarantee durability, failover, and predictable performance characteristics. For these services, elasticity is achieved through controlled horizontal scaling of nodes, vertical tuning of resource allocations, and scheduled maintenance windows, with the serving tier remaining continuously available.  </p>
+<p>In all scenarios, auto scaling integrates with the platform’s monitoring, logging, and governance capabilities. Scaling events are traceable, auditable, and can be correlated with business and security metrics to validate that capacity changes remain compliant with corporate policies.</p>
+<h3 id="security-patching-vulnerability-management">Security Patching &amp; Vulnerability Management</h3>
+<h4 id="overview">Overview</h4>
+<p>Security Patching is a core activity of the Vulnerability Management (VM) process, focused on identifying, assessing, and remediating security vulnerabilities affecting operating systems, applications, firmware, and infrastructure components.</p>
+<p>The service helps organizations maintain a secure and compliant environment by applying security updates, reducing exposure to cyber threats, and improving overall system resilience.</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced security risks</em></td>
+<td>Mitigates vulnerabilities that could be exploited by attackers, reducing exposure to malware, ransomware, and unauthorized access.</td>
+</tr>
+<tr>
+<td><em>Improved system reliability</em></td>
+<td>Enhances the stability and resilience of operating systems, applications, and infrastructure components.</td>
+</tr>
+<tr>
+<td><em>Regulatory compliance</em></td>
+<td>Supports adherence to security standards, corporate policies, and compliance requirements.</td>
+</tr>
+<tr>
+<td><em>Proactive threat mitigation</em></td>
+<td>Identifies and addresses vulnerabilities before they can be exploited by emerging threats.</td>
+</tr>
+<tr>
+<td><em>Continuous security improvement</em></td>
+<td>Validates remediation actions and continuously improves the organization's security posture.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vulnerability-management-scope">Vulnerability management scope</h4>
+<p>The Vulnerability management process is designed to:</p>
+<ul>
+<li>Identify and assess security vulnerabilities.</li>
+<li>Verify compliance with security standards and internal policies.</li>
+<li>Evaluate the resilience of systems, networks, and applications.</li>
+<li>Validate the effectiveness of remediation activities.</li>
+<li>Continuously improve the security posture of managed environments.</li>
+</ul>
+<p><em>Vulnerability management lifecycle</em>:</p>
+<div class="highlight"><pre><span></span><code>Planning
+    ↓
+Execution of activities
+    ↓
+Remediation plan definition
+    ↓
+Remediation implementation
+    ↓
+Monitoring &amp; validation
+</code></pre></div>
+<h4 id="patch-management-approaches">Patch Management Approaches</h4>
+<table>
+<thead>
+<tr>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Periodic vulnerability management</em></td>
+<td>Scheduled assessments and patching activities performed according to predefined maintenance windows.</td>
+</tr>
+<tr>
+<td><em>On-demand vulnerability management</em></td>
+<td>Activities triggered by risk assessments, security alerts, newly discovered vulnerabilities, emergency patches, or zero-day threats.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="roles-and-responsibilities">Roles and Responsibilities</h4>
+<p>The SOC coordinates and governs the Vulnerability Management process by:</p>
+<ul>
+<li>Defining the VM scope.</li>
+<li>Supporting activity planning.</li>
+<li>Managing internal and external security alerts.</li>
+<li>Reviewing assessment results.</li>
+<li>Validating remediation plans.</li>
+</ul>
+<p>The SOC also performs:</p>
+<ul>
+<li>Collecting vulnerability intelligence from internal and external sources.</li>
+<li>Analyzing affected assets and systems.</li>
+<li>Planning security assessments and testing activities.</li>
+<li>Performing Vulnerability Assessments (VA) and Penetration Testing (PT).</li>
+<li>Producing reports and tracking remediation activities.</li>
+</ul>
+<h4 id="kubernetes-security-and-stackrox-integration">Kubernetes security and StackRox integration</h4>
+<p>For Kubernetes-based PaaS services, Vulnerability Management and Security Patching activities leverage <strong>StackRox</strong>, a cloud-native security platform providing continuous security monitoring and vulnerability assessment.</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Vulnerability management</em></td>
+<td>Identifies, prioritizes, and monitors vulnerabilities across container images and running workloads.</td>
+</tr>
+<tr>
+<td><em>Network segmentation</em></td>
+<td>Validates and enforces network segmentation policies to reduce lateral movement risks.</td>
+</tr>
+<tr>
+<td><em>Compliance monitoring</em></td>
+<td>Continuously evaluates workloads against security and compliance requirements.</td>
+</tr>
+<tr>
+<td><em>Detection and response</em></td>
+<td>Detects security threats and supports remediation activities through continuous monitoring and alerting.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="replication">Replication</h3>
+<p>The protection of data integrity and availability within the PaaS platform is ensured through the integration of the Kubernetes cluster with a centralized backup service based on Veeam Backup &amp; Recovery.</p>
+<p>To support Kubernetes environments, the Veeam architecture includes a dedicated <em>Media Agent</em> responsible for executing backup operations through APIs exposed by the Kubernetes infrastructure.</p>
+<p>The following table summarizes the Kubernetes objects protected by the backup service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Etcd Database</em></td>
+<td>Distributed database hosted on Kubernetes master nodes, responsible for storing cluster state and configuration data.</td>
+</tr>
+<tr>
+<td><em>Persistent volumes</em></td>
+<td>Block and File Storage volumes provided by the Ceph platform and used by containerized workloads.</td>
+</tr>
+</tbody>
+</table>
+<p>Due to the critical role of the <em>etcd database</em>, which manages and stores the state and configuration of all Kubernetes objects, backup operations are performed at a very high frequency, typically several times per hour.</p>
+<p>For stateful applications requiring <em>Application-consistent backups</em> (for example PostgreSQL databases), the backup process can leverage dedicated pre-backup and post-backup scripts.</p>
+<p>During backup execution, the workflow follows these steps:</p>
+<div class="highlight"><pre><span></span><code>Application Quiesce (Read-Only)
+            ↓
+Volume Snapshot Creation
+            ↓
+Application Unquiesce (Read-Write)
+</code></pre></div>
+<p>These scripts temporarily place the application in a read-only state during snapshot creation and automatically restore normal operations once the backup process has been completed.</p>
+<p>The Veeam platform supports the configuration and execution of these pre/post-backup scripts on a per-application basis, ensuring consistent and reliable backup operations for business-critical workloads.</p>
+<h3 id="disaster-recovery">Disaster Recovery</h3>
+<p>The PaaS platform leverages the multi-region, multi-availability-zone infrastructure of Leonardo Cloud Everywhere to support disaster recovery strategies at both the infrastructure and application level.  </p>
+<p>The underlying architecture is organized into three geographically distributed Regions, each composed of three Availability Zones hosted in physically separate Data Centers. Within a Region, the Availability Zones are interconnected through a dedicated high-throughput, low-latency backbone that supports synchronous data replication across the tri-site storage configuration. Across Regions, asynchronous replication is available over dedicated interregional backbones, enabling recovery scenarios while maintaining data sovereignty within Italian territory.</p>
+<h2 id="list-of-services">List of services</h2>
+<p>The following table lists the services included in the <em>Platform as a Service (PaaS)</em> category.</p>
+<table>
+<thead>
+<tr>
+<th>FAMILY</th>
+<th>SERVICES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Security</em></td>
+<td>• <a href="#IAM">Identity &amp; Access Management (IAM) Service</a><br>• <a href="#key-vault">Key Vault as a Service - Standard</a><br>• <a href="#endpoint">Endpoint Protection</a><br>• <a href="#ngfw">NGFW Platform</a></td>
+</tr>
+<tr>
+<td><em>Middleware</em></td>
+<td>• <a href="#API">PaaS API Management</a><br>• <a href="#faas">Functions As A Service (FAAS)</a></td>
+</tr>
+<tr>
+<td><em>Infra &amp; Ops Platform</em></td>
+<td>• <a href="#ITops">IT Infrastructure Service Operations (Logging &amp; Monitoring)</a></td>
+</tr>
+<tr>
+<td><em>DevSecOps</em></td>
+<td>• <a href="#devsecops">DevSecOps As A Service</a><br>• <a href="#qualizer">Qualizer DevSecOps</a></td>
+</tr>
+<tr>
+<td><em>Big Data</em></td>
+<td>• <a href="#datalake">Data Lake</a><br>• <a href="#dataplatform">Data Platform</a><br>• <a href="#BI">Business Intelligence Platform</a><br>• <a href="#event-message">Event Message</a></td>
+</tr>
+<tr>
+<td><em>Artificial Intelligence (AI)</em></td>
+<td>• <a href="#AI-platform">AI Platform</a></td>
+</tr>
+<tr>
+<td><em>Database</em></td>
+<td>• <a href="#postgres">PaaS SQL - PostgreSQL</a><br>• <a href="#redis">PaaS In Memory - Redis</a></td>
+</tr>
+<tr>
+<td><em>Networking</em></td>
+<td>• <a href="#DNS">PaaS Domain Name System (DNS)</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption>List of families and related PaaS services</figcaption>
+
+<h2 id="security-family">Security Family</h2>
+<p>Below is the list of services belonging to the Security family:</p>
+<ul>
+<li><a href="#IAM">Identity &amp; Access Management Service</a></li>
+<li><a href="#key-vault">Key Vault as a Service - Standard</a></li>
+<li><a href="#endpoint">End point protection</a></li>
+<li><a href="#ngfw">NGFW Platform</a></li>
+</ul>
+<p><a id="IAM"></a></p>
+<h3 id="identity-access-management-iam-service">Identity &amp; Access Management (IAM) Service</h3>
+<p><a href="../assets/images/extract/media/IAM.png"><figure><img src="../assets/images/extract/media/IAM.png" /><figcaption>Identity &amp; Access Management Service (IAM) Interface</figcaption></figure></a></p>
+<h4 id="service-description">Service Description</h4>
+<p>The Identity &amp; Access Management (IAM) service, developed by Leonardo, provides centralized authentication, authorization, and identity lifecycle management across the PaaS platform.</p>
+<p>The service provides secure and centralized access management through <em>Single Sign-On (SSO)</em>, <em>Multi-Factor Authentication (MFA)</em>, and fine-grained authorization policies. It integrates with enterprise identity systems and external directories, enabling identity federation and centralized user lifecycle management.</p>
+<p>Through a unified <strong>Single Pane of Glass</strong>, administrators can manage user identities, roles, authorization policies, authentication requirements, sessions, tokens, and directory integrations from a single console. Security and governance policies are consistently enforced across all PaaS services, providing a streamlined, secure, and cloud-native identity management experience.</p>
+<p>The service is offered with the following unit metric: <strong>100 concurrent users</strong>.</p>
+<h4 id="features-and-advantages">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>CAPABILITY AREA</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Identity Management</em></td>
+<td>• User Management: creation, modification, and deletion of users; management of user profiles (name, email, custom attributes, roles, etc.); import/export of users from external directories such as LDAP and Active Directory.<br>• Identity Federation: integration with external identity providers through LDAP and Active Directory, with support for one-way or two-way synchronization of users and roles.<br>• Account Management UI: self-service portal that allows users to manage profiles, passwords, devices, active sessions, and permissions.</td>
+</tr>
+<tr>
+<td><em>Access Management</em></td>
+<td>• Single Sign-On (SSO) and Single Logout (SLO).<br>• Multi-Factor Authentication (MFA).<br>• Delegated Authentication (Identity Brokering).<br>• Role-Based Access Control (RBAC) and policy enforcement.</td>
+</tr>
+<tr>
+<td><em>Protocols &amp; Integration</em></td>
+<td>• Support for industry-standard protocols, including OpenID Connect (OIDC), OAuth 2.0, and SAML 2.0.<br> Integration with API Gateways, microservices, and web frontend applications.</td>
+</tr>
+<tr>
+<td><em>Security &amp; Management</em></td>
+<td>• Session and token management.<br>• Password policy enforcement.<br>• Event logging and auditing capabilities.<br>• Scalability and High Availability through a distributed architecture with clustering and replication support.</td>
+</tr>
+<tr>
+<td><em>Extensibility</em></td>
+<td>• REST APIs for automated management of users, roles, and clients.<br>• Service Provider Interfaces (SPI) for extending authentication, validation, and provisioning capabilities.<br>• Support for custom authenticators and integration with external systems.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Improved overall security</em></td>
+<td>Centralized authentication and identity management reduce the attack surface and minimize the risk of security vulnerabilities being implemented inconsistently across applications.</td>
+</tr>
+<tr>
+<td><em>Reduced maintenance and development costs</em></td>
+<td>A single, centralized identity platform eliminates duplication of authentication and authorization logic, reducing development effort, operational complexity, and maintenance costs.</td>
+</tr>
+<tr>
+<td><em>Agility and scalability</em></td>
+<td>Accelerates the onboarding of new applications and services through the adoption of standard identity protocols such as OpenID Connect (OIDC), OAuth 2.0, and SAML 2.0, enabling rapid integration at scale.</td>
+</tr>
+<tr>
+<td><em>Maintainability and standardization</em></td>
+<td>Adoption of industry-standard protocols (OIDC, OAuth 2.0, and SAML 2.0) eliminates proprietary implementations, improves interoperability, and simplifies long-term maintenance.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="key-vault"></a></p>
+<h3 id="key-vault-as-a-service-standard">Key Vault as a Service - Standard</h3>
+<p><a href="../assets/images/extract/media/KeyVault.png"><figure><img src="../assets/images/extract/media/KeyVault.png" /><figcaption>Key Vault as a service Interface</figcaption></figure></a></p>
+<h4 id="service-description_1">Service Description</h4>
+<p>The service, based on Hashicorp Vault technology, provides a secure cloud repository (Vault) for storing and managing credentials and passwords used by cloud applications without having to manually install and manage dedicated IaaS machines.</p>
+<p>The service consists of a software platform that enables centralized and automated management of encryption keys, secrets, and certificates, with access controlled by identity-based authentication and authorization methods.  </p>
+<p>It also allows organizations to significantly simplify key lifecycle management, ensuring centralized control while leveraging the native cryptographic capabilities of KMS providers.</p>
+<p>The service is offered with the following unit metric: <strong>500 clients</strong>.</p>
+<h4 id="features-and-advantages_1">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Secure secret storage</em></td>
+<td>Key/value secrets are stored in encrypted form within Key Vault As A Service, ensuring confidentiality and integrity even in the event of unauthorized access to the underlying storage layer.</td>
+</tr>
+<tr>
+<td><em>Dynamic secrets</em></td>
+<td>Key Vault As A Service can generate secrets on demand, enabling users and applications to securely access external systems without relying on long-lived credentials.</td>
+</tr>
+<tr>
+<td><em>Data encryption</em></td>
+<td>Key Vault As A Service provides encryption and decryption capabilities for workloads running on customer infrastructure, managing the complete lifecycle of the cryptographic material used during the encryption process.</td>
+</tr>
+<tr>
+<td><em>Leasing and renewal</em></td>
+<td>Each key or secret is associated with a lease that enables automatic revocation upon expiration. Clients can renew leases through the platform’s integrated APIs to maintain authorized access.</td>
+</tr>
+<tr>
+<td><em>Revocation</em></td>
+<td>Integrated support for revoking keys and secrets individually or in bulk (e.g., all secrets associated with a specific user), enabling rapid response in the event of credential compromise or security incidents.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers high availability and geographic replication.  </p>
+<p>The main workflow of Key Vault as a Service consists of four phases, as described in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>PHASE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Authentication</em></td>
+<td>The process by which a client provides information that Key Vault as a Service uses to verify the authenticity of the requester. Once authenticated, the system generates a token associated with the applicable security policy.</td>
+</tr>
+<tr>
+<td><em>Validation</em></td>
+<td>Identity validation is performed through trusted third-party providers such as Active Directory, LDAP, and Okta.</td>
+</tr>
+<tr>
+<td><em>Authorization</em></td>
+<td>The authenticated client is associated with a Key Vault as a Service security policy, consisting of a set of rules that define which API endpoints a user, machine, or application is allowed or denied access to through its token.</td>
+</tr>
+<tr>
+<td><em>Access</em></td>
+<td>Once authentication and authorization have been completed, Key Vault as a Service grants access to cryptographic keys, encryption capabilities, secrets, and certificates.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Risk reduction</em></td>
+<td>Automatic key rotation and secret lifecycle management enhance the protection of sensitive data, simplify regulatory compliance, and reduce the risk of human errors associated with manual credential management.</td>
+</tr>
+<tr>
+<td><em>Operational efficiency and cost reduction</em></td>
+<td>Automation, standardization, and centralized secret management reduce operational overhead, improve scalability, and eliminate the need for dedicated hardware investments.</td>
+</tr>
+<tr>
+<td><em>Optimized Time-to-Market</em></td>
+<td>Developers can focus on application development rather than key and secret management, enabling faster delivery of secure applications and accelerating innovation.</td>
+</tr>
+<tr>
+<td><em>Improved trust and reputation</em></td>
+<td>Auditing and traceability capabilities provide visibility into secret management activities, helping organizations demonstrate security controls and compliance to customers, partners, and stakeholders.</td>
+</tr>
+<tr>
+<td><em>Cryptographic and standards compliance</em></td>
+<td>Support for FIPS (Federal Information Processing Standards) validated cryptographic modules ensures that encryption, digital signing, HMAC, and key derivation operations comply with recognized security standards and regulatory requirements.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="endpoint"></a></p>
+<h3 id="endpoint-protection-service">Endpoint Protection Service</h3>
+<p><a href="../assets/images/extract/media/endpoint.png"><figure><img src="../assets/images/extract/media/endpoint.png" /><figcaption>Endpoint Protection Service Interface</figcaption></figure></a></p>
+<h4 id="service-description_2">Service Description</h4>
+<p>Powered by Wazuh technology, the Endpoint Security Monitoring Service provides centralized security monitoring, threat detection, vulnerability assessment, and compliance monitoring for endpoint devices, servers, and workloads.</p>
+<p>The service delivers a cloud-based, scalable, and centrally managed security monitoring platform capable of collecting, correlating, and analyzing security events from distributed endpoints. By combining host-based intrusion detection, file integrity monitoring, vulnerability detection, and log analysis, the service enhances visibility across the organization's infrastructure and enables proactive identification of security risks.  </p>
+<p>The service is delivered as a managed PaaS solution, offering continuous security monitoring, centralized visibility, and simplified administration for organizations seeking advanced endpoint security monitoring capabilities without the overhead of managing on-premises security infrastructures.</p>
+<p>The service is offered with the following unit metric: <strong>100 monitored endpoints</strong>.</p>
+<h4 id="features-and-advantages_2">Features and Advantages</h4>
+<p>The Endpoint Security Monitoring Service offers a comprehensive suite of integrated security functions aimed at ensuring endpoint visibility, compliance, and threat detection across the organization:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Security event collection and log analysis</em></td>
+<td>Centralized collection, normalization, and analysis of security events, system logs, application logs, and audit records from monitored endpoints.</td>
+</tr>
+<tr>
+<td><em>Host-Based Intrusion Detection (HIDS)</em></td>
+<td>Continuous monitoring of endpoints to detect suspicious activities, unauthorized changes, and potential security breaches.</td>
+</tr>
+<tr>
+<td><em>File Integrity Monitoring (FIM)</em></td>
+<td>Tracks modifications to critical files, configurations, and system resources, generating alerts when unauthorized changes are detected.</td>
+</tr>
+<tr>
+<td><em>Vulnerability detection and assessment</em></td>
+<td>Continuously identifies known vulnerabilities and missing security updates across monitored systems, enabling risk prioritization and remediation planning.</td>
+</tr>
+<tr>
+<td><em>Security configuration assessment</em></td>
+<td>Evaluates endpoint configurations against security best practices and compliance benchmarks, helping organizations maintain secure and compliant system configurations.</td>
+</tr>
+<tr>
+<td><em>Threat detection and correlation</em></td>
+<td>Correlates events from multiple sources to identify attack patterns, Indicators of Compromise (IoCs), and suspicious behaviors.</td>
+</tr>
+<tr>
+<td><em>Compliance monitoring</em></td>
+<td>Supports security and regulatory frameworks by continuously assessing monitored systems against predefined compliance requirements.</td>
+</tr>
+<tr>
+<td><em>Centralized management console</em></td>
+<td>Provides unified visibility and control over monitored endpoints, enabling policy management, alert handling, investigation, and reporting from a single interface.</td>
+</tr>
+<tr>
+<td><em>Integration with SIEM, SOC, and XDR platforms</em></td>
+<td>Enables advanced security monitoring, incident investigation, and orchestration through integration with existing security ecosystems.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the main components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Wazuh agent</em></td>
+<td>Lightweight agent installed on monitored endpoints that collects security events, system information, file integrity data, and vulnerability information.</td>
+</tr>
+<tr>
+<td><em>Wazuh management server</em></td>
+<td>Central component responsible for receiving, processing, correlating, and managing security data collected from endpoint agents.</td>
+</tr>
+<tr>
+<td><em>Indexer and analytics engine</em></td>
+<td>Stores, indexes, and analyzes security events, enabling efficient searches, dashboards, reporting, and long-term event retention.</td>
+</tr>
+<tr>
+<td><em>Management and monitoring console</em></td>
+<td>Centralized administrative interface providing visibility into alerts, vulnerabilities, compliance status, and overall endpoint security posture.</td>
+</tr>
+<tr>
+<td><em>Vulnerability detection module</em></td>
+<td>Continuously evaluates monitored assets against vulnerability databases and identifies security weaknesses requiring remediation.</td>
+</tr>
+<tr>
+<td><em>File Integrity Monitoring (FIM) module</em></td>
+<td>Monitors critical files, configurations, and system resources for unauthorized modifications and suspicious changes.</td>
+</tr>
+<tr>
+<td><em>Compliance monitoring module</em></td>
+<td>Assesses systems against predefined security policies, regulatory requirements, and compliance frameworks.</td>
+</tr>
+<tr>
+<td><em>Event correlation and alerting engine</em></td>
+<td>Analyzes and correlates security events across the environment to identify anomalies, attack patterns, and generate actionable alerts.</td>
+</tr>
+<tr>
+<td><em>Integration and API layer</em></td>
+<td>Enables interoperability with SIEM, SOC, IAM, ticketing, automation, and orchestration platforms through APIs and standard integrations.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Centralized security visibility</em></td>
+<td>Provides unified monitoring and security event analysis across all managed endpoints from a single platform.</td>
+</tr>
+<tr>
+<td><em>Continuous threat detection</em></td>
+<td>Enables real-time identification of suspicious activities, policy violations, and indicators of compromise.</td>
+</tr>
+<tr>
+<td><em>Vulnerability and risk management</em></td>
+<td>Continuously identifies vulnerabilities and misconfigurations, supporting remediation prioritization and risk reduction.</td>
+</tr>
+<tr>
+<td><em>Compliance and audit readiness</em></td>
+<td>Facilitates adherence to security standards and regulatory requirements through continuous monitoring and reporting.</td>
+</tr>
+<tr>
+<td><em>Reduced operational complexity</em></td>
+<td>Centralizes monitoring, analysis, and management activities, simplifying security operations.</td>
+</tr>
+<tr>
+<td><em>Scalable architecture</em></td>
+<td>Supports distributed environments ranging from small infrastructures to large enterprise deployments.</td>
+</tr>
+<tr>
+<td><em>Integration with security ecosystems</em></td>
+<td>Enables seamless integration with SIEM, SOC, XDR, IAM, and ticketing platforms for coordinated security operations.</td>
+</tr>
+<tr>
+<td><em>Comprehensive endpoint visibility</em></td>
+<td>Provides detailed insights into endpoint activity, configuration changes, security events, and system health.</td>
+</tr>
+<tr>
+<td><em>Automated alerting and incident investigation</em></td>
+<td>Accelerates threat identification and investigation through event correlation and actionable alerts.</td>
+</tr>
+<tr>
+<td><em>Advanced reporting and analytics</em></td>
+<td>Offers customizable dashboards, compliance reports, and security analytics to support operational and governance requirements.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="ngfw"></a></p>
+<h3 id="ngfw-platform">NGFW Platform</h3>
+<p><a href="../assets/images/extract/media/firewall.png"><figure><img src="../assets/images/extract/media/firewall.png" /><figcaption>NGFW platform Interface</figcaption></figure></a></p>
+<h4 id="service-description_3">Service Description</h4>
+<p>The Next-Generation Firewall (NGFW) service, based on OPNsense technology, implements a firewall application system to manage inbound and outbound traffic flows.</p>
+<p>The platform includes all the advanced features of a firewall with additional threat detection capabilities based on artificial intelligence and machine learning.<br />
+The device is also capable of analyzing the content of network packets, down to the application layer (deep packet inspection), and managing rules based on more than just ports and protocols.  </p>
+<p>The service delivers intelligent traffic inspection, application-aware control, intrusion prevention, and threat detection across cloud, on-premise, and hybrid infrastructures.<br />
+Unlike traditional firewalls that rely solely on port and protocol filtering, the NGFW PaaS incorporates deep packet inspection (DPI), machine learning-based threat analysis, and context-aware security policies to identify and mitigate sophisticated attacks, including malware, ransomware, zero-day exploits, and data exfiltration attempts.</p>
+<p>The service is offered with the following unit metric: <strong>1 Gbps of Throughput</strong>.</p>
+<h4 id="features-and-advantages_3">Features and Advantages</h4>
+<p>The following table summarizes the main features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Intrusion Prevention System (IPS)</em></td>
+<td>Provides signature-based and behavior-based detection to prevent known and unknown exploits. Protects against buffer overflows, SQL injection, cross-site scripting (XSS), and command injection attacks. Continuously updated through global threat intelligence feeds.</td>
+</tr>
+<tr>
+<td><em>Virtual Private Network (VPN) and Secure Remote Access</em></td>
+<td>Provides site-to-site and remote access VPN capabilities with AES-256 encryption. Supports IPsec, SSL, and hybrid VPN tunnels for secure communications and integrates with Multi-Factor Authentication (MFA) for enhanced user security.</td>
+</tr>
+<tr>
+<td><em>Logging, monitoring, and analytics</em></td>
+<td>Delivers real-time visibility into network traffic, user activity, and threat events through integrated dashboards and customizable reports. Supports integration with SIEM and SOAR platforms for advanced analytics, compliance, auditing, and incident response.</td>
+</tr>
+<tr>
+<td><em>High Availability and scalability</em></td>
+<td>Provides a redundant architecture with failover mechanisms, session synchronization, and minimal service disruption. Supports auto-scaling capabilities, multi-zone deployments, and multi-region architectures to ensure resilience and disaster recovery.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Web filtering and URL categorization</em></td>
+<td>Filters web traffic by category and blocks or restricts access to malicious, unauthorized, or non-compliant websites through HTTP/HTTPS proxy capabilities, URL filtering, and blacklist enforcement.</td>
+</tr>
+<tr>
+<td><em>Firewall enforcement nodes</em></td>
+<td>Provides stateful firewall inspection, policy-based traffic filtering, VLAN support, Network Address Translation (NAT), port forwarding, and advanced network security controls.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Enhanced cyber resilience</em></td>
+<td>Provides continuous protection against advanced cyber threats, ensuring business continuity and minimizing the risk of network downtime, data loss, or reputational damage.</td>
+</tr>
+<tr>
+<td><em>Regulatory compliance and risk reduction</em></td>
+<td>Simplifies compliance with major cybersecurity frameworks by enforcing standardized policies, secure configurations, and comprehensive audit logging.</td>
+</tr>
+<tr>
+<td><em>Operational efficiency and cost optimization</em></td>
+<td>Delivered as a managed PaaS, eliminating the need for dedicated hardware, manual updates, and specialized maintenance activities, significantly reducing operational costs.</td>
+</tr>
+<tr>
+<td><em>Scalable and flexible network protection</em></td>
+<td>Cloud-native architecture enables dynamic scaling according to traffic demand, ensuring consistent performance across hybrid and multi-cloud environments.</td>
+</tr>
+<tr>
+<td><em>Accelerated security modernization</em>*</td>
+<td>Enables organizations to transition from legacy firewall solutions to a modern, intelligent, and centrally managed security platform without downtime or complex migrations.</td>
+</tr>
+<tr>
+<td>*<em>Improved visibility and governance</em></td>
+<td>Consolidates monitoring and policy control across distributed environments into a single interface, empowering governance, risk, and compliance teams.</td>
+</tr>
+<tr>
+<td><em>Faster incident response</em></td>
+<td>Automated detection and orchestration reduce the time required to identify and mitigate attacks, minimizing business impact and operational overhead.</td>
+</tr>
+<tr>
+<td><em>Business continuity and resilience</em></td>
+<td>Redundant and geo-distributed infrastructure ensures uninterrupted protection and service availability, even during outages or cyberattacks.</td>
+</tr>
+<tr>
+<td><em>Support for digital transformation initiatives</em></td>
+<td>Enables secure adoption of cloud services, remote access solutions, and IoT technologies by integrating network security directly into cloud workflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="middleware-family">Middleware Family</h2>
+<p>Below is the list of services belonging to the Middleware family:</p>
+<ul>
+<li><a href="#API">PaaS API Management</a></li>
+<li><a href="#faas">Functions as a Service (FAAS)</a></li>
+</ul>
+<p><a id="API"></a></p>
+<h3 id="paas-api-management">PaaS API Management</h3>
+<p><a href="../assets/images/extract/media/API01.png"><img alt="" src="../assets/images/extract/media/API01.png" /></a>
+<a href="../assets/images/extract/media/API02.png"><figure><img src="../assets/images/extract/media/API02.png" /><figcaption>PaaS API Management Interface</figcaption></figure></a></p>
+<h4 id="service-description_4">Service Description</h4>
+<p>Based on Kong solution, it is a platform of tools and services that facilitates the management, control, monitoring, and protection of APIs (Application Programming Interfaces) without having to manually implement all the components. 
+The service typically offers:</p>
+<ul>
+<li>API gateways to route and secure traffic;</li>
+<li>Authentication and authorization: Rate limiting and throttling to control consumption;</li>
+<li>Logging and observability: Integration with security and DevOps systems.</li>
+</ul>
+<p>The API manager facilitates API lifecycle management, including aspects such as creation, version management, deprecation, and retirement, to ensure backward compatibility, allowing developers to gradually migrate to new versions without disrupting existing applications. </p>
+<p>The API manager allows you to define and enforce policies, such as usage limits, quota management, custom authentication, data transformations, and caching. These policies allow you to control API behavior and ensure compliance with security requirements and guidelines.  </p>
+<p>The API Manager can integrate with other systems and tools, such as identity and access management (IAM) systems, performance monitoring systems, data analytics systems, and security gateways. This integration expands the API Manager's functionality and integrates it into the ecosystem of existing applications and services.</p>
+<p>The service is offered for a <strong>unit size of 500 M of API requests</strong>.</p>
+<h4 id="features-and-advantages_4">Features and Advantages</h4>
+<p>The following table summarizes the main features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>API publishing</em></td>
+<td>Provides tools for publishing and exposing APIs to developers and authorized consumers. Supports comprehensive API documentation, including available endpoints, request parameters, authentication requirements, and response formats to facilitate adoption and integration.</td>
+</tr>
+<tr>
+<td><em>Access control</em></td>
+<td>Manages authentication and authorization for API consumers, enabling fine-grained control over access permissions. Supports security mechanisms such as API keys, access tokens, and digital certificates to protect API resources.</td>
+</tr>
+<tr>
+<td><em>Monitoring and analytics</em></td>
+<td>Delivers visibility into API usage and performance through metrics such as request volumes, response times, and error rates. Enables administrators and developers to monitor service health, identify performance bottlenecks, and support capacity planning and optimization activities.</td>
+</tr>
+</tbody>
+</table>
+<p>The architecture is divided into several key components that interact to provide comprehensive functionality to users:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Front-end</em></td>
+<td>Administration interfaces and graphical portals (Admin GUI and Developer Portal) accessible through web browsers or dedicated applications. These interfaces enable service configuration, user management, and real-time monitoring of operational metrics.</td>
+</tr>
+<tr>
+<td><em>Back-end Kong control plane</em></td>
+<td>Centralized management layer responsible for API configurations, policies, plugins, routing rules, and service orchestration across the platform.</td>
+</tr>
+<tr>
+<td><em>Back-end data plane</em></td>
+<td>Processes and routes API traffic to backend services while enforcing security policies, request transformations, caching mechanisms, and rate-limiting controls.</td>
+</tr>
+<tr>
+<td><em>Database</em></td>
+<td>Stores configurations, users, roles, operational statistics, and logs. Supports replication and high-availability capabilities to ensure resilience, fault tolerance, and business continuity.</td>
+</tr>
+<tr>
+<td><em>Integrations</em></td>
+<td>Supports integration with development tools, CI/CD pipelines, monitoring platforms, and project management systems, enabling seamless adoption within enterprise workflows.</td>
+</tr>
+<tr>
+<td><em>Security and authentication</em></td>
+<td>Provides advanced security capabilities, including Multi-Factor Authentication (MFA), support for OIDC, SAML, and LDAP protocols, and granular access control mechanisms to ensure data protection and regulatory compliance.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced time to market</em></td>
+<td>APIs can be published, secured, and managed rapidly without the need to build and maintain the underlying infrastructure from scratch.</td>
+</tr>
+<tr>
+<td><em>Flexibility and scalability</em></td>
+<td>The platform adapts to evolving business requirements, supporting traffic growth, peak workloads, and new integrations without service disruption.</td>
+</tr>
+<tr>
+<td><em>Reduced operating costs</em></td>
+<td>Eliminates investments in hardware, infrastructure maintenance, and platform operations by delegating management responsibilities to the PaaS provider.</td>
+</tr>
+<tr>
+<td><em>API monetization</em></td>
+<td>Enables API-driven business models by exposing APIs to partners, customers, or third parties through subscription plans, usage-based pricing, or other monetization strategies.</td>
+</tr>
+<tr>
+<td><em>Enhanced security and compliance</em></td>
+<td>Protects APIs and service communications through authentication, authorization, traffic control, and rate-limiting policies, supporting compliance and reducing security risks.</td>
+</tr>
+<tr>
+<td><em>Open ecosystem</em></td>
+<td>Facilitates innovation, interoperability, and collaboration through a standardized, API-first architecture that simplifies integration with partners and external services.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="faas"></a></p>
+<h3 id="functions-as-a-service-faas">Functions as a Service (FAAS)</h3>
+<p><a href="../assets/images/extract/media/FaaS.png"><figure><img src="../assets/images/extract/media/FaaS.png" /><figcaption>Functions As a Service (FAAS) Interface</figcaption></figure></a></p>
+<h4 id="service-description_5">Service Description</h4>
+<p>FaaS (Function as a Service) is an event-driven system design model running on stateless containers based on the Nuvolaris platform, where developers create, deploy, and execute small, independent functions to accomplish specific tasks without having to worry about the underlying infrastructure.<br />
+Adopting FaaS allows for standardization of application development and execution by centralizing cross-functional capabilities such as orchestration, automatic provisioning, monitoring, integrated service management, and event-driven flow control. </p>
+<p>It offers tools to:</p>
+<ul>
+<li>centrally manage serverless functions;</li>
+<li>automate component lifecycle management.</li>
+</ul>
+<p>The FaaS platform provisions and scales the underlying resources based on demand. It is ideal for highly dynamic scenarios with variable workloads and integrates seamlessly with microservices and event-based architectures.</p>
+<p>The service is offered with the following metrics: <strong>100 VCPUs</strong>.</p>
+<h4 id="features-and-advantages_5">Features and Advantages</h4>
+<p>The service goes beyond simply providing an execution engine; it also offers a complete ecosystem, consisting of:</p>
+<ul>
+<li>Serverless execution → stateless functions and event-driven workflows, scalable and available in various programming languages.</li>
+<li>Portability and independence → can run on any Kubernetes cluster, across multiple environments, without lock-in constraints.</li>
+<li>Security and compliance → data protection and centralized access management.</li>
+<li>The solution enables organizations to adopt a modern and flexible model, reducing operational complexity and benefiting from a standardized and easily accessible service.</li>
+</ul>
+<p>The service is delivered through Apache OpenServerless, an open-source, cloud-agnostic serverless platform based on Apache OpenWhisk as a Function-as-a-Service (FaaS) engine.</p>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced operating costs</em></td>
+<td>Adopts a pay-per-use model, allowing organizations to pay only for the actual execution of functions and consumed resources.</td>
+</tr>
+<tr>
+<td><em>Flexibility and scalability</em></td>
+<td>Automatically scales resources according to workload demand, ensuring optimal performance without manual intervention.</td>
+</tr>
+<tr>
+<td><em>Operational efficiency</em></td>
+<td>Eliminates the need to manage servers, operating systems, patches, and infrastructure updates, reducing operational overhead.</td>
+</tr>
+<tr>
+<td><em>High availability</em></td>
+<td>Built-in redundancy and fault-tolerance mechanisms ensure continuous service availability, even in the event of infrastructure failures.</td>
+</tr>
+<tr>
+<td><em>Accelerated time-to-market</em></td>
+<td>Enables rapid deployment of new features and services without the complexity of infrastructure provisioning and management.</td>
+</tr>
+<tr>
+<td><em>Agile development</em></td>
+<td>Allows development teams to focus on application code and business logic rather than server administration and platform maintenance.</td>
+</tr>
+<tr>
+<td><em>Continuous innovation</em></td>
+<td>Facilitates rapid experimentation, prototyping, and deployment of new services with minimal upfront investment and reduced risk.</td>
+</tr>
+<tr>
+<td><em>Competitive advantage</em></td>
+<td>Improves organizational agility, reduces operational costs, and accelerates service delivery compared to traditional hosting and infrastructure models.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="infra-ops-platform-family">Infra &amp; Ops Platform Family</h2>
+<p>Below is the list of services belonging to the Infra &amp; Ops Platform family:</p>
+<ul>
+<li><a href="#ITops">IT infrastructure Service Operations (Logging &amp; Monitoring)</a></li>
+</ul>
+<p><a id="ITops"></a></p>
+<h3 id="it-infrastructure-service-operations-logging-monitoring">IT infrastructure Service Operations (Logging &amp; Monitoring)</h3>
+<p><a href="../assets/images/extract/media/ITops.png"><figure><img src="../assets/images/extract/media/ITops.png" /><figcaption>IT infrastructure Service Operations (Logging &amp; Monitoring) interface</figcaption></figure></a></p>
+<h4 id="service-description_6">Service Description</h4>
+<p>Developed by Leonardo, this is an Application Performance Monitoring (APM) service that monitors and controls infrastructure performance supporting applications (e.g., latency, errors, service availability) and workloads deployed in the Cloud environment.<br />
+It provides centralized collection and analysis across various infrastructure elements: Servers and VMs, Containers and orchestrators, Cloud providers, and Network.  </p>
+<p>The service is offered per <strong>1 GB of data storage</strong>.</p>
+<h4 id="features-and-advantages_6">Features and Advantages</h4>
+<p>The Log &amp; Audit service built on OpenTelemetry provides a unified and vendor-neutral way to collect, process, and export observability data.  </p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Log collection and aggregation</em></td>
+<td>Captures application logs, system logs, and security-relevant audit events. Supports structured logging to ensure consistent, searchable, and machine-readable data across environments.</td>
+</tr>
+<tr>
+<td><em>Audit trail generation</em></td>
+<td>Records user activities, configuration changes, and security-sensitive operations, ensuring traceability, integrity, and compliance through standardized data collection and export mechanisms.</td>
+</tr>
+<tr>
+<td><em>Distributed tracing</em></td>
+<td>Provides end-to-end visibility across distributed applications and microservices, enabling correlation of logs, metrics, and traces for comprehensive observability and auditability.</td>
+</tr>
+<tr>
+<td><em>Metrics and performance data</em></td>
+<td>Collects infrastructure and application metrics, including CPU, memory, network utilization, and API latency, supporting performance monitoring and operational diagnostics.</td>
+</tr>
+<tr>
+<td><em>Policy-driven data processing</em></td>
+<td>Enables filtering, sampling, redaction, and enrichment of telemetry data through OpenTelemetry Collectors, ensuring compliance with security and data governance requirements.</td>
+</tr>
+<tr>
+<td><em>Multi-destination export</em></td>
+<td>Exports logs, metrics, and traces to SIEM platforms, analytics solutions, data lakes, and object storage systems. Supports integrations with Elasticsearch, Splunk, Loki, BigQuery, and other observability platforms.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Instrumentation layer</em></td>
+<td>Applications and services instrumented through OpenTelemetry SDKs and auto-instrumentation agents. Generates logs, metrics, and traces using the standardized OpenTelemetry Protocol (OTLP) format.</td>
+</tr>
+<tr>
+<td><em>OpenTelemetry collector</em></td>
+<td>Central component responsible for receiving, processing, enriching, and exporting telemetry data. Can be deployed as a Kubernetes sidecar, a DaemonSet on each node, or a centralized collector cluster.</td>
+</tr>
+<tr>
+<td><em>Export and storage layer</em></td>
+<td>Stores and distributes observability and security data to multiple destinations, including Elasticsearch, Loki, cloud logging platforms, SIEM solutions such as Splunk and Microsoft Sentinel, and object storage repositories for long-term retention.</td>
+</tr>
+<tr>
+<td><em>Visualization and analytics</em></td>
+<td>Provides dashboards and visualization tools, such as Grafana, enabling real-time monitoring, operational analytics, and troubleshooting activities.</td>
+</tr>
+<tr>
+<td><em>Audit and compliance capabilities</em></td>
+<td>Supports centralized log analysis, auditing, digital forensics, and compliance reporting through consolidated access to telemetry and security-related information.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Improved security and compliance</em></td>
+<td>Centralized audit trails and telemetry collection simplify compliance with regulatory and security frameworks such as ISO 27001, SOC 2, and GDPR, while providing enhanced visibility into user activities and critical events.</td>
+</tr>
+<tr>
+<td><em>Reduced vendor lock-in</em></td>
+<td>OpenTelemetry's vendor-neutral architecture enables organizations to change observability backends without requiring application re-instrumentation.</td>
+</tr>
+<tr>
+<td><em>Better decision-making</em></td>
+<td>Unified observability data provides actionable insights into application usage, performance trends, and customer experience, supporting data-driven business and operational decisions.</td>
+</tr>
+<tr>
+<td><em>Cost optimization</em></td>
+<td>Policy-based sampling, filtering, and data routing help reduce storage, processing, and licensing costs while enabling the use of cost-efficient storage tiers.</td>
+</tr>
+<tr>
+<td><em>Unified observability pipeline</em></td>
+<td>A single, standardized pipeline for logs, metrics, and traces simplifies operations, reduces tool sprawl, and improves data consistency.</td>
+</tr>
+<tr>
+<td><em>Improved troubleshooting</em></td>
+<td>Correlation of logs, metrics, and traces accelerates root-cause analysis and significantly reduces Mean Time to Repair (MTTR).</td>
+</tr>
+<tr>
+<td><em>Scalability and flexibility</em></td>
+<td>OpenTelemetry Collectors can be scaled horizontally to support high-volume telemetry workloads across multi-cloud and hybrid environments.</td>
+</tr>
+<tr>
+<td><em>Standardization across teams</em></td>
+<td>Developers, SREs, operations, and security teams share a common telemetry standard, improving collaboration, onboarding, and operational efficiency.</td>
+</tr>
+<tr>
+<td><em>Extensibility</em></td>
+<td>Modular and pluggable components enable integration with new tools, platforms, and workflows without redesigning the observability architecture.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="devsecops-family">DevSecOps Family</h2>
+<p>Below is the list of services belonging to the  DevSecOps family:</p>
+<ul>
+<li><a href="#devsecops">DevSecOps As A Service</a></li>
+<li><a href="#qualizer">Qualizer DevSecOps</a></li>
+</ul>
+<p><a id="devsecops"></a></p>
+<h3 id="devsecops-as-a-service">DevSecOps As A Service</h3>
+<p><a href="../assets/images/extract/media/DevSecOps.png"><figure><img src="../assets/images/extract/media/DevSecOps.png" /><figcaption>DevSecOps As A Service interface</figcaption></figure></a></p>
+<h4 id="service-description_7">Service Description</h4>
+<p>The service, based on Gitlab, offers an integrated environment for the complete management of the software development lifecycle according to the DevSecOps approach and practices, providing the tools needed for collaboration, development, testing, security, and software release in a single integrated environment.  </p>
+<p>The service aims to support organizations in introducing application development, release, and management processes characterized by automation, security, and compliance, thus promoting the creation of reliable digital solutions aligned with required quality standards.<br />
+It allows you to manage projects and repositories, control source code versions, automate CI/CD pipelines, and collaborate efficiently with development teams.</p>
+<p>The service is offered per user unit in the following options: <strong>100 Users Ultimate/500 Users premium/2000 Free</strong>.</p>
+<h4 id="features-and-advantages_7">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Git repositories</em></td>
+<td>Centralized source code repositories that support version control, change tracking, and collaboration across development teams.</td>
+</tr>
+<tr>
+<td><em>CI/CD pipeline</em></td>
+<td>Automated build, test, and deployment workflows that accelerate software delivery, improve consistency, and reduce manual intervention.</td>
+</tr>
+<tr>
+<td><em>Security integration (DevSecOps)</em></td>
+<td>Embedded security controls, including SAST, SCA, container image scanning, and infrastructure security checks, enabling early vulnerability detection and remediation.</td>
+</tr>
+<tr>
+<td><em>Artifact and container management</em></td>
+<td>Centralized storage and management of build artifacts and container images, supporting secure promotion and deployment across development, testing, and production environments.</td>
+</tr>
+<tr>
+<td><em>Monitoring and governance</em></td>
+<td>Dashboards and reporting capabilities that provide visibility into project status, code quality, and security posture, with role-based access controls and identity management integration.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>GitLab core platform</em></td>
+<td>Central platform providing the web interface, APIs, database services, and collaboration capabilities required to manage the software development lifecycle.</td>
+</tr>
+<tr>
+<td><em>Git repository</em></td>
+<td>Repository management service that enables source code versioning, change tracking, branching, and collaborative development workflows.</td>
+</tr>
+<tr>
+<td><em>CI/CD engine (GitLab Runner)</em></td>
+<td>Execution engine responsible for running CI/CD pipeline jobs, automating build, test, validation, and deployment processes.</td>
+</tr>
+<tr>
+<td><em>Artifact registry</em></td>
+<td>Centralized repository for storing and managing build artifacts, software packages, container images, and libraries generated throughout the CI/CD lifecycle.</td>
+</tr>
+<tr>
+<td><em>Test management</em></td>
+<td>Integrated testing component that supports the planning, execution, and monitoring of test activities, helping ensure software quality and release readiness.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced time to market</em></td>
+<td>Accelerates software delivery through automation, integrated CI/CD pipelines, and streamlined development workflows.</td>
+</tr>
+<tr>
+<td><em>Reduced operating costs</em></td>
+<td>Consolidates source code management, CI/CD, security, and collaboration capabilities into a single platform, reducing tooling and maintenance overhead.</td>
+</tr>
+<tr>
+<td><em>Increased team productivity</em></td>
+<td>Improves efficiency through centralized collaboration, process automation, and integrated development workflows.</td>
+</tr>
+<tr>
+<td><em>High return on investment (ROI)</em></td>
+<td>Reduces rework, operational inefficiencies, and post-release remediation costs, maximizing the value of software development investments.</td>
+</tr>
+<tr>
+<td><em>Increased stakeholder trust</em></td>
+<td>Enhances software quality, security, and release reliability, fostering confidence among customers, partners, and internal stakeholders.</td>
+</tr>
+<tr>
+<td><em>Native security integration</em></td>
+<td>Embeds DevSecOps capabilities directly into the development lifecycle, supporting compliance with corporate policies and regulatory requirements.</td>
+</tr>
+<tr>
+<td><em>Integrated project management</em></td>
+<td>Provides native project management capabilities, including issue tracking, boards, milestones, and planning tools, improving project visibility and coordination.</td>
+</tr>
+<tr>
+<td><em>Centralized development lifecycle management</em></td>
+<td>Unifies source code repositories, CI/CD pipelines, testing, and artifact management within a single platform.</td>
+</tr>
+<tr>
+<td><em>Enhanced cross-team collaboration</em></td>
+<td>Facilitates collaboration between development, operations, security, and project management teams through shared workflows and visibility.</td>
+</tr>
+<tr>
+<td><em>Process automation</em></td>
+<td>Automates repetitive development, testing, security, and deployment activities, increasing consistency and operational efficiency.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="qualizer"></a></p>
+<h3 id="qualizer-devsecops">Qualizer DevSecOps</h3>
+<p><a href="../assets/images/extract/media/Qualizer.png"><figure><img src="../assets/images/extract/media/Qualizer.png" /><figcaption>Qualizer DevSecOps Service interface</figcaption></figure></a></p>
+<h4 id="service-description_8">Service Description</h4>
+<p>The Leonardo's Qualizer service is a platform designed to meet the needs for visibility, control, and continuous improvement of the software lifecycle throughout the development cycle, in accordance with the DevSecOps and Agile approach.  </p>
+<p>It offers a centralized tool for analyzing, observability, and governance of software quality.<br />
+The service allows you to aggregate data from various sources, security, monitoring, and testing tools, integrating them into a user dashboard (portal) that clearly and graphically displays various interactive metrics and insights.</p>
+<p>The service is sized and offered per project unit. Each unit consists of <strong>10 projects</strong>.</p>
+<h4 id="features-and-advantages_8">Features and Advantages</h4>
+<p>The service offers the following key features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Ingestion</em></td>
+<td>Automatically collects data from software development and delivery tools, including source code repositories, CI/CD platforms, and security and quality analysis solutions. The collected information is consolidated and prepared for further analysis.</td>
+</tr>
+<tr>
+<td><em>Data processing</em></td>
+<td>Normalizes, correlates, and enriches collected data, extracting key metrics and transforming information into a structured format suitable for reporting and analytics.</td>
+</tr>
+<tr>
+<td><em>Project management</em></td>
+<td>Provides project configuration and organization capabilities, enabling the association of products, pipelines, tools, and contextual information within a unified management framework.</td>
+</tr>
+<tr>
+<td><em>Analytics engine</em></td>
+<td>Aggregates and analyzes collected data to generate insights into development performance, code quality, security posture, testing activities, and delivery efficiency.</td>
+</tr>
+<tr>
+<td><em>Presentation layer</em></td>
+<td>Delivers dashboards and reporting capabilities that provide continuous visibility into key performance indicators, trends, and operational metrics.</td>
+</tr>
+</tbody>
+</table>
+<p>The Qualizer service is cloud-native and based on a containerized microservices system. This architecture allows Qualizer to be flexible, resilient and secure, with the ability to adapt to different technological scenarios.  </p>
+<p>At a logical level, the architecture is divided into the following main components:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Core modules</em></td>
+<td>Service capabilities such as ingestion, project management, and data processing are implemented as independent microservices running on Kubernetes/OpenShift, ensuring scalability, high availability, and functional isolation.</td>
+</tr>
+<tr>
+<td><em>Data repository</em></td>
+<td>Centralized database used to store, normalize, and manage information collected from external systems, supporting efficient metric calculation, reporting, and dashboard generation.</td>
+</tr>
+<tr>
+<td><em>REST API integration</em></td>
+<td>Standard API layer that enables continuous integration with external platforms, facilitating automated data collection and interoperability across the software delivery ecosystem.</td>
+</tr>
+<tr>
+<td><em>Messaging broker</em></td>
+<td>Kafka-based messaging infrastructure that decouples service components, supports high-volume event processing, and enables horizontal scalability and resilient communication between modules.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced time to market</em></td>
+<td>Accelerates software delivery through automation, integrated pipelines, and streamlined development workflows.</td>
+</tr>
+<tr>
+<td><em>Reduced operating costs</em></td>
+<td>Consolidates multiple development, quality, and security capabilities into a single platform, reducing tooling complexity and operational overhead.</td>
+</tr>
+<tr>
+<td><em>Increased team productivity</em></td>
+<td>Enhances collaboration between development, operations, and security teams, aligning objectives, improving visibility, and reducing coordination efforts.</td>
+</tr>
+<tr>
+<td><em>High return on investment (ROI)</em></td>
+<td>Minimizes rework, technical debt, and post-release remediation activities, maximizing the value of software development investments.</td>
+</tr>
+<tr>
+<td><em>Increased stakeholder trust</em></td>
+<td>Improves software quality and security posture, enabling more reliable releases and increasing confidence among customers and stakeholders.</td>
+</tr>
+<tr>
+<td><em>Centralized security management</em></td>
+<td>Aggregates, normalizes, and tracks vulnerabilities identified by multiple security tools within a single platform, simplifying governance and reducing the risk of overlooked issues.</td>
+</tr>
+<tr>
+<td><em>Reduced remediation time</em></td>
+<td>Provides immediate visibility into vulnerabilities and security findings, accelerating issue prioritization, ownership, and resolution processes.</td>
+</tr>
+<tr>
+<td><em>Continuous improvement through metrics</em></td>
+<td>Delivers standardized dashboards and performance indicators that enable objective measurement of team efficiency, software quality, and delivery performance.</td>
+</tr>
+<tr>
+<td><em>Unified visibility and governance</em></td>
+<td>Provides a single dashboard for monitoring quality, security, and deployment metrics, supporting informed decision-making and operational governance.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="big-data-family">Big Data Family</h2>
+<p>Below is the list of services belonging to the Big Data family:</p>
+<ul>
+<li><a href="#datalake">Data Lake</a></li>
+<li><a href="#dataplatform">Data Platform</a></li>
+<li><a href="#BI">Business Intelligence</a></li>
+<li><a href="#event-message">Event Message</a></li>
+</ul>
+<p><a id="datalake"></a></p>
+<h3 id="data-lake">Data Lake</h3>
+<p><a href="../assets/images/extract/media/DataLakeLDO01.png"><img alt="" src="../assets/images/extract/media/DataLakeLDO01.png" /></a>
+<a href="../assets/images/extract/media/DataLakeLDO02.png"><figure><img src="../assets/images/extract/media/DataLakeLDO02.png" /><figcaption>Data Lake Service interface</figcaption></figure></a></p>
+<h4 id="service-description_9">Service Description</h4>
+<p>Developed by Leonardo, it provides a ready-to-use platform that has all the features developers, data scientists, and analysts need to easily archive data of all sizes, shapes, and velocities. </p>
+<p>It allows for the ingestion of a wide range of heterogeneous data sources (structured, semi-structured, and unstructured), from various internal and external sources within the organizations (relational databases, files, web applications, cloud, web services, etc.), and of various classification types.  </p>
+<p>It integrates with the Processing/ETL module for accessing data and metadata for the necessary processing or normalization, and with the Data Governance module for managing data access and managing data security and protection.</p>
+<p>The service is sized and offered per storage unit. Each unit contains <strong>1 TB</strong>.</p>
+<h4 id="features-and-advantages_9">Features and Advantages</h4>
+<p>Data Lake is the foundation for all Big Data services; without it, other services cannot be activated.  </p>
+<p>It was designed based on, and with full wire-protocol compatibility with, Amazon's renowned cloud storage product (Simple Storage Service). This enables the scalability needed to manage data volumes in the petabyte range (and beyond) typical of the Big Data world, while ensuring maximum interoperability and compatibility with languages, libraries, and products compatible with the S3 protocol.  </p>
+<p>Data Lake's capabilities are based on a horizontally scalable infrastructure, capable of supporting heavy read and write loads, ensuring consistent performance even in scenarios characterized by large amounts of data and intensive throughput.</p>
+<p>The development technology is based on MinIO, an object storage solution fully compatible with the S3 protocol.</p>
+<p>The application layer is built on distributed object storage, which in turn relies on an underlying block storage layer, which can be implemented either bare metal or using software-defined solutions. The overall architecture is based on containers orchestrated by a resource manager based on an enterprise-class Kubernetes distribution.</p>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Compliance and governance</em></td>
+<td>Supports auditing, versioning, encryption (AES-256), and integration with identity and access management systems, helping organizations meet security and regulatory requirements.</td>
+</tr>
+<tr>
+<td><em>Flexibility and scalability</em></td>
+<td>Supports horizontal scaling and accommodates rapidly growing datasets, making it suitable for large-scale and multi-petabyte storage environments.</td>
+</tr>
+<tr>
+<td><em>Rapid time to market</em></td>
+<td>Enables the rapid deployment of new analytics workloads, data pipelines, and data-driven applications without the complexity of managing the underlying infrastructure.</td>
+</tr>
+<tr>
+<td><em>Simplified management</em></td>
+<td>Eliminates the need to manage clusters, load balancers, replication mechanisms, and monitoring platforms, while providing built-in monitoring and alerting capabilities.</td>
+</tr>
+<tr>
+<td><em>Reduced operating costs</em></td>
+<td>Leverages open standards and S3-compatible technologies to reduce licensing and infrastructure costs compared to proprietary storage solutions.</td>
+</tr>
+<tr>
+<td><em>High availability and resilience</em></td>
+<td>Integrated replication and erasure coding mechanisms ensure data durability, fault tolerance, and business continuity.</td>
+</tr>
+<tr>
+<td><em>Optimized performance</em></td>
+<td>Delivers high throughput and low latency for object storage workloads, supporting real-time analytics, AI, and machine learning use cases.</td>
+</tr>
+<tr>
+<td><em>Interoperability</em></td>
+<td>S3 API compatibility and multi-protocol support simplify integration with existing applications, platforms, and data ecosystems.</td>
+</tr>
+<tr>
+<td><em>Automation and DevOps friendliness</em></td>
+<td>Supports automated operations, continuous updates, and simplified backup management, enabling efficient DevOps and platform engineering practices.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="disaster-recovery-dr-architecture">Disaster Recovery (DR) architecture</h4>
+<p>Data replication within MinIO Object Storage is managed directly at the application level.</p>
+<p>The solution provides <strong>Site Replication</strong> capabilities that enable native management of data distributed across multiple Data Centers (DCs), synchronizing buckets, objects, access policies, and encryption configurations.<br />
+Typically, data availability and resilience in distributed object storage systems are achieved through deployment across multiple physical locations. In this architecture, MinIO clusters are deployed in geographically separate data centers to provide disaster recovery capabilities.</p>
+<p>Replication between MinIO sites can be configured as follows:</p>
+<table>
+<thead>
+<tr>
+<th>REPLICATION MODE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Synchronous replication</em></td>
+<td>Used within the same Region for High Availability (HA) configurations.</td>
+</tr>
+<tr>
+<td><em>Asynchronous replication</em></td>
+<td>Used between different Regions for Disaster Recovery (DR) configurations.</td>
+</tr>
+</tbody>
+</table>
+<p>In this deployment, thanks to the high-bandwidth and low-latency connections available between data centers, synchronous Site Replication has been adopted between clusters, ensuring data consistency across locations.<br />
+Access to the different clusters can be achieved either through direct addressing or through a load balancer, depending on architectural and operational needs.</p>
+<p>From an internal management perspective, MinIO automatically organizes storage units into <strong>erasure sets</strong>, logical groups that form the foundation of system availability and resilience.<br />
+To ensure uniform distribution, MinIO applies a striping mechanism for erasure sets across the various nodes in the pool, avoiding load concentrations or single points of failure.<br />
+Objects are then divided into data blocks and parity blocks, which are distributed within the erasure sets to ensure redundancy, fault tolerance, and operational continuity.</p>
+<p><a id="dataplatform"></a></p>
+<h3 id="data-platform-services">Data Platform Services</h3>
+<p>The Data Platform offering provides a modular platform for the governance, processing, and value extraction of Big Data assets stored within the enterprise Data Lake.  </p>
+<p>Designed to support data-driven organizations, the platform enables the governance, transformation, and consumption of large volumes of structured and unstructured data, ensuring quality, traceability, security, and control throughout the entire information lifecycle. </p>
+<p>The Data Platform integrates with the Data Lake, which serves as the data collection and persistence layer, by providing the capabilities required for metadata management, data governance, batch and real-time processing, and data preparation for analytics, operational, and artificial intelligence use cases.  </p>
+<p>The platform is delivered as a set of complementary managed PaaS services that address both data governance and data processing requirements, enabling organizations to transform their data assets into trusted, governed, and actionable information.</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Data governance service</em></td>
+<td>Provides data cataloging, metadata management, data lineage, data quality controls, and governance capabilities to ensure compliance, discoverability, and effective management of enterprise data assets.</td>
+</tr>
+<tr>
+<td><em>PaaS ETL – Batch/Real-Time processing service</em></td>
+<td>Provides scalable data ingestion, transformation, enrichment, and processing capabilities for both batch and streaming workloads, enabling data preparation for analytics, reporting, artificial intelligence, and business applications.</td>
+</tr>
+</tbody>
+</table>
+<p>Together, these services provide a comprehensive framework for governing, processing, and maximizing the value of enterprise data assets, ensuring that data stored within the Data Lake can be securely managed, efficiently consumed, and used to support business and analytical workloads.</p>
+<p>The following sections provide a detailed description of each service, outlining their features, capabilities, and benefits within the Data Platform ecosystem.</p>
+<p><a id="processing"></a></p>
+<h4 id="paas-etl-batchreal-time-processing">PaaS ETL - Batch/Real time Processing</h4>
+<p><a href="../assets/images/extract/media/Processing01.png"><img alt="" src="../assets/images/extract/media/Processing01.png" /></a>
+<a href="../assets/images/extract/media/Processing02.png"><figure><img src="../assets/images/extract/media/Processing02.png" /><figcaption>PaaS ETL - Batch/Real time Processing interface</figcaption></figure></a></p>
+<h5 id="service-description_10">Service Description</h5>
+<p>The ETL - Batch/Real time Processingt is a platform that provides a set of tools for processing, integrating, quality-checking, and preparing data from heterogeneous sources stored in the Data Lake, both in real time and in batch mode.  </p>
+<p>It offers a user-friendly graphical interface for designing and implementing data integration workflows using a visual approach, following the ETL (Extract – Transform – Load) approach. This reduces the complexity of data integration and allows users to focus on business logic rather than programming code.  </p>
+<p>It supports a wide range of data sources, including relational databases, files, web applications, cloud, web services, and more. This makes it extremely flexible for data integration in a variety of contexts.  </p>
+<p>It also offers data quality management tools, allowing users to clean, standardize, and enrich their data to ensure its accuracy and reliability.</p>
+<p>The service is sized and offered per worker node. Each worker consists of <strong>16vCPU and 128 GB of RAM</strong>.</p>
+<h5 id="features-and-advantages_10">Features and Advantages</h5>
+<p>The following table summarizes the main features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Heterogeneous and large-scale data processing</em></td>
+<td>Supports a wide range of data sources and formats in both batch and streaming modes, including HDFS, S3, ADLS Gen2, GCS, relational databases, NoSQL platforms, Apache Kafka, and common formats such as CSV, Parquet, and Avro.</td>
+</tr>
+<tr>
+<td><em>Native integration with the Big Data platform</em></td>
+<td>Seamlessly integrates with the Data Lake and Batch/Real-Time Processing services, enabling the creation of end-to-end data processing and analytics workflows.</td>
+</tr>
+<tr>
+<td><em>Advanced data pipeline implementation</em></td>
+<td>Enables the development of complex data processing pipelines by leveraging the parallel and distributed computing capabilities of Apache Spark clusters.</td>
+</tr>
+<tr>
+<td><em>Interactive data exploration and debugging</em></td>
+<td>Provides interactive execution environments that simplify data exploration, pipeline validation, troubleshooting, and development activities.</td>
+</tr>
+<tr>
+<td><em>Maximum scalability</em></td>
+<td>Delivers the scalability required to support organizations of any size, from small-scale workloads to large enterprise data processing environments.</td>
+</tr>
+</tbody>
+</table>
+<p>The main architectural components of the service are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Visual ETL architecture</em></td>
+<td>Visual development environment that enables the design and orchestration of ETL, ELT, and ELL pipelines through reusable components. Supports data ingestion, transformation, and delivery across multiple sources and integrates with Data Lake, Monitoring, and Processing services.</td>
+</tr>
+<tr>
+<td><em>Apache Spark</em></td>
+<td>Distributed open-source processing engine that provides high-performance, in-memory computation capabilities for large-scale data processing, analytics, and transformation workloads.</td>
+</tr>
+<tr>
+<td><em>JupyterLab</em></td>
+<td>Interactive notebook-based development environment for data analysis, scientific computing, and machine learning. Supports multiple programming languages, including Python, R, and Julia.</td>
+</tr>
+<tr>
+<td><em>Node-RED</em></td>
+<td>Low-code visual programming environment that enables rapid development of data flows and integrations between devices, APIs, web services, and enterprise systems.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Support for data-driven strategies</em></td>
+<td>Enables faster and more informed decision-making through centralized access to data, supporting use cases such as real-time analytics, IoT, e-commerce, customer insights, and business intelligence.</td>
+</tr>
+<tr>
+<td><em>Greater focus on core business</em></td>
+<td>Allows development and IT teams to focus on business value and innovation by offloading platform maintenance and operational management activities.</td>
+</tr>
+<tr>
+<td><em>Reduced operating costs and service scalability</em></td>
+<td>Eliminates infrastructure management overhead while supporting large-scale batch processing and real-time streaming workloads. Automated extraction, transformation, and loading processes improve efficiency and scalability.</td>
+</tr>
+<tr>
+<td><em>Integration with cloud ecosystem</em></td>
+<td>Seamlessly integrates with Data Lakes, Data Warehouses, Business Intelligence platforms, and AI/ML services, enabling end-to-end data workflows.</td>
+</tr>
+<tr>
+<td><em>Guaranteed security and compliance</em></td>
+<td>Provides security controls such as encryption, access management, and audit logging to support governance, regulatory compliance, and data protection requirements.</td>
+</tr>
+<tr>
+<td><em>Integrated monitoring</em></td>
+<td>Delivers centralized monitoring, logging, metrics, and alerting capabilities for continuous visibility into data pipelines and processing activities.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="governance"></a></p>
+<h4 id="data-governance">Data Governance</h4>
+<p><a href="../assets/images/extract/media/Governance01.png"><img alt="" src="../assets/images/extract/media/Governance01.png" /></a>
+<a href="../assets/images/extract/media/Governance02.png"><figure><img src="../assets/images/extract/media/Governance02.png" /><figcaption>Data Governance Service interface</figcaption></figure></a></p>
+<h5 id="service-description_11">Service Description</h5>
+<p>A service developed by Leonardo, the Data Governance service provides a secure and centralized platform for managing, governing, and discovering enterprise data assets.</p>
+<p>Through advanced search, discovery, and metadata extraction capabilities, the platform automatically collects, organizes, enriches, and correlates metadata from multiple data sources, simplifying data access, analysis, and governance activities.</p>
+<p>The service supports data lineage tracking, data quality monitoring, and compliance management, helping organizations ensure data accuracy, consistency, reliability, and adherence to regulatory requirements.</p>
+<p>It also provides capabilities for the detection and classification of personal and sensitive data, enabling stronger data protection, simplified auditing processes, and improved control over data sharing and usage across the organization.</p>
+<p>The service is sized and offered each <strong>10 users</strong>.</p>
+<h5 id="features-and-advantages_11">Features and Advantages</h5>
+<p>The service offers the following features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Data search and discovery</em></td>
+<td>Automatically explores datasets and metadata across the Data Lake, enabling users to discover, understand, and leverage available data assets more effectively.</td>
+</tr>
+<tr>
+<td><em>Data and metadata catalog</em></td>
+<td>Collects, organizes, and enriches metadata to create a centralized catalog that improves data discoverability, accessibility, and governance.</td>
+</tr>
+<tr>
+<td><em>Data lineage</em></td>
+<td>Provides end-to-end visibility into data flows and transformations, tracking the complete lifecycle of data from source systems to consumption layers.</td>
+</tr>
+<tr>
+<td><em>Access control and auditing</em></td>
+<td>Enables granular access management and comprehensive auditing capabilities, providing full traceability of data access and usage activities.</td>
+</tr>
+</tbody>
+</table>
+<p>The service uses a tool of Data Hub that extends the concept of a data catalog by offering data discovery, data observability, and data governance functions.  </p>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Data search and discovery</em></td>
+<td>Automatically discovers and explores datasets and metadata across the Data Lake, improving data visibility, accessibility, and reuse.</td>
+</tr>
+<tr>
+<td><em>Data and metadata catalog</em></td>
+<td>Collects, organizes, and enriches metadata to create a centralized catalog that enhances data discoverability, governance, and self-service access.</td>
+</tr>
+<tr>
+<td><em>Data lineage</em></td>
+<td>Provides end-to-end traceability of data flows and transformations, enabling visibility into the complete lifecycle of data from source to consumption.</td>
+</tr>
+<tr>
+<td><em>Access control and auditing</em></td>
+<td>Delivers granular access management and comprehensive auditing capabilities, ensuring traceability of data access, usage, and governance activities.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="BI"></a></p>
+<h3 id="business-intelligence">Business Intelligence</h3>
+<p><a href="../assets/images/extract/media/BI.png"><figure><img src="../assets/images/extract/media/BI.png" /><figcaption>Business Intelligence Service interface</figcaption></figure></a></p>
+<h4 id="service-description_12">Service Description</h4>
+<p>Developed by Leonardo with Grafana technology, the Business Intelligence Service is a platform with an analytics environment designed to provide real-time, interactive data visualization and monitoring capabilities.  </p>
+<p>It centralizes data ingestion, transformation, storage, and dashboarding within a scalable service that eliminates the need for organizations to maintain on-premises analytics infrastructure.<br />
+Built on the Grafana visualization engine, the platform empowers users to explore metrics, logs, and business KPIs through intuitive dashboards while integrating seamlessly with diverse data sources across cloud and hybrid ecosystems.</p>
+<p>The service is sized and offered per user unit. Each unit consists of <strong>100 users</strong>.</p>
+<h4 id="features-and-advantages_12">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Unified data visualization</em></td>
+<td>Provides dynamic and customizable dashboards that consolidate operational, financial, and business performance data from multiple sources into a single view.</td>
+</tr>
+<tr>
+<td><em>Multi-source connectors</em></td>
+<td>Supports native integration with SQL databases, time-series platforms, cloud storage services, IoT systems, and third-party analytics solutions.</td>
+</tr>
+<tr>
+<td><em>Real-time monitoring</em></td>
+<td>Enables continuous monitoring of business and operational metrics through live dashboards, alerting mechanisms, and automated notifications.</td>
+</tr>
+<tr>
+<td><em>Role-based Access Control (RBAC)</em></td>
+<td>Provides granular access management to dashboards, datasets, and administrative functions based on user roles and permissions.</td>
+</tr>
+<tr>
+<td><em>Advanced querying and exploration</em></td>
+<td>Offers powerful data exploration capabilities with support for SQL, PromQL, InfluxQL, and other engine-specific query languages.</td>
+</tr>
+<tr>
+<td><em>Alerts and anomaly detection</em></td>
+<td>Delivers rule-based alerting, threshold monitoring, and anomaly detection capabilities to identify operational issues and performance deviations.</td>
+</tr>
+<tr>
+<td><em>White-labeling and custom branding</em></td>
+<td>Allows organizations to customize dashboards, reports, and portal interfaces with their own branding and visual identity.</td>
+</tr>
+<tr>
+<td><em>API and automation support</em></td>
+<td>Enables integration with external platforms through APIs, webhooks, and automation workflows to support orchestration and operational efficiency.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Visualization layer</em></td>
+<td>Dashboard engine responsible for rendering interactive charts, tables, reports, alerts, and analytical views for business and operational insights.</td>
+</tr>
+<tr>
+<td><em>Data source integration layer</em></td>
+<td>Collection of connectors and plugins that enable integration with databases, cloud platforms, streaming services, log repositories, and monitoring systems.</td>
+</tr>
+<tr>
+<td><em>Data processing pipeline</em></td>
+<td>Optional ETL/ELT layer used to collect, transform, enrich, and aggregate raw data before visualization and analysis.</td>
+</tr>
+<tr>
+<td><em>Time-series and analytical storage</em></td>
+<td>Storage layer optimized for real-time and historical analytics, supporting platforms such as Prometheus, Loki, InfluxDB, Elasticsearch, and SQL-based data warehouses.</td>
+</tr>
+<tr>
+<td><em>User and access management</em></td>
+<td>Centralized identity and access management capabilities with support for SSO, LDAP, OAuth 2.0, and enterprise IAM integrations.</td>
+</tr>
+<tr>
+<td><em>Alerting and notification engine</em></td>
+<td>Event-driven framework that generates alerts and notifications through channels such as email, Microsoft Teams, Slack, PagerDuty, or SMS based on configurable conditions and thresholds.</td>
+</tr>
+<tr>
+<td><em>Management and administration console</em></td>
+<td>Centralized web interface used to configure data sources, manage users and tenants, provision resources, and monitor platform health and usage.</td>
+</tr>
+<tr>
+<td><em>API gateway</em></td>
+<td>Provides programmatic access to platform capabilities, enabling dashboard provisioning, data export, alert management, and embedded analytics integrations.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Faster and better decision-making</em></td>
+<td>Provides real-time or near-real-time access to business data through interactive dashboards and drill-down capabilities, enabling informed and timely decisions.</td>
+</tr>
+<tr>
+<td><em>Increased productivity and faster insights</em></td>
+<td>Self-service dashboards, automated reporting, and simplified data sharing accelerate access to information and improve operational efficiency.</td>
+</tr>
+<tr>
+<td><em>Reduced total cost of ownership (TCO)</em></td>
+<td>Managed infrastructure and cloud-native delivery reduce the need for on-premises resources, lowering operational and maintenance costs.</td>
+</tr>
+<tr>
+<td><em>Enhanced collaboration and data-driven culture</em></td>
+<td>Shared dashboards, integrated collaboration capabilities, and intuitive user experiences encourage data adoption across technical and business teams.</td>
+</tr>
+<tr>
+<td><em>Anywhere, anytime access</em></td>
+<td>Cloud-based access, mobile support, and remote connectivity enable users to consume and analyze data from any location and device.</td>
+</tr>
+<tr>
+<td><em>Extensive data integration</em></td>
+<td>Supports a wide range of on-premises and cloud data sources, enabling consolidation and analysis of heterogeneous datasets.</td>
+</tr>
+<tr>
+<td><em>Efficient data preparation and modeling</em></td>
+<td>Integrated capabilities for data transformation, modeling, and advanced calculations simplify the creation of analytical datasets and reports.</td>
+</tr>
+<tr>
+<td><em>Interactive self-service analytics</em></td>
+<td>Intuitive interfaces, drag-and-drop functionality, and pre-built templates enable business users to independently create dashboards and reports.</td>
+</tr>
+<tr>
+<td><em>Security, governance, and compliance</em></td>
+<td>Built-in security controls, auditing capabilities, and access management mechanisms help protect data and support regulatory compliance requirements.</td>
+</tr>
+<tr>
+<td><em>Scalability and flexibility</em></td>
+<td>Cloud-native architecture enables the platform to scale according to business demand while maintaining performance and operational efficiency.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="event-message"></a></p>
+<h3 id="event-message">Event Message</h3>
+<p><a href="../assets/images/extract/media/Event01.png"><img alt="" src="../assets/images/extract/media/Event01.png" /></a>
+<a href="../assets/images/extract/media/Event02.png"><figure><img src="../assets/images/extract/media/Event02.png" /><figcaption>Event Message Service interface</figcaption></figure></a></p>
+<h4 id="service-description_13">Service Description</h4>
+<p>It provides a platform developed by Leonardo using Kafka technology for developing real-time applications and data pipelines and acts as a message broker, providing publish-subscribe functionality.  </p>
+<p>It increases the scalability and resilience of existing applications by decoupling architectural components using a reactive approach based on asynchronous interactions.<br />
+The platform can scale horizontally and provide ordered message delivery capabilities. Like other Big Data PaaS modules, the solution is based on containerized resources orchestrated via Kubernetes.  </p>
+<p>It enables near-real-time analytical processes through streaming and facilitates the implementation of IoT use cases.</p>
+<p>The service is sized and offered per worker node. Each worker consists of <strong>16 vCPU and 128 GB of RAM.</strong></p>
+<h4 id="features-and-advantages_13">Features and Advantages</h4>
+<p>The service offers the following main features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reliable data exchange</em></td>
+<td>Useful tool for implementing reliable data exchange between different components.</td>
+</tr>
+<tr>
+<td><em>Messaging workload partitioning</em></td>
+<td>Ability to partition messaging workloads as application requirements change.</td>
+</tr>
+<tr>
+<td><em>Real-time streaming</em></td>
+<td>Provides real-time streaming capabilities for data processing.</td>
+</tr>
+<tr>
+<td><em>Native message replay</em></td>
+<td>Native support for data and message replay.</td>
+</tr>
+<tr>
+<td><em>Batch and stream processing integration</em></td>
+<td>Integration with the Batch/Stream Processing module.</td>
+</tr>
+<tr>
+<td><em>Web-based monitoring interface</em></td>
+<td>Web interface for monitoring Brokers, Topics, Messages, Consumers, and ACLs.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Apache Kafka-based solution</em></td>
+<td>Distributed publish-subscribe messaging platform designed for real-time data streaming, event-driven architectures, scalable data pipelines, and replayable data processing workloads.</td>
+</tr>
+<tr>
+<td><em>Broker-based architecture</em></td>
+<td>Cluster of Kafka brokers responsible for receiving, storing, replicating, and distributing messages across the platform, ensuring scalability and fault tolerance.</td>
+</tr>
+<tr>
+<td><em>Topics</em></td>
+<td>Logical channels used to organize and categorize data streams, enabling producers and consumers to exchange messages through a common abstraction.</td>
+</tr>
+<tr>
+<td><em>Partitions</em></td>
+<td>Ordered and distributed subdivisions of a topic that enable parallel processing, scalability, and high-throughput message consumption.</td>
+</tr>
+<tr>
+<td><em>Persistence</em></td>
+<td>Durable storage mechanism that retains messages within the Kafka cluster according to configurable retention policies, enabling replay and recovery capabilities.</td>
+</tr>
+<tr>
+<td><em>Producers</em></td>
+<td>Applications or services responsible for publishing messages to specific topics and partitions within the Kafka platform.</td>
+</tr>
+<tr>
+<td><em>Consumers</em></td>
+<td>Applications, services, or processing engines that subscribe to topics and consume messages for analysis, processing, or integration purposes.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Faster time-to-market</em></td>
+<td>Accelerates the integration of new applications and services through event-driven architectures, enabling faster delivery of products and business capabilities.</td>
+</tr>
+<tr>
+<td><em>Greater agility</em></td>
+<td>Supports the development of modular, loosely coupled, and scalable services, reducing the impact of changes on existing systems.</td>
+</tr>
+<tr>
+<td><em>Reduced operational risk</em></td>
+<td>Built-in monitoring, redundancy, backup mechanisms, and service-level guarantees help minimize downtime and reduce the risk of data loss.</td>
+</tr>
+<tr>
+<td><em>Faster and more informed decision-making</em></td>
+<td>Enables real-time data processing and analytics to support use cases such as IoT, digital services, e-commerce, and operational intelligence.</td>
+</tr>
+<tr>
+<td><em>Predictable costs</em></td>
+<td>Managed service delivery reduces infrastructure management overhead and helps avoid over-provisioning and unexpected maintenance expenses.</td>
+</tr>
+<tr>
+<td><em>Scalability</em></td>
+<td>Supports high-volume event streams and large-scale workloads while maintaining consistent performance and throughput.</td>
+</tr>
+<tr>
+<td><em>High availability and fault tolerance</em></td>
+<td>Distributed architecture and replication mechanisms ensure service continuity and resilience in the event of failures.</td>
+</tr>
+<tr>
+<td><em>Simplified management</em></td>
+<td>Eliminates the need to manage clusters, software updates, patching activities, and complex platform configurations.</td>
+</tr>
+<tr>
+<td><em>Optimized performance and low latency</em></td>
+<td>Advanced capabilities such as message batching, compression, and automated topic management improve throughput and reduce processing latency.</td>
+</tr>
+<tr>
+<td><em>Security and compliance</em></td>
+<td>Provides integrated authentication, authorization, encryption in transit and at rest, and governance controls to support security and regulatory requirements.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="artificial-intelligence-ai-family">Artificial Intelligence (AI) Family</h2>
+<p>Below is the list of services belonging to the Artificial Intelligence (AI) family:</p>
+<ul>
+<li><a href="#AI-platform">AI Platform</a></li>
+</ul>
+<p><a id="ai-platform"></a></p>
+<h3 id="ai-platform-services">AI Platform services</h3>
+<p>The AI Platform offering provides a modular and scalable environment designed to enable organizations to adopt, manage, and operationalize AI capabilities across a wide range of business and operational use cases. </p>
+<p>Built on a cloud-native architecture, the platform provides a set of complementary managed PaaS services that support the development, deployment, and consumption of AI-powered applications while ensuring security, governance, and operational efficiency.</p>
+<p>The AI Platform is designed to accelerate the adoption of Generative AI and intelligent automation technologies, enabling organizations to leverage their data and knowledge assets through advanced search, language models, and AI-enabled tools.</p>
+<p>The offering is composed of the following services:</p>
+<table>
+<thead>
+<tr>
+<th>SERVICE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>AI search service</em></td>
+<td>Provides intelligent search and knowledge retrieval capabilities, enabling users and applications to discover, access, and interact with information distributed across enterprise data sources through semantic search and Retrieval-Augmented Generation (RAG) techniques.</td>
+</tr>
+<tr>
+<td><em>AI SLM service</em></td>
+<td>Provides access to Small Language Models (SLMs) optimized for enterprise use cases, delivering efficient, secure, and cost-effective natural language processing capabilities for inference, conversational AI, content generation, and domain-specific applications.</td>
+</tr>
+</tbody>
+</table>
+<p>The following sections provide a detailed description of each service, outlining their features, capabilities, and benefits within the AI Platform ecosystem.</p>
+<h4 id="ai-search-rag-service">AI Search - RAG Service</h4>
+<p><a href="../assets/images/extract/media/AIsearch.png"><figure><img src="../assets/images/extract/media/AIsearch.png" /><figcaption>AI Search - RAG Service interface</figcaption></figure></a></p>
+<h5 id="service-description_14">Service Description</h5>
+<p>AI Search-RAG is a system developed by Leonardo for automatically generating answers to user-generated questions using context and information from reliable data sources.<br />
+It can be integrated into environments requiring a virtual assistant capable of responding using reliable, contextualized information.</p>
+<p>The system generates answers by first searching for relevant information or passages from a reliable external knowledge base using AGENTIC RAG (Retrieval-Augmented Generation) techniques.<br />
+This service allows for better contextualization of the search, further improving the quality and accuracy of the generated answers compared to traditional text-based RAGs.</p>
+<p>AI Search allows individuals and organizations to quickly access relevant, contextualized information through a simple and intuitive graphical interface built on a chat model, improving efficiency and productivity through advanced intelligent search tools.</p>
+<p>The service is sized per GPU unit. Each unit consists of <strong>one partition of an NVIDIA H200 GPU</strong>.</p>
+<h5 id="features-and-advantages_14">Features and Advantages</h5>
+<p>The service offers the following key features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Big Data PaaS Data Lake integration</em></td>
+<td>Leverages the Big Data PaaS Data Lake service to meet object storage requirements and provide a scalable foundation for enterprise knowledge retrieval.</td>
+</tr>
+<tr>
+<td><em>Optimized language models and embeddings</em></td>
+<td>Uses optimized Large Language Models (LLMs) and embedding models to provide relevant responses tailored to specific business contexts and user needs.</td>
+</tr>
+<tr>
+<td><em>User authentication</em></td>
+<td>Integrates with existing security protocols to ensure controlled and secure access to AI Search capabilities and indexed knowledge sources.</td>
+</tr>
+<tr>
+<td><em>Natural language understanding</em></td>
+<td>Understands user queries expressed in natural language and provides coherent answers by retrieving relevant multimodal information from text and audio sources.</td>
+</tr>
+<tr>
+<td><em>Multilingual model support</em></td>
+<td>Supports multilingual models to enable search, retrieval, and interaction across different languages and knowledge domains.</td>
+</tr>
+<tr>
+<td><em>Feedback collection</em></td>
+<td>Collects user feedback after query resolution to support continuous improvement of search relevance and answer quality.</td>
+</tr>
+<tr>
+<td><em>User-based document segmentation</em></td>
+<td>Enables document segmentation by user to support access control, personalization, and context-aware knowledge retrieval.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Model Repository</em></td>
+<td>At a minimum, a virtual assistant and an embedding model are required.</td>
+</tr>
+<tr>
+<td><em>Vector Database and Search Engine</em></td>
+<td>It uses a vector database that stores vector representations (embeddings) of the input data, allowing documents and information to be retrieved based on their meaning (semantic search). It also uses a traditional search engine (lexical search) that operates on text and metadata, performing searches based on keywords and structured criteria (e.g., BM25, TF-IDF).</td>
+</tr>
+<tr>
+<td><em>Document Manager</em></td>
+<td>Responsible for retrieving documentation from a specific repository and indexing it in the vector database for use in user queries.</td>
+</tr>
+</tbody>
+</table>
+<p>AI Search is composed of three layers:</p>
+<table>
+<thead>
+<tr>
+<th>LAYER</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Data layer</em></td>
+<td>Represents the database and the primary source of information.</td>
+</tr>
+<tr>
+<td><em>Analysis layer</em></td>
+<td>Responsible for all processing, analysis, and generation of answers to user queries. It includes the Retriever and the Generator, responsible for retrieving the most relevant information and creating coherent and personalized responses, respectively.</td>
+</tr>
+<tr>
+<td><em>User layer</em></td>
+<td>Interface through which the user interacts directly with the service, offering the ability to query the knowledge base, view answers with referenced sources, manage documents, and provide feedback.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Access to up-to-date knowledge</em></td>
+<td>Answers are always based on the most recent internal and external documents.</td>
+</tr>
+<tr>
+<td><em>Reduced operational costs</em></td>
+<td>Less time is spent on manual searches and repetitive support activities.</td>
+</tr>
+<tr>
+<td><em>Improved customer/employee experience</em></td>
+<td>Provides relevant, clear, and personalized answers tailored to user needs.</td>
+</tr>
+<tr>
+<td><em>Increased competitiveness</em></td>
+<td>Leverages proprietary organizational knowledge in addition to publicly available information.</td>
+</tr>
+<tr>
+<td><em>Risk mitigation</em></td>
+<td>Reduces errors and hallucinations, increasing the relevance and accuracy of responses.</td>
+</tr>
+<tr>
+<td><em>Upgradability without retraining</em></td>
+<td>Knowledge can be updated by simply refreshing the document repository or database without retraining the underlying language model.</td>
+</tr>
+<tr>
+<td><em>Hybrid vector search</em></td>
+<td>Combines semantic search with traditional text-based search techniques to improve retrieval effectiveness.</td>
+</tr>
+<tr>
+<td><em>Model efficiency</em></td>
+<td>An LLM-based orchestration model oversees activities and decisions while coordinating simpler specialized models or agents.</td>
+</tr>
+<tr>
+<td><em>Traceability and transparency</em></td>
+<td>Enables the display of cited sources used to generate responses, improving trust and explainability.</td>
+</tr>
+<tr>
+<td><em>Bias reduction</em></td>
+<td>By leveraging vector database indexing, the orchestration model receives context that is relevant to the user’s query, improving response quality and reducing bias.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ai-slm-service">AI SLM service</h4>
+<p><a href="../assets/images/extract/media/LLM01.png"><img alt="" src="../assets/images/extract/media/LLM01.png" /></a>
+<a href="../assets/images/extract/media/LLM02.png"><figure><img src="../assets/images/extract/media/LLM02.png" /><figcaption>AI SLM/LLM Services interface</figcaption></figure></a></p>
+<h5 id="services-description">Services Description</h5>
+<p>The AI SLM Service is a Generative AI Platform-as-a-Service (PaaS) developed by Leonardo that provides optimized natural language processing and inference capabilities through the use of Small Language Models (SLMs).  </p>
+<p>Designed for enterprise and public administration environments, the service enables organizations to integrate Generative AI capabilities into their applications and business processes while maintaining control over resource consumption, performance, and operational costs.<br />
+SLMs are lightweight and efficient language models optimized for domain-specific use cases, offering fast and accurate responses for targeted natural language tasks such as text classification, content generation, summarization, information extraction, conversational assistants, and workflow automation.  </p>
+<p>The service is particularly suitable for organizations seeking to deploy AI-powered applications without the complexity and computational requirements typically associated with larger language models.  </p>
+<p>The service is sized per GPU unit; each AI SLM Service unit consists of <strong>one partition of an NVIDIA H200 GPU</strong>.</p>
+<h5 id="features-and-advantages_15">Features and Advantages</h5>
+<p>The service offers the following main features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Tenant isolation</em></td>
+<td>Each customer is provided with a dedicated tenant within the customer infrastructure, ensuring complete isolation of data, configurations, and deployed models.</td>
+</tr>
+<tr>
+<td><em>Resource allocation</em></td>
+<td>Dedicated infrastructure resources (CPU, GPU, RAM, and Storage) are assigned to each tenant and sized according to workload requirements.</td>
+</tr>
+<tr>
+<td><em>Auto-scaling</em></td>
+<td>Tenant resources can automatically scale in response to workload variations, ensuring service continuity and performance optimization.</td>
+</tr>
+<tr>
+<td><em>Cloud-native deployment</em></td>
+<td>The service is deployed within the customer tenant in cloud-native mode on the OpenShift platform, ensuring portability, resilience, and standardized operational procedures.</td>
+</tr>
+<tr>
+<td><em>Centralized observability</em></td>
+<td>Provides centralized monitoring capabilities, including log collection, metrics, and alerting, enabling complete observability, auditing, and advanced troubleshooting.</td>
+</tr>
+<tr>
+<td><em>PaaS integration</em></td>
+<td>Leverages platform services for storage, networking, security, and identity management, ensuring compliance with project requirements while benefiting from shared infrastructure services.</td>
+</tr>
+</tbody>
+</table>
+<p>The service features a modular architecture designed to ensure scalability, workload segregation, and seamless integration into enterprise and public administration processes.</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>API Layer</em></td>
+<td>Provides access to SLM capabilities through REST APIs for integration with existing systems or through a web-based user interface for direct interaction.</td>
+</tr>
+<tr>
+<td><em>Inference Layer</em></td>
+<td>The core component of the service, where Small Language Models are deployed and executed.</td>
+</tr>
+<tr>
+<td><em>Inference Engine</em></td>
+<td>Executes language models optimized for low latency, resource efficiency, and predictable performance.</td>
+</tr>
+<tr>
+<td><em>Model Pool Management</em></td>
+<td>Maintains a catalog of validated and pre-configured SLMs that can be selected according to specific business requirements. Only one model is active per tenant at any given time.</td>
+</tr>
+<tr>
+<td><em>Platform Layer</em></td>
+<td>Provides cross-functional platform services supporting the operation and management of the service.</td>
+</tr>
+<tr>
+<td><em>Resource Management &amp; Scaling</em></td>
+<td>Provides dynamic allocation of computational resources (CPU, GPU, RAM, and storage), load-based auto-scaling, and service lifecycle management.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Technological accessibility</em></td>
+<td>Enables access to Generative AI capabilities through intuitive interfaces and simplified integration mechanisms.</td>
+</tr>
+<tr>
+<td><em>Reduced operational costs</em></td>
+<td>Eliminates the need for investments in dedicated AI infrastructure and complex model management activities.</td>
+</tr>
+<tr>
+<td><em>Faster time-to-market</em></td>
+<td>Accelerates the adoption of AI-powered solutions through pre-configured and validated language models.</td>
+</tr>
+<tr>
+<td><em>Operational efficiency</em></td>
+<td>Automates repetitive tasks, reducing processing times and improving service quality.</td>
+</tr>
+<tr>
+<td><em>Specialized AI capabilities</em></td>
+<td>Provides lightweight and domain-focused language models optimized for specific business and operational use cases.</td>
+</tr>
+<tr>
+<td><em>Risk mitigation</em></td>
+<td>Leverages validated and pre-trained models without requiring advanced machine learning expertise.</td>
+</tr>
+<tr>
+<td><em>Easy integration with existing systems</em></td>
+<td>Supports integration through APIs, microservices, and enterprise workflows.</td>
+</tr>
+<tr>
+<td><em>Resource efficiency</em></td>
+<td>Optimized infrastructure utilization enables predictable costs and efficient consumption of computational resources.</td>
+</tr>
+<tr>
+<td><em>Fast and simplified model testing</em></td>
+<td>Ready-to-use models can be evaluated through integrated playground capabilities available directly from the service interface.</td>
+</tr>
+<tr>
+<td><em>Rapid prototyping and AI DevOps</em></td>
+<td>Provides a ready-to-use environment for developing, testing, and deploying AI-powered applications through standard interfaces and deployment workflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="database-family">Database Family</h2>
+<p>Below is the list of services belonging to the Database family:</p>
+<ul>
+<li><a href="#postgres">PaaS SQL - PostgreSQL</a></li>
+<li><a href="#redis">PaaS In Memory - Redis</a></li>
+</ul>
+<p><a id="postgres"></a></p>
+<h3 id="paas-sql-postgresql">PaaS SQL - PostgreSQL</h3>
+<p><a href="../assets/images/extract/media/postgres.png"><figure><img src="../assets/images/extract/media/postgres.png" /><figcaption>PostgreSQL client interface</figcaption></figure></a></p>
+<h4 id="service-description_15">Service Description</h4>
+<p>The PaaS SQL – PostgreSQL is a cloud-based managed platform that provides ready-to-use PostgreSQL database instances without requiring the user to install, configure, or maintain the underlying infrastructure. </p>
+<p>In essence, it delivers PostgreSQL “as a service”, allowing developers and organizations to focus on application development and data management instead of database administration.  </p>
+<p>PostgreSQL in a highly available configuration is a reliable solution for organizations seeking an open source database with performance, security, and scalability. This service is ideal for applications that require reliability without the costs of commercial database solutions.  </p>
+<p>The service could be used to:</p>
+<ul>
+<li>Host and manage relational databases in the cloud.</li>
+<li>Store and query structured data efficiently.</li>
+<li>Support applications that need high availability, scalability, and data integrity.</li>
+<li>Simplify DevOps workflows by automating database management tasks.</li>
+<li>Integrate easily with other cloud services (analytics, AI, APIs, etc.).</li>
+</ul>
+<p>The service is offered per DB instance. Each instance with replication consists of <strong>4 vCPUs and 16 GB of RAM.</strong></p>
+<h4 id="features-and-advantages_16">Features and Advantages</h4>
+<p>The service offers the following key features:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Fully managed service</em></td>
+<td>Simplifies provisioning, configuration, patching, and upgrade activities.</td>
+</tr>
+<tr>
+<td><em>Scalability</em></td>
+<td>Supports vertical and horizontal scaling of compute and storage resources according to workload requirements.</td>
+</tr>
+<tr>
+<td><em>High availability and reliability</em></td>
+<td>Provides built-in replication, automatic failover, and multi-zone deployment options.</td>
+</tr>
+<tr>
+<td><em>Backup and recovery</em></td>
+<td>Includes automated backups, point-in-time restore capabilities, and disaster recovery mechanisms.</td>
+</tr>
+<tr>
+<td><em>Security and compliance</em></td>
+<td>Supports data encryption in transit and at rest, identity and access management (IAM), network isolation (VPC/Private Link), and compliance with standards such as GDPR, ISO, and SOC.</td>
+</tr>
+<tr>
+<td><em>Performance optimization</em></td>
+<td>Provides query optimization, connection pooling, caching mechanisms, and performance monitoring tools.</td>
+</tr>
+<tr>
+<td><em>Monitoring and alerting</em></td>
+<td>Integrates with monitoring dashboards and metrics for CPU, memory, I/O, and query performance analysis.</td>
+</tr>
+<tr>
+<td><em>Integration and extensibility</em></td>
+<td>Compatible with PostgreSQL extensions (e.g., PostGIS, pg_partman, pg_stat_statements) and provides API and CLI tools for management and automation.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Control Plane</em></td>
+<td>It is the part of the service that manages the lifecycle and orchestration of database instances. It is composed of API, provisioning, configuration, and monitoring capabilities.</td>
+</tr>
+<tr>
+<td><em>Data Plane</em></td>
+<td>It is the layer where PostgreSQL instances actually run. Each instance can be isolated in a VM, container, or pod, depending on the implementation.</td>
+</tr>
+<tr>
+<td><em>HA &amp; Resilience</em></td>
+<td>Ensures that the service remains available even in the event of hardware or software failures. It implements replication, failover, and backup policies.</td>
+</tr>
+<tr>
+<td><em>Security Layer</em></td>
+<td>Ensures data protection and access control in accordance with security and compliance requirements. It includes authentication, authorization, encryption, firewalls, and auditing capabilities.</td>
+</tr>
+<tr>
+<td><em>Observability Layer</em></td>
+<td>Provides visibility and continuous management of the service through monitoring and operational capabilities such as metrics collection, logging, and automated patching.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Cost efficiency</em></td>
+<td>No hardware or infrastructure investment is required. Operational costs are reduced as there is no need for dedicated DBA teams to manually manage maintenance, patching, or scaling activities.</td>
+</tr>
+<tr>
+<td><em>Faster time-to-market</em></td>
+<td>Database instances can be provisioned quickly through a web interface or API. Ideal for rapid development, prototyping, and product launches, reducing dependency on infrastructure provisioning cycles.</td>
+</tr>
+<tr>
+<td><em>Business agility and scalability</em></td>
+<td>Supports elastic scaling of CPU, RAM, and storage resources without downtime. Easily adapts to changing workloads and seasonal demand while enabling cloud-native and microservices-based architectures.</td>
+</tr>
+<tr>
+<td><em>Increased reliability and availability</em></td>
+<td>High Availability (HA), automated failover, replication, and backup mechanisms help ensure service continuity, protect against data loss, and reduce downtime risks.</td>
+</tr>
+<tr>
+<td><em>Focus on core business</em></td>
+<td>Allows organizations to focus on application development and innovation rather than database administration, reducing management overhead and operational complexity.</td>
+</tr>
+<tr>
+<td><em>Compliance and risk reduction</em></td>
+<td>Security, patching, and compliance activities are managed by the service provider, reducing the risk of configuration errors, vulnerabilities, and non-compliance issues.</td>
+</tr>
+<tr>
+<td><em>Standardization and portability</em></td>
+<td>Based on open-source PostgreSQL, ensuring compatibility and avoiding vendor lock-in. Databases can be easily exported or migrated to other PostgreSQL environments and support extensions such as PostGIS, JSONB, and logical replication.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="redis"></a></p>
+<h3 id="paas-in-memory-redis">PaaS In Memory- Redis</h3>
+<p><a href="../assets/images/extract/media/redis.png"><figure><img src="../assets/images/extract/media/redis.png" /><figcaption>Redis client interface</figcaption></figure></a></p>
+<h4 id="service-description_16">Service Description</h4>
+<p>It is a PaaS DB based on Redis technology (Remote Dictionary Server) that exposes a high-performance in-memory database, primarily used as a cache and database for web and real-time applications. </p>
+<p>Redis is a widely used database due to its flexibility and ability to handle a wide range of data types with low latency.<br />
+The service delivers sub-millisecond data access, advanced caching, session management, message streaming, and data persistence capabilities. </p>
+<p>As a Platform-as-a-Service (PaaS) offering, it abstracts away the operational complexity of managing Redis clusters — including provisioning, scaling, patching, failover, and monitoring — while ensuring enterprise-grade reliability, security, and performance.  </p>
+<p>The PaaS Redis service is designed for applications that require extremely fast data access, real-time analytics, and low-latency transactions.<br />
+Typical use cases include:</p>
+<ul>
+<li>Application caching to reduce latency and offload backend databases.</li>
+<li>Session storage for web and mobile applications.</li>
+<li>Real-time analytics and leaderboards (e.g., gaming, ad tech, telemetry).</li>
+<li>Message queues and event streaming for distributed systems.</li>
+<li>Geospatial data processing and time-series data handling.</li>
+<li>Rate limiting and token management in API gateways.</li>
+</ul>
+<p>The service is offered per DB instance. Each instance consists of <strong>4 vCPUs and 16 GB of RAM.</strong></p>
+<h4 id="features-and-advantages_17">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>In-memory</em></td>
+<td>Data is stored in RAM, ensuring extremely fast access.</td>
+</tr>
+<tr>
+<td><em>Persistence</em></td>
+<td>Supports data persistence on disk, preventing data loss in the event of a system reboot.</td>
+</tr>
+<tr>
+<td><em>Data types</em></td>
+<td>Supports a variety of data types, allowing the modeling of different kinds of information.</td>
+</tr>
+<tr>
+<td><em>Pub/Sub</em></td>
+<td>Supports the publish/subscribe model for real-time communication between applications.</td>
+</tr>
+<tr>
+<td><em>Fully managed platform</em></td>
+<td>Manages provisioning, patching, scaling, and maintenance activities. Provides high-availability clusters with zero-downtime updates, self-healing orchestration, and management through API, CLI, or Web Console.</td>
+</tr>
+<tr>
+<td><em>High performance and low latency</em></td>
+<td>Stores the entire dataset in memory for sub-millisecond access. Optimized for real-time operations requiring microsecond response times and supports high throughput with optional persistent storage.</td>
+</tr>
+<tr>
+<td><em>Flexible data structures</em></td>
+<td>Supports strings, hashes, lists, sets, sorted sets, bitmaps, HyperLogLogs, streams, and geospatial indexes. Suitable for counters, queues, caching, and pub/sub messaging.</td>
+</tr>
+<tr>
+<td><em>High availability and disaster recovery</em></td>
+<td>Provides Redis Sentinel or Cluster Mode for automatic failover and fault tolerance. Supports multi-AZ deployments, backup and restore capabilities, and optional geo-replication across regions.</td>
+</tr>
+<tr>
+<td><em>Persistence options</em></td>
+<td>Supports RDB (Redis Database Backup), AOF (Append-Only File), and hybrid persistence modes to balance performance, durability, and recovery requirements.</td>
+</tr>
+<tr>
+<td><em>Scalability and elasticity</em></td>
+<td>Supports horizontal scaling through Redis Cluster sharding and vertical scaling through dynamic resource allocation. Includes automatic data rebalancing across nodes.</td>
+</tr>
+<tr>
+<td><em>Security and compliance</em></td>
+<td>Provides encryption in transit (TLS) and at rest, RBAC, user authentication, IAM integration, auditing, logging, and compliance monitoring.</td>
+</tr>
+<tr>
+<td><em>Monitoring and observability</em></td>
+<td>Offers real-time metrics on throughput, latency, and memory utilization, with alerting, anomaly detection, and integration with Prometheus, Grafana, and ELK.</td>
+</tr>
+<tr>
+<td><em>Developer integration and APIs</em></td>
+<td>Compatible with standard Redis clients and libraries. Supports REST and gRPC APIs, CI/CD integrations, Infrastructure-as-Code tools, and Redis modules such as RedisJSON, RediSearch, RedisGraph, and RedisTimeSeries.</td>
+</tr>
+</tbody>
+</table>
+<p>The logical architecture of the PaaS Redis service consists of multiple layers designed for automation, scalability, and resilience.</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Control plane</em></td>
+<td>Responsible for service orchestration, cluster provisioning, scaling, and lifecycle management. Manages authentication, authorization, metering, and billing. Provides APIs, CLI, and web-based UI for service management.</td>
+</tr>
+<tr>
+<td><em>Data plane (Redis cluster layer)</em></td>
+<td>Core component that hosts user data in memory. Composed of multiple Redis instances organized as master nodes and replica nodes. Implements sharding for horizontal scalability and ensures high throughput and low latency for data operations.</td>
+</tr>
+<tr>
+<td><em>Storage and persistence layer</em></td>
+<td>Provides optional durable storage for backup and disaster recovery. Utilizes RDB snapshots and AOF logs stored on encrypted block or object storage. Supports automated retention policies and scheduled backups.</td>
+</tr>
+<tr>
+<td><em>Networking and security layer</em></td>
+<td>Provides virtual network isolation using VPC/VNet configurations. Supports TLS-based encryption for client-to-server and inter-node communication, security groups, IP whitelisting, firewall rules, and optional private endpoints for secure integration with internal systems.</td>
+</tr>
+<tr>
+<td><em>Monitoring and management layer</em></td>
+<td>Aggregates telemetry and performance metrics. Implements logging, tracing, and alerting through monitoring systems and provides dashboards for capacity planning and SLA tracking.</td>
+</tr>
+<tr>
+<td><em>High availability and failover layer</em></td>
+<td>Monitors node health and automatically triggers failover in case of node or zone failures. Uses Redis Sentinel or internal control mechanisms for cluster coordination and supports synchronous or asynchronous replication for HA and DR scenarios.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced total cost of ownership (TCO)</em></td>
+<td>No capital investment in hardware, software, or cluster management. Reduces operational overhead by automating deployment, scaling, and maintenance activities while eliminating the need for specialized in-house Redis administration skills.</td>
+</tr>
+<tr>
+<td><em>Faster time-to-market</em></td>
+<td>Instant provisioning of Redis clusters enables rapid development and testing. Ready-to-use configurations optimize caching and real-time processing use cases, allowing teams to integrate low-latency data layers into applications within minutes.</td>
+</tr>
+<tr>
+<td><em>Improved application performance and user experience</em></td>
+<td>Sub-millisecond response times improve customer satisfaction and engagement. Reduces load on backend databases and APIs through caching and data offloading while ensuring consistent performance during traffic spikes and seasonal demand peaks.</td>
+</tr>
+<tr>
+<td><em>Business agility and scalability</em></td>
+<td>Easily scales up or down to accommodate fluctuating workloads. Enables dynamic adaptation to new business requirements and supports real-time analytics and streaming workloads without architectural redesign.</td>
+</tr>
+<tr>
+<td><em>Reliability and continuity</em></td>
+<td>Built-in replication and failover mechanisms ensure continuous availability. Automated backups and geo-redundancy support disaster recovery requirements and enterprise-grade service continuity.</td>
+</tr>
+<tr>
+<td><em>Compliance and security</em></td>
+<td>Provider-managed encryption, patching, and access control help ensure compliance with security standards. Role-based access controls, network isolation, auditing, and governance capabilities protect sensitive data and reduce compliance risks.</td>
+</tr>
+<tr>
+<td><em>Focus on core business innovation</em></td>
+<td>Frees development and operations teams from infrastructure and cluster management activities, allowing organizations to focus on product innovation, business value creation, and user experience improvements.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="networking-family">Networking Family</h2>
+<p>Below is the list of services belonging to the Networking family:</p>
+<ul>
+<li><a href="#DNS">PaaS DNS (Domain Name System)</a></li>
+</ul>
+<p><a id="DNS"></a></p>
+<h3 id="paas-dns-domain-name-system">PaaS DNS (Domain Name System)</h3>
+<p><a href="../assets/images/extract/media/DNS.png"><figure><img src="../assets/images/extract/media/DNS.png" /><figcaption>PaaS DNS (Domain Name System) interface</figcaption></figure></a></p>
+<h4 id="service-description_17">Service Description</h4>
+<p>The PaaS DNS service is a fully managed, cloud-native solution that provides internal and external Domain Name System (DNS) resolution within the customer’s Virtual Network (VNET).<br />
+It is designed for high availability, automated scalability, and integrated security, enabling seamless management of DNS names for dynamic workloads.</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Self-contained DNS resolver</em></td>
+<td>Based on OPNsense, acting as the authoritative DNS point for the VNET.</td>
+</tr>
+<tr>
+<td><em>Internal name resolution</em></td>
+<td>Provides name resolution for virtual machines, containers, and cloud services within the environment.</td>
+</tr>
+<tr>
+<td><em>Secure DNS forwarding</em></td>
+<td>Forwards DNS queries to external resolvers with DNSSEC support to ensure integrity and security of DNS responses.</td>
+</tr>
+<tr>
+<td><em>Automated provisioning</em></td>
+<td>Covers instance deployment, zone configuration, and dynamic record management. Fully compatible with DevOps pipelines through REST APIs.</td>
+</tr>
+<tr>
+<td><em>Automated security patching and updates</em></td>
+<td>Security patches and updates are applied automatically without user intervention, ensuring protection against known vulnerabilities.</td>
+</tr>
+</tbody>
+</table>
+<p>The service also supports protocol-level traffic handling, primarily DNS over TCP and UDP, with underlying network infrastructure supporting ICMP for connectivity diagnostics.</p>
+<h4 id="features-and-advantages_18">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Cloud-managed OPNsense firewall instances</em></td>
+<td>Fully managed virtual appliances with automated updates, monitoring, and lifecycle management.</td>
+</tr>
+<tr>
+<td><em>Zero-trust network access</em></td>
+<td>Policy-based access management for users and devices, enabling secure remote connectivity.</td>
+</tr>
+<tr>
+<td><em>High availability and scalability</em></td>
+<td>Supports cluster configurations, automated failover, and elastic capacity provisioning.</td>
+</tr>
+<tr>
+<td><em>Centralized configuration and orchestration</em></td>
+<td>Provides a unified control panel for managing rules, VPNs, routing, and monitoring across multiple nodes.</td>
+</tr>
+<tr>
+<td><em>Multi-tenant architecture</em></td>
+<td>Enables logical separation of environments for partners, business units, or customers.</td>
+</tr>
+<tr>
+<td><em>Full API integration</em></td>
+<td>Supports REST APIs for automation, CI/CD pipelines, and Infrastructure-as-Code workflows.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>OPNsense core platform</em></td>
+<td>The foundational DNS and security engine, providing routing, filtering, and advanced security modules.</td>
+</tr>
+<tr>
+<td><em>Management and orchestration layer</em></td>
+<td>Cloud-native platform that automates provisioning, configuration, monitoring, and scaling of OPNsense nodes.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reduced operational complexity</em></td>
+<td>Eliminates the need to manage firewall hardware, updates, and maintenance in-house.</td>
+</tr>
+<tr>
+<td><em>Lower total cost of ownership (TCO)</em></td>
+<td>Subscription-based model removes CAPEX requirements and ensures predictable cost planning.</td>
+</tr>
+<tr>
+<td><em>Accelerated time-to-value</em></td>
+<td>Rapid deployment and standardized configurations shorten rollout cycles and speed up service adoption.</td>
+</tr>
+<tr>
+<td><em>Improved security posture</em></td>
+<td>Centralized policy enforcement and continuous updates reduce exposure to threats and security vulnerabilities.</td>
+</tr>
+<tr>
+<td><em>Flexibility for business growth</em></td>
+<td>Enables the rapid addition of new sites, users, or workloads without requiring network re-architecture.</td>
+</tr>
+<tr>
+<td><em>Consistent and automated configuration</em></td>
+<td>Reduces human error and ensures uniform security policies and configurations across the organization.</td>
+</tr>
+<tr>
+<td><em>API-first approach</em></td>
+<td>Supports seamless integration with DevOps pipelines and automated deployment systems.</td>
+</tr>
+<tr>
+<td><em>Vendor-neutral and open-source based</em></td>
+<td>Avoids vendor lock-in while benefiting from the transparency, flexibility, and extensibility of the OPNsense ecosystem.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="deployment-in-customer-vnet">Deployment in customer VNET</h4>
+<p>The DNS service is deployed as a virtual appliance within the customer’s VNET.<br />
+It acts as the authoritative resolver for internal workloads while forwarding queries for external domains to upstream DNS servers. This ensures a single DNS endpoint for all workloads in the VNET, simplifying configuration and management.  </p>
+<h4 id="internal-and-external-resolution">Internal and external resolution</h4>
+<ul>
+<li><em>Internal Resolution</em>: the OPNsense DNS Resolver (Unbound) can be configured with local zones and host overrides. Workloads in the VNET can register their names dynamically, enabling seamless resolution of private IP addresses.</li>
+<li><em>External Resolution</em>: queries for domains outside the VNET are forwarded to upstream DNS servers (e.g., ISP or public resolvers). Supports DNSSEC validation for secure external lookups.</li>
+</ul>
+<h4 id="dynamic-updates">Dynamic updates</h4>
+<p>The service supports dynamic DNS updates from workloads in the account, which can automatically register or update their DNS records in the OPNsense DNS Resolver.<br />
+This ensures that newly deployed or scaled workloads are immediately reachable by name without manual intervention.<br />
+Dynamic updates are authenticated using secure mechanisms (TSIG keys), preventing unauthorized changes.  </p>
+<p><div class="highlight"><pre><span></span><code>Workload requests IP
+        │
+        ▼
+DHCP assigns lease
+        │
+        ▼
+RFC2136 DNS Update Request
+(TSIG authenticated)
+        │
+        ▼
+Unbound DNS updates
+A/AAAA records
+        │
+        ▼
+Clients resolve
+updated hostname
+</code></pre></div>
+<a href="../assets/images/extract/media/DNS-chart.png"><figure><img src="../assets/images/extract/media/DNS-chart.png" /><figcaption>Diagram of the Flow</figcaption></figure></a></p>
+<p><a id="gold"></a></p>
+<h3 id="cloud-connected-service">Cloud connected Service</h3>
+<h4 id="service-description_18">Service Description</h4>
+<p>The PaaS Cloud interconnect gold SW service provides a high-quality, software-defined, private connectivity between a customer’s on-premises infrastructure (or external data centers) and the Aruba cloud environment.  </p>
+<p>It offers dedicated bandwidth tiers, enhanced SLA guarantees, secure routing, and enterprise-grade performance, enabling customers to build hybrid or multi-cloud architectures without deploying physical network appliances or managing complex routing setups.  </p>
+<p>The “Gold” tier represents the highest level of availability, performance, and support, while the “SW” component refers to software-based interconnect provisioning, ensuring flexibility, fast activation, and seamless scalability.  </p>
+<p>This service, delivered via hardware or software, is designed to simplify customer application migration with minimal impact on users and workloads.<br />
+It enables granularity down to the individual IP address during migration, increasing security and minimizing rollback times, if necessary.  </p>
+<p>The service is offered with the following unit metric: <strong>10 Gbps of throughput</strong>.</p>
+<h4 id="features-and-advantages_19">Features and Advantages</h4>
+<p>The following table summarizes the key features of the service:</p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Private and secure network connectivity</em></td>
+<td>Ensures a private, non-public connection between customer networks and cloud resources. Traffic does not traverse the public Internet, reducing risk and improving performance. Ideal for workloads requiring compliance, isolation, or predictable latency.</td>
+</tr>
+<tr>
+<td><em>Software-defined provisioning (SDN)</em></td>
+<td>Fully software-based interconnect setup with no physical circuits required. Supports on-demand provisioning through web console or API, rapid activation, and flexible reconfiguration without service interruption.</td>
+</tr>
+<tr>
+<td><em>High SLA and guaranteed bandwidth (Gold tier)</em></td>
+<td>Provides defined bandwidth tiers with guaranteed throughput. Includes enhanced SLAs for availability, packet loss, latency, and jitter, making it suitable for mission-critical enterprise applications.</td>
+</tr>
+<tr>
+<td><em>Multi-site and multi-zone connectivity</em></td>
+<td>Supports connectivity across multiple regions and availability zones, enabling redundant hybrid cloud architectures and interconnection of distributed workloads.</td>
+</tr>
+<tr>
+<td><em>Routing integration</em></td>
+<td>Supports both dynamic routing (BGP) and static routing. Automatically adapts to network topology changes and enables flexible hybrid cloud traffic engineering.</td>
+</tr>
+<tr>
+<td><em>Segmentation and isolation</em></td>
+<td>Allows the creation of multiple isolated virtual circuits or VLANs, enabling separation of production, staging, development, and partner environments.</td>
+</tr>
+<tr>
+<td><em>End-to-end encryption</em></td>
+<td>Supports traffic encryption at the network edge through IPsec or provider-managed encryption mechanisms, helping ensure compliance with data protection requirements.</td>
+</tr>
+<tr>
+<td><em>Monitoring, logs, and telemetry</em></td>
+<td>Provides real-time visibility into bandwidth usage, packet loss, latency, and connection health, with exportable logs for SIEM and analytics platforms.</td>
+</tr>
+<tr>
+<td><em>No physical hardware required</em></td>
+<td>The provider manages the entire connectivity layer, eliminating the need for physical circuits, routers, or carrier contracts, thereby reducing complexity and deployment time.</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the components of the service:</p>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Software-defined interconnect fabric</em></td>
+<td>Centralized SDN layer orchestrating virtual connections. Provides flexible, scalable, multi-tenant connectivity and allows rapid deployment and reconfiguration.</td>
+</tr>
+<tr>
+<td><em>Regional interconnect gateways</em></td>
+<td>High-availability routing gateways located in Aruba cloud regions. Serve as entry and exit points for private customer traffic and are architected for redundancy and failover.</td>
+</tr>
+<tr>
+<td><em>Cloud backbone network</em></td>
+<td>High-capacity fiber backbone interconnecting Aruba data centers. Ensures low-latency east-west traffic across regions and supports both primary and backup routes.</td>
+</tr>
+<tr>
+<td><em>Security and isolation layer</em></td>
+<td>Enforces strict tenant isolation at the network virtualization layer, routing control plane, and traffic segmentation policy level, ensuring no cross-tenant visibility.</td>
+</tr>
+<tr>
+<td><em>Control plane</em></td>
+<td>Manages interconnect provisioning, routing updates, bandwidth allocation, and policy enforcement. Exposed through both user interfaces and APIs.</td>
+</tr>
+<tr>
+<td><em>Data plane</em></td>
+<td>Handles the actual traffic flow with guaranteed QoS, deterministic routing, and optimized latency paths. Decoupled from monitoring and control functions.</td>
+</tr>
+<tr>
+<td><em>Monitoring and observability layer</em></td>
+<td>Aggregates telemetry from gateways and SDN controllers, providing dashboards, analytics, and alerting capabilities for performance and reliability monitoring.</td>
+</tr>
+</tbody>
+</table>
+<p>The service offers the following advantages:</p>
+<table>
+<thead>
+<tr>
+<th>ADVANTAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Enhanced security</em></td>
+<td>Private connectivity avoids exposure to the public Internet and supports encrypted tunnels and isolated routing domains.</td>
+</tr>
+<tr>
+<td><em>Predictable and high performance</em></td>
+<td>Guaranteed bandwidth, low latency, and stable connectivity ensure consistent performance for enterprise workloads.</td>
+</tr>
+<tr>
+<td><em>Rapid deployment</em></td>
+<td>Software-defined provisioning reduces setup times from weeks to minutes, eliminating the need for physical circuits or carrier coordination.</td>
+</tr>
+<tr>
+<td><em>High availability and reliability (Gold SLA)</em></td>
+<td>Redundant gateways, network paths, and failover mechanisms are built in, making the service suitable for mission-critical connectivity requirements.</td>
+</tr>
+<tr>
+<td><em>Cost efficiency</em></td>
+<td>Eliminates the need for physical interconnects and traditional MPLS circuits, reducing infrastructure and operational costs.</td>
+</tr>
+<tr>
+<td><em>Improved hybrid cloud architecture</em></td>
+<td>Seamlessly integrates on-premises infrastructure with cloud workloads, supporting migration, disaster recovery, and inter-site communication scenarios.</td>
+</tr>
+<tr>
+<td><em>Scalability on demand</em></td>
+<td>Enables rapid adjustment of bandwidth tiers and addition of new interconnects to support growing or fluctuating workloads.</td>
+</tr>
+<tr>
+<td><em>Simplified network operations</em></td>
+<td>Centralized management through APIs and web portals, combined with automated routing and monitoring, reduces operational complexity.</td>
+</tr>
+<tr>
+<td><em>Better compliance and data governance</em></td>
+<td>Private regional connectivity helps support regulatory requirements while maintaining predictable control over data paths.</td>
+</tr>
+<tr>
+<td><em>Optimized application experience</em></td>
+<td>Reduced jitter and packet loss improve the performance of databases, real-time applications, VoIP/Unified Communications, and other latency-sensitive services.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/toc.js"></script>
+      
+        <script src="../assets/js/language-switcher.js"></script>
+      
+    
+  </body>
+</html>

@@ -21,4 +21,3 @@ The Customer is entitled to the following credits refunds in the event of failur
 | < 99.90%          | 5%             |
 | < 99%             | 10%            |
 | < 90%             | 15%            |
-

@@ -1,0 +1,157 @@
+/* ================================================
+   TABELLE DINAMICHE MkDocs Material
+   Sintassi: .col-[colonna]-[percentuale]
+   Esempi:   .col-1-30  .col-5-70
+   Puoi usarne più di una contemporaneamente.
+   ================================================ */
+
+.md-typeset table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.md-typeset table th,
+.md-typeset table td {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* -----------------------------
+   COLONNA 1
+------------------------------*/
+
+.col-1-10  td:nth-child(1), .col-1-10  th:nth-child(1) { width: 10%; }
+.col-1-20  td:nth-child(1), .col-1-20  th:nth-child(1) { width: 20%; }
+.col-1-30  td:nth-child(1), .col-1-30  th:nth-child(1) { width: 30%; }
+.col-1-40  td:nth-child(1), .col-1-40  th:nth-child(1) { width: 40%; }
+.col-1-50  td:nth-child(1), .col-1-50  th:nth-child(1) { width: 50%; }
+.col-1-60  td:nth-child(1), .col-1-60  th:nth-child(1) { width: 60%; }
+.col-1-70  td:nth-child(1), .col-1-70  th:nth-child(1) { width: 70%; }
+.col-1-80  td:nth-child(1), .col-1-80  th:nth-child(1) { width: 80%; }
+.col-1-90  td:nth-child(1), .col-1-90  th:nth-child(1) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 2
+------------------------------*/
+
+.col-2-10  td:nth-child(2), .col-2-10  th:nth-child(2) { width: 10%; }
+.col-2-20  td:nth-child(2), .col-2-20  th:nth-child(2) { width: 20%; }
+.col-2-30  td:nth-child(2), .col-2-30  th:nth-child(2) { width: 30%; }
+.col-2-40  td:nth-child(2), .col-2-40  th:nth-child(2) { width: 40%; }
+.col-2-50  td:nth-child(2), .col-2-50  th:nth-child(2) { width: 50%; }
+.col-2-60  td:nth-child(2), .col-2-60  th:nth-child(2) { width: 60%; }
+.col-2-70  td:nth-child(2), .col-2-70  th:nth-child(2) { width: 70%; }
+.col-2-80  td:nth-child(2), .col-2-80  th:nth-child(2) { width: 80%; }
+.col-2-90  td:nth-child(2), .col-2-90  th:nth-child(2) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 3
+------------------------------*/
+
+.col-3-10  td:nth-child(3), .col-3-10  th:nth-child(3) { width: 10%; }
+.col-3-20  td:nth-child(3), .col-3-20  th:nth-child(3) { width: 20%; }
+.col-3-30  td:nth-child(3), .col-3-30  th:nth-child(3) { width: 30%; }
+.col-3-40  td:nth-child(3), .col-3-40  th:nth-child(3) { width: 40%; }
+.col-3-50  td:nth-child(3), .col-3-50  th:nth-child(3) { width: 50%; }
+.col-3-60  td:nth-child(3), .col-3-60  th:nth-child(3) { width: 60%; }
+.col-3-70  td:nth-child(3), .col-3-70  th:nth-child(3) { width: 70%; }
+.col-3-80  td:nth-child(3), .col-3-80  th:nth-child(3) { width: 80%; }
+.col-3-90  td:nth-child(3), .col-3-90  th:nth-child(3) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 4
+------------------------------*/
+
+.col-4-10  td:nth-child(4), .col-4-10  th:nth-child(4) { width: 10%; }
+.col-4-20  td:nth-child(4), .col-4-20  th:nth-child(4) { width: 20%; }
+.col-4-30  td:nth-child(4), .col-4-30  th:nth-child(4) { width: 30%; }
+.col-4-40  td:nth-child(4), .col-4-40  th:nth-child(4) { width: 40%; }
+.col-4-50  td:nth-child(4), .col-4-50  th:nth-child(4) { width: 50%; }
+.col-4-60  td:nth-child(4), .col-4-60  th:nth-child(4) { width: 60%; }
+.col-4-70  td:nth-child(4), .col-4-70  th:nth-child(4) { width: 70%; }
+.col-4-80  td:nth-child(4), .col-4-80  th:nth-child(4) { width: 80%; }
+.col-4-90  td:nth-child(4), .col-4-90  th:nth-child(4) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 5
+------------------------------*/
+
+.col-5-10  td:nth-child(5), .col-5-10  th:nth-child(5) { width: 10%; }
+.col-5-20  td:nth-child(5), .col-5-20  th:nth-child(5) { width: 20%; }
+.col-5-30  td:nth-child(5), .col-5-30  th:nth-child(5) { width: 30%; }
+.col-5-40  td:nth-child(5), .col-5-40  th:nth-child(5) { width: 40%; }
+.col-5-50  td:nth-child(5), .col-5-50  th:nth-child(5) { width: 50%; }
+.col-5-60  td:nth-child(5), .col-5-60  th:nth-child(5) { width: 60%; }
+.col-5-70  td:nth-child(5), .col-5-70  th:nth-child(5) { width: 70%; }
+.col-5-80  td:nth-child(5), .col-5-80  th:nth-child(5) { width: 80%; }
+.col-5-90  td:nth-child(5), .col-5-90  th:nth-child(5) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 6
+------------------------------*/
+
+.col-6-10  td:nth-child(6), .col-6-10  th:nth-child(6) { width: 10%; }
+.col-6-20  td:nth-child(6), .col-6-20  th:nth-child(6) { width: 20%; }
+.col-6-30  td:nth-child(6), .col-6-30  th:nth-child(6) { width: 30%; }
+.col-6-40  td:nth-child(6), .col-6-40  th:nth-child(6) { width: 40%; }
+.col-6-50  td:nth-child(6), .col-6-50  th:nth-child(6) { width: 50%; }
+.col-6-60  td:nth-child(6), .col-6-60  th:nth-child(6) { width: 60%; }
+.col-6-70  td:nth-child(6), .col-6-70  th:nth-child(6) { width: 70%; }
+.col-6-80  td:nth-child(6), .col-6-80  th:nth-child(6) { width: 80%; }
+.col-6-90  td:nth-child(6), .col-6-90  th:nth-child(6) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 7
+------------------------------*/
+
+.col-7-10  td:nth-child(7), .col-7-10  th:nth-child(7) { width: 10%; }
+.col-7-20  td:nth-child(7), .col-7-20  th:nth-child(7) { width: 20%; }
+.col-7-30  td:nth-child(7), .col-7-30  th:nth-child(7) { width: 30%; }
+.col-7-40  td:nth-child(7), .col-7-40  th:nth-child(7) { width: 40%; }
+.col-7-50  td:nth-child(7), .col-7-50  th:nth-child(7) { width: 50%; }
+.col-7-60  td:nth-child(7), .col-7-60  th:nth-child(7) { width: 60%; }
+.col-7-70  td:nth-child(7), .col-7-70  th:nth-child(7) { width: 70%; }
+.col-7-80  td:nth-child(7), .col-7-80  th:nth-child(7) { width: 80%; }
+.col-7-90  td:nth-child(7), .col-7-90  th:nth-child(7) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 8
+------------------------------*/
+
+.col-8-10  td:nth-child(8), .col-8-10  th:nth-child(8) { width: 10%; }
+.col-8-20  td:nth-child(8), .col-8-20  th:nth-child(8) { width: 20%; }
+.col-8-30  td:nth-child(8), .col-8-30  th:nth-child(8) { width: 30%; }
+.col-8-40  td:nth-child(8), .col-8-40  th:nth-child(8) { width: 40%; }
+.col-8-50  td:nth-child(8), .col-8-50  th:nth-child(8) { width: 50%; }
+.col-8-60  td:nth-child(8), .col-8-60  th:nth-child(8) { width: 60%; }
+.col-8-70  td:nth-child(8), .col-8-70  th:nth-child(8) { width: 70%; }
+.col-8-80  td:nth-child(8), .col-8-80  th:nth-child(8) { width: 80%; }
+.col-8-90  td:nth-child(8), .col-8-90  th:nth-child(8) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 9
+------------------------------*/
+
+.col-9-10  td:nth-child(9), .col-9-10  th:nth-child(9) { width: 10%; }
+.col-9-20  td:nth-child(9), .col-9-20  th:nth-child(9) { width: 20%; }
+.col-9-30  td:nth-child(9), .col-9-30  th:nth-child(9) { width: 30%; }
+.col-9-40  td:nth-child(9), .col-9-40  th:nth-child(9) { width: 40%; }
+.col-9-50  td:nth-child(9), .col-9-50  th:nth-child(9) { width: 50%; }
+.col-9-60  td:nth-child(9), .col-9-60  th:nth-child(9) { width: 60%; }
+.col-9-70  td:nth-child(9), .col-9-70  th:nth-child(9) { width: 70%; }
+.col-9-80  td:nth-child(9), .col-9-80  th:nth-child(9) { width: 80%; }
+.col-9-90  td:nth-child(9), .col-9-90  th:nth-child(9) { width: 90%; }
+
+/* -----------------------------
+   COLONNA 10
+------------------------------*/
+
+.col-10-10 td:nth-child(10), .col-10-10 th:nth-child(10) { width: 10%; }
+.col-10-20 td:nth-child(10), .col-10-20 th:nth-child(10) { width: 20%; }
+.col-10-30 td:nth-child(10), .col-10-30 th:nth-child(10) { width: 30%; }
+.col-10-40 td:nth-child(10), .col-10-40 th:nth-child(10) { width: 40%; }
+.col-10-50 td:nth-child(10), .col-10-50 th:nth-child(10) { width: 50%; }
+.col-10-60 td:nth-child(10), .col-10-60 th:nth-child(10) { width: 60%; }
+.col-10-70 td:nth-child(10), .col-10-70 th:nth-child(10) { width: 70%; }
+.col-10-80 td:nth-child(10), .col-10-80 th:nth-child(10) { width: 80%; }
+.col-10-90 td:nth-child(10), .col-10-90 th:nth-child(10) { width: 90%; }

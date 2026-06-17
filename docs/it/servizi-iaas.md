@@ -1,5 +1,6 @@
 # Servizi Infrastructure as a Service (IaaS)
 
+
 Nella seguente tabella è possibile consultare i servizi afferenti alla categoria Infrastructure as a Service (IaaS).
 
 | FAMIGLIA | SOTTO-FAMIGLIA | NOMENCLATURA SERVIZI |

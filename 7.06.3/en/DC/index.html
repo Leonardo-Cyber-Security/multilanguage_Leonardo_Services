@@ -1,0 +1,3307 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Data Centers Description - Leonardo Cloud Everywhere Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/eng-standard-theme.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/fabric.min.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/toc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/language-switcher.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-centers-description" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-header__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leonardo Cloud Everywhere Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Centers Description
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Leonardo Cloud Everywhere Documentation" class="md-nav__button md-logo" aria-label="Leonardo Cloud Everywhere Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Leonardo Cloud Everywhere Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure as a Service (IaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container as a Service (CaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PaaS/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform as a Service (PaaS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hybrid/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hybrid Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Center Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Price/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provisioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITSM/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SLA/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Level Agreement (SLA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Account Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Certifications/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Faq/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions (FAQ)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-center-interconnection-dci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Center Interconnection (DCI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-architecture-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Architecture Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wide-area-network-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wide Area Network (WAN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-centers-characteristics-and-technical-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Centers characteristics and technical specification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Centers characteristics and technical specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-requirements-and-site-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General requirements and site criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-region-a-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Region A Data Centers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Region A Data Centers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dc-mi-1-bergamo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC MI 1 Bergamo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-mi-2-basiglio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC MI 2 Basiglio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-mi-3-siziano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC MI 3 Siziano
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-region-b-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Region B Data Centers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Region B Data Centers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dc-ge-1-fiumara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC GE 1 Fiumara
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-ge-2-puccini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC GE 2 Puccini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-ge-3-bisagno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC GE 3 Bisagno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-region-c-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Region C Data Centers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Region C Data Centers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dc-rm-1-rome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC RM 1 Rome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-rm-2-acilia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC RM 2 Acilia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-rm-3-pomezia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC RM 3 Pomezia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="data-centers-description">Data Centers Description</h1>
+<h2 id="general-architecture">General architecture</h2>
+<p>The Cloud Services described in the relevant categories are hosted within 9 Data Centers distributed throughout Italy and spread across 3 Regions (A, B, and C), each redundant with three highly reliable Availability Zones.</p>
+<p><a href="../assets/images/extract/media/DC_design.png"><figure><img src="../assets/images/extract/media/DC_design.png" /><figcaption>Data Center Architecture and Interconnection</figcaption></figure></a></p>
+<p>The infrastructure configuration is fully redundant thanks to the division of each of the three Regions, whose maximum distance exceeds 400 km.
+Each Region is composed of three Availability Zones (AZs), three Data Centers configured for business continuity, separated as the crow flies by tens of kilometers.</p>
+<p>Specifically, the following table shows the DC association for each region:</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>List of Data Centers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Region A</td>
+<td><a href="#MI1">DC MI 1 Bergamo</a></td>
+</tr>
+<tr>
+<td>Region A</td>
+<td><a href="#MI2">DC MI 2 Basiglio</a></td>
+</tr>
+<tr>
+<td>Region A</td>
+<td><a href="#MI3">DC MI 3 Siziano</a></td>
+</tr>
+<tr>
+<td>Region B</td>
+<td><a href="#GE1">DC GE 1 Fiumara</a></td>
+</tr>
+<tr>
+<td>Region B</td>
+<td><a href="#GE2">DC GE 2 Puccini</a></td>
+</tr>
+<tr>
+<td>Region B</td>
+<td><a href="#GE3">DC GE 3 Bisagno</a></td>
+</tr>
+<tr>
+<td>Region C</td>
+<td><a href="#RM1">DC RM 1 Rome</a></td>
+</tr>
+<tr>
+<td>Region C</td>
+<td><a href="#RM2">DC RM 2 Acilia</a></td>
+</tr>
+<tr>
+<td>Region C</td>
+<td><a href="#RM3">DC RM 3 Pomezia</a></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Nomenclature of DCs for each Region</figcaption>
+
+<p>The following table summarizes the approximate geographical distances between the three Regions hosting the platform infrastructure:</p>
+<table>
+<thead>
+<tr>
+<th>SOURCE REGION</th>
+<th>DESTINATION REGION</th>
+<th>DISTANCE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Region A</td>
+<td>Region B</td>
+<td>&gt; 100 km</td>
+</tr>
+<tr>
+<td>Region A</td>
+<td>Region C</td>
+<td>&gt; 400 km</td>
+</tr>
+<tr>
+<td>Region B</td>
+<td>Region C</td>
+<td>&gt; 500 km</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the approximate distances between the Data Centers located within Region A:</p>
+<table>
+<thead>
+<tr>
+<th>DATA CENTER</th>
+<th>DATA CENTER</th>
+<th>DISTANCE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC MI 1 Bergamo</td>
+<td>DC MI 2 Basiglio</td>
+<td>~53 km</td>
+</tr>
+<tr>
+<td>DC MI 1 Bergamo</td>
+<td>DC MI 3 Siziano</td>
+<td>~54 km</td>
+</tr>
+<tr>
+<td>DC MI 2 Basiglio</td>
+<td>DC MI 3 Siziano</td>
+<td>~10 km</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the approximate distances between the Data Centers located within Region B:</p>
+<table>
+<thead>
+<tr>
+<th>DATA CENTER</th>
+<th>DATA CENTER</th>
+<th>DISTANCE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC GE 1 Fiumara</td>
+<td>DC GE 2 Puccini</td>
+<td>~10 km</td>
+</tr>
+<tr>
+<td>DC GE 1 Fiumara</td>
+<td>DC GE 3 Bisagno</td>
+<td>~15 km</td>
+</tr>
+<tr>
+<td>DC GE 2 Puccini</td>
+<td>DC GE 3 Bisagno</td>
+<td>~15 km</td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes the approximate distances between the Data Centers located within Region C:</p>
+<table>
+<thead>
+<tr>
+<th>DATA CENTER</th>
+<th>DATA CENTER</th>
+<th>DISTANCE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC RM 1 Rome</td>
+<td>DC RM 2 Acilia</td>
+<td>~30 km</td>
+</tr>
+<tr>
+<td>DC RM 1 Rome</td>
+<td>DC RM 3 Pomezia</td>
+<td>~30 km</td>
+</tr>
+<tr>
+<td>DC RM 2 Acilia</td>
+<td>DC RM 3 Pomezia</td>
+<td>~15 km</td>
+</tr>
+</tbody>
+</table>
+<p>All data centers are equipped with all the technical and technological infrastructure necessary to ensure the highest quality standards in terms of reliability, availability, and physical security.</p>
+<p>The three Availability Zones are interconnected via a dedicated regional backbone, which guarantees complete redundancy, negligible latency, and priority connectivity, logically characterizing the Regions as a single virtual Data Center (Software Defined Data Center).</p>
+<p>The Regions are also interconnected via dedicated and reserved interregional backbones with IP/MPLS network transmission, enabling a flexible, software-defined logical network architecture, ensuring the mobility of application loads and the inherent high reliability of Cloud solutions.
+Within an Availability Zone, workloads are transparently distributed, and the HA (High Availability) configuration enables infrastructure service continuity (Business Continuity) between the three Data Centers in the same Region.</p>
+<p>The Cloud platform enables resilient data distribution across the three Availability Zones of each Region through enterprise-grade Storage Arrays deployed in a tri-site configuration, ensuring continuous synchronous/asynchronous replication.</p>
+<p>The Leonardo Secure Cloud Management Platform standardizes service delivery across all Regions by exposing a unified API framework and a single management portal. This guarantees homogeneous provisioning, automation, monitoring, and failover operations, enabling consistent DR/BC plan design and execution regardless of workload placement.</p>
+<p>The regional backbone interconnecting the three AZs supports high-throughput, low-latency replication, enabling transparent workload reactivation within any AZ or across Regions. Organizations can independently orchestrate DR/BC scenarios leveraging the platform’s native redundancy, standardized control interfaces, and storage-tier replication capabilities.</p>
+<h2 id="network-description">Network description</h2>
+<p>The network is structured around three main components: </p>
+<ul>
+<li>Data Center Interconnection</li>
+<li>Wide Area Network</li>
+<li>Local Area Network</li>
+</ul>
+<h3 id="data-center-interconnection-dci">Data Center Interconnection (DCI)</h3>
+<p>Interconnection between the Data Centers relies on a high-capacity transport infrastructure built to ensure minimal latency, fault tolerance, and uninterrupted service.<br />
+Key elements include:</p>
+<h3 id="network-architecture-components">Network Architecture Components</h3>
+<table>
+<thead>
+<tr>
+<th>COMPONENT</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>IP/MPLS backbone</em></td>
+<td>Fully redundant backbone infrastructure optimized for reliable, resilient, and high-performance routing across the network.</td>
+</tr>
+<tr>
+<td><em>DWDM technology</em></td>
+<td>Dense Wavelength Division Multiplexing (DWDM) technology supporting high-capacity optical transmission with very low latency and high bandwidth availability.</td>
+</tr>
+<tr>
+<td><em>VLAN-based segmentation</em></td>
+<td>Provides logical traffic isolation through VLANs, enabling secure multi-tenant environments and separation of traffic domains across different Organizations.</td>
+</tr>
+<tr>
+<td><em>Traffic management policies</em></td>
+<td>Controls routing behavior, traffic prioritization, and bandwidth allocation to ensure predictable performance and efficient resource utilization.</td>
+</tr>
+</tbody>
+</table>
+<p>The DCI enables operation in a multi-region configuration with three Availability Zones, essential for high availability, synchronous/asynchronous replication, and business continuity.</p>
+<h3 id="wide-area-network-wan">Wide Area Network (WAN)</h3>
+<p>The WAN provides secure, high-performance connectivity to external networks, supporting access to the services. It includes:</p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Shared Internet connectivity</em></td>
+<td>Offers controlled access to platform services through shared Internet connectivity.</td>
+</tr>
+<tr>
+<td><em>Traffic management</em></td>
+<td>Provides traffic profiling tools for bandwidth management, flow optimization, and congestion prevention.</td>
+</tr>
+<tr>
+<td><em>Security and performance monitoring</em></td>
+<td>Includes IDS systems for threat detection and APM systems for application and service performance monitoring.</td>
+</tr>
+<tr>
+<td><em>Dedicated connectivity services</em></td>
+<td>Supports dedicated line aggregation, VPN connectivity, special-purpose links for data migration, and hosting of termination routers directly within the facilities.</td>
+</tr>
+</tbody>
+</table>
+<p>The WAN ensures each Organization has isolated, secure channels for interacting with the infrastructure while maintaining high security and reliability.</p>
+<h2 id="data-centers-characteristics-and-technical-specification">Data Centers characteristics and technical specification</h2>
+<p>This section lists the general characteristics and technical specifications of the Data Center.</p>
+<h3 id="general-requirements-and-site-criteria">General requirements and site criteria</h3>
+<p>The architecture is designed to meet high standards for security, resilience, and sustainability, aligned with TIER III certifications and current regulatory requirements.  </p>
+<p>The Data Centers are selected and designed to reduce environmental and external risks:</p>
+<ul>
+<li>Located in seismic zones classified as zone ≥3.</li>
+<li>Sited away from coasts, major rivers, and heavily trafficked areas.</li>
+<li>Positioned near metropolitan zones while maintaining low risk.</li>
+<li>Equipped with independent power feeds, not derived from the same medium/high-voltage substation.</li>
+</ul>
+<p>Compliance with key regulations is ensured.</p>
+<h3 id="technical-specifications">Technical specifications</h3>
+<p>This section lists the technical specifications for each Data Center.</p>
+<h4 id="the-region-a-data-centers">The Region A Data Centers</h4>
+<p><a id="MI1"></a></p>
+<h5 id="dc-mi-1-bergamo">DC MI 1 Bergamo</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total surface area</td>
+<td>17,600 m²</td>
+</tr>
+<tr>
+<td>Data hall surface area</td>
+<td>8,050 m²</td>
+</tr>
+<tr>
+<td>Number of independent data rooms</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Seismic risk profile</td>
+<td>Secure location</td>
+</tr>
+<tr>
+<td>Hydro-geological risk profile</td>
+<td>Secure location</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data hall height</td>
+<td>3.5 m</td>
+</tr>
+<tr>
+<td>Upper plenum height</td>
+<td>2.5 m</td>
+</tr>
+<tr>
+<td>Lower plenum height</td>
+<td>2.0 m</td>
+</tr>
+<tr>
+<td>Raised floor load capacity</td>
+<td>2,000 kg/m² (distributed load); 1,000 kg/m² (concentrated load)</td>
+</tr>
+<tr>
+<td>External firewalls</td>
+<td>REI 240</td>
+</tr>
+<tr>
+<td>Internal firewalls</td>
+<td>REI 120</td>
+</tr>
+<tr>
+<td>Insulation system</td>
+<td>Double insulation with defrost system</td>
+</tr>
+<tr>
+<td>Loading bays</td>
+<td>Double loading bay</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION / STANDARD</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANSI/TIA 942-B-2017 Rating 4</td>
+<td>Formerly Tier IV</td>
+</tr>
+<tr>
+<td>GO</td>
+<td>Guarantee of Energy Origin</td>
+</tr>
+<tr>
+<td>Code of Conduct for Data Center Energy Efficiency</td>
+<td>Energy efficiency best practices</td>
+</tr>
+<tr>
+<td>ISO 9001</td>
+<td>Quality management system</td>
+</tr>
+<tr>
+<td>ISO 14001</td>
+<td>Environmental management system</td>
+</tr>
+<tr>
+<td>ISO 22237</td>
+<td>Data centre facilities and infrastructure</td>
+</tr>
+<tr>
+<td>ISO 27001</td>
+<td>Information security management</td>
+</tr>
+<tr>
+<td>ISO 50001</td>
+<td>Energy management system</td>
+</tr>
+<tr>
+<td>ISO/IEC 27017</td>
+<td>Cloud security controls</td>
+</tr>
+<tr>
+<td>ISO/IEC 27018</td>
+<td>Protection of personal data in cloud environments</td>
+</tr>
+<tr>
+<td>ISO/IEC 27035</td>
+<td>Security incident and event management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Points of entry</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Entrance rooms</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Main Distribution Areas (MDA)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Carrier neutrality</td>
+<td>Carrier-neutral data center</td>
+</tr>
+<tr>
+<td>Managed connectivity</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Internet exchange connectivity</td>
+<td>Dual transmission system to Milan Internet eXchange (MIX)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utility connection points</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Total IT power</td>
+<td>12 MW IT (2N redundant)</td>
+</tr>
+<tr>
+<td>UPS redundancy</td>
+<td>2N+1</td>
+</tr>
+<tr>
+<td>UPS type</td>
+<td>Double-conversion static</td>
+</tr>
+<tr>
+<td>Individual UPS power</td>
+<td>500 kVA</td>
+</tr>
+<tr>
+<td>UPS runtime</td>
+<td>15 minutes (emergency conditions); 40 minutes (standard conditions)</td>
+</tr>
+<tr>
+<td>Generator redundancy</td>
+<td>2N</td>
+</tr>
+<tr>
+<td>Generator type</td>
+<td>Diesel generator units</td>
+</tr>
+<tr>
+<td>Full-load autonomy</td>
+<td>26 hours (emergency conditions); 52 hours (standard conditions)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling technology</td>
+<td>Chilled water; water-to-water; water-to-air</td>
+</tr>
+<tr>
+<td>Primary cooling mode</td>
+<td>Groundwater cooling system</td>
+</tr>
+<tr>
+<td>Heat exchanger redundancy</td>
+<td>2N</td>
+</tr>
+<tr>
+<td>Groundwater extraction wells</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Emergency cooling mode</td>
+<td>Air/water chiller</td>
+</tr>
+<tr>
+<td>CRAH redundancy</td>
+<td>2N</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCTV</td>
+<td>Continuous video surveillance</td>
+</tr>
+<tr>
+<td>Physical security</td>
+<td>24x7x365 on-site security personnel</td>
+</tr>
+<tr>
+<td>Parking areas</td>
+<td>Separate parking for employees and visitors</td>
+</tr>
+<tr>
+<td>Perimeter protection</td>
+<td>Vehicle bollards</td>
+</tr>
+<tr>
+<td>Access control</td>
+<td>Separate entrances for visitors and goods</td>
+</tr>
+<tr>
+<td>Secure access points</td>
+<td>Mantraps with anti-tailgating and anti-piggybacking systems</td>
+</tr>
+<tr>
+<td>NOC</td>
+<td>Network Operations Center</td>
+</tr>
+<tr>
+<td>SOC</td>
+<td>Security Operations Center</td>
+</tr>
+<tr>
+<td>FOC</td>
+<td>Facility Operations Center</td>
+</tr>
+<tr>
+<td>BMS</td>
+<td>Building Management System</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Air replacement rate</td>
+<td>2 volumes/hour</td>
+</tr>
+<tr>
+<td>Extinguishing system</td>
+<td>Inert gas</td>
+</tr>
+<tr>
+<td>Extinguishing gas</td>
+<td>IG-541</td>
+</tr>
+<tr>
+<td>Cylinder redundancy</td>
+<td>2N</td>
+</tr>
+<tr>
+<td>Smoke detection</td>
+<td>Highly sensitive smoke detection system</td>
+</tr>
+<tr>
+<td>Liquid leakage detection</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>Module-level protection</td>
+<td>Dedicated fire detection and extinguishing system for each module</td>
+</tr>
+<tr>
+<td>Generator protection</td>
+<td>Standalone fire detection and extinguishing system for each generator unit</td>
+</tr>
+</tbody>
+</table>
+<p><a id="MI2"></a></p>
+<h5 id="dc-mi-2-basiglio">DC MI 2 Basiglio</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Colocation space</td>
+<td>2,380 m²</td>
+</tr>
+<tr>
+<td>Global uptime average</td>
+<td>&gt;99.999%</td>
+</tr>
+<tr>
+<td>Energy source</td>
+<td>100% renewable energy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Building type</td>
+<td>4-floor concrete structure</td>
+</tr>
+<tr>
+<td>Floor type</td>
+<td>Raised floor</td>
+</tr>
+<tr>
+<td>Floor load capacity</td>
+<td>1,500 kg/m²</td>
+</tr>
+<tr>
+<td>Parking</td>
+<td>Adjacent to building (free)</td>
+</tr>
+<tr>
+<td>Seismic design</td>
+<td>Low seismic category</td>
+</tr>
+<tr>
+<td>Flood zone</td>
+<td>Not applicable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>CERTIFICATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO Standards</td>
+<td>ISO 9001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 22301</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 27001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 45001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 14001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 50001</td>
+</tr>
+<tr>
+<td>Other Certifications</td>
+<td>Cyber Essentials</td>
+</tr>
+<tr>
+<td></td>
+<td>PCI DSS</td>
+</tr>
+<tr>
+<td></td>
+<td>SOC 1 Type II</td>
+</tr>
+<tr>
+<td></td>
+<td>SOC 2 Type II</td>
+</tr>
+<tr>
+<td></td>
+<td>EU Code of Conduct</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carrier ecosystem</td>
+<td>Access to 30+ carriers across the Milan metro ecosystem</td>
+</tr>
+<tr>
+<td>Internet exchange connectivity</td>
+<td>Direct peering through Equinix Internet Exchange™</td>
+</tr>
+<tr>
+<td>Cloud interconnection</td>
+<td>Direct connectivity via Equinix Fabric® to distributed digital infrastructure</td>
+</tr>
+<tr>
+<td>Regional interconnections</td>
+<td>Access to MIX, TOP-IX and other interconnections at Via Caldera, Milan</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utility feeders</td>
+<td>1 × 3 MVA electrical feed</td>
+</tr>
+<tr>
+<td>PS configuration</td>
+<td>N+N</td>
+</tr>
+<tr>
+<td>UPS redundancy</td>
+<td>N+1</td>
+</tr>
+<tr>
+<td>Standby power configuration</td>
+<td>2 × 1,900 kVA diesel generators (mechanical load); 4 × 1,400 kVA diesel generators (IT load)</td>
+</tr>
+<tr>
+<td>Standby power redundancy</td>
+<td>N+N</td>
+</tr>
+<tr>
+<td>Power density</td>
+<td>1.0–7.0 kVA per cabinet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling configuration</td>
+<td>Chilled water system</td>
+</tr>
+<tr>
+<td>Cooling redundancy</td>
+<td>N+1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>Mantrap entry</td>
+</tr>
+<tr>
+<td></td>
+<td>Proximity access card + PIN</td>
+</tr>
+<tr>
+<td>Human Security</td>
+<td>24/7 on-site security officers</td>
+</tr>
+<tr>
+<td>Electronic Security</td>
+<td>PIN and card readers</td>
+</tr>
+<tr>
+<td></td>
+<td>Optional biometric readers for customer cages</td>
+</tr>
+<tr>
+<td></td>
+<td>CCTV with 7-day video retention</td>
+</tr>
+<tr>
+<td></td>
+<td>Motion detection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detection</td>
+<td>VESDA</td>
+</tr>
+<tr>
+<td></td>
+<td>HSSD (High Sensitivity Smoke Detection)</td>
+</tr>
+<tr>
+<td></td>
+<td>Visual and audio alarms</td>
+</tr>
+<tr>
+<td></td>
+<td>Double-knock activation</td>
+</tr>
+<tr>
+<td>Suppression Agents</td>
+<td>Novec</td>
+</tr>
+<tr>
+<td></td>
+<td>FM200</td>
+</tr>
+<tr>
+<td></td>
+<td>Argon</td>
+</tr>
+</tbody>
+</table>
+<p><a id="MI3"></a></p>
+<h5 id="dc-mi-3-siziano">DC MI 3 Siziano</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campus location</td>
+<td>Siziano (PV), hosting all CoreTech hosting and cloud infrastructures</td>
+</tr>
+<tr>
+<td>Campus surface area</td>
+<td>100,000 m²</td>
+</tr>
+<tr>
+<td>Building footprint</td>
+<td>42,000 m²</td>
+</tr>
+<tr>
+<td>Data center standard</td>
+<td>Tier IV multi-tenant data center</td>
+</tr>
+<tr>
+<td>Availability target</td>
+<td>100% Power &amp; Cooling guaranteed uptime</td>
+</tr>
+<tr>
+<td>Energy efficiency</td>
+<td>Advanced cooling and climatization technologies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structural Design</td>
+<td>Constructed according to NTC anti-seismic regulations (D.M. 14/01/2008)</td>
+</tr>
+<tr>
+<td></td>
+<td>Double roof resistant to winds up to 280 km/h</td>
+</tr>
+<tr>
+<td></td>
+<td>Intumescent-coated metal structure for fire resistance</td>
+</tr>
+<tr>
+<td></td>
+<td>Perimeter walls of the technical area built to REI120 standards</td>
+</tr>
+<tr>
+<td>Flood Mitigation</td>
+<td>3 m-high perimeter wall, waterproofed up to 1.5 m</td>
+</tr>
+<tr>
+<td></td>
+<td>Building elevation +1 m above primary urban level</td>
+</tr>
+<tr>
+<td></td>
+<td>Rain-water balance basin for extreme weather events</td>
+</tr>
+<tr>
+<td>Cooling Infrastructure</td>
+<td>No water pipes inside the data center (air-based cooling)</td>
+</tr>
+<tr>
+<td>Innovation</td>
+<td>Infrastructure benefits from 218 patented technologies (granted or pending)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO 9001:2015</td>
+<td>Quality Management</td>
+</tr>
+<tr>
+<td>ISO 14001:2015</td>
+<td>Environmental Management</td>
+</tr>
+<tr>
+<td>OHSAS 18001</td>
+<td>Health &amp; Safety Management</td>
+</tr>
+<tr>
+<td>ISO 27001:2013</td>
+<td>Information Security Management</td>
+</tr>
+<tr>
+<td>ISO 50001:2011</td>
+<td>Energy Management</td>
+</tr>
+<tr>
+<td>ANSI/TIA-942-B:2017</td>
+<td>Rating 4 (Tier IV)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fiber infrastructure</td>
+<td>100 fiber pairs with diversified routes in a multi-carrier configuration provide connectivity to each data hall.</td>
+</tr>
+<tr>
+<td>Structured cabling</td>
+<td>Fiber, copper, and electrical cabling run through dedicated overhead trays.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power Supply</td>
+<td>Campus powered by a redundant 132 kV high-voltage line supporting up to 40 MW at full capacity.</td>
+</tr>
+<tr>
+<td>UPS Architecture</td>
+<td>Tri-redundant UPS system ensuring 100% availability.</td>
+</tr>
+<tr>
+<td>Electrical Architecture</td>
+<td>Engineered for Tier IV “system + system” (2N+1) requirements.</td>
+</tr>
+<tr>
+<td></td>
+<td>Two completely independent electrical systems.</td>
+</tr>
+<tr>
+<td></td>
+<td>Each capable of supporting the full facility load.</td>
+</tr>
+<tr>
+<td></td>
+<td>Independent UPS, Bypass Modules, PDUs, and RPPs.</td>
+</tr>
+<tr>
+<td>Rack Power Distribution</td>
+<td>Dual power feeds (Feed A + Feed B) supplied from separate electrical systems.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling system</td>
+<td>Modular AHUs (Air Handling Units).</td>
+</tr>
+<tr>
+<td>Cooling technology</td>
+<td>Indirect evaporative cooling with air-to-air heat exchangers cooled by external water systems.</td>
+</tr>
+<tr>
+<td>Energy efficiency</td>
+<td>Designed to achieve an estimated PUE lower than 1.4.</td>
+</tr>
+<tr>
+<td>Resilience</td>
+<td>Steel infrastructure under the T-SCIF acts as a thermal flywheel to increase resilience.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>Multilevel badge and numeric code access control.</td>
+</tr>
+<tr>
+<td></td>
+<td>24x7x365 security personnel and anti-intrusion systems.</td>
+</tr>
+<tr>
+<td></td>
+<td>CCTV video surveillance with privacy-compliant digital archiving.</td>
+</tr>
+<tr>
+<td>Data Hall Security</td>
+<td>4 data halls (expandable to 6), supporting up to 1,056 racks per hall.</td>
+</tr>
+<tr>
+<td></td>
+<td>Racks organized into T-SCIF islands (Thermal Separate Compartment in Facility).</td>
+</tr>
+<tr>
+<td></td>
+<td>Complete separation of hot and cold airflows.</td>
+</tr>
+<tr>
+<td></td>
+<td>Cage-protected environment.</td>
+</tr>
+<tr>
+<td></td>
+<td>Maximized density and thermal efficiency.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fire Protection</td>
+<td>Intumescent paint on metal structures.</td>
+</tr>
+<tr>
+<td></td>
+<td>REI120 fire-resistant perimeter walls around technical areas.</td>
+</tr>
+<tr>
+<td></td>
+<td>Fire-resistant compartmentalization as part of the electrical and environmental risk-mitigation strategy.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-region-b-data-centers">The Region B Data Centers</h4>
+<p><a id="GE1"></a></p>
+<h5 id="dc-ge-1-fiumara">DC GE 1 Fiumara</h5>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data center classification</td>
+<td>Tier II</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO 27001</td>
+<td>Information Security Management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redundant dark fiber connectivity</td>
+<td>Two redundant dark fiber links (100 + 100 Gbps) between GE1 and GE2.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power Supply</td>
+<td>Two power supply branches (A and B) connected to the same substation, delivering up to 1 MW (500 kW + 500 kW).</td>
+</tr>
+<tr>
+<td>Substation Infrastructure</td>
+<td>3 × 1600 kVA transformers.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 medium-voltage main switchboard.</td>
+</tr>
+<tr>
+<td></td>
+<td>2 low-voltage switchboards.</td>
+</tr>
+<tr>
+<td></td>
+<td>824 kW generator.</td>
+</tr>
+<tr>
+<td></td>
+<td>320 kW UPS.</td>
+</tr>
+<tr>
+<td>Roadmap</td>
+<td>Upgrade to Tier III standards planned for completion in 2026.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling system</td>
+<td>Air cooling system composed of 7 CDZ units with water-based technology (chilled water) and liquid cooling capabilities.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>Perimeter walls.</td>
+</tr>
+<tr>
+<td></td>
+<td>Reception area.</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>Fingerprint or badge-based access control.</td>
+</tr>
+<tr>
+<td>Monitoring &amp; Surveillance</td>
+<td>Internal VDS system protecting the data center.</td>
+</tr>
+<tr>
+<td></td>
+<td>Internal armed surveillance service operating 24x7.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fire suppression system</td>
+<td>Gas-based extinguishing system with NOVEC 1230 agent.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="GE2"></a></p>
+<h5 id="dc-ge-2-puccini">DC GE 2 Puccini</h5>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data center design</td>
+<td>Built according to Tier III design principles.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO 27001</td>
+<td>Information Security Management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redundant dark fiber connectivity</td>
+<td>Two redundant dark fiber links (100 + 100 Gbps) between GE1 and GE2.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General Characteristics</td>
+<td>Dual power branches (A and B).</td>
+</tr>
+<tr>
+<td></td>
+<td>Maximum supported IT load: 340 kW, depending on installed cooling units.</td>
+</tr>
+<tr>
+<td>Branch A</td>
+<td>Data Center Branch "A" Distribution Cabinet.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 × 1000 kW transformer.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 LV main panel.</td>
+</tr>
+<tr>
+<td></td>
+<td>Equivalent earthing system connected to the main earthing system.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 × 576 kW Milantractor generator.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 UPS consisting of 1 × 500 kW Piller rotary unit.</td>
+</tr>
+<tr>
+<td>Branch B</td>
+<td>Data Center Branch "B" Distribution Cabinet.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 × 1000 kW transformer.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 LV main panel.</td>
+</tr>
+<tr>
+<td></td>
+<td>Equivalent earthing system connected to the main earthing system.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 × 500 kW Perkins generator.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 × 576 kW Spark generator dedicated to air conditioning.</td>
+</tr>
+<tr>
+<td></td>
+<td>1 UPS consisting of 1 × 500 kW Piller rotary unit.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling system</td>
+<td>Air cooling system composed of 6 CDZ units with mixed water-based (chilled water) and gas cooling technology.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>Perimeter walls.</td>
+</tr>
+<tr>
+<td></td>
+<td>Reception area.</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>Fingerprint or badge-based access control.</td>
+</tr>
+<tr>
+<td>Monitoring &amp; Surveillance</td>
+<td>Internal VDS system protecting the data center.</td>
+</tr>
+<tr>
+<td></td>
+<td>Internal armed surveillance service operating 24x7.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fire suppression system</td>
+<td>Water mist extinguishing system.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="GE3"></a></p>
+<h5 id="dc-ge-3-bisagno">DC GE 3 Bisagno</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Submarine cable landing</td>
+<td>Landing point for Blue and Raman submarine cable systems.</td>
+</tr>
+<tr>
+<td>BlueMed system</td>
+<td>Connectivity branches between Italy, Africa, Europe, and the Middle East.</td>
+</tr>
+<tr>
+<td>Future expansion</td>
+<td>Infrastructure designed to support up to six additional submarine cable systems through the Genoa Landing Platform.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>CERTIFICATION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO Certifications</td>
+<td>ISO 9001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 14001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 45001</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 27001</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP Transit Services</td>
+<td>Active IP node providing IP transit services integrated with Sparkle's global Tier-1 Seabone backbone.</td>
+</tr>
+<tr>
+<td>Submarine Cable Systems</td>
+<td>Supports or is planned to support multiple undersea cable systems, including BlueMed, Blue &amp; Raman, and Unitirreno.</td>
+</tr>
+<tr>
+<td>Interconnection &amp; Peering</td>
+<td>Access to local Internet Exchange ecosystems and peering services, aligned with the Ge-DIX Internet Exchange.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installed power</td>
+<td>4.7 MW</td>
+</tr>
+<tr>
+<td>Sustainability approach</td>
+<td>Infrastructure designed with a strong focus on environmental sustainability.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling technology</td>
+<td>Advanced cooling systems, including environmentally sustainable ("green") cooling techniques.</td>
+</tr>
+<tr>
+<td>Energy storage</td>
+<td>Lithium-ion battery systems.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital Security</td>
+<td>Security management aligned with ISO 27001 standards.</td>
+</tr>
+<tr>
+<td>Security Services</td>
+<td>DDoS protection services.</td>
+</tr>
+<tr>
+<td></td>
+<td>Virtual NAP capabilities.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-region-c-data-centers">The Region C Data Centers</h4>
+<p><a id="RM1"></a></p>
+<h5 id="dc-rm-1-rome">DC RM 1 Rome</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total surface area</td>
+<td>10,730 m²</td>
+</tr>
+<tr>
+<td>Data hall surface area</td>
+<td>3,120 m²</td>
+</tr>
+<tr>
+<td>Number of independent data rooms</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Floors hosting data halls</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Seismic risk profile</td>
+<td>Secure location</td>
+</tr>
+<tr>
+<td>Hydro-geological risk profile</td>
+<td>Secure location</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data hall height</td>
+<td>3.5 m</td>
+</tr>
+<tr>
+<td>Upper plenum height</td>
+<td>1.4 m</td>
+</tr>
+<tr>
+<td>Lower plenum height</td>
+<td>1.95 m</td>
+</tr>
+<tr>
+<td>Raised floor load capacity</td>
+<td>2,000 kg/m² (distributed load); 1,000 kg/m² (concentrated load)</td>
+</tr>
+<tr>
+<td>External firewalls</td>
+<td>REI 240</td>
+</tr>
+<tr>
+<td>Internal firewalls</td>
+<td>REI 120</td>
+</tr>
+<tr>
+<td>Insulation system</td>
+<td>Double insulation with defrost system</td>
+</tr>
+<tr>
+<td>Loading bays</td>
+<td>Double loading bay</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANSI/TIA 942-C-2024 Rating 4</td>
+<td>Formerly Tier IV</td>
+</tr>
+<tr>
+<td>ISO 9001</td>
+<td>Quality of services offered</td>
+</tr>
+<tr>
+<td>ISO 14001</td>
+<td>Environmental management system</td>
+</tr>
+<tr>
+<td>ISO 22237</td>
+<td>Data Center Lifecycle Management</td>
+</tr>
+<tr>
+<td>ISO 27001</td>
+<td>Information security management</td>
+</tr>
+<tr>
+<td>ISO 45001</td>
+<td>Workplace health and safety management system</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>Business continuity management system</td>
+</tr>
+<tr>
+<td>ISO 20000-1</td>
+<td>IT service management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infrastructure</td>
+<td>6 Points of Entrance (PoE)</td>
+</tr>
+<tr>
+<td></td>
+<td>2 Entrance Rooms</td>
+</tr>
+<tr>
+<td></td>
+<td>2 Main Distribution Areas (MDA)</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>Carrier-neutral data center</td>
+</tr>
+<tr>
+<td></td>
+<td>Provision of managed connectivity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total IT power</td>
+<td>6 MW IT (2N redundant)</td>
+</tr>
+<tr>
+<td>UPS redundancy</td>
+<td>2N+1</td>
+</tr>
+<tr>
+<td>UPS type</td>
+<td>Double-conversion static</td>
+</tr>
+<tr>
+<td>Individual UPS power</td>
+<td>500 kVA</td>
+</tr>
+<tr>
+<td>UPS runtime</td>
+<td>15 minutes at full load in emergency conditions; 30 minutes in standard conditions</td>
+</tr>
+<tr>
+<td>Generator redundancy</td>
+<td>2N</td>
+</tr>
+<tr>
+<td>Generator type</td>
+<td>Diesel generator units</td>
+</tr>
+<tr>
+<td>Full-load autonomy</td>
+<td>24 hours in emergency conditions; 48 hours in standard conditions; fuel refill within 12 hours</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling type</td>
+<td>Chilled water, water-to-air system</td>
+</tr>
+<tr>
+<td>Normal operating mode</td>
+<td>Air/water chiller with indirect free cooling</td>
+</tr>
+<tr>
+<td>Chiller redundancy</td>
+<td>2N</td>
+</tr>
+<tr>
+<td>CRAH redundancy</td>
+<td>2N</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>CCTV</td>
+</tr>
+<tr>
+<td></td>
+<td>24x7x365 on-site security</td>
+</tr>
+<tr>
+<td></td>
+<td>Separate parking areas for employees and visitors</td>
+</tr>
+<tr>
+<td></td>
+<td>Vehicle bollards</td>
+</tr>
+<tr>
+<td></td>
+<td>Separate entrance gates for visitors and goods</td>
+</tr>
+<tr>
+<td></td>
+<td>Mantrap for visitors and goods with anti-tailgating protection</td>
+</tr>
+<tr>
+<td>Operations Centers</td>
+<td>Network Operations Center (NOC) 24x7x365</td>
+</tr>
+<tr>
+<td></td>
+<td>Security Operations Center (SOC) 24x7x365</td>
+</tr>
+<tr>
+<td></td>
+<td>Facility Operations Center (FOC) 24x7x365</td>
+</tr>
+<tr>
+<td>Facility Management</td>
+<td>Building Management System (BMS)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fire Suppression</td>
+<td>Inert gas extinguishing system (IG-541)</td>
+</tr>
+<tr>
+<td></td>
+<td>Redundancy of extinguishing cylinders: 2N</td>
+</tr>
+<tr>
+<td>Air Management</td>
+<td>Air exchange rate: 2 volumes/hour</td>
+</tr>
+<tr>
+<td>Detection &amp; Protection</td>
+<td>Highly sensitive smoke detection system</td>
+</tr>
+<tr>
+<td></td>
+<td>Underfloor liquid loss detection system</td>
+</tr>
+<tr>
+<td></td>
+<td>Fire detection and extinguishing system in each individual module</td>
+</tr>
+<tr>
+<td></td>
+<td>Standalone fire protection system for every generator unit</td>
+</tr>
+</tbody>
+</table>
+<p><a id="RM2"></a></p>
+<h5 id="dc-rm-2-acilia">DC RM 2 Acilia</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total surface area</td>
+<td>8,000 m²</td>
+</tr>
+<tr>
+<td>Electrical infrastructure</td>
+<td>Powered by two separate medium-voltage lines, each supplied by a distinct ACEA substation, ensuring electrical redundancy.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>CERTIFICATION / STANDARD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Center Certification</td>
+<td>Tier IV</td>
+</tr>
+<tr>
+<td></td>
+<td>ANSI/TIA-942 Rating 4</td>
+</tr>
+<tr>
+<td>Management Standards</td>
+<td>ISO 50001 (Energy Management)</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 14001 (Environmental Management)</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 27001 (Information Security Management)</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 20000-1 (IT Service Management)</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 22301 (Business Continuity Management)</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 9001 (Quality Management)</td>
+</tr>
+<tr>
+<td>Energy Efficiency</td>
+<td>European Data Center Code of Conduct</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fiber Connectivity</td>
+<td>Dual-ring fiber connectivity through two distinct Points of Entry (POEs) connected to Rome-based optical backbone POPs.</td>
+</tr>
+<tr>
+<td>Campus Distribution</td>
+<td>Physically separated fiber paths between POEs and meet-me rooms/data halls.</td>
+</tr>
+<tr>
+<td>Availability Zone Interconnection</td>
+<td>Three Availability Zones interconnected through high-capacity DWDM links with proprietary backbone infrastructure for redundancy and low latency.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Renewable energy</td>
+<td>Powered by 100% renewable energy.</td>
+</tr>
+<tr>
+<td>Photovoltaic system</td>
+<td>On-site photovoltaic installation with a capacity of up to 75 kW.</td>
+</tr>
+<tr>
+<td>Energy management</td>
+<td>Real-time monitoring of electrical and thermal parameters to support predictive maintenance and energy efficiency optimization.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>FEATURE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling architecture</td>
+<td>Air distribution through raised-floor systems with return air collected via alternating ceiling plenums.</td>
+</tr>
+<tr>
+<td>Free cooling</td>
+<td>Utilizes external air when environmental conditions allow, reducing mechanical refrigeration requirements.</td>
+</tr>
+<tr>
+<td>Geothermal heat exchangers</td>
+<td>Ground-based dispersers used for heat rejection from chillers when required.</td>
+</tr>
+<tr>
+<td>Environmental monitoring</td>
+<td>Building Management System (BMS) continuously monitors temperature, humidity, and airflow to optimize cooling operations.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>External and internal fencing with anti-climb perimeter protection.</td>
+</tr>
+<tr>
+<td></td>
+<td>Armed security guard presence.</td>
+</tr>
+<tr>
+<td></td>
+<td>Site-wide CCTV surveillance.</td>
+</tr>
+<tr>
+<td></td>
+<td>Pedestrian access controlled through mantraps and security turnstiles.</td>
+</tr>
+<tr>
+<td></td>
+<td>Intrusion detection systems with perimeter alarms.</td>
+</tr>
+<tr>
+<td></td>
+<td>Blast-resistant and reinforced windows.</td>
+</tr>
+<tr>
+<td></td>
+<td>Internal security patrols and rounds.</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>Access to data halls through security airlocks (bussole) with dual badge-based authentication.</td>
+</tr>
+<tr>
+<td>Cyber Security</td>
+<td>Continuous monitoring by a Security Operations Center (SOC).</td>
+</tr>
+<tr>
+<td>Compliance &amp; Governance</td>
+<td>Compliance with Technical Security Measures (MTMS) covering logical segmentation, risk management, and protection controls.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detection</td>
+<td>Very Early Smoke Detection Apparatus (VESDA) or equivalent high-sensitivity smoke detection systems.</td>
+</tr>
+<tr>
+<td>Fire Suppression</td>
+<td>3M Novec 1230 extinguishing agent, electrically non-conductive and designed to absorb heat and inhibit combustion.</td>
+</tr>
+<tr>
+<td>Redundancy</td>
+<td>Fire suppression system designed with 2N redundancy to ensure full reliability and operational continuity.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="RM3"></a></p>
+<h5 id="dc-rm-3-pomezia">DC RM 3 Pomezia</h5>
+<p><strong>General Specifications</strong></p>
+<table>
+<thead>
+<tr>
+<th>PARAMETER</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campus surface area</td>
+<td>Approximately 51,000 m²</td>
+</tr>
+<tr>
+<td>Infrastructure layout</td>
+<td>13 system rooms and 6 telecom rooms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Building</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structural Design</td>
+<td>The PISP building is elevated and equipped with a 0.9 m raised floor to provide enhanced protection against flooding events.</td>
+</tr>
+<tr>
+<td>Power Infrastructure</td>
+<td>Power supplied through two independent 20 kV medium-voltage lines connected to an ACEA substation.</td>
+</tr>
+<tr>
+<td>Electrical Distribution</td>
+<td>Primary distribution designed with N+1 redundancy.</td>
+</tr>
+<tr>
+<td></td>
+<td>Secondary distribution designed with A+B (or N+1) architecture and dual radial paths.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certifications &amp; Compliance</strong></p>
+<table>
+<thead>
+<tr>
+<th>CERTIFICATION</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uptime Institute Tier III</td>
+<td>Data center design and operational standard</td>
+</tr>
+<tr>
+<td>ANSI/TIA-942 Rating 3</td>
+<td>Facility design certification</td>
+</tr>
+<tr>
+<td>ISO 50001</td>
+<td>Energy Management</td>
+</tr>
+<tr>
+<td>ISO 14001</td>
+<td>Environmental Management</td>
+</tr>
+<tr>
+<td>ISO 9001</td>
+<td>Quality Management</td>
+</tr>
+<tr>
+<td>ISO 27001</td>
+<td>Information Security Management</td>
+</tr>
+<tr>
+<td>ISO 22301</td>
+<td>Business Continuity Management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connectivity</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network Connectivity</td>
+<td>Connected through a dual-fiber ring with two independent paths linking the facility to the main ISP core network via Rome-based POPs.</td>
+</tr>
+<tr>
+<td>Campus Infrastructure</td>
+<td>Physically separated fiber routes between Points of Entry (POEs), meet-me rooms, and system rooms to ensure redundancy and resilience.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Energy</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electrical Supply</td>
+<td>Redundant 20 kV medium-voltage power lines ensuring high availability.</td>
+</tr>
+<tr>
+<td>Backup Power</td>
+<td>Two diesel generators and two DRUPS (UPS + generator combination units).</td>
+</tr>
+<tr>
+<td>Fuel Storage</td>
+<td>Two double-walled 15,000-liter diesel tanks equipped with leak detection systems and reserved for emergency use.</td>
+</tr>
+<tr>
+<td>Sustainability</td>
+<td>Infrastructure aligned with green energy standards and sustainability objectives.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooling</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling Architecture</td>
+<td>Dual-loop refrigerant circulation system with two independent cooling loops.</td>
+</tr>
+<tr>
+<td>Chiller Infrastructure</td>
+<td>Redundant rooftop chillers configured in N+1 mode to ensure uninterrupted thermal rejection.</td>
+</tr>
+<tr>
+<td>Precision Cooling</td>
+<td>Approximately 120 air-conditioning units installed within the system rooms to manage localized heat loads.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical Security</td>
+<td>Multi-layered security architecture including perimeter protection, intrusion detection, surveillance, and access control systems.</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>Security airlocks (mantraps) and badge-based authentication required for access to sensitive areas.</td>
+</tr>
+<tr>
+<td>Cyber Security</td>
+<td>Continuous monitoring, threat detection, and incident response managed through a Security Operations Center (SOC).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fire Prevention System</strong></p>
+<table>
+<thead>
+<tr>
+<th>CATEGORY</th>
+<th>FEATURE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detection</td>
+<td>Very Early Smoke Detection systems required by the MTMS security framework for rapid fire risk identification.</td>
+</tr>
+<tr>
+<td>Fire Suppression</td>
+<td>Clean-agent fire suppression technologies suitable for data center environments and sensitive IT equipment.</td>
+</tr>
+<tr>
+<td>Resilience</td>
+<td>Fire protection architecture designed with redundancy in accordance with high-availability and business continuity requirements.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/toc.js"></script>
+      
+        <script src="../assets/js/language-switcher.js"></script>
+      
+    
+  </body>
+</html>

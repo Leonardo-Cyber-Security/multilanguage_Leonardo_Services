@@ -40,9 +40,9 @@ stages:
   parameters:
     dependsOn: 'Prepare'
     environment: 'Minio_Collaudo'
-    minioEndpoint: '$(MINIOENDPOINTCOLLAUDO)'
-    minioUsername: '$(MINIOUSERCOLLAUDO)'
-    minioPassword: '$(MINIOPASSCOLLAUDO)'
+    minioEndpoint: '$(MINIIOENDPOINTLCE)'
+    minioUsername: '$(MINIIOUSERNAMELCE)'
+    minioPassword: '$(MINIIOPASSWORDLCE)'
     bucket: 'servicesdocs'
     deleteBeforeUpload: 'true'
     folder: 'latest'

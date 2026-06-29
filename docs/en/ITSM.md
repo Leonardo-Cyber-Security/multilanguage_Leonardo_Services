@@ -1,4 +1,4 @@
-# IT Service Management (ITSM)
+# IT Service Management (ITSM) 
 
 The IT Service Management (ITSM) defines the process of the activities, responsibilities, and controls required to manage customer support requests in a structured, timely, and traceable manner.  
 It applies to all types of tickets submitted by customers, including:
